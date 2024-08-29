@@ -3,9 +3,9 @@ local d = require("directories")
 local M = {}
 
 M.export = function(c, t)
-	M.clean(string.format("%s%s", c, t))
+	M.clean(string.format("%s/%s", c, t))
 	os.execute(string.format("/bin/cp -r ./%s %s", t, c))
-	print(string.format("%s -> %s", t, c))
+	print(string.format("%s -> %s/", t, c))
 end
 
 M.clean = function(t)
@@ -14,8 +14,8 @@ end
 
 M.import = function(c, t)
 	M.clean(string.format("./%s", t))
-	os.execute(string.format("/bin/cp -r %s%s ./", c, t))
-	print(string.format("%s%s -> %s", c, t, t))
+	os.execute(string.format("/bin/cp -r %s/%s ./", c, t))
+	print(string.format("%s/%s -> %s", c, t, t))
 end
 
 M.check_backup = function()
@@ -41,10 +41,10 @@ M.backup = function()
 	os.execute(string.format("mkdir -p %s/import && mkdir -p %s/export", undo, undo))
 	print("Backup in progess")
 	for k, v in pairs(d) do
-		for i in pairs(v) do
+		for _, w in pairs(v) do
 			local t = M.gen_path(k)
-			os.execute(string.format("cp -r %s%s %s/import/", t, v[i], undo))
-			os.execute(string.format("cp -r ./%s %s/export/", v[i], undo))
+			os.execute(string.format("cp -r %s%s %s/import/", t, w, undo))
+			os.execute(string.format("cp -r ./%s %s/export/", w, undo))
 		end
 	end
 	print("Backup finished")
@@ -61,8 +61,7 @@ end
 M.iter_dir = function(f)
 	for k, v in pairs(d) do
 		for i, _ in pairs(v) do
-			local t = M.gen_path(k)
-			f(t, v[i])
+			f(k, v[i])
 		end
 	end
 end
@@ -80,9 +79,9 @@ end
 
 M.get_path = function(t)
 	for k, v in pairs(d) do
-		for i in pairs(v) do
-			if t == v[i] then
-				return M.gen_path(k)
+		for _, w in pairs(v) do
+			if t == w then
+				return k
 			end
 		end
 	end

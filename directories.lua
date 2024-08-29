@@ -1,10 +1,10 @@
 local M = {}
 
-M.home = {
+M["~"] = {
 	".bashrc",
 }
 
-M.config = {
+M["~/.config"] = {
 	"wezterm",
 	"nvim",
 }
