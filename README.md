@@ -30,5 +30,5 @@ Example: Import NeoVim to the repo
 In the `directories.lua` file configs can be added, they are discerned by their parent directory (i.e. `~/.config/`) and then the config name.
 
 # ToDo
-- [ ] Refactor `directories.lua` to be per directory
+- [ ] Refactor `directories.lua` to be per directory [#1](/../../issues/1)
 - [ ] Undo function
