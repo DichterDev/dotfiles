@@ -2,6 +2,7 @@ local M = {}
 
 M["~"] = {
 	".bashrc",
+	".zshrc",
 }
 
 M["~/.config"] = {
