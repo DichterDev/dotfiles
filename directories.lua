@@ -8,6 +8,7 @@ M["~"] = {
 M["~/.config"] = {
 	"wezterm",
 	"nvim",
+	"starship.toml",
 }
 
 return M
