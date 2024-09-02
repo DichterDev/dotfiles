@@ -196,3 +196,5 @@ require('mason-lspconfig').setup {
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
   severity_sort = true,
 })
+
+require 'custom.configs.lsp.languages'

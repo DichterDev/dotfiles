@@ -1,5 +1,16 @@
 return {
   {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    opt = {
+      transparent = true,
+      styles = {
+        sidebars = 'transparent',
+        floats = 'transparent',
+      },
+    },
+  },
+  {
     'akinsho/bufferline.nvim',
     version = '*',
     dependencies = 'nvim-tree/nvim-web-devicons',
