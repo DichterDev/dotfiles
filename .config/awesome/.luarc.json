@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/lua-language-server/master/schemas/json.schemas/luarc.json",
+  "workspace": {
+    "library": [
+      "/usr/share/awesome/lib"
+    ]
+  },
+  "diagnostics": {
+    "globals": [
+      "awesome",
+      "client",
+      "screen",
+      "tag",
+      "mouse",
+      "root"
+    ]
+  },
+  "runtime": {
+    "version": "Lua 5.3"
+  }
+}
+
