@@ -1,0 +1,10 @@
+{
+  "runtime": {
+    "version": "LuaJIT",
+    "pathStrict": true
+  },
+  "diagnostics.globals": ["vim", "MiniDeps"],
+  "type": {
+    "checkTableShape": true
+  }
+}
