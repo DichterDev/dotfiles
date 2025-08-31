@@ -1,9 +1,6 @@
-local M = {}
-
-M.TERM = "kitty"
-M.MOD = "Mod4"
-M.SPACE = "Space"
-M.SHIFT = "Shift"
-M.CTRL = "Control"
-
-return M
+TERM = "kitty"
+MOD = "Mod4"
+SPACE = "Space"
+SHIFT = "Shift"
+CTRL = "Control"
+RETURN = "Return"
