@@ -1,8 +1,7 @@
 local map = vim.keymap.set
 
--- Normal mode keymaps
--- Exit insert mode quicker
 map("i", "jk", "<Esc>", { desc = "Exit insert mode" })
+map("t", "jk", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- Ex
 map("n", "<leader>x", ":Ex<CR>", { desc = "Ex" })
@@ -37,18 +36,19 @@ map("n", "<leader>Q", ":qa!<CR>", { desc = "Quit all without saving" })
 map("v", "<", "<gv", { desc = "Unindent (Visual)" })
 map("v", ">", ">gv", { desc = "Indent (Visual)" })
 
--- LSP keymaps (will be overridden or supplemented by LSP config)
--- These are just placeholders
-map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-map("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })
-map("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
-map("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
-map("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
-map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
-map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
-map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, { desc = "Format buffer" })
+-- LSP
+map("n", "gd", vim.lsp.buf.definition, { desc = "[g]o [d]efinition" })
+map("n", "gr", vim.lsp.buf.references, { desc = "[g]o [r]efrences" })
+map("n", "gD", vim.lsp.buf.declaration, { desc = "[g]o [D]eclarations" })
+map("n", "gi", vim.lsp.buf.implementation, { desc = "[g]o [i]mplementation" })
+map("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
+map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "[r]e[n]ame" })
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[c]ode [a]ctions" })
+map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, { desc = "[f]ormat buffer" })
 
 -- Diagnostics
-map("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
-map("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
 map("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+
+-- Terminal
+map("n", "<leader>vt", [[<cmd>vsplit | term<CR>A]], { desc = "[v]ertical [t]erminal" })
+map("n", "<leader>ht", [[<cmd>split | term<CR>A]], { desc = "[h]orizontal [t]erminal" })

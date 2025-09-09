@@ -3,7 +3,7 @@
     "version": "LuaJIT",
     "pathStrict": true
   },
-  "diagnostics.globals": ["vim", "MiniDeps"],
+  "diagnostics.globals": ["vim"],
   "type": {
     "checkTableShape": true
   }
