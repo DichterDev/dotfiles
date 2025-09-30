@@ -1,30 +1,9 @@
 local awful = require("awful")
+local lain = require("lain")
 
-local keymap = {}
-local opt = require("config.options")
+local M = {}
 
-keymap.client = {
-  {
-    {},
-    "f",
-    function (c)
-      c.fullscreen = not c.fullscreen
-      c:raise()
-    end,
-    "toggle fullscreen"
-  },
-  {
-    {},
-    "q",
-    function (c)
-      c:kill()
-    end,
-    "close",
-  },
-  {
-    { opt.CTRL },
-    opt.SPACE,
-    awful.client.floating.toggle,
-    "toggle floating",
-  },
+M.client = {
+  {{}, "f", lain.util.magnify_client, "magnify client",},
+  {{}, "q", function (c) c:kill() end, "close",},
 }

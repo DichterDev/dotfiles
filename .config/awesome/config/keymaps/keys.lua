@@ -1,0 +1,6 @@
+SUPER = "Mod4"
+SPACE = "Space"
+CTRL = "Control"
+ALT = "Mod1"
+SHIFT = "Shift"
+RETURN = "Return"
