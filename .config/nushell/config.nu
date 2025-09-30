@@ -1,7 +1,11 @@
+# CATPPUCCIN
+source ./catppuccin.nu
+
+# ALIASES
+source ./alias.nu
+
 $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
-
-source ($nu.config-path | path dirname | path join "alias.nu")
 
 # STARSHIP
 mkdir ($nu.data-dir | path join "vendor/autoload")
