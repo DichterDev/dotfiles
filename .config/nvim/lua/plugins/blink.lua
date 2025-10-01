@@ -36,7 +36,7 @@ return {
         draw = { columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" }, }, treesitter = { "lsp" }, },
       }
     },
-    signature = {enabled = true, window = { border = "rounded" },},
+    signature = { enabled = true, window = { border = "rounded" }, },
     sources = {
       default = { "lazydev", "lsp", "path", "snippets", "buffer" },
       providers = {

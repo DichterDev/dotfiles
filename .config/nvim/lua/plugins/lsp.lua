@@ -3,7 +3,8 @@ return {
   dependencies = { "saghen/blink.cmp" },
   opts = {
     servers = {
-      lua_ls = {}
+      lua_ls = {},
+      jdtls = {},
     }
   },
   config = function(_, opts)
