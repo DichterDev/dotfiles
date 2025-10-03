@@ -33,7 +33,9 @@ return {
         "html-lsp",
         "css-lsp",
         "dockerls",
-        "jdtls"
+        "java-test",
+        "jdtls",
+        "java-debug-adapter",
       },
     }
   }

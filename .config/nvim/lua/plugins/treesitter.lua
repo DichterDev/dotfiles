@@ -1,13 +1,26 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
-  config = function ()
+  config = function()
     require("nvim-treesitter.configs").setup({
-      ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "query", "javascript", "typescript", "html", "css", "python" },
+      ensure_installed = {
+        "c",
+        "cpp",
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+        "javascript",
+        "typescript",
+        "html",
+        "css",
+        "python",
+        "java"
+      },
       sync_install = false,
       auto_install = true,
       highlight = {
-        enable = true, -- `false` will disable the whole extension
+        enable = true,            -- `false` will disable the whole extension
         disable = { "markdown" }, -- Disable treesitter for markdown for better compatibility with markdown plugins
       },
       indent = { enable = true },

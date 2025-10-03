@@ -2,9 +2,9 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = { "saghen/blink.cmp" },
   opts = {
+    setup = { jdtls = function() return true end },
     servers = {
       lua_ls = {},
-      jdtls = {},
     }
   },
   config = function(_, opts)

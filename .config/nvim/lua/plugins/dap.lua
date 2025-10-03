@@ -15,6 +15,16 @@ return {
       for _, keymap in pairs(keymaps) do
         vim.keymap.set("n", keymap[1], keymap[2], { desc = keymap[3] })
       end
+
+      dap.configurations.java = {
+        {
+          type = "java",
+          request = "attach",
+          name = "Debug (Attach) - Remote",
+          hostName = "127.0.0.1",
+          port = 5005,
+        }
+      }
     end
   },
   { "igorlfs/nvim-dap-view",           opts = {} },
