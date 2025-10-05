@@ -836,3 +836,6 @@ client.connect_signal("unmanage", backham)
 tag.connect_signal("property::selected", backham)
 
 -- }}}
+
+awful.spawn("xinput set-prop 12 'libinput Tapping Enabled' 1")
+awful.spawn("picom")
