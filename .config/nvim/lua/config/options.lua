@@ -25,10 +25,15 @@ vim.o.incsearch = true
 vim.o.updatetime = 300 -- Faster update for CursorHold
 vim.o.timeoutlen = 500 -- Decrease mapped sequence timeout
 vim.o.conceallevel = 0 -- Don't conceal by default (useful for markdown)
+vim.o.clipboard = "unnamedplus"
 
 -- Performance
 vim.o.lazyredraw = true
 vim.o.undofile = false
 vim.o.syntax = "on"
 
+-- Advanced UI
 vim.o.winborder = "rounded"
+
+-- SHELL
+vim.o.sh = "/bin/zsh"

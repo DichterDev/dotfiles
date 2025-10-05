@@ -45,6 +45,7 @@ map("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
 map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "[r]e[n]ame" })
 map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[c]ode [a]ctions" })
 map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, { desc = "[f]ormat buffer" })
+map("i", "<C-Space>", function() vim.lsp.completion.get() end, { desc = "show completion" })
 
 -- Diagnostics
 map("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
