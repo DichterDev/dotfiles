@@ -3,18 +3,17 @@ return {
     "darianmorat/gruvdark.nvim",
     lazy = false,
     priority = 1000,
-    config = function ()
+    config = function()
       require("gruvdark").setup({
         transparent = true
       })
-      vim.cmd.colorscheme("gruvdark")
     end,
   },
   {
     "catppuccin/nvim",
     lazy = false,
     priority = 1000,
-    config = function ()
+    config = function()
       require("catppuccin").setup({
         flavour = "macchiato",
         background = {
@@ -31,6 +30,24 @@ return {
           mini = true,
         },
       })
+    end
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    config = function()
+      require("kanagawa").setup({
+        transparent = true,
+        colors = {
+          theme = {
+            all = {
+              ui = {
+                bg_gutter = "none"
+              }
+            }
+          }
+        }
+      })
+      vim.cmd.colorscheme("kanagawa")
     end
   }
 }

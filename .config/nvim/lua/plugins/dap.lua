@@ -11,22 +11,17 @@ return {
         { "<LEFT>",    function() dap.step_out() end,          "DAP step out" },
         { "<UP>",      function() dap.restart_frame() end,     "DAP restart frame" },
       }
-
       for _, keymap in pairs(keymaps) do
         vim.keymap.set("n", keymap[1], keymap[2], { desc = keymap[3] })
       end
-
-      dap.configurations.java = {
-        {
-          type = "java",
-          request = "attach",
-          name = "Debug (Attach) - Remote",
-          hostName = "127.0.0.1",
-          port = 5005,
-        }
-      }
     end
   },
-  { "igorlfs/nvim-dap-view",           opts = {} },
+  {
+    "igorlfs/nvim-dap-view",
+    opts = {},
+    setup = function()
+      vim.keymap.set("n", "<leader>dv", "<cmd>DapViewToggle<cr>", { desc = "DAP View Toggle" })
+    end
+  },
   { "theHamsta/nvim-dap-virtual-text", opts = {} }
 }
