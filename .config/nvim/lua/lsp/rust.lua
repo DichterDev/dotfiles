@@ -24,6 +24,8 @@ return {
         lifetimeElisionHints = { enable = "skip_trivial" },
         reborrowHints = { enable = "always" },
         typeHints = { enable = true },
+        parameterHints = { enable = true },
+        chainingHints = { enable = true },
       },
     },
   }
