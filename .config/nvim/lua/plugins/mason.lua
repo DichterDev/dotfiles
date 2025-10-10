@@ -36,6 +36,7 @@ return {
         "java-test",
         "jdtls",
         "java-debug-adapter",
+        "prettier",
       },
     }
   }
