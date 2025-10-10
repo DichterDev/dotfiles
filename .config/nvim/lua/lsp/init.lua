@@ -1,5 +1,4 @@
 local function setup(server)
-  vim.print(server)
   local defaults = {
     capabilities = require("blink-cmp").get_lsp_capabilities(),
     on_attach = function(client, bufnr)
