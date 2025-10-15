@@ -1,7 +1,8 @@
 {
   "workspace": {
     "library": [
-      "/usr/share/awesome/lib"
+      "/usr/share/awesome/lib",
+      "${3rd}/luv/library"
     ]
   },
   "diagnostics": {
@@ -11,7 +12,8 @@
       "screen",
       "tag",
       "mouse",
-      "root"
+      "root",
+      "lain"
     ]
   },
   "runtime": {

@@ -364,17 +364,6 @@ globalkeys = mytable.join(
     end,
     { description = "cycle with previous/go back", group = "client" }),
 
-  -- Show/hide wibox
-  awful.key({ modkey }, "b", function()
-      for s in screen do
-        s.mywibox.visible = not s.mywibox.visible
-        if s.mybottomwibox then
-          s.mybottomwibox.visible = not s.mybottomwibox.visible
-        end
-      end
-    end,
-    { description = "toggle wibox", group = "awesome" }),
-
   -- On-the-fly useless gaps change
   awful.key({ altkey, "Control" }, "+", function() lain.util.useless_gaps_resize(1) end,
     { description = "increment useless gaps", group = "tag" }),
@@ -412,11 +401,6 @@ globalkeys = mytable.join(
     { description = "increase the number of columns", group = "layout" }),
   awful.key({ modkey, "Control" }, "l", function() awful.tag.incncol(-1, nil, true) end,
     { description = "decrease the number of columns", group = "layout" }),
-  awful.key({ modkey, }, "space", function() awful.layout.inc(1) end,
-    { description = "select next", group = "layout" }),
-  awful.key({ modkey, "Shift" }, "space", function() awful.layout.inc(-1) end,
-    { description = "select previous", group = "layout" }),
-
   awful.key({ modkey, "Control" }, "n", function()
     local c = awful.client.restore()
     -- Focus restored client
@@ -424,95 +408,6 @@ globalkeys = mytable.join(
       c:emit_signal("request::activate", "key.unminimize", { raise = true })
     end
   end, { description = "restore minimized", group = "client" }),
-
-  -- Dropdown application
-  awful.key({ modkey, }, "z", function() awful.screen.focused().quake:toggle() end,
-    { description = "dropdown application", group = "launcher" }),
-
-  -- Widgets popups
-  awful.key({ altkey, }, "c", function() if beautiful.cal then beautiful.cal.show(7) end end,
-    { description = "show calendar", group = "widgets" }),
-  awful.key({ altkey, }, "h", function() if beautiful.fs then beautiful.fs.show(7) end end,
-    { description = "show filesystem", group = "widgets" }),
-  awful.key({ altkey, }, "w", function() if beautiful.weather then beautiful.weather.show(7) end end,
-    { description = "show weather", group = "widgets" }),
-
-  -- Screen brightness
-  awful.key({}, "XF86MonBrightnessUp", function() os.execute("xbacklight -inc 10") end,
-    { description = "+10%", group = "hotkeys" }),
-  awful.key({}, "XF86MonBrightnessDown", function() os.execute("xbacklight -dec 10") end,
-    { description = "-10%", group = "hotkeys" }),
-
-  -- ALSA volume control
-  awful.key({ altkey }, "Up",
-    function()
-      os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
-      beautiful.volume.update()
-    end,
-    { description = "volume up", group = "hotkeys" }),
-  awful.key({ altkey }, "Down",
-    function()
-      os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
-      beautiful.volume.update()
-    end,
-    { description = "volume down", group = "hotkeys" }),
-  awful.key({ altkey }, "m",
-    function()
-      os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
-      beautiful.volume.update()
-    end,
-    { description = "toggle mute", group = "hotkeys" }),
-  awful.key({ altkey, "Control" }, "m",
-    function()
-      os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
-      beautiful.volume.update()
-    end,
-    { description = "volume 100%", group = "hotkeys" }),
-  awful.key({ altkey, "Control" }, "0",
-    function()
-      os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
-      beautiful.volume.update()
-    end,
-    { description = "volume 0%", group = "hotkeys" }),
-
-  -- MPD control
-  awful.key({ altkey, "Control" }, "Up",
-    function()
-      os.execute("mpc toggle")
-      beautiful.mpd.update()
-    end,
-    { description = "mpc toggle", group = "widgets" }),
-  awful.key({ altkey, "Control" }, "Down",
-    function()
-      os.execute("mpc stop")
-      beautiful.mpd.update()
-    end,
-    { description = "mpc stop", group = "widgets" }),
-  awful.key({ altkey, "Control" }, "Left",
-    function()
-      os.execute("mpc prev")
-      beautiful.mpd.update()
-    end,
-    { description = "mpc prev", group = "widgets" }),
-  awful.key({ altkey, "Control" }, "Right",
-    function()
-      os.execute("mpc next")
-      beautiful.mpd.update()
-    end,
-    { description = "mpc next", group = "widgets" }),
-  awful.key({ altkey }, "0",
-    function()
-      local common = { text = "MPD widget ", position = "top_middle", timeout = 2 }
-      if beautiful.mpd.timer.started then
-        beautiful.mpd.timer:stop()
-        common.text = common.text .. lain.util.markup.bold("OFF")
-      else
-        beautiful.mpd.timer:start()
-        common.text = common.text .. lain.util.markup.bold("ON")
-      end
-      naughty.notify(common)
-    end,
-    { description = "mpc on/off", group = "widgets" }),
 
   -- Copy primary to clipboard (terminals to gtk)
   awful.key({ modkey }, "c", function() awful.spawn.with_shell("xsel | xsel -i -b") end,
@@ -522,31 +417,10 @@ globalkeys = mytable.join(
     { description = "copy gtk to terminal", group = "hotkeys" }),
 
   -- User programs
-  awful.key({ modkey }, "q", function() awful.spawn(browser) end,
+  awful.key({ modkey }, "b", function() awful.spawn(browser) end,
     { description = "run browser", group = "launcher" }),
-
-  -- Default
-  --[[ Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"}),
-    --]]
-  --[[ dmenu
-    awful.key({ modkey }, "x", function ()
-            os.execute(string.format("dmenu_run -i -fn 'Monospace' -nb '%s' -nf '%s' -sb '%s' -sf '%s'",
-            beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
-        end,
-        {description = "show dmenu", group = "launcher"}),
-    --]]
-  -- alternatively use rofi, a dmenu-like application with more features
-  -- check https://github.com/DaveDavenport/rofi for more details
-  --[[ rofi
-    awful.key({ modkey }, "x", function ()
-            os.execute(string.format("rofi -show %s -theme %s",
-            'run', 'dmenu'))
-        end,
-        {description = "show rofi", group = "launcher"}),
-    --]]
-  -- Prompt
+  awful.key({ modkey }, "space", function() awful.spawn.with_shell("rofi -show drun") end,
+    { description = "run browser", group = "launcher" }),
   awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
     { description = "run prompt", group = "launcher" }),
 
@@ -572,7 +446,7 @@ clientkeys = mytable.join(
       c:raise()
     end,
     { description = "toggle fullscreen", group = "client" }),
-  awful.key({ modkey, "Shift" }, "c", function(c) c:kill() end,
+  awful.key({ modkey }, "q", function(c) c:kill() end,
     { description = "close", group = "client" }),
   awful.key({ modkey, "Control" }, "space", awful.client.floating.toggle,
     { description = "toggle floating", group = "client" }),

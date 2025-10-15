@@ -76,7 +76,7 @@ end)
 
 -- TODO: #theme
 -- screen.connect_signal("request::desktop_decoration", function(s)
---   awful.tag({ "dev", "web", "misc", "4", "5" }, s, awful.layout.layouts[1])
+--   awful.tag({ "dev", "web", "misc" }, s, awful.layout.layouts[1])
 --
 --   -- TODO: replace with dmenu
 --   s.mypromptbox = awful.widget.prompt()

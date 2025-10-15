@@ -6,7 +6,7 @@ local M = {}
 
 M.client = {
   { {}, "f", lain.util.magnify_client,           "magnify client" },
-  { {}, "q", function(c) c:kill() end,           "close client" },
+  { {}, "q", function(c) c:kill() end,           "quit client" },
   { {}, "n", function(c) c.minimized = true end, "minimize client" },
   { {}, "m", function(c)
     c.maximized = not c.maximized
