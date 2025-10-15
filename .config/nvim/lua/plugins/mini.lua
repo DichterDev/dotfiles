@@ -14,6 +14,7 @@ return {
       require("mini.notify").setup({})
       require("mini.icons").setup({})
       require("mini.trailspace").setup({})
+      require("mini.align").setup({})
     end
   },
 }

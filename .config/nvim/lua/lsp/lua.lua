@@ -7,6 +7,12 @@ return {
       runtime = {
         version = "LuaJIT"
       },
+      completion = {
+        callSnippet = "Replace", -- makes :method() completion nicer
+      },
+      hint = {
+        enable = true,
+      },
     }
   }
 }

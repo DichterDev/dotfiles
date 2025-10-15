@@ -1,3 +1,12 @@
+local function set_pmenu_transparent()
+  vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  -- vim.api.nvim_set_hl(0, "PmenuSbar", { bg = "none" })
+  vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+  vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "none" })
+  vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { bg = "none" })
+end
+
 return {
   {
     "darianmorat/gruvdark.nvim",
@@ -7,6 +16,7 @@ return {
       require("gruvdark").setup({
         transparent = true
       })
+      set_pmenu_transparent()
     end,
   },
   {
@@ -30,6 +40,7 @@ return {
           mini = true,
         },
       })
+      set_pmenu_transparent()
     end
   },
   {
@@ -48,6 +59,7 @@ return {
         }
       })
       vim.cmd.colorscheme("kanagawa")
+      set_pmenu_transparent()
     end
   }
 }

@@ -6,6 +6,9 @@ map("t", "jk", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 -- Ex
 map("n", "<leader>x", ":Ex<CR>", { desc = "Ex" })
 
+-- Select all
+map("n", "<C-a>", "ggVG", { desc = "Visual select all" })
+
 -- Navigation
 map("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 map("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
@@ -45,11 +48,11 @@ map("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
 map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "[r]e[n]ame" })
 map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[c]ode [a]ctions" })
 map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, { desc = "[f]ormat buffer" })
-map("i", "<C-Space>", function() vim.lsp.completion.get() end, { desc = "show completion" })
 
 -- Diagnostics
 map("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
+
 -- Terminal
-map("n", "<leader>vt", [[<cmd>vsplit | term<CR>A]], { desc = "[v]ertical [t]erminal" })
-map("n", "<leader>ht", [[<cmd>split | term<CR>A]], { desc = "[h]orizontal [t]erminal" })
+map("n", "<leader>vt", ":vsplit | term<CR>", { desc = "[v]ertical [t]erminal" })
+map("n", "<leader>ht", ":vsplit | term<CR>", { desc = "[h]orizontal [t]erminal" })

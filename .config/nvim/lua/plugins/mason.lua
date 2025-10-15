@@ -37,6 +37,7 @@ return {
         "jdtls",
         "java-debug-adapter",
         "prettier",
+        "marksman"
       },
     }
   }

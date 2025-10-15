@@ -34,6 +34,7 @@ vim.o.syntax = "on"
 
 -- Advanced UI
 vim.o.winborder = "rounded"
+vim.o.pumblend = 30
 
 -- SHELL
 vim.o.sh = "/bin/zsh"

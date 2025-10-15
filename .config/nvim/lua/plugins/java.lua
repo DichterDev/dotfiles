@@ -1,8 +1,11 @@
 return {
+  --- @module "lazy"
+  --- @type LazySpec
   {
     "mfussenegger/nvim-jdtls",
     dependencies = { "mason-org/mason.nvim", "saghen/blink.cmp" },
     ft = { "java" },
+    ---@module "jdtls"
     opts = function()
       vim.env.JAVA_HOME = "/usr/lib/jvm/java-21-openjdk"
       local cmd = { vim.fn.exepath("jdtls") }
