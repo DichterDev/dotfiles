@@ -1,9 +1,16 @@
 # SOURCE
 alias src="exec fish"
 
+# SYSTEMCTL
+alias sv="sudo systemctl"
+
+# KITTENS
+alias ssh="kitten ssh"
+alias icat="kitten icat"
+
 # LS
-alias ls="eza -1F --git --icons --group-directories-first --time-style=long-iso"
-alias la="ls -alh"
+alias l="eza -1F --git --icons --group-directories-first --time-style=long-iso"
+alias la="l -alh"
 alias lt="la -T --level=2"
 
 # GIT
@@ -11,6 +18,13 @@ alias ga="git add"
 alias gs="git status"
 alias gd="git diff"
 alias gcm="git commit -m"
+
+# DOCKER
+alias dps="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}'"
+alias dcu="docker compose up -d"
+alias dcuf="docker compose up -d --force-recreate"
+alias dcr="docker compose restart"
+alias dcd="docker compose down"
 
 # RSYNC
 alias cp="rsync -aP"
