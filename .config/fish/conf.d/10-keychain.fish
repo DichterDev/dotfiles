@@ -3,6 +3,7 @@
 if command -v keychain >/dev/null
     set -l key_files ~/.ssh/id_*
     set -l private_keys
+
     for file in $key_files
         if string match -- "*id_*.*" "$file" >/dev/null
             continue
@@ -11,8 +12,6 @@ if command -v keychain >/dev/null
     end
 
     if test (count $private_keys) -gt 0
-        set -l kc_out keychain --eval -Q --quiet $private_keys --nogui | source
-        set -l fish_commands (echo "$kc_out" | awk '{gsub(/;/, ""); print "set -gx "$1}' | string collect)
-        eval $fish_commands
+        keychain --eval -Q --quiet $private_keys | source
     end
 end

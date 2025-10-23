@@ -1,0 +1,1 @@
+set SHELL /bin/fish
