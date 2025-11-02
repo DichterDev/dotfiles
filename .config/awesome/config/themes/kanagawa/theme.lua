@@ -26,13 +26,13 @@ theme.fg_urgent = c.fujiWhite
 theme.fg_minimize = c.sumiInk4
 
 theme.bg_normal = c.sumiInk1
-theme.bg_focus = c.waveBlue1 -- Use selection bg for focused window
+theme.bg_focus = c.waveAqua1 -- Use selection bg for focused window
 theme.bg_urgent = c.samuraiRed
 theme.bg_minimize = c.sumiInk3
 
 theme.border_width = 2
 theme.border_normal = c.sumiInk4
-theme.border_focus = c.crystalBlue
+theme.border_focus = c.waveAqua1
 theme.border_marked = c.roninYellow
 
 -- :: Gaps
@@ -43,7 +43,7 @@ theme.taglist_fg_normal = c.fujiWhite
 theme.taglist_bg_normal = c.sumiInk1
 
 theme.taglist_fg_focus = c.sumiInk1
-theme.taglist_bg_focus = c.crystalBlue
+theme.taglist_bg_focus = c.waveAqua1
 
 theme.taglist_fg_urgent = c.sumiInk1
 theme.taglist_bg_urgent = c.samuraiRed
@@ -56,7 +56,7 @@ theme.tasklist_fg_normal = c.fujiWhite
 theme.tasklist_bg_normal = c.sumiInk1
 
 theme.tasklist_fg_focus = c.sumiInk1
-theme.tasklist_bg_focus = c.crystalBlue
+theme.tasklist_bg_focus = c.waveAqua1
 
 theme.tasklist_fg_urgent = c.sumiInk1
 theme.tasklist_bg_urgent = c.samuraiRed
