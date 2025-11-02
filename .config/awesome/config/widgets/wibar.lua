@@ -2,13 +2,18 @@ require("config.bindings.keys")
 local awful = require("awful")
 local wibox = require("wibox")
 
-keyboardlayout = awful.widget.keyboardlayout()
+local keyboardlayout = awful.widget.keyboardlayout()
+local textclock = wibox.widget.textclock()
 
--- Create a textclock widget
-textclock = wibox.widget.textclock()
+local function tag_filter(t)
+  if t.index <= 3 then
+    return true
+  end
+  return t.occupied or t.selected
+end
 
 screen.connect_signal("request::desktop_decoration", function(s)
-  awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+  awful.tag({ "dev", "web", "misc", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
   s.promptbox = awful.widget.prompt()
 
@@ -24,7 +29,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
   s.taglist = awful.widget.taglist {
     screen  = s,
-    filter  = awful.widget.taglist.filter.all,
+    filter  = tag_filter,
     buttons = {
       awful.button({}, 1, function(t) t:view_only() end),
       awful.button({ SUPER }, 1, function(t)
