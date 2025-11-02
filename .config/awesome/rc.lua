@@ -30,7 +30,13 @@ end)
 
 -- {{{ Theme
 
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+local themes = {
+  "kanagawa",
+  "catppuccin",
+  "gruvdark"
+}
+
+beautiful.init(gears.filesystem.get_configuration_dir() .. "config/themes/" .. themes[1] .. "/theme.lua")
 beautiful.useless_gap = 5
 
 -- }}}
