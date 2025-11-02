@@ -28,9 +28,15 @@ end)
 
 -- }}}
 
--- {{{ Variable definitions
+-- {{{ Theme
 
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.useless_gap = 5
+
+-- }}}
+
+-- {{{ Variable definitions
+
 
 TERM = os.getenv("TERM") or "kitty"
 BROWSER = "firefox"
@@ -43,9 +49,11 @@ EDITOR = "nvim"
 -- }}}
 
 -- {{{ Menu
+
 require("config.widgets.menu")
 
-menubar.utils.terminal = TERM -- Set the terminal for applications that require it
+menubar.utils.terminal = TERM
+
 -- }}}
 
 -- {{{ Tag layout
