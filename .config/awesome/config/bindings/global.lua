@@ -43,9 +43,10 @@ local M = {
     { { CTRL }, "k", function() awful.screen.focus_relative(-1) end, "focus the previous screen", }
   },
   launcher = {
-    { {}, SPACE,  function() awful.spawn(APP_LAUNCHER) end, "open app launcher" },
-    { {}, RETURN, function() awful.spawn(TERM) end,         "open terminal" },
-    { {}, "b",    function() awful.spawn(BROWSER) end,      "open browser" }
+    { {},        SPACE,  function() awful.spawn(APP_LAUNCHER) end, "open app launcher" },
+    { {},        RETURN, function() awful.spawn(TERM) end,         "open terminal" },
+    { {},        "b",    function() awful.spawn(BROWSER) end,      "open browser" },
+    { { SHIFT }, "s",    function() awful.spawn(SCREENSHOT) end,   "open screenshot util" }
   },
 }
 

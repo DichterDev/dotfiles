@@ -50,6 +50,7 @@ NETW_INT = "en12p0s"
 APP_LAUNCHER = "rofi -show drun"
 SHELL = "/bin/fish"
 EDITOR = "nvim"
+SCREENSHOT = "flameshot gui"
 -- TODO: FILEBROWSER =
 
 -- }}}
