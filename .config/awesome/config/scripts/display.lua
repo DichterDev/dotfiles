@@ -2,6 +2,8 @@ local awful = require("awful")
 local gears = require("gears")
 local rofi = require("config.scripts.rofi")
 
+local async = awful.spawn.easy_async_with_shell
+
 local options = {
   "Mirror",
   "Extend Left",
@@ -23,17 +25,16 @@ local function parse_xrandr(stdout)
 end
 
 local function apply_layout(choice, source, target)
-  local cmd = "xrandr --ouput " .. source " --auto"
-  choice = choice:gsub("[\n\r]$", "")
+  local cmd = "xrandr --ouput " .. source .. " --auto"
 
   if choice == options[1] then
-    cmd = cmd .. "--output " .. target .. "--same-as " .. source
+    cmd = cmd .. " --output " .. target .. "--same-as " .. source
   elseif choice == options[2] then
-    cmd = cmd .. "--output " .. target .. "--left-of " .. source
+    cmd = cmd .. " --output " .. target .. "--left-of " .. source
   elseif choice == options[3] then
-    cmd = cmd .. "--output " .. target .. "--right-of " .. source
+    cmd = cmd .. " --output " .. target .. "--right-of " .. source
   elseif choice == options[4] then
-    cmd = cmd .. "--output " .. target .. "--off"
+    cmd = cmd .. " --off"
   end
 
   if cmd ~= "" then
@@ -46,13 +47,26 @@ local function apply_layout(choice, source, target)
 end
 
 M.run = function()
-  local source = nil
-  local target = nil
+  local displays = nil
 
-  local function set_source(display) source = display end
-  local function set_target(display) source = display end
+  async(
+    "xrandr --query",
+    function(stdout)
+      displays = parse_xrandr(stdout)
 
-  rofi.run("Select Source", options, set_source)
+      rofi.run("Select Source", displays, function(source)
+        rofi.run("Select Option", options, function(opt)
+          if opt == options[4] then
+            apply_layout(opt, source, {})
+            return
+          end
+          rofi.run("Select Target", displays, function(target)
+            apply_layout(opt, source, target)
+          end)
+        end)
+      end)
+    end
+  )
 end
 
 return M

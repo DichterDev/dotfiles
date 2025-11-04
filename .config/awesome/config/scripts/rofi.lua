@@ -2,23 +2,15 @@ local awful = require("awful")
 
 local M = {}
 
-local function options_builder(options)
-  local s = ""
-  for _, opt in ipairs(options) do
-    s = s .. opt .. "\n"
-  end
-  return s
-end
-
-M.run = function(title, options, callback)
-  local cmd = "rofi -show drun -p " .. title .. "-i"
-  local opts = options_builder(options)
+M.run = function(prompt, options, callback)
+  local options_str = table.concat(options, "\n")
+  local rofi_cmd = "rofi -dmenu -p '" .. prompt .. "' -i"
 
   awful.spawn.easy_async_with_shell(
-    "echo -e '" .. opts .. "' | " .. cmd,
+    "echo -e '" .. options_str .. "' | " .. rofi_cmd,
     function(choice)
       if choice and choice ~= "" then
-        callback(choice)
+        callback(choice:gsub("[\n\r]$", ""))
       end
     end
   )
