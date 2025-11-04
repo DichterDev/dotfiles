@@ -1,6 +1,7 @@
 require("config.bindings.keys")
 
 local awful = require("awful")
+local display = require("config.scripts.display")
 
 local function restore_client()
   local c = awful.client.restore()
@@ -46,7 +47,8 @@ local M = {
     { {},        SPACE,  function() awful.spawn(APP_LAUNCHER) end, "open app launcher" },
     { {},        RETURN, function() awful.spawn(TERM) end,         "open terminal" },
     { {},        "b",    function() awful.spawn(BROWSER) end,      "open browser" },
-    { { SHIFT }, "s",    function() awful.spawn(SCREENSHOT) end,   "open screenshot util" }
+    { { SHIFT }, "s",    function() awful.spawn(SCREENSHOT) end,   "open screenshot util" },
+    { {},        "p",    function() display.run() end,             "open display selection" }
   },
 }
 
