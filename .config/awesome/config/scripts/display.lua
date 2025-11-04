@@ -1,6 +1,7 @@
 local awful = require("awful")
 local gears = require("gears")
 local rofi = require("config.scripts.rofi")
+local naughty = require("naughty")
 
 local async = awful.spawn.easy_async_with_shell
 
@@ -25,19 +26,23 @@ local function parse_xrandr(stdout)
 end
 
 local function apply_layout(choice, source, target)
-  local cmd = "xrandr --ouput " .. source .. " --auto"
+  local cmd = "xrandr --output " .. source .. " --auto"
 
   if choice == options[1] then
-    cmd = cmd .. " --output " .. target .. "--same-as " .. source
+    cmd = cmd .. " --output " .. target .. " --auto --same-as " .. source
   elseif choice == options[2] then
-    cmd = cmd .. " --output " .. target .. "--left-of " .. source
+    cmd = cmd .. " --output " .. target .. " --left-of " .. source
   elseif choice == options[3] then
-    cmd = cmd .. " --output " .. target .. "--right-of " .. source
+    cmd = cmd .. " --output " .. target .. " --right-of " .. source
   elseif choice == options[4] then
     cmd = cmd .. " --off"
   end
 
   if cmd ~= "" then
+    naughty.notify({
+      title = "Display Select",
+      text = cmd
+    })
     awful.spawn.with_shell(cmd)
     gears.timer.start_new(1, function()
       awesome.restart()
