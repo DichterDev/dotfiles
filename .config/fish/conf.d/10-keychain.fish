@@ -12,6 +12,6 @@ if command -v keychain >/dev/null
     end
 
     if test (count $private_keys) -gt 0
-        keychain --eval -Q --quiet $private_keys | source
+        keychain --eval -Q --nogui $private_keys | source
     end
 end

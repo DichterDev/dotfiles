@@ -18,15 +18,16 @@ alias ga="git add"
 alias gs="git status"
 alias gd="git diff"
 alias gcm="git commit -m"
+alias gco="git checkout"
+alias gp="git push"
+
+# NVIM
+alias nv="nvim"
 
 # DOCKER
+alias dc="docker compose"
 alias dps="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}'"
 alias dcu="docker compose up -d"
 alias dcuf="docker compose up -d --force-recreate"
 alias dcr="docker compose restart"
 alias dcd="docker compose down"
-
-# RSYNC
-alias cp="rsync -aP"
-alias mv="rsync -aP --remove-source-files"
-alias scp="rsync -avzP --rsh=ssh"
