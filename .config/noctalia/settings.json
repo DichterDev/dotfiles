@@ -29,8 +29,9 @@
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
+            "eDP-1"
         ],
-        "outerCorners": true,
+        "outerCorners": false,
         "position": "top",
         "showCapsule": true,
         "widgets": {
@@ -287,7 +288,7 @@
         "videoSource": "portal"
     },
     "settingsVersion": 21,
-    "setupCompleted": false,
+    "setupCompleted": true,
     "templates": {
         "alacritty": false,
         "code": false,
