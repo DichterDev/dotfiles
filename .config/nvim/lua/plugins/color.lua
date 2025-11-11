@@ -1,11 +1,29 @@
-local function set_pmenu_transparent()
-  vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
-  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-  -- vim.api.nvim_set_hl(0, "PmenuSbar", { bg = "none" })
-  vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
-  vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "none" })
-  vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { bg = "none" })
+local function set_transparent()
+  local function set_hl(name)
+    vim.api.nvim_set_hl(0, name, { bg = "none" })
+  end
+
+  -- === FLOATS ===
+  set_hl("NormalFloat")
+  set_hl("FloatBorder")
+  set_hl("FloatTitle")
+
+  -- === BLINK.CMP ===
+  set_hl("BlinkCmpMenu")
+  set_hl("BlinkCmpMenuBorder")
+  set_hl("BlinkCmpDoc")
+  set_hl("BlinkCmpDocBorder")
+
+  -- === STANDARD VIM POPUPS ===
+  set_hl("Pmenu")
+  set_hl("PmenuSbar")
+  set_hl("PmenuThumb")
 end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = set_transparent
+})
 
 return {
   {
@@ -16,7 +34,6 @@ return {
       require("gruvdark").setup({
         transparent = true
       })
-      set_pmenu_transparent()
     end,
   },
   {
@@ -40,7 +57,6 @@ return {
           mini = true,
         },
       })
-      set_pmenu_transparent()
     end
   },
   {
@@ -56,10 +72,9 @@ return {
               }
             }
           }
-        }
+        },
       })
       vim.cmd.colorscheme("kanagawa")
-      set_pmenu_transparent()
     end
   }
 }
