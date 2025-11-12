@@ -83,6 +83,11 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {}
 
 window-rule {
+  match app-id="firefox"
+  open-maximized true
+}
+
+window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }

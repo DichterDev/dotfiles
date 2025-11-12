@@ -101,7 +101,7 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "id": "Battery",
                     "warningThreshold": 30
                 },
