@@ -22,10 +22,10 @@ vim.o.hlsearch = true
 vim.o.incsearch = true
 
 -- Neovim specific
-vim.o.updatetime = 300 -- Faster update for CursorHold
-vim.o.timeoutlen = 500 -- Decrease mapped sequence timeout
-vim.o.conceallevel = 0 -- Don't conceal by default (useful for markdown)
-vim.o.clipboard = "unnamedplus"
+vim.o.updatetime = 300
+vim.o.timeoutlen = 500
+vim.o.conceallevel = 0
+-- vim.o.clipboard = "unnamedplus"
 
 -- Performance
 vim.o.lazyredraw = false

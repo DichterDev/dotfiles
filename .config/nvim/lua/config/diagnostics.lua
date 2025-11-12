@@ -1,3 +1,4 @@
+---@type vim.diagnostic.Opts
 local diagnostic_opts = {
   signs = true,
   underline = {
@@ -10,7 +11,7 @@ local diagnostic_opts = {
   severity_sort = true,
   float = {
     border = "rounded",
-    source = "always",
+    source = true,
   },
 }
 

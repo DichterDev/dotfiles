@@ -24,6 +24,15 @@ map("n", "<leader>k", "<C-w>-", { desc = "Decrease window height" })
 -- Clear search highlights
 map("n", "<leader>cs", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
+-- Yanking
+map({ "n", "v" }, "<leader>y", '"+y', { desc = "[y]ank to clipboard" })
+map("n", "<leader>yy", '"+yy', { desc = "[yy]ank to clipboard" })
+map("n", "<leader>Y", '"+y_', { desc = "[Y]ank to clipboard" })
+
+-- Pasting
+map({ "n", "v" }, "<leader>p", '"+p"', { desc = "[p]aste from clipboard" })
+map({ "n", "v" }, "<leader>P", '"+P"', { desc = "[P]aste from clipboard" })
+
 -- Buffer navigation
 map("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 map("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
