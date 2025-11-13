@@ -4,12 +4,12 @@ return {
     opts = {
       ui = {
         icons = {
-          package_installed = '✓',
-          package_pending = '➜',
-          package_uninstalled = '✗',
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗",
         },
         check_outdated_packages_on_open = true,
-        border = 'rounded',
+        border = "rounded",
         width = 0.9,
         height = 0.9,
       }
@@ -29,7 +29,8 @@ return {
         "lua_ls",
         "clangd",
         "rust-analyzer",
-        "pyright",
+        "basedpyright",
+        "ruff",
         "html-lsp",
         "css-lsp",
         "dockerls",
@@ -39,7 +40,8 @@ return {
         "prettier",
         "marksman",
         "fish-lsp",
-        "htmx-lsp"
+        "htmx-lsp",
+        "vscode-spring-boot-tools",
       },
     }
   }
