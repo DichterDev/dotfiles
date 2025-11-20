@@ -3,22 +3,25 @@ return {
     "nvim-mini/mini.nvim",
     version = false,
     config = function()
-      require("mini.statusline").setup({
-        -- vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', { fg = '#a6e3a1', bg = '#1e1e2e', bold = true })
-      })
+      require("mini.statusline").setup({})
       require("mini.pairs").setup({})
       require("mini.ai").setup({})
       require("mini.surround").setup({})
       require("mini.move").setup({})
       require("mini.splitjoin").setup({})
-      require("mini.notify").setup({
-        window = {
-          winblend = 0
-        }
-      })
+      require("mini.notify").setup({ window = { winblend = 0 } })
       require("mini.icons").setup({})
       require("mini.trailspace").setup({})
       require("mini.align").setup({})
+      require("mini.keymap").setup({})
+      require("mini.jump").setup({})
+
+      local map_multistep = require("mini.keymap").map_multistep
+
+      map_multistep("i", "<Tab>", { "pmenu_next" })
+      map_multistep("i", "<S-Tab>", { "pmenu_prev" })
+      map_multistep("i", "<CR>", { "pmenu_accept", "minipairs_cr" })
+      map_multistep("i", "<BS>", { "minipairs_bs" })
     end
   },
 }
