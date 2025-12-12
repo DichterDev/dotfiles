@@ -20,6 +20,11 @@ alias gd="git diff"
 alias gcm="git commit -m"
 alias gco="git checkout"
 alias gp="git push"
+alias gm="git merge"
+alias gma="git merge --abort"
+alias grb="git rebase"
+alias grba="grb --abort"
+alias grbc="grb --continue"
 
 # NVIM
 alias nv="nvim"
