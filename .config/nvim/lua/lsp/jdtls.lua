@@ -1,6 +1,9 @@
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+local workspace_dir = vim.fn.stdpath("data") .. "/jdtls/workspace/" .. project_name
+
 ---@type vim.lsp.Config
 return {
-  cmd = { "jdtls" },
+  cmd = { "jdtls", "--data", workspace_dir },
   settings = {
     java = {
       format = {
