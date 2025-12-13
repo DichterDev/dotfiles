@@ -1,6 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 format = '''
-[╭─](mauve)[](mauve)$directory[](mauve) $all
+[╭─](mauve)$directory $all
 [╰─$battery$character](mauve)
 '''
 
@@ -12,8 +12,8 @@ palette = 'catppuccin_macchiato'
 disabled = true
 
 [directory]
-style = "bg:mauve fg:crust"
-format = "[$path]($style)"
+style = "bg:pink fg:crust"
+format = "[](pink)[$path]($style)[](pink)"
 
 [character]
 success_symbol = '[❯](mauve)[❯](bold teal)[❯](bold flamingo)'
