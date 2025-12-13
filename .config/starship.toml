@@ -1,7 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 format = '''
-[╭─](bold purple)$directory$all
-[╰─$battery$character](bold purple)'''
+[╭─](mauve)[](mauve)$directory[](mauve) $all
+[╰─$battery$character](mauve)
+'''
 
 scan_timeout = 10
 
@@ -10,9 +11,16 @@ palette = 'catppuccin_macchiato'
 [line_break]
 disabled = true
 
+[directory]
+style = "bg:mauve fg:crust"
+format = "[$path]($style)"
+
 [character]
-success_symbol = '[❯](bold lavender)[❯](bold teal)[❯](bold flamingo)'
-error_symbol = '[❯❯❯](bold red)'
+success_symbol = '[❯](mauve)[❯](bold teal)[❯](bold flamingo)'
+error_symbol = '[❯❯❯](red)'
+
+[git_status]
+diverged = '$ahead$behind'
 
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"
