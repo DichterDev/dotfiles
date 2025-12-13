@@ -16,7 +16,7 @@ style = "bg:pink fg:crust"
 format = "[](pink)[$path]($style)[](pink)"
 
 [character]
-success_symbol = '[❯](mauve)[❯](bold teal)[❯](bold flamingo)'
+success_symbol = '[❯](flamingo)[❯](teal)[❯](sapphire)'
 error_symbol = '[❯❯❯](red)'
 
 [git_status]
