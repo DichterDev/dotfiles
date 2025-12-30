@@ -72,7 +72,7 @@ layout {
 }
 
 spawn-sh-at-startup "swaybg -i ~/wallpapers/miku-kageyu.png"
-spawn-sh-at-startup "qs -c noctalia-shell"
+spawn-sh-at-startup "dms run"
 
 hotkey-overlay {
   skip-at-startup
