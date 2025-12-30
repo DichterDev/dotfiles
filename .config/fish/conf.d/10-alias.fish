@@ -2,7 +2,7 @@
 alias src="exec fish"
 
 # SYSTEMCTL
-alias sv="sudo systemctl"
+alias sv="systemctl --user"
 
 # KITTENS
 alias ssh="kitten ssh"
@@ -27,7 +27,7 @@ alias grba="grb --abort"
 alias grbc="grb --continue"
 
 # NVIM
-alias nv="nvim"
+alias nv="nvim ."
 
 # DOCKER
 alias dc="docker compose"
