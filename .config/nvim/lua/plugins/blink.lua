@@ -1,5 +1,4 @@
----@module "lazy"
----@type LazySpec
+---@class LazyPlugin
 return {
   "saghen/blink.cmp",
   build = "cargo build --release",

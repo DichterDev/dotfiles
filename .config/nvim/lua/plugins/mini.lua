@@ -15,6 +15,15 @@ return {
       require("mini.align").setup({})
       require("mini.keymap").setup({})
       require("mini.jump").setup({})
+      require("mini.bracketed").setup({})
+      -- require("mini.files").setup({
+      --   window = { winblend = 0, preview = true },
+      --   options = {
+      --     use_as_default_explorer = false
+      --   }
+      -- })
+
+      -- Map("n", "<leader>x", ":lua MiniFiles.open()<CR>", { desc = "Files" })
 
       local map_multistep = require("mini.keymap").map_multistep
 

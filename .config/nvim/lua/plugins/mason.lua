@@ -29,8 +29,8 @@ return {
         "lua_ls",
         "clangd",
         "rust-analyzer",
-        "basedpyright",
         "ruff",
+        "ty",
         "html-lsp",
         "css-lsp",
         "dockerls",
@@ -42,6 +42,8 @@ return {
         "fish-lsp",
         "htmx-lsp",
         "vscode-spring-boot-tools",
+        "vue-language-server",
+        "tsgo"
       },
     }
   }
