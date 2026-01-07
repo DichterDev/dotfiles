@@ -1,0 +1,41 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-10-07T19:48:58Z",
+  "checkdepends": [],
+  "compressed_size": 3317898,
+  "conflicts": [],
+  "depends": [
+    "binutils",
+    "pcsclite",
+    "util-linux"
+  ],
+  "epoch": 0,
+  "filename": "sbctl-0.18-1-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 10657946,
+  "last_update": "2025-10-07T20:07:47.693Z",
+  "licenses": [
+    "MIT"
+  ],
+  "maintainers": [
+    "Foxboron",
+    "sangy"
+  ],
+  "makedepends": [
+    "asciidoc",
+    "git",
+    "go"
+  ],
+  "optdepends": [],
+  "packager": "Foxboron",
+  "pkgbase": "sbctl",
+  "pkgdesc": "Secure Boot key manager",
+  "pkgname": "sbctl",
+  "pkgrel": "1",
+  "pkgver": "0.18",
+  "provides": [],
+  "replaces": [],
+  "repo": "extra",
+  "url": "https://github.com/Foxboron/sbctl"
+}

@@ -1,0 +1,81 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-12-01T14:52:14Z",
+  "checkdepends": [],
+  "compressed_size": 7940777,
+  "conflicts": [
+    "grub-bios",
+    "grub-common",
+    "grub-efi-x86_64",
+    "grub-emu",
+    "grub-legacy"
+  ],
+  "depends": [
+    "device-mapper",
+    "gettext",
+    "sh",
+    "xz"
+  ],
+  "epoch": 2,
+  "filename": "grub-2:2.14rc1.r54.g29f3131a-2-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 43296766,
+  "last_update": "2025-12-02T08:30:50.858Z",
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "maintainers": [
+    "eworm",
+    "tpowa"
+  ],
+  "makedepends": [
+    "autogen",
+    "device-mapper",
+    "freetype2",
+    "fuse3",
+    "gettext",
+    "git",
+    "help2man",
+    "libusb",
+    "python",
+    "rsync",
+    "sdl",
+    "texinfo",
+    "ttf-dejavu",
+    "wget",
+    "xz"
+  ],
+  "optdepends": [
+    "dosfstools: For grub-mkrescue FAT FS and EFI support",
+    "efibootmgr: For grub-install EFI support",
+    "freetype2: For grub-mkfont usage",
+    "fuse3: For grub-mount usage",
+    "libisoburn: Provides xorriso for generating grub rescue iso using grub-mkrescue",
+    "libusb: For grub-emu USB support",
+    "lzop: For grub-mkrescue LZO support",
+    "mtools: For grub-mkrescue FAT FS support",
+    "os-prober: To detect other OSes when generating grub.cfg in BIOS systems",
+    "sdl: For grub-emu SDL support"
+  ],
+  "packager": "eworm",
+  "pkgbase": "grub",
+  "pkgdesc": "GNU GRand Unified Bootloader (2)",
+  "pkgname": "grub",
+  "pkgrel": "2",
+  "pkgver": "2.14rc1.r54.g29f3131a",
+  "provides": [
+    "grub-bios",
+    "grub-common",
+    "grub-efi-x86_64",
+    "grub-emu"
+  ],
+  "replaces": [
+    "grub-bios",
+    "grub-common",
+    "grub-efi-x86_64",
+    "grub-emu"
+  ],
+  "repo": "core",
+  "url": "https://www.gnu.org/software/grub/"
+}

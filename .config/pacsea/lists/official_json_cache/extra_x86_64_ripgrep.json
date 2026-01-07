@@ -1,0 +1,39 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-10-22T17:16:54Z",
+  "checkdepends": [],
+  "compressed_size": 1549291,
+  "conflicts": [],
+  "depends": [
+    "gcc-libs",
+    "glibc",
+    "pcre2"
+  ],
+  "epoch": 0,
+  "filename": "ripgrep-15.1.0-1-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 5387385,
+  "last_update": "2025-10-24T05:20:24.942Z",
+  "licenses": [
+    "MIT OR Unlicense"
+  ],
+  "maintainers": [
+    "svenstaro",
+    "carsme"
+  ],
+  "makedepends": [
+    "rust"
+  ],
+  "optdepends": [],
+  "packager": "carsme",
+  "pkgbase": "ripgrep",
+  "pkgdesc": "A search tool that combines the usability of ag with the raw speed of grep",
+  "pkgname": "ripgrep",
+  "pkgrel": "1",
+  "pkgver": "15.1.0",
+  "provides": [],
+  "replaces": [],
+  "repo": "extra",
+  "url": "https://github.com/BurntSushi/ripgrep"
+}

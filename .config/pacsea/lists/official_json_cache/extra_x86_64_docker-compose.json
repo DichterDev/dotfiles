@@ -1,0 +1,38 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-12-25T19:10:52Z",
+  "checkdepends": [
+    "docker"
+  ],
+  "compressed_size": 8110380,
+  "conflicts": [],
+  "depends": [],
+  "epoch": 0,
+  "filename": "docker-compose-5.0.1-1-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 28186005,
+  "last_update": "2025-12-25T22:29:51.149Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "maintainers": [
+    "Foxboron",
+    "andrewSC",
+    "lfleischer"
+  ],
+  "makedepends": [
+    "go"
+  ],
+  "optdepends": [],
+  "packager": "Foxboron",
+  "pkgbase": "docker-compose",
+  "pkgdesc": "Fast, isolated development environments using Docker",
+  "pkgname": "docker-compose",
+  "pkgrel": "1",
+  "pkgver": "5.0.1",
+  "provides": [],
+  "replaces": [],
+  "repo": "extra",
+  "url": "https://www.docker.com/"
+}

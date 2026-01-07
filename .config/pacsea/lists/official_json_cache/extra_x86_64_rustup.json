@@ -1,0 +1,61 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-12-16T13:54:30Z",
+  "checkdepends": [],
+  "compressed_size": 3736571,
+  "conflicts": [
+    "cargo",
+    "rust",
+    "rustfmt"
+  ],
+  "depends": [
+    "gcc-libs",
+    "glibc",
+    "xz",
+    "zstd"
+  ],
+  "epoch": 0,
+  "filename": "rustup-1.28.2-4-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 12266197,
+  "last_update": "2025-12-16T13:58:29.633Z",
+  "licenses": [
+    "Apache-2.0",
+    "MIT"
+  ],
+  "maintainers": [
+    "svenstaro",
+    "orhun"
+  ],
+  "makedepends": [
+    "cargo"
+  ],
+  "optdepends": [
+    "gdb: rust-gdb script",
+    "lldb: rust-lldb script"
+  ],
+  "packager": "svenstaro",
+  "pkgbase": "rustup",
+  "pkgdesc": "The Rust toolchain installer",
+  "pkgname": "rustup",
+  "pkgrel": "4",
+  "pkgver": "1.28.2",
+  "provides": [
+    "cargo",
+    "cargo-nightly",
+    "lib32-rust-libs",
+    "rust",
+    "rust-analyzer",
+    "rust-musl",
+    "rust-nightly",
+    "rust-src",
+    "rust-wasm",
+    "rustfmt"
+  ],
+  "replaces": [
+    "cargo-tree"
+  ],
+  "repo": "extra",
+  "url": "https://github.com/rust-lang/rustup.rs"
+}

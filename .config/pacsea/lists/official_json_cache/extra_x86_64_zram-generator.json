@@ -1,0 +1,38 @@
+{
+  "arch": "x86_64",
+  "build_date": "2024-12-09T09:10:58Z",
+  "checkdepends": [],
+  "compressed_size": 339985,
+  "conflicts": [],
+  "depends": [
+    "systemd"
+  ],
+  "epoch": 0,
+  "filename": "zram-generator-1.2.1-1-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 786152,
+  "last_update": "2024-12-09T09:14:39.714Z",
+  "licenses": [
+    "MIT"
+  ],
+  "maintainers": [
+    "felixonmars"
+  ],
+  "makedepends": [
+    "git",
+    "ruby-ronn-ng",
+    "rust"
+  ],
+  "optdepends": [],
+  "packager": "eworm",
+  "pkgbase": "zram-generator",
+  "pkgdesc": "Systemd unit generator for zram devices",
+  "pkgname": "zram-generator",
+  "pkgrel": "1",
+  "pkgver": "1.2.1",
+  "provides": [],
+  "replaces": [],
+  "repo": "extra",
+  "url": "https://github.com/systemd/zram-generator"
+}

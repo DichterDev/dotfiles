@@ -1,0 +1,42 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-11-12T05:48:47Z",
+  "checkdepends": [],
+  "compressed_size": 3710900,
+  "conflicts": [],
+  "depends": [
+    "gcc-libs"
+  ],
+  "epoch": 0,
+  "filename": "rmpc-0.10.0-1-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 13037402,
+  "last_update": "2025-11-12T05:53:52.343Z",
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "maintainers": [
+    "orhun"
+  ],
+  "makedepends": [
+    "cargo"
+  ],
+  "optdepends": [
+    "cava: for visualizer",
+    "ffmpeg: for youtube playback",
+    "python-mutagen: for youtube playback",
+    "ueberzugpp: for alternative album art method",
+    "yt-dlp: for youtube playback"
+  ],
+  "packager": "orhun",
+  "pkgbase": "rmpc",
+  "pkgdesc": "A beautiful and configurable TUI client for MPD",
+  "pkgname": "rmpc",
+  "pkgrel": "1",
+  "pkgver": "0.10.0",
+  "provides": [],
+  "replaces": [],
+  "repo": "extra",
+  "url": "https://mierak.github.io/rmpc/"
+}

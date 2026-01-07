@@ -1,0 +1,1076 @@
+2025-12-30-T23:07:04  INFO logging initialized path=/home/dichter/.config/pacsea/logs/pacsea.log
+2025-12-30-T23:07:04  INFO Pacsea starting dry_run=false
+2025-12-30-T23:07:04  INFO startup timestamp tracking previous=None current=20251231:000704
+2025-12-30-T23:07:04  WARN [Config] settings.conf missing or unreadable, using defaults path=/home/dichter/.config/pacsea/settings.conf
+2025-12-30-T23:07:04  INFO resolved state file paths recent=/home/dichter/.config/pacsea/lists/recent_searches.json install=/home/dichter/.config/pacsea/lists/install_list.json details_cache=/home/dichter/.config/pacsea/lists/details_cache.json index=/home/dichter/.config/pacsea/lists/official_index.json news_read=/home/dichter/.config/pacsea/lists/news_read_urls.json news_read_ids=/home/dichter/.config/pacsea/lists/news_read_ids.json announcement_read=/home/dichter/.config/pacsea/lists/announcement_read.json
+2025-12-30-T23:07:04  INFO Resolved locale: 'en-US' (from settings: '<auto-detect>')
+2025-12-30-T23:07:04  INFO showing version announcement modal current_version="0.7.1" base_version=0.7.1 announcement_version="0.7.1"
+2025-12-30-T23:07:04  INFO attempted to load official index from disk path=/home/dichter/.config/pacsea/lists/official_index.json
+2025-12-30-T23:07:04  INFO [Runtime] Dependency worker started, waiting for requests...
+2025-12-30-T23:07:04  INFO [Runtime] Executor worker started, waiting for requests...
+2025-12-30-T23:07:04  INFO auxiliary workers starting headless=false get_announcement=true updates_refresh_interval=60
+2025-12-30-T23:07:04  INFO queueing combined news feed fetch (startup) installed_names=0
+2025-12-30-T23:07:04  INFO waiting for startup news fetch to complete before starting aggregated feed fetch
+2025-12-30-T23:07:04  INFO fetching remote announcement url=https://gist.githubusercontent.com/Firstp1ck/d2e6016b8d7a90f813a582078208e9bd/raw/announcement.json
+2025-12-30-T23:07:04  INFO refreshing official index in background
+2025-12-30-T23:07:04  INFO additional delay after startup fetch completion additional_delay_ms=1428
+2025-12-30-T23:07:04  INFO loaded theme configuration path=/home/dichter/.config/pacsea/theme.conf
+2025-12-30-T23:07:04  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:07:04  WARN Temp database sync failed
+2025-12-30-T23:07:04  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "endeavouros"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=47
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=43
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=48
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=49
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=46
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=51
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=52
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=46
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=51
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=52
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "omniverse"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=45
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "universe"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=44
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "lib32"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=41
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "galaxy"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=42
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "world"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=41
+2025-12-30-T23:07:04  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "system"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=42
+2025-12-30-T23:07:04  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:07:04  INFO official index updated (names changed) count=15035
+2025-12-30-T23:07:04  INFO announcement fetched successfully id=2025-12-20-nvidia-590-pascal-support
+2025-12-30-T23:07:04  INFO queued remote announcement (modal already open) id=2025-12-20-nvidia-590-pascal-support queue_size=1
+2025-12-30-T23:07:05  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:07:05  INFO Update check completed: found 0 total available updates (after deduplication)
+2025-12-30-T23:07:06  INFO fetch_news_feed start limit=50 include_arch_news=true include_advisories=true include_pkg_updates=true include_aur_comments=true installed_only=false installed_filter=true sort_mode=DateDesc
+2025-12-30-T23:07:06  INFO starting fetch: arch_news=true, advisories=true, pkg_updates=true, aur_comments=true
+2025-12-30-T23:07:06  INFO fetching package updates: installed_count=35, limit=50
+2025-12-30-T23:07:06  INFO fetch_installed_updates: official scan complete, new_packages=30, updated_packages=0, baseline_only=0
+2025-12-30-T23:07:06  INFO fetching AUR comments: installed_count=35, limit=50
+2025-12-30-T23:07:06  INFO fetching arch news...
+2025-12-30-T23:07:07  INFO AUR comments fetch completed: items=21
+2025-12-30-T23:07:08  INFO showing pending announcement id=2025-12-20-nvidia-590-pascal-support
+2025-12-30-T23:07:08  INFO fetched arch news feed bytes=18612
+2025-12-30-T23:07:08  INFO parsed arch news feed count=10
+2025-12-30-T23:07:08  INFO arch news fetch completed: items=10
+2025-12-30-T23:07:08  INFO fetching advisories...
+2025-12-30-T23:07:09  INFO fetched advisories feed status=200 bytes=43444
+2025-12-30-T23:07:09  INFO parsed advisories feed count=15
+2025-12-30-T23:07:09  INFO advisories fetch completed: items=15
+2025-12-30-T23:07:21  INFO installed update feed built emitted=34 new_packages=30 updated_packages=0 aur_new_packages=4 aur_updated_packages=0 baseline_only=0 installed_total=35 aur_candidates=5
+2025-12-30-T23:07:21  INFO package updates fetch completed: items=34
+2025-12-30-T23:07:21  INFO fetch completed, combining results...
+2025-12-30-T23:07:21  INFO fetch_news_feed success total=80 arch=10 advisories=15 updates=34 aur_comments=21
+2025-12-30-T23:07:21  INFO news feed fetched total=80 arch=10 advisories=15 installed_names=35
+2025-12-30-T23:07:21  INFO sending aggregated news feed payload to channel items_count=80
+2025-12-30-T23:07:21  INFO aggregated news feed payload sent successfully
+2025-12-30-T23:07:21  INFO received aggregated news feed payload in event loop items_count=80
+2025-12-30-T23:07:21  INFO starting news continuation worker initial_count=80
+2025-12-30-T23:07:21  INFO news feed updated fetched=80 visible=38 max_age_days=30 installed_only=false arch_on=true advisories_on=true
+2025-12-30-T23:07:23  INFO starting continuation fetch installed_count=35 initial_count=80
+2025-12-30-T23:07:23  INFO fetch_installed_updates: using cached results (age=2s, items=34)
+2025-12-30-T23:07:23  INFO fetch_installed_aur_comments: using cached results (age=16s, items=21)
+2025-12-30-T23:07:23  INFO fetching arch news...
+2025-12-30-T23:07:23  INFO using in-memory cached arch news
+2025-12-30-T23:07:23  INFO arch news fetch completed: items=10
+2025-12-30-T23:07:23  INFO fetching advisories...
+2025-12-30-T23:07:23  INFO using in-memory cached advisories
+2025-12-30-T23:07:23  INFO advisories fetch completed: items=15
+2025-12-30-T23:07:23  INFO continuation fetch complete total=0 arch=0 advisories=0 updates=0
+2025-12-30-T23:07:23  INFO continuation worker received items to send count=0
+2025-12-30-T23:07:23  INFO news continuation worker completed
+2025-12-30-T23:07:24  INFO [Runtime] Dependency worker received request: 1 items, action=Install
+2025-12-30-T23:07:24  INFO [Runtime] File worker received request: 1 items, action=Install
+2025-12-30-T23:07:24  INFO [Runtime] Service worker received request: 1 items, action=Install
+2025-12-30-T23:07:24  INFO [Runtime] Resolving forward dependencies for 1 packages
+2025-12-30-T23:07:24  INFO resolve_dependencies{stage="dependencies" item_count=1}: Fetching list of installed packages...
+2025-12-30-T23:07:24  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-30-T23:07:24  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-30-T23:07:24  INFO resolve_file_changes{stage="files" item_count=1}: [1/1] Resolving files for package: ttf-blex-nerd-font-git (Aur)
+2025-12-30-T23:07:24  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 557 installed packages
+2025-12-30-T23:07:24  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 0 upgradable packages
+2025-12-30-T23:07:24  INFO resolve_dependencies{stage="dependencies" item_count=1}: Checking conflicts for 1 package(s)
+2025-12-30-T23:07:24  INFO [Runtime] check_and_trigger_deps_resolution: preflight_deps_items=0, preflight_deps_resolving=false, deps_resolving=true
+2025-12-30-T23:07:24  INFO Sandbox resolution complete stage="sandbox" item_count=1 result_count=1 duration_ms=235
+2025-12-30-T23:07:24  INFO [Runtime] sandbox resolution worker completed stage="sandbox" result_count=1 was_preflight=false
+2025-12-30-T23:07:24  INFO [Runtime] handle_sandbox_result: Received 1 sandbox info entries
+2025-12-30-T23:07:24  INFO [Runtime] handle_sandbox_result: Package 'ttf-blex-nerd-font-git' - total_deps=1, installed_deps=1, depends=0, makedepends=0, checkdepends=0, optdepends=1
+2025-12-30-T23:07:25  WARN GitLab main returned invalid PKGBUILD (likely HTML): first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-30-T23:07:25  WARN GitLab master returned HTML instead of PKGBUILD: first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-30-T23:07:25  INFO [Runtime] services resolution worker completed stage="services" result_count=0 was_preflight=false
+2025-12-30-T23:07:26  INFO [Install] Opening preflight modal for 1 packages
+2025-12-30-T23:07:26  INFO loaded service cache path=/home/dichter/.config/pacsea/lists/services_cache.json count=0
+2025-12-30-T23:07:26  INFO loaded sandbox cache (exact match) path=/home/dichter/.config/pacsea/lists/sandbox_cache.json count=1
+2025-12-30-T23:07:26  INFO [Install] Preflight modal opened successfully in 77.192µs (1 packages)
+2025-12-30-T23:07:26  INFO compute_preflight_summary{stage="summary" item_count=1}: Preflight summary computation complete stage="summary" item_count=1 duration_ms=45
+2025-12-30-T23:07:26  INFO [Runtime] Preflight summary computation worker completed stage="summary" package_count=1
+2025-12-30-T23:07:29  WARN resolve_dependencies{stage="dependencies" item_count=1}: Could not fetch .SRCINFO for ttf-blex-nerd-font-git: Response does not appear to be valid .SRCINFO format (build-time dependencies will be missing)
+2025-12-30-T23:07:29  INFO resolve_file_changes{stage="files" item_count=1}:   Found 2 files for ttf-blex-nerd-font-git (2 new, 0 changed, 0 removed)
+2025-12-30-T23:07:29  INFO resolve_file_changes{stage="files" item_count=1}: File resolution complete stage="files" item_count=1 result_count=1 duration_ms=5747
+2025-12-30-T23:07:29  INFO resolve_dependencies{stage="dependencies" item_count=1}: Total unique dependencies found: 0
+2025-12-30-T23:07:29  INFO resolve_dependencies{stage="dependencies" item_count=1}: Dependency resolution complete stage="dependencies" item_count=1 result_count=0 duration_ms=5820
+2025-12-30-T23:07:29  INFO [Runtime] Dependency resolution done, sending 0 deps to result channel
+2025-12-30-T23:07:29  INFO [Runtime] deps_res_tx.send result: true
+2025-12-30-T23:07:32  INFO [Runtime] Executor worker received install request: 1 items, dry_run=false
+2025-12-30-T23:08:04  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:08:04  WARN Temp database sync failed
+2025-12-30-T23:08:04  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:08:05  INFO Update check completed: found 0 total available updates (after deduplication)
+2025-12-30-T23:08:35  INFO [PTY] Process finished: success=true, exit_code=Some(0), total_lines_sent=944
+2025-12-30-T23:08:35  INFO Received Finished: success=true, exit_code=Some(0)
+2025-12-30-T23:08:35  INFO Added completion message, log_lines.len()=926
+2025-12-30-T23:08:35  INFO Install operation completed: triggered refresh of installed packages and updates
+2025-12-30-T23:08:35  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:08:35  WARN Temp database sync failed
+2025-12-30-T23:08:35  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:08:36  INFO Update check completed: found 0 total available updates (after deduplication)
+2025-12-30-T23:09:04  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:09:04  WARN Temp database sync failed
+2025-12-30-T23:09:04  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:09:05  INFO Update check completed: found 0 total available updates (after deduplication)
+2025-12-30-T23:10:04  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:10:04  WARN Temp database sync failed
+2025-12-30-T23:10:04  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:10:05  INFO Update check completed: found 0 total available updates (after deduplication)
+2025-12-30-T23:11:04  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:11:04  WARN Temp database sync failed
+2025-12-30-T23:11:04  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:11:05  INFO Update check completed: found 0 total available updates (after deduplication)
+2025-12-30-T23:12:10  INFO logging initialized path=/home/dichter/.config/pacsea/logs/pacsea.log
+2025-12-30-T23:12:10  INFO Pacsea starting dry_run=false
+2025-12-30-T23:12:10  INFO startup timestamp tracking previous=Some("20251231:000704") current=20251231:001210
+2025-12-30-T23:12:10  INFO resolved state file paths recent=/home/dichter/.config/pacsea/lists/recent_searches.json install=/home/dichter/.config/pacsea/lists/install_list.json details_cache=/home/dichter/.config/pacsea/lists/details_cache.json index=/home/dichter/.config/pacsea/lists/official_index.json news_read=/home/dichter/.config/pacsea/lists/news_read_urls.json news_read_ids=/home/dichter/.config/pacsea/lists/news_read_ids.json announcement_read=/home/dichter/.config/pacsea/lists/announcement_read.json
+2025-12-30-T23:12:10  INFO Resolved locale: 'en-US' (from settings: '<auto-detect>')
+2025-12-30-T23:12:10  INFO loaded details cache path=/home/dichter/.config/pacsea/lists/details_cache.json
+2025-12-30-T23:12:10  INFO loaded recent searches path=/home/dichter/.config/pacsea/lists/recent_searches.json count=1
+2025-12-30-T23:12:10  INFO loaded install list path=/home/dichter/.config/pacsea/lists/install_list.json count=0
+2025-12-30-T23:12:10  INFO loaded announcement read IDs path=/home/dichter/.config/pacsea/lists/announcement_read.json count=1
+2025-12-30-T23:12:10  INFO showing version announcement modal current_version="0.7.1" base_version=0.7.1 announcement_version="0.7.1"
+2025-12-30-T23:12:10  INFO attempted to load official index from disk path=/home/dichter/.config/pacsea/lists/official_index.json
+2025-12-30-T23:12:10  INFO auxiliary workers starting headless=false get_announcement=true updates_refresh_interval=60
+2025-12-30-T23:12:10  INFO [Runtime] Dependency worker started, waiting for requests...
+2025-12-30-T23:12:10  INFO [Runtime] Executor worker started, waiting for requests...
+2025-12-30-T23:12:10  INFO queueing combined news feed fetch (startup) installed_names=0
+2025-12-30-T23:12:10  INFO waiting for startup news fetch to complete before starting aggregated feed fetch
+2025-12-30-T23:12:10  INFO fetching remote announcement url=https://gist.githubusercontent.com/Firstp1ck/d2e6016b8d7a90f813a582078208e9bd/raw/announcement.json
+2025-12-30-T23:12:10  INFO additional delay after startup fetch completion additional_delay_ms=851
+2025-12-30-T23:12:10  INFO refreshing official index in background
+2025-12-30-T23:12:10  INFO loaded theme configuration path=/home/dichter/.config/pacsea/theme.conf
+2025-12-30-T23:12:10  INFO [PKGBUILD cache] Loaded cache entries path=/home/dichter/.config/pacsea/lists/pkgbuild_parse_cache.json count=1
+2025-12-30-T23:12:10  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:12:10  WARN Temp database sync failed
+2025-12-30-T23:12:10  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "endeavouros"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=47
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=43
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=48
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=49
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=46
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=51
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=52
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=46
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=51
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=52
+2025-12-30-T23:12:10  INFO announcement fetched successfully id=2025-12-20-nvidia-590-pascal-support
+2025-12-30-T23:12:10  INFO remote announcement already marked as read id=2025-12-20-nvidia-590-pascal-support
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "omniverse"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=45
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "universe"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=44
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "lib32"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=41
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "galaxy"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=42
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "world"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=41
+2025-12-30-T23:12:10  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "system"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=42
+2025-12-30-T23:12:10  INFO official index up-to-date (no name changes) count=15035
+2025-12-30-T23:12:10  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:12:10  INFO Update check completed: found 0 total available updates (after deduplication)
+2025-12-30-T23:12:11  INFO fetch_news_feed start limit=50 include_arch_news=true include_advisories=true include_pkg_updates=true include_aur_comments=true installed_only=false installed_filter=true sort_mode=DateDesc
+2025-12-30-T23:12:11  INFO starting fetch: arch_news=true, advisories=true, pkg_updates=true, aur_comments=true
+2025-12-30-T23:12:11  INFO fetching package updates: installed_count=36, limit=50
+2025-12-30-T23:12:11  INFO fetch_installed_updates: official scan complete, new_packages=0, updated_packages=0, baseline_only=0
+2025-12-30-T23:12:11  INFO fetching AUR comments: installed_count=36, limit=50
+2025-12-30-T23:12:11  INFO fetching arch news...
+2025-12-30-T23:12:11  INFO loaded from disk cache source="arch_news" items=10 age_hours=0 ttl_days=14
+2025-12-30-T23:12:11  INFO arch news fetch completed: items=10
+2025-12-30-T23:12:11  INFO fetching advisories...
+2025-12-30-T23:12:11  INFO loaded from disk cache source="advisories" items=15 age_hours=0 ttl_days=14
+2025-12-30-T23:12:11  INFO advisories fetch completed: items=15
+2025-12-30-T23:12:12  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:12:12  INFO AUR comments fetch completed: items=24
+2025-12-30-T23:12:21  INFO [Runtime] Dependency worker received request: 1 items, action=Install
+2025-12-30-T23:12:21  INFO [Runtime] File worker received request: 1 items, action=Install
+2025-12-30-T23:12:21  INFO [Runtime] Service worker received request: 1 items, action=Install
+2025-12-30-T23:12:21  INFO [Runtime] Resolving forward dependencies for 1 packages
+2025-12-30-T23:12:21  INFO resolve_dependencies{stage="dependencies" item_count=1}: Fetching list of installed packages...
+2025-12-30-T23:12:21  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-30-T23:12:21  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-30-T23:12:21  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts"] display="pacman -Fl noto-fonts" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=266
+2025-12-30-T23:12:21  WARN Failed to resolve service units for package noto-fonts: `pacman -Fl noto-fonts` exited with status exit status: 1
+2025-12-30-T23:12:21  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 558 installed packages
+2025-12-30-T23:12:21  INFO resolve_file_changes{stage="files" item_count=1}: [1/1] Resolving files for package: noto-fonts (Official { repo: "extra", arch: "any" })
+2025-12-30-T23:12:21  WARN resolve_file_changes{stage="files" item_count=1}: File database not synced for noto-fonts (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:12:21  INFO resolve_sandbox_info{stage="sandbox" item_count=0}: Sandbox resolution complete stage="sandbox" item_count=0 result_count=0 duration_ms=14
+2025-12-30-T23:12:21  INFO [Runtime] sandbox resolution worker completed stage="sandbox" result_count=0 was_preflight=false
+2025-12-30-T23:12:21  WARN [Runtime] handle_sandbox_result: Received empty sandbox info
+2025-12-30-T23:12:21  INFO [Runtime] check_and_trigger_deps_resolution: preflight_deps_items=0, preflight_deps_resolving=false, deps_resolving=true
+2025-12-30-T23:12:21  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts"] display="pacman -Fl noto-fonts" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=266
+2025-12-30-T23:12:21  INFO [Runtime] services resolution worker completed stage="services" result_count=0 was_preflight=false
+2025-12-30-T23:12:21  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 0 upgradable packages
+2025-12-30-T23:12:21  INFO resolve_dependencies{stage="dependencies" item_count=1}: Checking conflicts for 1 package(s)
+2025-12-30-T23:12:21  INFO resolve_dependencies{stage="dependencies" item_count=1}: Total unique dependencies found: 0
+2025-12-30-T23:12:21  INFO resolve_dependencies{stage="dependencies" item_count=1}: Dependency resolution complete stage="dependencies" item_count=1 result_count=0 duration_ms=416
+2025-12-30-T23:12:21  INFO [Runtime] Dependency resolution done, sending 0 deps to result channel
+2025-12-30-T23:12:21  INFO [Runtime] deps_res_tx.send result: true
+2025-12-30-T23:12:21  INFO [Runtime] dependencies resolution worker completed stage="dependencies" result_count=0 was_preflight=false
+2025-12-30-T23:12:21  INFO resolve_file_changes{stage="files" item_count=1}:   Found 0 files for noto-fonts (0 new, 0 changed, 0 removed)
+2025-12-30-T23:12:21  INFO resolve_file_changes{stage="files" item_count=1}: File resolution complete stage="files" item_count=1 result_count=1 duration_ms=528
+2025-12-30-T23:12:21  INFO [Runtime] files resolution worker completed stage="files" result_count=1 was_preflight=false
+2025-12-30-T23:12:21  INFO [Runtime] handle_file_result: Package 'noto-fonts' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-30-T23:12:22  INFO [Runtime] Dependency worker received request: 2 items, action=Install
+2025-12-30-T23:12:22  INFO [Runtime] Service worker received request: 2 items, action=Install
+2025-12-30-T23:12:22  INFO [Runtime] File worker received request: 2 items, action=Install
+2025-12-30-T23:12:22  INFO [Runtime] Resolving forward dependencies for 2 packages
+2025-12-30-T23:12:22  INFO resolve_dependencies{stage="dependencies" item_count=2}: Fetching list of installed packages...
+2025-12-30-T23:12:22  WARN resolve_file_changes{stage="files" item_count=2}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-30-T23:12:22  WARN resolve_file_changes{stage="files" item_count=2}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-30-T23:12:22  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts-emoji"] display="pacman -Fl noto-fonts-emoji" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=272
+2025-12-30-T23:12:22  WARN Failed to resolve service units for package noto-fonts-emoji: `pacman -Fl noto-fonts-emoji` exited with status exit status: 1
+2025-12-30-T23:12:22  INFO resolve_dependencies{stage="dependencies" item_count=2}: Found 558 installed packages
+2025-12-30-T23:12:22  INFO resolve_file_changes{stage="files" item_count=2}: [1/2] Resolving files for package: noto-fonts-emoji (Official { repo: "extra", arch: "any" })
+2025-12-30-T23:12:22  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts"] display="pacman -Fl noto-fonts" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=266
+2025-12-30-T23:12:22  WARN Failed to resolve service units for package noto-fonts: `pacman -Fl noto-fonts` exited with status exit status: 1
+2025-12-30-T23:12:22  WARN resolve_file_changes{stage="files" item_count=2}: File database not synced for noto-fonts-emoji (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:12:22  INFO resolve_sandbox_info{stage="sandbox" item_count=0}: Sandbox resolution complete stage="sandbox" item_count=0 result_count=0 duration_ms=15
+2025-12-30-T23:12:22  INFO [Runtime] sandbox resolution worker completed stage="sandbox" result_count=0 was_preflight=false
+2025-12-30-T23:12:22  WARN [Runtime] handle_sandbox_result: Received empty sandbox info
+2025-12-30-T23:12:22  INFO [Runtime] check_and_trigger_deps_resolution: preflight_deps_items=0, preflight_deps_resolving=false, deps_resolving=true
+2025-12-30-T23:12:22  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts-emoji"] display="pacman -Fl noto-fonts-emoji" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=272
+2025-12-30-T23:12:22  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts"] display="pacman -Fl noto-fonts" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=266
+2025-12-30-T23:12:22  INFO [Runtime] services resolution worker completed stage="services" result_count=0 was_preflight=false
+2025-12-30-T23:12:22  INFO resolve_dependencies{stage="dependencies" item_count=2}: Found 0 upgradable packages
+2025-12-30-T23:12:22  INFO resolve_dependencies{stage="dependencies" item_count=2}: Checking conflicts for 2 package(s)
+2025-12-30-T23:12:22  INFO [Runtime] Dependency worker received request: 3 items, action=Install
+2025-12-30-T23:12:22  INFO [Runtime] Service worker received request: 3 items, action=Install
+2025-12-30-T23:12:22  INFO [Runtime] File worker received request: 3 items, action=Install
+2025-12-30-T23:12:22  INFO [Runtime] Resolving forward dependencies for 3 packages
+2025-12-30-T23:12:22  INFO resolve_dependencies{stage="dependencies" item_count=3}: Fetching list of installed packages...
+2025-12-30-T23:12:22  WARN resolve_file_changes{stage="files" item_count=3}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-30-T23:12:22  WARN resolve_file_changes{stage="files" item_count=3}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-30-T23:12:22  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts-extra"] display="pacman -Fl noto-fonts-extra" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=272
+2025-12-30-T23:12:22  WARN Failed to resolve service units for package noto-fonts-extra: `pacman -Fl noto-fonts-extra` exited with status exit status: 1
+2025-12-30-T23:12:22  INFO resolve_dependencies{stage="dependencies" item_count=3}: Found 558 installed packages
+2025-12-30-T23:12:22  INFO resolve_file_changes{stage="files" item_count=3}: [1/3] Resolving files for package: noto-fonts-extra (Official { repo: "extra", arch: "any" })
+2025-12-30-T23:12:22  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts-emoji"] display="pacman -Fl noto-fonts-emoji" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=272
+2025-12-30-T23:12:22  WARN Failed to resolve service units for package noto-fonts-emoji: `pacman -Fl noto-fonts-emoji` exited with status exit status: 1
+2025-12-30-T23:12:22  WARN resolve_file_changes{stage="files" item_count=3}: File database not synced for noto-fonts-extra (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:12:22  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts"] display="pacman -Fl noto-fonts" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=266
+2025-12-30-T23:12:22  WARN Failed to resolve service units for package noto-fonts: `pacman -Fl noto-fonts` exited with status exit status: 1
+2025-12-30-T23:12:22  INFO resolve_sandbox_info{stage="sandbox" item_count=0}: Sandbox resolution complete stage="sandbox" item_count=0 result_count=0 duration_ms=13
+2025-12-30-T23:12:22  INFO [Runtime] sandbox resolution worker completed stage="sandbox" result_count=0 was_preflight=false
+2025-12-30-T23:12:22  WARN [Runtime] handle_sandbox_result: Received empty sandbox info
+2025-12-30-T23:12:22  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts-extra"] display="pacman -Fl noto-fonts-extra" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=272
+2025-12-30-T23:12:22  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts-emoji"] display="pacman -Fl noto-fonts-emoji" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=272
+2025-12-30-T23:12:22  WARN command exited with non-zero status command="pacman" args=["-Fl", "noto-fonts"] display="pacman -Fl noto-fonts" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=266
+2025-12-30-T23:12:22  INFO [Runtime] services resolution worker completed stage="services" result_count=0 was_preflight=false
+2025-12-30-T23:12:22  INFO resolve_dependencies{stage="dependencies" item_count=3}: Found 0 upgradable packages
+2025-12-30-T23:12:22  INFO resolve_dependencies{stage="dependencies" item_count=3}: Checking conflicts for 3 package(s)
+2025-12-30-T23:12:22  INFO resolve_file_changes{stage="files" item_count=2}:   Found 0 files for noto-fonts-emoji (0 new, 0 changed, 0 removed)
+2025-12-30-T23:12:22  INFO resolve_file_changes{stage="files" item_count=2}: [2/2] Resolving files for package: noto-fonts (Official { repo: "extra", arch: "any" })
+2025-12-30-T23:12:22  WARN resolve_file_changes{stage="files" item_count=2}: File database not synced for noto-fonts (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:12:22  INFO resolve_dependencies{stage="dependencies" item_count=2}: Total unique dependencies found: 0
+2025-12-30-T23:12:22  INFO resolve_dependencies{stage="dependencies" item_count=2}: Dependency resolution complete stage="dependencies" item_count=2 result_count=0 duration_ms=546
+2025-12-30-T23:12:22  INFO [Runtime] Dependency resolution done, sending 0 deps to result channel
+2025-12-30-T23:12:22  INFO [Runtime] deps_res_tx.send result: true
+2025-12-30-T23:12:22  INFO [Runtime] dependencies resolution worker completed stage="dependencies" result_count=0 was_preflight=false
+2025-12-30-T23:12:23  INFO resolve_file_changes{stage="files" item_count=2}:   Found 0 files for noto-fonts (0 new, 0 changed, 0 removed)
+2025-12-30-T23:12:23  INFO resolve_file_changes{stage="files" item_count=2}: File resolution complete stage="files" item_count=2 result_count=2 duration_ms=989
+2025-12-30-T23:12:23  INFO [Runtime] files resolution worker completed stage="files" result_count=2 was_preflight=false
+2025-12-30-T23:12:23  INFO [Runtime] handle_file_result: Package 'noto-fonts-emoji' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-30-T23:12:23  INFO [Runtime] handle_file_result: Package 'noto-fonts' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-30-T23:12:23  INFO resolve_dependencies{stage="dependencies" item_count=3}: Total unique dependencies found: 1
+2025-12-30-T23:12:23  INFO resolve_dependencies{stage="dependencies" item_count=3}: Dependency resolution complete stage="dependencies" item_count=3 result_count=1 duration_ms=779
+2025-12-30-T23:12:23  INFO [Runtime] Dependency resolution done, sending 1 deps to result channel
+2025-12-30-T23:12:23  INFO [Runtime] deps_res_tx.send result: true
+2025-12-30-T23:12:23  INFO [Runtime] dependencies resolution worker completed stage="dependencies" result_count=1 was_preflight=false
+2025-12-30-T23:12:23  WARN resolve_file_changes{stage="files" item_count=3}: GitLab main returned invalid PKGBUILD (likely HTML): first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-30-T23:12:23  WARN resolve_file_changes{stage="files" item_count=3}: GitLab master returned HTML instead of PKGBUILD: first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-30-T23:12:23  INFO resolve_file_changes{stage="files" item_count=3}:   Found 0 files for noto-fonts-extra (0 new, 0 changed, 0 removed)
+2025-12-30-T23:12:23  INFO resolve_file_changes{stage="files" item_count=3}: [2/3] Resolving files for package: noto-fonts-emoji (Official { repo: "extra", arch: "any" })
+2025-12-30-T23:12:23  WARN resolve_file_changes{stage="files" item_count=3}: File database not synced for noto-fonts-emoji (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:12:24  INFO resolve_file_changes{stage="files" item_count=3}:   Found 0 files for noto-fonts-emoji (0 new, 0 changed, 0 removed)
+2025-12-30-T23:12:24  INFO resolve_file_changes{stage="files" item_count=3}: [3/3] Resolving files for package: noto-fonts (Official { repo: "extra", arch: "any" })
+2025-12-30-T23:12:24  WARN resolve_file_changes{stage="files" item_count=3}: File database not synced for noto-fonts (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:12:24  INFO resolve_file_changes{stage="files" item_count=3}:   Found 0 files for noto-fonts (0 new, 0 changed, 0 removed)
+2025-12-30-T23:12:24  INFO resolve_file_changes{stage="files" item_count=3}: File resolution complete stage="files" item_count=3 result_count=3 duration_ms=2114
+2025-12-30-T23:12:24  INFO [Runtime] files resolution worker completed stage="files" result_count=3 was_preflight=false
+2025-12-30-T23:12:24  INFO [Runtime] handle_file_result: Package 'noto-fonts-extra' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-30-T23:12:24  INFO [Runtime] handle_file_result: Package 'noto-fonts-emoji' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-30-T23:12:24  INFO [Runtime] handle_file_result: Package 'noto-fonts' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-30-T23:12:26  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:12:27  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:12:27  INFO installed update feed built emitted=35 new_packages=0 updated_packages=0 aur_new_packages=1 aur_updated_packages=0 baseline_only=0 installed_total=36 aur_candidates=6
+2025-12-30-T23:12:27  INFO package updates fetch completed: items=35
+2025-12-30-T23:12:27  INFO fetch completed, combining results...
+2025-12-30-T23:12:27  INFO fetch_news_feed success total=84 arch=10 advisories=15 updates=35 aur_comments=24
+2025-12-30-T23:12:27  INFO news feed fetched total=84 arch=10 advisories=15 installed_names=36
+2025-12-30-T23:12:27  INFO sending aggregated news feed payload to channel items_count=84
+2025-12-30-T23:12:27  INFO aggregated news feed payload sent successfully
+2025-12-30-T23:12:27  INFO received aggregated news feed payload in event loop items_count=84
+2025-12-30-T23:12:27  INFO starting news continuation worker initial_count=84
+2025-12-30-T23:12:27  INFO news feed updated fetched=84 visible=38 max_age_days=30 installed_only=false arch_on=true advisories_on=true
+2025-12-30-T23:12:29  INFO starting continuation fetch installed_count=36 initial_count=84
+2025-12-30-T23:12:29  INFO fetch_installed_updates: using cached results (age=2s, items=35)
+2025-12-30-T23:12:29  INFO fetch_installed_aur_comments: using cached results (age=16s, items=24)
+2025-12-30-T23:12:29  INFO fetching arch news...
+2025-12-30-T23:12:29  INFO using in-memory cached arch news
+2025-12-30-T23:12:29  INFO arch news fetch completed: items=10
+2025-12-30-T23:12:29  INFO fetching advisories...
+2025-12-30-T23:12:29  INFO using in-memory cached advisories
+2025-12-30-T23:12:29  INFO advisories fetch completed: items=15
+2025-12-30-T23:12:29  INFO continuation fetch complete total=0 arch=0 advisories=0 updates=0
+2025-12-30-T23:12:29  INFO continuation worker received items to send count=0
+2025-12-30-T23:12:29  INFO news continuation worker completed
+2025-12-30-T23:12:31  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:12:34  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:12:39  INFO [Install] Opening preflight modal for 3 packages
+2025-12-30-T23:12:39  INFO loaded service cache path=/home/dichter/.config/pacsea/lists/services_cache.json count=0
+2025-12-30-T23:12:39  INFO loaded sandbox cache (exact match) path=/home/dichter/.config/pacsea/lists/sandbox_cache.json count=0
+2025-12-30-T23:12:39  INFO [Install] Preflight modal opened successfully in 76.6µs (3 packages)
+2025-12-30-T23:12:39  INFO compute_preflight_summary{stage="summary" item_count=3}: Preflight summary computation complete stage="summary" item_count=3 duration_ms=473
+2025-12-30-T23:12:39  INFO [Runtime] Preflight summary computation worker completed stage="summary" package_count=3
+2025-12-30-T23:12:49  INFO [Runtime] Executor worker received install request: 3 items, dry_run=false
+2025-12-30-T23:12:57  INFO [PTY] Process finished: success=true, exit_code=Some(0), total_lines_sent=180
+2025-12-30-T23:12:57  INFO Received Finished: success=true, exit_code=Some(0)
+2025-12-30-T23:12:57  INFO Added completion message, log_lines.len()=28
+2025-12-30-T23:12:57  INFO Install operation completed: triggered refresh of installed packages and updates
+2025-12-30-T23:12:58  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:12:58  WARN Temp database sync failed
+2025-12-30-T23:12:58  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:12:58  INFO Update check completed: found 1 total available updates (after deduplication)
+2025-12-30-T23:13:02  WARN pacman exited with non-zero status command="pacman" args=["-Fl", "noto-fonts-extra"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=272
+2025-12-30-T23:13:02  WARN pacman exited with non-zero status command="pacman" args=["-Fl", "noto-fonts-emoji"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=272
+2025-12-30-T23:13:02  WARN pacman exited with non-zero status command="pacman" args=["-Fl", "noto-fonts"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=266
+2025-12-30-T23:13:10  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:13:10  WARN Temp database sync failed
+2025-12-30-T23:13:10  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:13:10  INFO Update check completed: found 1 total available updates (after deduplication)
+2025-12-30-T23:13:17  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:13:18  INFO [Runtime] Dependency worker received request: 1 items, action=Install
+2025-12-30-T23:13:18  INFO [Runtime] File worker received request: 1 items, action=Install
+2025-12-30-T23:13:18  INFO [Runtime] Service worker received request: 1 items, action=Install
+2025-12-30-T23:13:18  INFO [Runtime] Resolving forward dependencies for 1 packages
+2025-12-30-T23:13:18  INFO resolve_dependencies{stage="dependencies" item_count=1}: Fetching list of installed packages...
+2025-12-30-T23:13:18  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-30-T23:13:18  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-30-T23:13:18  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker"] display="pacman -Fl docker" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-30-T23:13:18  WARN Failed to resolve service units for package docker: `pacman -Fl docker` exited with status exit status: 1
+2025-12-30-T23:13:18  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 561 installed packages
+2025-12-30-T23:13:18  INFO resolve_file_changes{stage="files" item_count=1}: [1/1] Resolving files for package: docker (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:13:18  WARN resolve_file_changes{stage="files" item_count=1}: File database not synced for docker (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:13:18  INFO resolve_sandbox_info{stage="sandbox" item_count=0}: Sandbox resolution complete stage="sandbox" item_count=0 result_count=0 duration_ms=13
+2025-12-30-T23:13:18  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker"] display="pacman -Fl docker" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-30-T23:13:18  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 1 upgradable packages
+2025-12-30-T23:13:18  INFO resolve_dependencies{stage="dependencies" item_count=1}: Checking conflicts for 1 package(s)
+2025-12-30-T23:13:19  INFO resolve_file_changes{stage="files" item_count=1}:   Found 0 files for docker (0 new, 0 changed, 0 removed)
+2025-12-30-T23:13:19  INFO resolve_file_changes{stage="files" item_count=1}: File resolution complete stage="files" item_count=1 result_count=1 duration_ms=655
+2025-12-30-T23:13:19  INFO resolve_dependencies{stage="dependencies" item_count=1}: Total unique dependencies found: 10
+2025-12-30-T23:13:19  INFO resolve_dependencies{stage="dependencies" item_count=1}: Dependency resolution complete stage="dependencies" item_count=1 result_count=10 duration_ms=917
+2025-12-30-T23:13:19  INFO [Runtime] Dependency resolution done, sending 10 deps to result channel
+2025-12-30-T23:13:19  INFO [Runtime] deps_res_tx.send result: true
+2025-12-30-T23:13:20  INFO [Runtime] Dependency worker received request: 2 items, action=Install
+2025-12-30-T23:13:20  INFO [Runtime] File worker received request: 2 items, action=Install
+2025-12-30-T23:13:20  INFO [Runtime] Service worker received request: 2 items, action=Install
+2025-12-30-T23:13:20  INFO [Runtime] Resolving forward dependencies for 2 packages
+2025-12-30-T23:13:20  INFO resolve_dependencies{stage="dependencies" item_count=2}: Fetching list of installed packages...
+2025-12-30-T23:13:20  WARN resolve_file_changes{stage="files" item_count=2}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-30-T23:13:20  WARN resolve_file_changes{stage="files" item_count=2}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-30-T23:13:20  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker-compose"] display="pacman -Fl docker-compose" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=270
+2025-12-30-T23:13:20  WARN Failed to resolve service units for package docker-compose: `pacman -Fl docker-compose` exited with status exit status: 1
+2025-12-30-T23:13:20  INFO resolve_dependencies{stage="dependencies" item_count=2}: Found 561 installed packages
+2025-12-30-T23:13:20  INFO resolve_file_changes{stage="files" item_count=2}: [1/2] Resolving files for package: docker-compose (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:13:20  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker"] display="pacman -Fl docker" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-30-T23:13:20  WARN Failed to resolve service units for package docker: `pacman -Fl docker` exited with status exit status: 1
+2025-12-30-T23:13:20  WARN resolve_file_changes{stage="files" item_count=2}: File database not synced for docker-compose (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:13:20  INFO resolve_sandbox_info{stage="sandbox" item_count=0}: Sandbox resolution complete stage="sandbox" item_count=0 result_count=0 duration_ms=14
+2025-12-30-T23:13:20  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker-compose"] display="pacman -Fl docker-compose" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=270
+2025-12-30-T23:13:20  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker"] display="pacman -Fl docker" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-30-T23:13:20  INFO resolve_dependencies{stage="dependencies" item_count=2}: Found 1 upgradable packages
+2025-12-30-T23:13:20  INFO resolve_dependencies{stage="dependencies" item_count=2}: Checking conflicts for 2 package(s)
+2025-12-30-T23:13:20  INFO resolve_file_changes{stage="files" item_count=2}:   Found 0 files for docker-compose (0 new, 0 changed, 0 removed)
+2025-12-30-T23:13:20  INFO resolve_file_changes{stage="files" item_count=2}: [2/2] Resolving files for package: docker (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:13:20  WARN resolve_file_changes{stage="files" item_count=2}: File database not synced for docker (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:13:21  INFO resolve_dependencies{stage="dependencies" item_count=2}: Total unique dependencies found: 10
+2025-12-30-T23:13:21  INFO resolve_dependencies{stage="dependencies" item_count=2}: Dependency resolution complete stage="dependencies" item_count=2 result_count=10 duration_ms=1011
+2025-12-30-T23:13:21  INFO [Runtime] Dependency resolution done, sending 10 deps to result channel
+2025-12-30-T23:13:21  INFO [Runtime] deps_res_tx.send result: true
+2025-12-30-T23:13:21  INFO resolve_file_changes{stage="files" item_count=2}:   Found 0 files for docker (0 new, 0 changed, 0 removed)
+2025-12-30-T23:13:21  INFO resolve_file_changes{stage="files" item_count=2}: File resolution complete stage="files" item_count=2 result_count=2 duration_ms=1136
+2025-12-30-T23:13:23  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:13:25  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:13:33  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:13:34  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:13:35  INFO [Runtime] Dependency worker received request: 3 items, action=Install
+2025-12-30-T23:13:35  INFO [Runtime] File worker received request: 3 items, action=Install
+2025-12-30-T23:13:35  INFO [Runtime] Service worker received request: 3 items, action=Install
+2025-12-30-T23:13:35  INFO [Runtime] Resolving forward dependencies for 3 packages
+2025-12-30-T23:13:35  INFO resolve_dependencies{stage="dependencies" item_count=3}: Fetching list of installed packages...
+2025-12-30-T23:13:35  WARN resolve_file_changes{stage="files" item_count=3}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-30-T23:13:35  WARN resolve_file_changes{stage="files" item_count=3}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-30-T23:13:35  WARN command exited with non-zero status command="pacman" args=["-Fl", "flatpak"] display="pacman -Fl flatpak" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=263
+2025-12-30-T23:13:35  WARN Failed to resolve service units for package flatpak: `pacman -Fl flatpak` exited with status exit status: 1
+2025-12-30-T23:13:35  INFO resolve_dependencies{stage="dependencies" item_count=3}: Found 561 installed packages
+2025-12-30-T23:13:35  INFO resolve_file_changes{stage="files" item_count=3}: [1/3] Resolving files for package: flatpak (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:13:35  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker-compose"] display="pacman -Fl docker-compose" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=270
+2025-12-30-T23:13:35  WARN Failed to resolve service units for package docker-compose: `pacman -Fl docker-compose` exited with status exit status: 1
+2025-12-30-T23:13:35  WARN resolve_file_changes{stage="files" item_count=3}: File database not synced for flatpak (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:13:35  INFO resolve_sandbox_info{stage="sandbox" item_count=0}: Sandbox resolution complete stage="sandbox" item_count=0 result_count=0 duration_ms=13
+2025-12-30-T23:13:35  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker"] display="pacman -Fl docker" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-30-T23:13:35  WARN Failed to resolve service units for package docker: `pacman -Fl docker` exited with status exit status: 1
+2025-12-30-T23:13:36  INFO resolve_dependencies{stage="dependencies" item_count=3}: Found 1 upgradable packages
+2025-12-30-T23:13:36  INFO resolve_dependencies{stage="dependencies" item_count=3}: Checking conflicts for 3 package(s)
+2025-12-30-T23:13:36  WARN command exited with non-zero status command="pacman" args=["-Fl", "flatpak"] display="pacman -Fl flatpak" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=263
+2025-12-30-T23:13:36  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker-compose"] display="pacman -Fl docker-compose" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=270
+2025-12-30-T23:13:36  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker"] display="pacman -Fl docker" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-30-T23:13:36  INFO resolve_file_changes{stage="files" item_count=3}:   Found 0 files for flatpak (0 new, 0 changed, 0 removed)
+2025-12-30-T23:13:36  INFO resolve_file_changes{stage="files" item_count=3}: [2/3] Resolving files for package: docker-compose (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:13:36  WARN resolve_file_changes{stage="files" item_count=3}: File database not synced for docker-compose (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:13:37  INFO resolve_file_changes{stage="files" item_count=3}:   Found 0 files for docker-compose (0 new, 0 changed, 0 removed)
+2025-12-30-T23:13:37  INFO resolve_file_changes{stage="files" item_count=3}: [3/3] Resolving files for package: docker (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:13:37  WARN resolve_file_changes{stage="files" item_count=3}: File database not synced for docker (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:13:37  INFO resolve_file_changes{stage="files" item_count=3}:   Found 0 files for docker (0 new, 0 changed, 0 removed)
+2025-12-30-T23:13:37  INFO resolve_file_changes{stage="files" item_count=3}: File resolution complete stage="files" item_count=3 result_count=3 duration_ms=1639
+2025-12-30-T23:13:37  INFO resolve_dependencies{stage="dependencies" item_count=3}: Total unique dependencies found: 36
+2025-12-30-T23:13:37  INFO resolve_dependencies{stage="dependencies" item_count=3}: Dependency resolution complete stage="dependencies" item_count=3 result_count=36 duration_ms=2016
+2025-12-30-T23:13:37  INFO [Runtime] Dependency resolution done, sending 36 deps to result channel
+2025-12-30-T23:13:37  INFO [Runtime] deps_res_tx.send result: true
+2025-12-30-T23:13:39  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:13:41  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:13:51  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:14:10  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:14:10  WARN Temp database sync failed
+2025-12-30-T23:14:10  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:14:10  INFO Update check completed: found 1 total available updates (after deduplication)
+2025-12-30-T23:14:18  INFO [Runtime] Dependency worker received request: 4 items, action=Install
+2025-12-30-T23:14:18  INFO [Runtime] File worker received request: 4 items, action=Install
+2025-12-30-T23:14:18  INFO [Runtime] Service worker received request: 4 items, action=Install
+2025-12-30-T23:14:18  INFO [Runtime] Resolving forward dependencies for 4 packages
+2025-12-30-T23:14:18  INFO resolve_dependencies{stage="dependencies" item_count=4}: Fetching list of installed packages...
+2025-12-30-T23:14:18  WARN resolve_file_changes{stage="files" item_count=4}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-30-T23:14:18  WARN resolve_file_changes{stage="files" item_count=4}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-30-T23:14:18  INFO resolve_dependencies{stage="dependencies" item_count=4}: Found 561 installed packages
+2025-12-30-T23:14:18  INFO resolve_file_changes{stage="files" item_count=4}: [1/4] Resolving files for package: visual-studio-code-bin (Aur)
+2025-12-30-T23:14:18  WARN command exited with non-zero status command="pacman" args=["-Fl", "flatpak"] display="pacman -Fl flatpak" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=263
+2025-12-30-T23:14:18  WARN Failed to resolve service units for package flatpak: `pacman -Fl flatpak` exited with status exit status: 1
+2025-12-30-T23:14:18  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker-compose"] display="pacman -Fl docker-compose" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=270
+2025-12-30-T23:14:18  WARN Failed to resolve service units for package docker-compose: `pacman -Fl docker-compose` exited with status exit status: 1
+2025-12-30-T23:14:18  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker"] display="pacman -Fl docker" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-30-T23:14:18  WARN Failed to resolve service units for package docker: `pacman -Fl docker` exited with status exit status: 1
+2025-12-30-T23:14:18  INFO resolve_dependencies{stage="dependencies" item_count=4}: Found 1 upgradable packages
+2025-12-30-T23:14:18  INFO resolve_dependencies{stage="dependencies" item_count=4}: Checking conflicts for 4 package(s)
+2025-12-30-T23:14:18  INFO Sandbox resolution complete stage="sandbox" item_count=1 result_count=1 duration_ms=506
+2025-12-30-T23:14:19  INFO resolve_dependencies{stage="dependencies" item_count=4}: Using yay to resolve runtime dependencies for visual-studio-code-bin (will fetch .SRCINFO for build-time deps)
+2025-12-30-T23:14:19  WARN GitLab main returned invalid PKGBUILD (likely HTML): first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-30-T23:14:20  WARN resolve_dependencies{stage="dependencies" item_count=4}: Could not fetch .SRCINFO for visual-studio-code-bin: Response does not appear to be valid .SRCINFO format (build-time dependencies will be missing)
+2025-12-30-T23:14:20  WARN GitLab master returned HTML instead of PKGBUILD: first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-30-T23:14:20  WARN command exited with non-zero status command="pacman" args=["-Fl", "flatpak"] display="pacman -Fl flatpak" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=263
+2025-12-30-T23:14:20  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker-compose"] display="pacman -Fl docker-compose" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=270
+2025-12-30-T23:14:20  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker"] display="pacman -Fl docker" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-30-T23:14:20  INFO resolve_file_changes{stage="files" item_count=4}:   Found 2 files for visual-studio-code-bin (2 new, 0 changed, 0 removed)
+2025-12-30-T23:14:20  INFO resolve_file_changes{stage="files" item_count=4}: [2/4] Resolving files for package: flatpak (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:14:20  WARN resolve_file_changes{stage="files" item_count=4}: File database not synced for flatpak (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:14:21  INFO resolve_file_changes{stage="files" item_count=4}:   Found 0 files for flatpak (0 new, 0 changed, 0 removed)
+2025-12-30-T23:14:21  INFO resolve_file_changes{stage="files" item_count=4}: [3/4] Resolving files for package: docker-compose (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:14:21  WARN resolve_file_changes{stage="files" item_count=4}: File database not synced for docker-compose (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:14:21  INFO resolve_dependencies{stage="dependencies" item_count=4}: Total unique dependencies found: 41
+2025-12-30-T23:14:21  INFO resolve_dependencies{stage="dependencies" item_count=4}: Dependency resolution complete stage="dependencies" item_count=4 result_count=41 duration_ms=3092
+2025-12-30-T23:14:21  INFO [Runtime] Dependency resolution done, sending 41 deps to result channel
+2025-12-30-T23:14:21  INFO [Runtime] deps_res_tx.send result: true
+2025-12-30-T23:14:21  INFO resolve_file_changes{stage="files" item_count=4}:   Found 0 files for docker-compose (0 new, 0 changed, 0 removed)
+2025-12-30-T23:14:21  INFO resolve_file_changes{stage="files" item_count=4}: [4/4] Resolving files for package: docker (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:14:21  WARN resolve_file_changes{stage="files" item_count=4}: File database not synced for docker (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:14:21  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:14:22  INFO resolve_file_changes{stage="files" item_count=4}:   Found 0 files for docker (0 new, 0 changed, 0 removed)
+2025-12-30-T23:14:22  INFO resolve_file_changes{stage="files" item_count=4}: File resolution complete stage="files" item_count=4 result_count=4 duration_ms=3741
+2025-12-30-T23:14:26  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:14:27  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:14:30  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-30-T23:14:34  INFO [Install] Opening preflight modal for 4 packages
+2025-12-30-T23:14:34  INFO [Install] Preflight modal opened successfully in 35.128µs (4 packages)
+2025-12-30-T23:14:34  INFO [Runtime] check_and_trigger_deps_resolution: preflight_deps_items=4, preflight_deps_resolving=true, deps_resolving=false
+2025-12-30-T23:14:34  INFO [Runtime] Tick: Triggering dependency resolution for 4 preflight items (action=Install, preflight_deps_resolving=true, deps_resolving=false)
+2025-12-30-T23:14:34  INFO [Runtime] Tick: deps_req_tx.send result: true
+2025-12-30-T23:14:34  INFO [Runtime] File worker received request: 4 items, action=Install
+2025-12-30-T23:14:34  INFO [Runtime] Dependency worker received request: 4 items, action=Install
+2025-12-30-T23:14:34  INFO [Runtime] Service worker received request: 4 items, action=Install
+2025-12-30-T23:14:34  INFO [Runtime] Resolving forward dependencies for 4 packages
+2025-12-30-T23:14:34  INFO resolve_dependencies{stage="dependencies" item_count=4}: Fetching list of installed packages...
+2025-12-30-T23:14:34  WARN resolve_file_changes{stage="files" item_count=4}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-30-T23:14:34  WARN resolve_file_changes{stage="files" item_count=4}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-30-T23:14:34  INFO resolve_dependencies{stage="dependencies" item_count=4}: Found 561 installed packages
+2025-12-30-T23:14:34  INFO resolve_file_changes{stage="files" item_count=4}: [1/4] Resolving files for package: visual-studio-code-bin (Aur)
+2025-12-30-T23:14:34  WARN command exited with non-zero status command="pacman" args=["-Fl", "flatpak"] display="pacman -Fl flatpak" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=263
+2025-12-30-T23:14:34  WARN Failed to resolve service units for package flatpak: `pacman -Fl flatpak` exited with status exit status: 1
+2025-12-30-T23:14:34  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker-compose"] display="pacman -Fl docker-compose" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=270
+2025-12-30-T23:14:34  WARN Failed to resolve service units for package docker-compose: `pacman -Fl docker-compose` exited with status exit status: 1
+2025-12-30-T23:14:34  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker"] display="pacman -Fl docker" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-30-T23:14:34  WARN Failed to resolve service units for package docker: `pacman -Fl docker` exited with status exit status: 1
+2025-12-30-T23:14:34  INFO [Runtime] check_and_trigger_deps_resolution: preflight_deps_items=0, preflight_deps_resolving=true, deps_resolving=true
+2025-12-30-T23:14:34  INFO resolve_dependencies{stage="dependencies" item_count=4}: Found 1 upgradable packages
+2025-12-30-T23:14:34  INFO resolve_dependencies{stage="dependencies" item_count=4}: Checking conflicts for 4 package(s)
+2025-12-30-T23:14:34  INFO compute_preflight_summary{stage="summary" item_count=4}: Preflight summary computation complete stage="summary" item_count=4 duration_ms=468
+2025-12-30-T23:14:34  INFO [Runtime] Preflight summary computation worker completed stage="summary" package_count=4
+2025-12-30-T23:14:34  INFO Sandbox resolution complete stage="sandbox" item_count=1 result_count=1 duration_ms=474
+2025-12-30-T23:14:34  INFO [Runtime] sandbox resolution worker completed stage="sandbox" result_count=1 was_preflight=true
+2025-12-30-T23:14:34  INFO [Runtime] handle_sandbox_result: Received 1 sandbox info entries
+2025-12-30-T23:14:34  INFO [Runtime] handle_sandbox_result: Package 'visual-studio-code-bin' - total_deps=17, installed_deps=12, depends=13, makedepends=0, checkdepends=0, optdepends=4
+2025-12-30-T23:14:34  INFO [Runtime] handle_sandbox_result: Modal open - items=4, aur_items=1, filtered_sandbox=1, modal_current=0
+2025-12-30-T23:14:34  INFO [Runtime] handle_sandbox_result: Syncing 1 sandbox infos to preflight modal
+2025-12-30-T23:14:35  INFO resolve_dependencies{stage="dependencies" item_count=4}: Using yay to resolve runtime dependencies for visual-studio-code-bin (will fetch .SRCINFO for build-time deps)
+2025-12-30-T23:14:35  WARN GitLab main returned invalid PKGBUILD (likely HTML): first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-30-T23:14:35  WARN resolve_dependencies{stage="dependencies" item_count=4}: Could not fetch .SRCINFO for visual-studio-code-bin: Response does not appear to be valid .SRCINFO format (build-time dependencies will be missing)
+2025-12-30-T23:14:35  WARN GitLab master returned HTML instead of PKGBUILD: first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-30-T23:14:35  WARN command exited with non-zero status command="pacman" args=["-Fl", "flatpak"] display="pacman -Fl flatpak" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=263
+2025-12-30-T23:14:35  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker-compose"] display="pacman -Fl docker-compose" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=270
+2025-12-30-T23:14:35  WARN command exited with non-zero status command="pacman" args=["-Fl", "docker"] display="pacman -Fl docker" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-30-T23:14:35  INFO [Runtime] services resolution worker completed stage="services" result_count=0 was_preflight=true
+2025-12-30-T23:14:36  INFO resolve_file_changes{stage="files" item_count=4}:   Found 2 files for visual-studio-code-bin (2 new, 0 changed, 0 removed)
+2025-12-30-T23:14:36  INFO resolve_file_changes{stage="files" item_count=4}: [2/4] Resolving files for package: flatpak (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:14:36  WARN resolve_file_changes{stage="files" item_count=4}: File database not synced for flatpak (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:14:36  INFO resolve_file_changes{stage="files" item_count=4}:   Found 0 files for flatpak (0 new, 0 changed, 0 removed)
+2025-12-30-T23:14:36  INFO resolve_file_changes{stage="files" item_count=4}: [3/4] Resolving files for package: docker-compose (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:14:36  WARN resolve_file_changes{stage="files" item_count=4}: File database not synced for docker-compose (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:14:37  INFO resolve_dependencies{stage="dependencies" item_count=4}: Total unique dependencies found: 41
+2025-12-30-T23:14:37  INFO resolve_dependencies{stage="dependencies" item_count=4}: Dependency resolution complete stage="dependencies" item_count=4 result_count=41 duration_ms=3096
+2025-12-30-T23:14:37  INFO [Runtime] Dependency resolution done, sending 41 deps to result channel
+2025-12-30-T23:14:37  INFO [Runtime] deps_res_tx.send result: true
+2025-12-30-T23:14:37  INFO [Runtime] dependencies resolution worker completed stage="dependencies" result_count=41 was_preflight=true
+2025-12-30-T23:14:37  INFO [Runtime] sync_to_modal: action=Install, results=41, items=4, was_preflight=true
+2025-12-30-T23:14:37  INFO [Runtime] sync_to_modal: result[0] name=containerd, required_by=["docker", "docker"]
+2025-12-30-T23:14:37  INFO [Runtime] sync_to_modal: result[1] name=libmalcontent, required_by=["flatpak", "flatpak"]
+2025-12-30-T23:14:37  INFO [Runtime] sync_to_modal: result[2] name=nftables, required_by=["docker", "docker"]
+2025-12-30-T23:14:37  INFO [Runtime] sync_to_modal: filtered 41 deps from 41 results (items={"docker", "visual-studio-code-bin", "flatpak", "docker-compose"})
+2025-12-30-T23:14:37  INFO [Runtime] Syncing 41 dependencies to preflight modal (was_preflight=true, modal had 0 before)
+2025-12-30-T23:14:37  INFO [Runtime] Modal dependency_info now has 41 entries (was 0)
+2025-12-30-T23:14:37  INFO [Runtime] check_and_trigger_deps_resolution: preflight_deps_items=0, preflight_deps_resolving=false, deps_resolving=true
+2025-12-30-T23:14:37  INFO resolve_file_changes{stage="files" item_count=4}:   Found 0 files for docker-compose (0 new, 0 changed, 0 removed)
+2025-12-30-T23:14:37  INFO resolve_file_changes{stage="files" item_count=4}: [4/4] Resolving files for package: docker (Official { repo: "extra", arch: "x86_64" })
+2025-12-30-T23:14:37  WARN resolve_file_changes{stage="files" item_count=4}: File database not synced for docker (pacman -Fy requires root). Skipping file list.
+2025-12-30-T23:14:37  INFO resolve_file_changes{stage="files" item_count=4}:   Found 0 files for docker (0 new, 0 changed, 0 removed)
+2025-12-30-T23:14:37  INFO resolve_file_changes{stage="files" item_count=4}: File resolution complete stage="files" item_count=4 result_count=4 duration_ms=3693
+2025-12-30-T23:14:37  INFO [Runtime] files resolution worker completed stage="files" result_count=4 was_preflight=true
+2025-12-30-T23:14:37  INFO [Runtime] handle_file_result: Package 'visual-studio-code-bin' - total=2, new=2, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-30-T23:14:37  INFO [Runtime] handle_file_result: Package 'flatpak' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-30-T23:14:37  INFO [Runtime] handle_file_result: Package 'docker-compose' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-30-T23:14:37  INFO [Runtime] handle_file_result: Package 'docker' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-30-T23:14:37  INFO [Runtime] handle_file_result: Modal open - items=4, filtered_files=4, modal_current=0 (was 0)
+2025-12-30-T23:14:37  INFO [Runtime] handle_file_result: Syncing 4 file infos to preflight modal (was_preflight=true, modal had 0 before)
+2025-12-30-T23:14:37  INFO [Runtime] handle_file_result: Successfully synced file info to modal, modal now has 4 entries (was 0)
+2025-12-30-T23:14:41  INFO [Runtime] Executor worker received install request: 4 items, dry_run=false
+2025-12-30-T23:15:10  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:15:10  WARN Temp database sync failed
+2025-12-30-T23:15:10  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:15:10  INFO Update check completed: found 1 total available updates (after deduplication)
+2025-12-30-T23:15:16  INFO [PTY] Process finished: success=true, exit_code=Some(0), total_lines_sent=478
+2025-12-30-T23:15:16  INFO Received Finished: success=true, exit_code=Some(0)
+2025-12-30-T23:15:16  INFO Added completion message, log_lines.len()=201
+2025-12-30-T23:15:16  INFO Install operation completed: triggered refresh of installed packages and updates
+2025-12-30-T23:15:16  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-30-T23:15:16  WARN Temp database sync failed
+2025-12-30-T23:15:16  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-30-T23:15:17  INFO Update check completed: found 1 total available updates (after deduplication)
+2025-12-30-T23:15:39  WARN pacman exited with non-zero status command="pacman" args=["-Fl", "visual-studio-code-bin"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=278
+2025-12-30-T23:15:39  WARN pacman exited with non-zero status command="pacman" args=["-Fl", "flatpak"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=263
+2025-12-30-T23:15:39  WARN pacman exited with non-zero status command="pacman" args=["-Fl", "docker-compose"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=270
+2025-12-30-T23:15:39  WARN pacman exited with non-zero status command="pacman" args=["-Fl", "docker"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-31-T10:45:44  INFO logging initialized path=/home/dichter/.config/pacsea/logs/pacsea.log
+2025-12-31-T10:45:44  INFO Pacsea starting dry_run=false
+2025-12-31-T10:45:44  INFO startup timestamp tracking previous=Some("20251231:001210") current=20251231:114544
+2025-12-31-T10:45:44  INFO resolved state file paths recent=/home/dichter/.config/pacsea/lists/recent_searches.json install=/home/dichter/.config/pacsea/lists/install_list.json details_cache=/home/dichter/.config/pacsea/lists/details_cache.json index=/home/dichter/.config/pacsea/lists/official_index.json news_read=/home/dichter/.config/pacsea/lists/news_read_urls.json news_read_ids=/home/dichter/.config/pacsea/lists/news_read_ids.json announcement_read=/home/dichter/.config/pacsea/lists/announcement_read.json
+2025-12-31-T10:45:44  INFO Resolved locale: 'en-US' (from settings: '<auto-detect>')
+2025-12-31-T10:45:44  INFO loaded details cache path=/home/dichter/.config/pacsea/lists/details_cache.json
+2025-12-31-T10:45:44  INFO loaded recent searches path=/home/dichter/.config/pacsea/lists/recent_searches.json count=10
+2025-12-31-T10:45:44  INFO loaded install list path=/home/dichter/.config/pacsea/lists/install_list.json count=0
+2025-12-31-T10:45:44  INFO loaded announcement read IDs path=/home/dichter/.config/pacsea/lists/announcement_read.json count=1
+2025-12-31-T10:45:44  INFO showing version announcement modal current_version="0.7.1" base_version=0.7.1 announcement_version="0.7.1"
+2025-12-31-T10:45:44  INFO attempted to load official index from disk path=/home/dichter/.config/pacsea/lists/official_index.json
+2025-12-31-T10:45:44  INFO auxiliary workers starting headless=false get_announcement=true updates_refresh_interval=60
+2025-12-31-T10:45:44  INFO queueing combined news feed fetch (startup) installed_names=0
+2025-12-31-T10:45:44  INFO [Runtime] Executor worker started, waiting for requests...
+2025-12-31-T10:45:44  INFO waiting for startup news fetch to complete before starting aggregated feed fetch
+2025-12-31-T10:45:44  INFO additional delay after startup fetch completion additional_delay_ms=696
+2025-12-31-T10:45:44  INFO fetching remote announcement url=https://gist.githubusercontent.com/Firstp1ck/d2e6016b8d7a90f813a582078208e9bd/raw/announcement.json
+2025-12-31-T10:45:44  INFO refreshing official index in background
+2025-12-31-T10:45:44  INFO [Runtime] Dependency worker started, waiting for requests...
+2025-12-31-T10:45:44  INFO loaded theme configuration path=/home/dichter/.config/pacsea/theme.conf
+2025-12-31-T10:45:44  INFO [PKGBUILD cache] Loaded cache entries path=/home/dichter/.config/pacsea/lists/pkgbuild_parse_cache.json count=7
+2025-12-31-T10:45:44  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-31-T10:45:44  WARN Temp database sync failed
+2025-12-31-T10:45:44  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-31-T10:45:44  INFO announcement fetched successfully id=2025-12-20-nvidia-590-pascal-support
+2025-12-31-T10:45:44  INFO remote announcement already marked as read id=2025-12-20-nvidia-590-pascal-support
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "endeavouros"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=47
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=43
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=48
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=49
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=46
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=51
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=52
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=46
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=51
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=52
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "omniverse"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=45
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "universe"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=44
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "lib32"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=41
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "galaxy"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=42
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "world"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=41
+2025-12-31-T10:45:45  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "system"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=42
+2025-12-31-T10:45:45  INFO official index up-to-date (no name changes) count=15035
+2025-12-31-T10:45:45  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-31-T10:45:45  INFO Update check completed: found 1 total available updates (after deduplication)
+2025-12-31-T10:45:45  INFO fetch_news_feed start limit=50 include_arch_news=true include_advisories=true include_pkg_updates=true include_aur_comments=true installed_only=false installed_filter=true sort_mode=DateDesc
+2025-12-31-T10:45:45  INFO starting fetch: arch_news=true, advisories=true, pkg_updates=true, aur_comments=true
+2025-12-31-T10:45:45  INFO fetching package updates: installed_count=46, limit=50
+2025-12-31-T10:45:45  INFO fetch_installed_updates: official scan complete, new_packages=9, updated_packages=1, baseline_only=0
+2025-12-31-T10:45:45  INFO fetching AUR comments: installed_count=46, limit=50
+2025-12-31-T10:45:45  INFO fetching arch news...
+2025-12-31-T10:45:45  INFO loaded from disk cache source="arch_news" items=10 age_hours=11 ttl_days=14
+2025-12-31-T10:45:45  INFO arch news fetch completed: items=10
+2025-12-31-T10:45:45  INFO fetching advisories...
+2025-12-31-T10:45:45  INFO loaded from disk cache source="advisories" items=15 age_hours=11 ttl_days=14
+2025-12-31-T10:45:45  INFO advisories fetch completed: items=15
+2025-12-31-T10:45:47  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-31-T10:45:47  INFO AUR comments fetch completed: items=35
+2025-12-31-T10:45:48  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-31-T10:45:56  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-31-T10:45:56  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15035
+2025-12-31-T10:45:59  INFO [Runtime] Dependency worker received request: 1 items, action=Install
+2025-12-31-T10:45:59  INFO [Runtime] File worker received request: 1 items, action=Install
+2025-12-31-T10:45:59  INFO [Runtime] Service worker received request: 1 items, action=Install
+2025-12-31-T10:45:59  INFO [Runtime] Resolving forward dependencies for 1 packages
+2025-12-31-T10:45:59  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-31-T10:45:59  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-31-T10:45:59  WARN command exited with non-zero status command="pacman" args=["-Fl", "rmpc"] display="pacman -Fl rmpc" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=260
+2025-12-31-T10:45:59  WARN Failed to resolve service units for package rmpc: `pacman -Fl rmpc` exited with status exit status: 1
+2025-12-31-T10:45:59  INFO resolve_file_changes{stage="files" item_count=1}: [1/1] Resolving files for package: rmpc (Official { repo: "extra", arch: "x86_64" })
+2025-12-31-T10:45:59  WARN resolve_file_changes{stage="files" item_count=1}: File database not synced for rmpc (pacman -Fy requires root). Skipping file list.
+2025-12-31-T10:45:59  INFO resolve_sandbox_info{stage="sandbox" item_count=0}: Sandbox resolution complete stage="sandbox" item_count=0 result_count=0 duration_ms=13
+2025-12-31-T10:45:59  INFO [Runtime] sandbox resolution worker completed stage="sandbox" result_count=0 was_preflight=false
+2025-12-31-T10:45:59  WARN [Runtime] handle_sandbox_result: Received empty sandbox info
+2025-12-31-T10:45:59  INFO [Runtime] check_and_trigger_deps_resolution: preflight_deps_items=0, preflight_deps_resolving=false, deps_resolving=true
+2025-12-31-T10:45:59  INFO resolve_dependencies{stage="dependencies" item_count=1}: Fetching list of installed packages...
+2025-12-31-T10:45:59  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 582 installed packages
+2025-12-31-T10:45:59  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 1 upgradable packages
+2025-12-31-T10:45:59  INFO resolve_dependencies{stage="dependencies" item_count=1}: Checking conflicts for 1 package(s)
+2025-12-31-T10:45:59  WARN command exited with non-zero status command="pacman" args=["-Fl", "rmpc"] display="pacman -Fl rmpc" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=260
+2025-12-31-T10:45:59  INFO [Runtime] services resolution worker completed stage="services" result_count=0 was_preflight=false
+2025-12-31-T10:46:00  INFO resolve_dependencies{stage="dependencies" item_count=1}: Total unique dependencies found: 1
+2025-12-31-T10:46:00  INFO resolve_dependencies{stage="dependencies" item_count=1}: Dependency resolution complete stage="dependencies" item_count=1 result_count=1 duration_ms=457
+2025-12-31-T10:46:00  INFO [Runtime] Dependency resolution done, sending 1 deps to result channel
+2025-12-31-T10:46:00  INFO [Runtime] deps_res_tx.send result: true
+2025-12-31-T10:46:00  INFO [Runtime] dependencies resolution worker completed stage="dependencies" result_count=1 was_preflight=false
+2025-12-31-T10:46:00  INFO resolve_file_changes{stage="files" item_count=1}:   Found 0 files for rmpc (0 new, 0 changed, 0 removed)
+2025-12-31-T10:46:00  INFO resolve_file_changes{stage="files" item_count=1}: File resolution complete stage="files" item_count=1 result_count=1 duration_ms=501
+2025-12-31-T10:46:00  INFO [Runtime] files resolution worker completed stage="files" result_count=1 was_preflight=false
+2025-12-31-T10:46:00  INFO [Runtime] handle_file_result: Package 'rmpc' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-31-T10:46:06  INFO installed update feed built emitted=45 new_packages=9 updated_packages=1 aur_new_packages=1 aur_updated_packages=0 baseline_only=0 installed_total=46 aur_candidates=7
+2025-12-31-T10:46:06  INFO package updates fetch completed: items=45
+2025-12-31-T10:46:06  INFO fetch completed, combining results...
+2025-12-31-T10:46:06  INFO fetch_news_feed success total=105 arch=10 advisories=15 updates=45 aur_comments=35
+2025-12-31-T10:46:06  INFO news feed fetched total=105 arch=10 advisories=15 installed_names=46
+2025-12-31-T10:46:06  INFO sending aggregated news feed payload to channel items_count=105
+2025-12-31-T10:46:06  INFO aggregated news feed payload sent successfully
+2025-12-31-T10:46:06  INFO received aggregated news feed payload in event loop items_count=105
+2025-12-31-T10:46:06  INFO starting news continuation worker initial_count=105
+2025-12-31-T10:46:06  INFO news feed updated fetched=105 visible=47 max_age_days=30 installed_only=false arch_on=true advisories_on=true
+2025-12-31-T10:46:06  INFO [Install] Opening preflight modal for 1 packages
+2025-12-31-T10:46:06  INFO loaded service cache path=/home/dichter/.config/pacsea/lists/services_cache.json count=0
+2025-12-31-T10:46:06  INFO loaded sandbox cache (exact match) path=/home/dichter/.config/pacsea/lists/sandbox_cache.json count=0
+2025-12-31-T10:46:06  INFO [Install] Preflight modal opened successfully in 318.279µs (1 packages)
+2025-12-31-T10:46:07  INFO compute_preflight_summary{stage="summary" item_count=1}: Preflight summary computation complete stage="summary" item_count=1 duration_ms=176
+2025-12-31-T10:46:07  INFO [Runtime] Preflight summary computation worker completed stage="summary" package_count=1
+2025-12-31-T10:46:08  INFO starting continuation fetch installed_count=46 initial_count=105
+2025-12-31-T10:46:08  INFO fetch_installed_updates: using cached results (age=2s, items=45)
+2025-12-31-T10:46:08  INFO fetch_installed_aur_comments: using cached results (age=21s, items=35)
+2025-12-31-T10:46:08  INFO fetching arch news...
+2025-12-31-T10:46:08  INFO using in-memory cached arch news
+2025-12-31-T10:46:08  INFO arch news fetch completed: items=10
+2025-12-31-T10:46:08  INFO fetching advisories...
+2025-12-31-T10:46:08  INFO using in-memory cached advisories
+2025-12-31-T10:46:08  INFO advisories fetch completed: items=15
+2025-12-31-T10:46:08  INFO continuation fetch complete total=0 arch=0 advisories=0 updates=0
+2025-12-31-T10:46:08  INFO continuation worker received items to send count=0
+2025-12-31-T10:46:08  INFO news continuation worker completed
+2025-12-31-T10:46:12  INFO [Runtime] Executor worker received install request: 1 items, dry_run=false
+2025-12-31-T10:46:14  INFO [PTY] Process finished: success=true, exit_code=Some(0), total_lines_sent=49
+2025-12-31-T10:46:14  INFO Received Finished: success=true, exit_code=Some(0)
+2025-12-31-T10:46:14  INFO Added completion message, log_lines.len()=24
+2025-12-31-T10:46:14  INFO Install operation completed: triggered refresh of installed packages and updates
+2025-12-31-T10:46:14  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-31-T10:46:14  WARN Temp database sync failed
+2025-12-31-T10:46:14  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-31-T10:46:15  INFO Update check completed: found 3 total available updates (after deduplication)
+2025-12-31-T10:46:16  WARN pacman exited with non-zero status command="pacman" args=["-Fl", "rmpc"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=260
+2025-12-31-T10:46:33  INFO logging initialized path=/home/dichter/.config/pacsea/logs/pacsea.log
+2025-12-31-T10:46:33  INFO Pacsea starting dry_run=false
+2025-12-31-T10:46:33  INFO startup timestamp tracking previous=Some("20251231:114544") current=20251231:114633
+2025-12-31-T10:46:33  INFO resolved state file paths recent=/home/dichter/.config/pacsea/lists/recent_searches.json install=/home/dichter/.config/pacsea/lists/install_list.json details_cache=/home/dichter/.config/pacsea/lists/details_cache.json index=/home/dichter/.config/pacsea/lists/official_index.json news_read=/home/dichter/.config/pacsea/lists/news_read_urls.json news_read_ids=/home/dichter/.config/pacsea/lists/news_read_ids.json announcement_read=/home/dichter/.config/pacsea/lists/announcement_read.json
+2025-12-31-T10:46:33  INFO Resolved locale: 'en-US' (from settings: '<auto-detect>')
+2025-12-31-T10:46:33  INFO loaded details cache path=/home/dichter/.config/pacsea/lists/details_cache.json
+2025-12-31-T10:46:33  INFO loaded recent searches path=/home/dichter/.config/pacsea/lists/recent_searches.json count=12
+2025-12-31-T10:46:33  INFO loaded install list path=/home/dichter/.config/pacsea/lists/install_list.json count=0
+2025-12-31-T10:46:33  INFO loaded announcement read IDs path=/home/dichter/.config/pacsea/lists/announcement_read.json count=2
+2025-12-31-T10:46:33  INFO version announcement already marked as read current_version="0.7.1" base_version=0.7.1
+2025-12-31-T10:46:33  INFO attempted to load official index from disk path=/home/dichter/.config/pacsea/lists/official_index.json
+2025-12-31-T10:46:33  INFO auxiliary workers starting headless=false get_announcement=true updates_refresh_interval=60
+2025-12-31-T10:46:33  INFO [Runtime] Dependency worker started, waiting for requests...
+2025-12-31-T10:46:33  INFO [Runtime] Executor worker started, waiting for requests...
+2025-12-31-T10:46:33  INFO queueing combined news feed fetch (startup) installed_names=0
+2025-12-31-T10:46:33  INFO fetching remote announcement url=https://gist.githubusercontent.com/Firstp1ck/d2e6016b8d7a90f813a582078208e9bd/raw/announcement.json
+2025-12-31-T10:46:33  INFO waiting for startup news fetch to complete before starting aggregated feed fetch
+2025-12-31-T10:46:33  INFO additional delay after startup fetch completion additional_delay_ms=1139
+2025-12-31-T10:46:33  INFO refreshing official index in background
+2025-12-31-T10:46:33  INFO loaded theme configuration path=/home/dichter/.config/pacsea/theme.conf
+2025-12-31-T10:46:33  INFO [PKGBUILD cache] Loaded cache entries path=/home/dichter/.config/pacsea/lists/pkgbuild_parse_cache.json count=8
+2025-12-31-T10:46:33  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-31-T10:46:33  WARN Temp database sync failed
+2025-12-31-T10:46:33  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-31-T10:46:33  INFO announcement fetched successfully id=2025-12-20-nvidia-590-pascal-support
+2025-12-31-T10:46:33  INFO remote announcement already marked as read id=2025-12-20-nvidia-590-pascal-support
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "endeavouros"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=47
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=43
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=48
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=49
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=46
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=51
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra-v3"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=52
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=46
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-core-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=51
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "cachyos-extra-v4"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=52
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "omniverse"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=45
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "universe"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=44
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "lib32"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=41
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "galaxy"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=42
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "world"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=41
+2025-12-31-T10:46:33  WARN pacman exited with non-zero status command="pacman" args=["-Sl", "system"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=42
+2025-12-31-T10:46:33  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:46:33  INFO official index updated (names changed) count=15034
+2025-12-31-T10:46:33  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:46:33  INFO Update check completed: found 3 total available updates (after deduplication)
+2025-12-31-T10:46:34  INFO fetch_news_feed start limit=50 include_arch_news=true include_advisories=true include_pkg_updates=true include_aur_comments=true installed_only=false installed_filter=true sort_mode=DateDesc
+2025-12-31-T10:46:34  INFO starting fetch: arch_news=true, advisories=true, pkg_updates=true, aur_comments=true
+2025-12-31-T10:46:34  INFO fetching package updates: installed_count=47, limit=50
+2025-12-31-T10:46:34  INFO fetch_installed_updates: official scan complete, new_packages=1, updated_packages=0, baseline_only=0
+2025-12-31-T10:46:34  INFO fetching AUR comments: installed_count=47, limit=50
+2025-12-31-T10:46:34  INFO fetching arch news...
+2025-12-31-T10:46:34  INFO loaded from disk cache source="arch_news" items=10 age_hours=11 ttl_days=14
+2025-12-31-T10:46:34  INFO arch news fetch completed: items=10
+2025-12-31-T10:46:34  INFO fetching advisories...
+2025-12-31-T10:46:34  INFO loaded from disk cache source="advisories" items=15 age_hours=11 ttl_days=14
+2025-12-31-T10:46:34  INFO advisories fetch completed: items=15
+2025-12-31-T10:46:36  INFO AUR comments fetch completed: items=35
+2025-12-31-T10:46:42  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:46:44  INFO [Runtime] Dependency worker received request: 1 items, action=Install
+2025-12-31-T10:46:44  INFO [Runtime] File worker received request: 1 items, action=Install
+2025-12-31-T10:46:44  INFO [Runtime] Service worker received request: 1 items, action=Install
+2025-12-31-T10:46:44  INFO [Runtime] Resolving forward dependencies for 1 packages
+2025-12-31-T10:46:44  INFO resolve_dependencies{stage="dependencies" item_count=1}: Fetching list of installed packages...
+2025-12-31-T10:46:44  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-31-T10:46:44  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-31-T10:46:44  WARN command exited with non-zero status command="pacman" args=["-Fl", "mpd"] display="pacman -Fl mpd" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=259
+2025-12-31-T10:46:44  WARN Failed to resolve service units for package mpd: `pacman -Fl mpd` exited with status exit status: 1
+2025-12-31-T10:46:44  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 583 installed packages
+2025-12-31-T10:46:44  INFO resolve_file_changes{stage="files" item_count=1}: [1/1] Resolving files for package: mpd (Official { repo: "extra", arch: "x86_64" })
+2025-12-31-T10:46:44  WARN resolve_file_changes{stage="files" item_count=1}: File database not synced for mpd (pacman -Fy requires root). Skipping file list.
+2025-12-31-T10:46:44  INFO resolve_sandbox_info{stage="sandbox" item_count=0}: Sandbox resolution complete stage="sandbox" item_count=0 result_count=0 duration_ms=13
+2025-12-31-T10:46:44  INFO [Runtime] sandbox resolution worker completed stage="sandbox" result_count=0 was_preflight=false
+2025-12-31-T10:46:44  WARN [Runtime] handle_sandbox_result: Received empty sandbox info
+2025-12-31-T10:46:44  INFO [Runtime] check_and_trigger_deps_resolution: preflight_deps_items=0, preflight_deps_resolving=false, deps_resolving=true
+2025-12-31-T10:46:44  WARN command exited with non-zero status command="pacman" args=["-Fl", "mpd"] display="pacman -Fl mpd" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=259
+2025-12-31-T10:46:44  INFO [Runtime] services resolution worker completed stage="services" result_count=0 was_preflight=false
+2025-12-31-T10:46:44  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 3 upgradable packages
+2025-12-31-T10:46:44  INFO resolve_dependencies{stage="dependencies" item_count=1}: Checking conflicts for 1 package(s)
+2025-12-31-T10:46:45  INFO resolve_file_changes{stage="files" item_count=1}:   Found 0 files for mpd (0 new, 0 changed, 0 removed)
+2025-12-31-T10:46:45  INFO resolve_file_changes{stage="files" item_count=1}: File resolution complete stage="files" item_count=1 result_count=1 duration_ms=618
+2025-12-31-T10:46:45  INFO [Runtime] files resolution worker completed stage="files" result_count=1 was_preflight=false
+2025-12-31-T10:46:45  INFO [Runtime] handle_file_result: Package 'mpd' - total=0, new=0, changed=0, removed=0, config=0, pacnew=0, pacsave=0
+2025-12-31-T10:46:48  INFO resolve_dependencies{stage="dependencies" item_count=1}: Total unique dependencies found: 52
+2025-12-31-T10:46:48  INFO resolve_dependencies{stage="dependencies" item_count=1}: Dependency resolution complete stage="dependencies" item_count=1 result_count=52 duration_ms=4064
+2025-12-31-T10:46:48  INFO [Runtime] Dependency resolution done, sending 52 deps to result channel
+2025-12-31-T10:46:48  INFO [Runtime] deps_res_tx.send result: true
+2025-12-31-T10:46:48  INFO [Runtime] dependencies resolution worker completed stage="dependencies" result_count=52 was_preflight=false
+2025-12-31-T10:46:55  INFO installed update feed built emitted=46 new_packages=1 updated_packages=0 aur_new_packages=0 aur_updated_packages=0 baseline_only=0 installed_total=47 aur_candidates=7
+2025-12-31-T10:46:55  INFO package updates fetch completed: items=46
+2025-12-31-T10:46:55  INFO fetch completed, combining results...
+2025-12-31-T10:46:55  INFO fetch_news_feed success total=106 arch=10 advisories=15 updates=46 aur_comments=35
+2025-12-31-T10:46:55  INFO news feed fetched total=106 arch=10 advisories=15 installed_names=47
+2025-12-31-T10:46:55  INFO sending aggregated news feed payload to channel items_count=106
+2025-12-31-T10:46:55  INFO aggregated news feed payload sent successfully
+2025-12-31-T10:46:55  INFO received aggregated news feed payload in event loop items_count=106
+2025-12-31-T10:46:55  INFO starting news continuation worker initial_count=106
+2025-12-31-T10:46:55  INFO news feed updated fetched=106 visible=47 max_age_days=30 installed_only=false arch_on=true advisories_on=true
+2025-12-31-T10:46:56  INFO [Install] Opening preflight modal for 1 packages
+2025-12-31-T10:46:56  INFO loaded service cache path=/home/dichter/.config/pacsea/lists/services_cache.json count=0
+2025-12-31-T10:46:56  INFO loaded sandbox cache (exact match) path=/home/dichter/.config/pacsea/lists/sandbox_cache.json count=0
+2025-12-31-T10:46:56  INFO [Install] Preflight modal opened successfully in 71.489µs (1 packages)
+2025-12-31-T10:46:57  INFO compute_preflight_summary{stage="summary" item_count=1}: Preflight summary computation complete stage="summary" item_count=1 duration_ms=176
+2025-12-31-T10:46:57  INFO [Runtime] Preflight summary computation worker completed stage="summary" package_count=1
+2025-12-31-T10:46:57  INFO starting continuation fetch installed_count=47 initial_count=106
+2025-12-31-T10:46:57  INFO fetch_installed_updates: using cached results (age=2s, items=46)
+2025-12-31-T10:46:57  INFO fetch_installed_aur_comments: using cached results (age=20s, items=35)
+2025-12-31-T10:46:57  INFO fetching arch news...
+2025-12-31-T10:46:57  INFO using in-memory cached arch news
+2025-12-31-T10:46:57  INFO arch news fetch completed: items=10
+2025-12-31-T10:46:57  INFO fetching advisories...
+2025-12-31-T10:46:57  INFO using in-memory cached advisories
+2025-12-31-T10:46:57  INFO advisories fetch completed: items=15
+2025-12-31-T10:46:57  INFO continuation fetch complete total=0 arch=0 advisories=0 updates=0
+2025-12-31-T10:46:57  INFO continuation worker received items to send count=0
+2025-12-31-T10:46:57  INFO news continuation worker completed
+2025-12-31-T10:47:02  INFO [Runtime] Executor worker received install request: 1 items, dry_run=false
+2025-12-31-T10:47:04  INFO [PTY] Process finished: success=true, exit_code=Some(0), total_lines_sent=304
+2025-12-31-T10:47:04  INFO Received Finished: success=true, exit_code=Some(0)
+2025-12-31-T10:47:04  INFO Added completion message, log_lines.len()=60
+2025-12-31-T10:47:04  INFO Install operation completed: triggered refresh of installed packages and updates
+2025-12-31-T10:47:04  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-31-T10:47:04  WARN Temp database sync failed
+2025-12-31-T10:47:04  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-31-T10:47:04  INFO Update check completed: found 3 total available updates (after deduplication)
+2025-12-31-T10:47:05  WARN pacman exited with non-zero status command="pacman" args=["-Fl", "mpd"] status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=259
+2025-12-31-T10:47:11  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:47:12  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:47:33  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-31-T10:47:33  WARN Temp database sync failed
+2025-12-31-T10:47:33  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-31-T10:47:33  INFO Update check completed: found 3 total available updates (after deduplication)
+2025-12-31-T10:48:33  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-31-T10:48:33  WARN Temp database sync failed
+2025-12-31-T10:48:33  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-31-T10:48:33  INFO Update check completed: found 3 total available updates (after deduplication)
+2025-12-31-T10:49:33  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-31-T10:49:33  WARN Temp database sync failed
+2025-12-31-T10:49:33  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-31-T10:49:33  INFO Update check completed: found 3 total available updates (after deduplication)
+2025-12-31-T10:49:53  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:49:56  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:50:05  INFO [Runtime] Dependency worker received request: 1 items, action=Install
+2025-12-31-T10:50:05  INFO [Runtime] Service worker received request: 1 items, action=Install
+2025-12-31-T10:50:05  INFO [Runtime] File worker received request: 1 items, action=Install
+2025-12-31-T10:50:05  INFO [Runtime] Resolving forward dependencies for 1 packages
+2025-12-31-T10:50:05  INFO resolve_dependencies{stage="dependencies" item_count=1}: Fetching list of installed packages...
+2025-12-31-T10:50:05  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-31-T10:50:05  WARN resolve_file_changes{stage="files" item_count=1}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-31-T10:50:05  WARN command exited with non-zero status command="pacman" args=["-Fl", "mopidy"] display="pacman -Fl mopidy" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-31-T10:50:05  WARN Failed to resolve service units for package mopidy: `pacman -Fl mopidy` exited with status exit status: 1
+2025-12-31-T10:50:05  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 605 installed packages
+2025-12-31-T10:50:05  INFO resolve_file_changes{stage="files" item_count=1}: [1/1] Resolving files for package: mopidy (Official { repo: "extra", arch: "any" })
+2025-12-31-T10:50:05  WARN resolve_file_changes{stage="files" item_count=1}: File database not synced for mopidy (pacman -Fy requires root). Skipping file list.
+2025-12-31-T10:50:05  INFO resolve_sandbox_info{stage="sandbox" item_count=0}: Sandbox resolution complete stage="sandbox" item_count=0 result_count=0 duration_ms=14
+2025-12-31-T10:50:05  INFO resolve_dependencies{stage="dependencies" item_count=1}: Found 3 upgradable packages
+2025-12-31-T10:50:05  INFO resolve_dependencies{stage="dependencies" item_count=1}: Checking conflicts for 1 package(s)
+2025-12-31-T10:50:05  WARN command exited with non-zero status command="pacman" args=["-Fl", "mopidy"] display="pacman -Fl mopidy" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-31-T10:50:06  INFO resolve_file_changes{stage="files" item_count=1}:   Found 0 files for mopidy (0 new, 0 changed, 0 removed)
+2025-12-31-T10:50:06  INFO resolve_file_changes{stage="files" item_count=1}: File resolution complete stage="files" item_count=1 result_count=1 duration_ms=538
+2025-12-31-T10:50:07  INFO resolve_dependencies{stage="dependencies" item_count=1}: Total unique dependencies found: 11
+2025-12-31-T10:50:07  INFO resolve_dependencies{stage="dependencies" item_count=1}: Dependency resolution complete stage="dependencies" item_count=1 result_count=11 duration_ms=1717
+2025-12-31-T10:50:07  INFO [Runtime] Dependency resolution done, sending 11 deps to result channel
+2025-12-31-T10:50:07  INFO [Runtime] deps_res_tx.send result: true
+2025-12-31-T10:50:10  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:50:13  INFO [Runtime] Dependency worker received request: 2 items, action=Install
+2025-12-31-T10:50:13  INFO [Runtime] File worker received request: 2 items, action=Install
+2025-12-31-T10:50:13  INFO [Runtime] Service worker received request: 2 items, action=Install
+2025-12-31-T10:50:13  INFO [Runtime] Resolving forward dependencies for 2 packages
+2025-12-31-T10:50:13  INFO resolve_dependencies{stage="dependencies" item_count=2}: Fetching list of installed packages...
+2025-12-31-T10:50:13  WARN resolve_file_changes{stage="files" item_count=2}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-31-T10:50:13  WARN resolve_file_changes{stage="files" item_count=2}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-31-T10:50:13  INFO resolve_dependencies{stage="dependencies" item_count=2}: Found 605 installed packages
+2025-12-31-T10:50:13  INFO resolve_file_changes{stage="files" item_count=2}: [1/2] Resolving files for package: mopidy-mpd (Aur)
+2025-12-31-T10:50:13  WARN command exited with non-zero status command="pacman" args=["-Fl", "mopidy"] display="pacman -Fl mopidy" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-31-T10:50:13  WARN Failed to resolve service units for package mopidy: `pacman -Fl mopidy` exited with status exit status: 1
+2025-12-31-T10:50:13  INFO resolve_dependencies{stage="dependencies" item_count=2}: Found 3 upgradable packages
+2025-12-31-T10:50:13  INFO resolve_dependencies{stage="dependencies" item_count=2}: Checking conflicts for 2 package(s)
+2025-12-31-T10:50:13  INFO Sandbox resolution complete stage="sandbox" item_count=1 result_count=1 duration_ms=406
+2025-12-31-T10:50:14  WARN GitLab main returned invalid PKGBUILD (likely HTML): first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:50:14  INFO resolve_dependencies{stage="dependencies" item_count=2}: Using yay to resolve runtime dependencies for mopidy-mpd (will fetch .SRCINFO for build-time deps)
+2025-12-31-T10:50:14  WARN GitLab master returned HTML instead of PKGBUILD: first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:50:14  WARN command exited with non-zero status command="pacman" args=["-Fl", "mopidy"] display="pacman -Fl mopidy" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-31-T10:50:15  INFO resolve_file_changes{stage="files" item_count=2}:   Found 1 files for mopidy-mpd (1 new, 0 changed, 0 removed)
+2025-12-31-T10:50:15  INFO resolve_file_changes{stage="files" item_count=2}: [2/2] Resolving files for package: mopidy (Official { repo: "extra", arch: "any" })
+2025-12-31-T10:50:15  WARN resolve_file_changes{stage="files" item_count=2}: File database not synced for mopidy (pacman -Fy requires root). Skipping file list.
+2025-12-31-T10:50:15  WARN resolve_dependencies{stage="dependencies" item_count=2}: Could not fetch .SRCINFO for mopidy-mpd: Response does not appear to be valid .SRCINFO format (build-time dependencies will be missing)
+2025-12-31-T10:50:15  INFO resolve_file_changes{stage="files" item_count=2}:   Found 0 files for mopidy (0 new, 0 changed, 0 removed)
+2025-12-31-T10:50:15  INFO resolve_file_changes{stage="files" item_count=2}: File resolution complete stage="files" item_count=2 result_count=2 duration_ms=2400
+2025-12-31-T10:50:16  INFO resolve_dependencies{stage="dependencies" item_count=2}: Total unique dependencies found: 14
+2025-12-31-T10:50:16  INFO resolve_dependencies{stage="dependencies" item_count=2}: Dependency resolution complete stage="dependencies" item_count=2 result_count=14 duration_ms=3371
+2025-12-31-T10:50:16  INFO [Runtime] Dependency resolution done, sending 14 deps to result channel
+2025-12-31-T10:50:16  INFO [Runtime] deps_res_tx.send result: true
+2025-12-31-T10:50:18  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:50:23  INFO [Runtime] File worker received request: 3 items, action=Install
+2025-12-31-T10:50:23  INFO [Runtime] Dependency worker received request: 3 items, action=Install
+2025-12-31-T10:50:23  INFO [Runtime] Service worker received request: 3 items, action=Install
+2025-12-31-T10:50:23  INFO [Runtime] Resolving forward dependencies for 3 packages
+2025-12-31-T10:50:23  INFO resolve_dependencies{stage="dependencies" item_count=3}: Fetching list of installed packages...
+2025-12-31-T10:50:23  WARN resolve_file_changes{stage="files" item_count=3}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-31-T10:50:23  WARN resolve_file_changes{stage="files" item_count=3}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-31-T10:50:23  INFO resolve_dependencies{stage="dependencies" item_count=3}: Found 605 installed packages
+2025-12-31-T10:50:23  INFO resolve_file_changes{stage="files" item_count=3}: [1/3] Resolving files for package: mopidy-spotify-git (Aur)
+2025-12-31-T10:50:23  WARN command exited with non-zero status command="pacman" args=["-Fl", "mopidy"] display="pacman -Fl mopidy" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-31-T10:50:23  WARN Failed to resolve service units for package mopidy: `pacman -Fl mopidy` exited with status exit status: 1
+2025-12-31-T10:50:23  INFO resolve_dependencies{stage="dependencies" item_count=3}: Found 3 upgradable packages
+2025-12-31-T10:50:23  INFO resolve_dependencies{stage="dependencies" item_count=3}: Checking conflicts for 3 package(s)
+2025-12-31-T10:50:23  INFO Sandbox resolution complete stage="sandbox" item_count=2 result_count=2 duration_ms=580
+2025-12-31-T10:50:24  WARN GitLab main returned invalid PKGBUILD (likely HTML): first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:50:24  WARN GitLab master returned HTML instead of PKGBUILD: first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:50:24  INFO resolve_file_changes{stage="files" item_count=3}:   Found 2 files for mopidy-spotify-git (2 new, 0 changed, 0 removed)
+2025-12-31-T10:50:24  INFO resolve_file_changes{stage="files" item_count=3}: [2/3] Resolving files for package: mopidy-mpd (Aur)
+2025-12-31-T10:50:25  WARN GitLab main returned invalid PKGBUILD (likely HTML): first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:50:25  INFO resolve_dependencies{stage="dependencies" item_count=3}: Using yay to resolve runtime dependencies for mopidy-spotify-git (will fetch .SRCINFO for build-time deps)
+2025-12-31-T10:50:26  WARN GitLab master returned HTML instead of PKGBUILD: first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:50:26  WARN command exited with non-zero status command="pacman" args=["-Fl", "mopidy"] display="pacman -Fl mopidy" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-31-T10:50:26  WARN resolve_file_changes{stage="files" item_count=3}: GitLab main returned invalid PKGBUILD (likely HTML): first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:50:26  WARN resolve_dependencies{stage="dependencies" item_count=3}: Could not fetch .SRCINFO for mopidy-spotify-git: Response does not appear to be valid .SRCINFO format (build-time dependencies will be missing)
+2025-12-31-T10:50:26  WARN resolve_file_changes{stage="files" item_count=3}: GitLab master returned HTML instead of PKGBUILD: first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:50:27  INFO resolve_dependencies{stage="dependencies" item_count=3}: Using yay to resolve runtime dependencies for mopidy-mpd (will fetch .SRCINFO for build-time deps)
+2025-12-31-T10:50:27  WARN resolve_dependencies{stage="dependencies" item_count=3}: Could not fetch .SRCINFO for mopidy-mpd: Response does not appear to be valid .SRCINFO format (build-time dependencies will be missing)
+2025-12-31-T10:50:27  INFO resolve_file_changes{stage="files" item_count=3}:   Found 0 files for mopidy-mpd (0 new, 0 changed, 0 removed)
+2025-12-31-T10:50:27  INFO resolve_file_changes{stage="files" item_count=3}: [3/3] Resolving files for package: mopidy (Official { repo: "extra", arch: "any" })
+2025-12-31-T10:50:27  WARN resolve_file_changes{stage="files" item_count=3}: File database not synced for mopidy (pacman -Fy requires root). Skipping file list.
+2025-12-31-T10:50:28  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:50:28  INFO resolve_file_changes{stage="files" item_count=3}:   Found 0 files for mopidy (0 new, 0 changed, 0 removed)
+2025-12-31-T10:50:28  INFO resolve_file_changes{stage="files" item_count=3}: File resolution complete stage="files" item_count=3 result_count=3 duration_ms=5125
+2025-12-31-T10:50:28  INFO resolve_dependencies{stage="dependencies" item_count=3}: Total unique dependencies found: 14
+2025-12-31-T10:50:28  INFO resolve_dependencies{stage="dependencies" item_count=3}: Dependency resolution complete stage="dependencies" item_count=3 result_count=14 duration_ms=5742
+2025-12-31-T10:50:28  INFO [Runtime] Dependency resolution done, sending 14 deps to result channel
+2025-12-31-T10:50:28  INFO [Runtime] deps_res_tx.send result: true
+2025-12-31-T10:50:33  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-31-T10:50:33  WARN Temp database sync failed
+2025-12-31-T10:50:33  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-31-T10:50:33  INFO Update check completed: found 3 total available updates (after deduplication)
+2025-12-31-T10:50:59  INFO Successfully saved index to disk path=/home/dichter/.config/pacsea/lists/official_index.json package_count=15034
+2025-12-31-T10:51:02  INFO [Runtime] Dependency worker received request: 4 items, action=Install
+2025-12-31-T10:51:02  INFO [Runtime] File worker received request: 4 items, action=Install
+2025-12-31-T10:51:02  INFO [Runtime] Service worker received request: 4 items, action=Install
+2025-12-31-T10:51:02  INFO [Runtime] Resolving forward dependencies for 4 packages
+2025-12-31-T10:51:02  INFO resolve_dependencies{stage="dependencies" item_count=4}: Fetching list of installed packages...
+2025-12-31-T10:51:02  WARN resolve_file_changes{stage="files" item_count=4}: File database sync failed: error: you cannot perform this operation unless you are root.
+
+2025-12-31-T10:51:02  WARN resolve_file_changes{stage="files" item_count=4}: File database sync failed: File database sync failed: error: you cannot perform this operation unless you are root.
+ (continuing without sync)
+2025-12-31-T10:51:02  INFO resolve_dependencies{stage="dependencies" item_count=4}: Found 605 installed packages
+2025-12-31-T10:51:02  INFO resolve_file_changes{stage="files" item_count=4}: [1/4] Resolving files for package: gst-plugins-rs-git (Aur)
+2025-12-31-T10:51:02  WARN command exited with non-zero status command="pacman" args=["-Fl", "mopidy"] display="pacman -Fl mopidy" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-31-T10:51:02  WARN Failed to resolve service units for package mopidy: `pacman -Fl mopidy` exited with status exit status: 1
+2025-12-31-T10:51:02  INFO resolve_dependencies{stage="dependencies" item_count=4}: Found 3 upgradable packages
+2025-12-31-T10:51:02  INFO resolve_dependencies{stage="dependencies" item_count=4}: Checking conflicts for 4 package(s)
+2025-12-31-T10:51:02  INFO Sandbox resolution complete stage="sandbox" item_count=3 result_count=3 duration_ms=749
+2025-12-31-T10:51:03  WARN GitLab main returned invalid PKGBUILD (likely HTML): first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:51:03  WARN GitLab master returned HTML instead of PKGBUILD: first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:51:03  INFO resolve_file_changes{stage="files" item_count=4}:   Found 2 files for gst-plugins-rs-git (2 new, 0 changed, 0 removed)
+2025-12-31-T10:51:03  INFO resolve_file_changes{stage="files" item_count=4}: [2/4] Resolving files for package: mopidy-spotify-git (Aur)
+2025-12-31-T10:51:04  INFO [Install] Opening preflight modal for 4 packages
+2025-12-31-T10:51:04  INFO [Install] Preflight modal opened successfully in 33.43µs (4 packages)
+2025-12-31-T10:51:04  INFO [Runtime] check_and_trigger_deps_resolution: preflight_deps_items=0, preflight_deps_resolving=false, deps_resolving=true
+2025-12-31-T10:51:04  INFO compute_preflight_summary{stage="summary" item_count=4}: Preflight summary computation complete stage="summary" item_count=4 duration_ms=224
+2025-12-31-T10:51:04  INFO [Runtime] Preflight summary computation worker completed stage="summary" package_count=4
+2025-12-31-T10:51:04  WARN resolve_file_changes{stage="files" item_count=4}: GitLab main returned invalid PKGBUILD (likely HTML): first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:51:04  INFO resolve_dependencies{stage="dependencies" item_count=4}: Using yay to resolve runtime dependencies for gst-plugins-rs-git (will fetch .SRCINFO for build-time deps)
+2025-12-31-T10:51:04  INFO Sandbox resolution complete stage="sandbox" item_count=3 result_count=3 duration_ms=762
+2025-12-31-T10:51:04  INFO [Runtime] sandbox resolution worker completed stage="sandbox" result_count=3 was_preflight=true
+2025-12-31-T10:51:04  INFO [Runtime] handle_sandbox_result: Received 3 sandbox info entries
+2025-12-31-T10:51:04  INFO [Runtime] handle_sandbox_result: Package 'gst-plugins-rs-git' - total_deps=12, installed_deps=6, depends=6, makedepends=6, checkdepends=0, optdepends=0
+2025-12-31-T10:51:04  INFO [Runtime] handle_sandbox_result: Package 'mopidy-spotify-git' - total_deps=7, installed_deps=0, depends=4, makedepends=3, checkdepends=0, optdepends=0
+2025-12-31-T10:51:04  INFO [Runtime] handle_sandbox_result: Package 'mopidy-mpd' - total_deps=8, installed_deps=4, depends=6, makedepends=2, checkdepends=0, optdepends=0
+2025-12-31-T10:51:04  INFO [Runtime] handle_sandbox_result: Modal open - items=4, aur_items=3, filtered_sandbox=3, modal_current=0
+2025-12-31-T10:51:04  INFO [Runtime] handle_sandbox_result: Syncing 3 sandbox infos to preflight modal
+2025-12-31-T10:51:05  WARN resolve_file_changes{stage="files" item_count=4}: GitLab master returned HTML instead of PKGBUILD: first 200 chars: "<!DOCTYPE html>\n<html class=\"html-devise-layout gl-system\" lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\""
+2025-12-31-T10:51:05  WARN command exited with non-zero status command="pacman" args=["-Fl", "mopidy"] display="pacman -Fl mopidy" status=ExitStatus(unix_wait_status(256)) status_code=1 stdout_len=0 stderr_len=262
+2025-12-31-T10:51:05  INFO [Runtime] services resolution worker completed stage="services" result_count=0 was_preflight=false
+2025-12-31-T10:51:05  INFO loaded service cache path=/home/dichter/.config/pacsea/lists/services_cache.json count=0
+2025-12-31-T10:51:05  WARN resolve_dependencies{stage="dependencies" item_count=4}: Could not fetch .SRCINFO for gst-plugins-rs-git: Response does not appear to be valid .SRCINFO format (build-time dependencies will be missing)
+2025-12-31-T10:51:05  INFO resolve_dependencies{stage="dependencies" item_count=4}: Using yay to resolve runtime dependencies for mopidy-spotify-git (will fetch .SRCINFO for build-time deps)
+2025-12-31-T10:51:06  INFO resolve_file_changes{stage="files" item_count=4}:   Found 0 files for mopidy-spotify-git (0 new, 0 changed, 0 removed)
+2025-12-31-T10:51:06  INFO resolve_file_changes{stage="files" item_count=4}: [3/4] Resolving files for package: mopidy-mpd (Aur)
+2025-12-31-T10:51:06  WARN resolve_dependencies{stage="dependencies" item_count=4}: Could not fetch .SRCINFO for mopidy-spotify-git: Response does not appear to be valid .SRCINFO format (build-time dependencies will be missing)
+2025-12-31-T10:51:06  INFO resolve_dependencies{stage="dependencies" item_count=4}: Using yay to resolve runtime dependencies for mopidy-mpd (will fetch .SRCINFO for build-time deps)
+2025-12-31-T10:51:07  WARN resolve_dependencies{stage="dependencies" item_count=4}: Could not fetch .SRCINFO for mopidy-mpd: Response does not appear to be valid .SRCINFO format (build-time dependencies will be missing)
+2025-12-31-T10:51:08  INFO resolve_file_changes{stage="files" item_count=4}:   Found 1 files for mopidy-mpd (1 new, 0 changed, 0 removed)
+2025-12-31-T10:51:08  INFO resolve_file_changes{stage="files" item_count=4}: [4/4] Resolving files for package: mopidy (Official { repo: "extra", arch: "any" })
+2025-12-31-T10:51:08  WARN resolve_file_changes{stage="files" item_count=4}: File database not synced for mopidy (pacman -Fy requires root). Skipping file list.
+2025-12-31-T10:51:08  INFO resolve_dependencies{stage="dependencies" item_count=4}: Total unique dependencies found: 18
+2025-12-31-T10:51:08  INFO resolve_dependencies{stage="dependencies" item_count=4}: Dependency resolution complete stage="dependencies" item_count=4 result_count=18 duration_ms=6523
+2025-12-31-T10:51:08  INFO [Runtime] Dependency resolution done, sending 18 deps to result channel
+2025-12-31-T10:51:08  INFO [Runtime] deps_res_tx.send result: true
+2025-12-31-T10:51:08  INFO resolve_file_changes{stage="files" item_count=4}:   Found 0 files for mopidy (0 new, 0 changed, 0 removed)
+2025-12-31-T10:51:08  INFO resolve_file_changes{stage="files" item_count=4}: File resolution complete stage="files" item_count=4 result_count=4 duration_ms=6626
+2025-12-31-T10:51:09  INFO [Runtime] Executor worker received install request: 4 items, dry_run=false
+2025-12-31-T10:51:33  WARN Temp database sync failed (exit code: Some(1)): error: restricting filesystem access failed because the Landlock ruleset could not be applied: Operation not permitted
+error: switching to sandbox user 'alpm' failed!
+error: failed to synchronize all databases (failed to retrieve some files)
+2025-12-31-T10:51:33  WARN Temp database sync failed
+2025-12-31-T10:51:33  WARN Temp database sync failed and checkupdates not available, falling back to pacman -Qu (may show stale results)
+2025-12-31-T10:51:33  INFO Update check completed: found 3 total available updates (after deduplication)
+2025-12-31-T10:51:52  WARN [EventLoop] Received executor output but modal is not PreflightExec, modal=Discriminant(0)
+2025-12-31-T10:51:53  WARN [EventLoop] Received executor output but modal is not PreflightExec, modal=Discriminant(0)
+2025-12-31-T10:51:54  WARN [EventLoop] Received executor output but modal is not PreflightExec, modal=Discriminant(0)

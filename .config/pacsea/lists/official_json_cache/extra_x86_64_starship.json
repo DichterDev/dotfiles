@@ -1,0 +1,45 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-12-30T19:43:26Z",
+  "checkdepends": [
+    "python"
+  ],
+  "compressed_size": 3706803,
+  "conflicts": [],
+  "depends": [
+    "gcc-libs",
+    "glibc"
+  ],
+  "epoch": 0,
+  "filename": "starship-1.24.2-1-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 11786933,
+  "last_update": "2025-12-30T19:50:33.092Z",
+  "licenses": [
+    "ISC"
+  ],
+  "maintainers": [
+    "alucryd",
+    "alerque",
+    "orhun"
+  ],
+  "makedepends": [
+    "cmake",
+    "git",
+    "rust"
+  ],
+  "optdepends": [
+    "ttf-font-nerd: Nerd Font Symbols preset"
+  ],
+  "packager": "alerque",
+  "pkgbase": "starship",
+  "pkgdesc": "The cross-shell prompt for astronauts",
+  "pkgname": "starship",
+  "pkgrel": "1",
+  "pkgver": "1.24.2",
+  "provides": [],
+  "replaces": [],
+  "repo": "extra",
+  "url": "https://starship.rs/"
+}

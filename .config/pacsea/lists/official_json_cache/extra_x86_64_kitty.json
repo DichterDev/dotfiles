@@ -1,0 +1,67 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-11-03T17:54:53Z",
+  "checkdepends": [],
+  "compressed_size": 19885628,
+  "conflicts": [],
+  "depends": [
+    "cairo",
+    "dbus",
+    "fontconfig",
+    "freetype2",
+    "harfbuzz",
+    "hicolor-icon-theme",
+    "kitty-shell-integration",
+    "kitty-terminfo",
+    "lcms2",
+    "libgl",
+    "libpng",
+    "librsync",
+    "libx11",
+    "libxcursor",
+    "libxi",
+    "libxkbcommon",
+    "libxkbcommon-x11",
+    "openssl",
+    "python3",
+    "wayland",
+    "xxhash",
+    "zlib"
+  ],
+  "epoch": 0,
+  "filename": "kitty-0.44.0-1-x86_64.pkg.tar.zst",
+  "flag_date": "2025-12-24T07:56:05.243Z",
+  "groups": [],
+  "installed_size": 62808366,
+  "last_update": "2025-11-03T18:08:21.358Z",
+  "licenses": [
+    "GPL-3.0-only"
+  ],
+  "maintainers": [
+    "serebit",
+    "lfleischer"
+  ],
+  "makedepends": [
+    "go",
+    "libxinerama",
+    "libxrandr",
+    "simde",
+    "ttf-nerd-fonts-symbols-mono",
+    "wayland-protocols"
+  ],
+  "optdepends": [
+    "imagemagick: viewing images with icat",
+    "libcanberra: playing \"bell\" sound on terminal bell",
+    "python-pygments: syntax highlighting in kitty +kitten diff"
+  ],
+  "packager": "lfleischer",
+  "pkgbase": "kitty",
+  "pkgdesc": "A modern, hackable, featureful, OpenGL-based terminal emulator",
+  "pkgname": "kitty",
+  "pkgrel": "1",
+  "pkgver": "0.44.0",
+  "provides": [],
+  "replaces": [],
+  "repo": "extra",
+  "url": "https://github.com/kovidgoyal/kitty"
+}

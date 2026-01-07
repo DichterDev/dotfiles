@@ -1,0 +1,45 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-12-27T14:43:03Z",
+  "checkdepends": [],
+  "compressed_size": 1642007,
+  "conflicts": [],
+  "depends": [
+    "bash"
+  ],
+  "epoch": 0,
+  "filename": "fzf-0.67.0-2-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 4794912,
+  "last_update": "2025-12-27T14:45:37.846Z",
+  "licenses": [
+    "MIT"
+  ],
+  "maintainers": [
+    "Foxboron",
+    "foxxx0",
+    "FFY00",
+    "gromit"
+  ],
+  "makedepends": [
+    "git",
+    "go"
+  ],
+  "optdepends": [
+    "fish: fish keybindings",
+    "tmux: fzf-tmux script for launching fzf in a tmux pane",
+    "vim: plugin",
+    "zsh: zsh keybindings"
+  ],
+  "packager": "gromit",
+  "pkgbase": "fzf",
+  "pkgdesc": "Command-line fuzzy finder",
+  "pkgname": "fzf",
+  "pkgrel": "2",
+  "pkgver": "0.67.0",
+  "provides": [],
+  "replaces": [],
+  "repo": "extra",
+  "url": "https://github.com/junegunn/fzf"
+}

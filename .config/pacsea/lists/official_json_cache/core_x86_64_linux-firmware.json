@@ -1,0 +1,57 @@
+{
+  "arch": "any",
+  "build_date": "2025-12-01T23:00:56Z",
+  "checkdepends": [],
+  "compressed_size": 2419,
+  "conflicts": [],
+  "depends": [
+    "linux-firmware-amdgpu",
+    "linux-firmware-atheros",
+    "linux-firmware-broadcom",
+    "linux-firmware-cirrus",
+    "linux-firmware-intel",
+    "linux-firmware-mediatek",
+    "linux-firmware-nvidia",
+    "linux-firmware-other",
+    "linux-firmware-radeon",
+    "linux-firmware-realtek"
+  ],
+  "epoch": 0,
+  "filename": "linux-firmware-20251125-2-any.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 0,
+  "last_update": "2025-12-05T21:07:42.667Z",
+  "licenses": [
+    "CC0-1.0"
+  ],
+  "maintainers": [
+    "lcarlier",
+    "tpowa",
+    "heftig"
+  ],
+  "makedepends": [
+    "git",
+    "parallel",
+    "python",
+    "rdfind"
+  ],
+  "optdepends": [
+    "linux-firmware-liquidio: Firmware for Cavium LiquidIO server adapters",
+    "linux-firmware-marvell: Firmware for Marvell devices",
+    "linux-firmware-mellanox: Firmware for Mellanox Spectrum switches",
+    "linux-firmware-nfp: Firmware for Netronome Flow Processors",
+    "linux-firmware-qcom: Firmware for Qualcomm SoCs",
+    "linux-firmware-qlogic: Firmware for QLogic devices"
+  ],
+  "packager": "heftig",
+  "pkgbase": "linux-firmware",
+  "pkgdesc": "Firmware files for Linux - Default set",
+  "pkgname": "linux-firmware",
+  "pkgrel": "2",
+  "pkgver": "20251125",
+  "provides": [],
+  "replaces": [],
+  "repo": "core",
+  "url": "https://gitlab.com/kernel-firmware/linux-firmware"
+}

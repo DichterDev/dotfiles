@@ -1,0 +1,41 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-05-26T22:12:52Z",
+  "checkdepends": [],
+  "compressed_size": 451812,
+  "conflicts": [],
+  "depends": [
+    "gcc-libs",
+    "glibc"
+  ],
+  "epoch": 0,
+  "filename": "zoxide-0.9.8-2-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 1181808,
+  "last_update": "2025-05-26T22:14:53.746Z",
+  "licenses": [
+    "MIT"
+  ],
+  "maintainers": [
+    "grawlinson",
+    "alerque"
+  ],
+  "makedepends": [
+    "cargo",
+    "git"
+  ],
+  "optdepends": [
+    "fzf: for interactive selection"
+  ],
+  "packager": "alerque",
+  "pkgbase": "zoxide",
+  "pkgdesc": "A smarter cd command for your terminal",
+  "pkgname": "zoxide",
+  "pkgrel": "2",
+  "pkgver": "0.9.8",
+  "provides": [],
+  "replaces": [],
+  "repo": "extra",
+  "url": "https://github.com/ajeetdsouza/zoxide"
+}

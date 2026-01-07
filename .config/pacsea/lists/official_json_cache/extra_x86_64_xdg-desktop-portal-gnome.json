@@ -1,0 +1,63 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-09-15T07:29:40Z",
+  "checkdepends": [],
+  "compressed_size": 225442,
+  "conflicts": [
+    "xdg-desktop-portal-gtk<1.10.0-2"
+  ],
+  "depends": [
+    "cairo",
+    "dconf",
+    "fontconfig",
+    "gcc-libs",
+    "gdk-pixbuf2",
+    "glib2",
+    "glibc",
+    "gnome-desktop-4",
+    "graphene",
+    "gtk4",
+    "libadwaita",
+    "libx11",
+    "nautilus",
+    "wayland",
+    "xdg-desktop-portal",
+    "xdg-desktop-portal-gtk>=1.10.0-2"
+  ],
+  "epoch": 0,
+  "filename": "xdg-desktop-portal-gnome-49.0-1-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [
+    "gnome"
+  ],
+  "installed_size": 931743,
+  "last_update": "2025-09-22T17:12:53.128Z",
+  "licenses": [
+    "LGPL-2.1-or-later"
+  ],
+  "maintainers": [
+    "heftig"
+  ],
+  "makedepends": [
+    "git",
+    "glib2-devel",
+    "meson"
+  ],
+  "optdepends": [
+    "evince: Print previews"
+  ],
+  "packager": "fabiscafe",
+  "pkgbase": "xdg-desktop-portal-gnome",
+  "pkgdesc": "Backend implementation for xdg-desktop-portal for the GNOME desktop environment",
+  "pkgname": "xdg-desktop-portal-gnome",
+  "pkgrel": "1",
+  "pkgver": "49.0",
+  "provides": [
+    "xdg-desktop-portal-impl"
+  ],
+  "replaces": [
+    "xdg-desktop-portal-gtk<1.10.0-2"
+  ],
+  "repo": "extra",
+  "url": "https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome"
+}

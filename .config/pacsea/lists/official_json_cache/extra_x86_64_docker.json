@@ -1,0 +1,57 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-12-14T18:17:38Z",
+  "checkdepends": [],
+  "compressed_size": 26363851,
+  "conflicts": [],
+  "depends": [
+    "containerd",
+    "device-mapper",
+    "glibc",
+    "iproute2",
+    "libseccomp",
+    "libtool",
+    "nftables",
+    "runc",
+    "sqlite",
+    "systemd-libs"
+  ],
+  "epoch": 1,
+  "filename": "docker-1:29.1.3-1-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 109209111,
+  "last_update": "2025-12-14T18:25:20.111Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "maintainers": [
+    "seblu",
+    "lfleischer",
+    "Foxboron"
+  ],
+  "makedepends": [
+    "btrfs-progs",
+    "cmake",
+    "git",
+    "go",
+    "go-md2man",
+    "sed",
+    "systemd"
+  ],
+  "optdepends": [
+    "btrfs-progs: btrfs backend support",
+    "docker-buildx: extended build capabilities",
+    "pigz: parallel gzip compressor support"
+  ],
+  "packager": "Foxboron",
+  "pkgbase": "docker",
+  "pkgdesc": "Pack, ship and run any application as a lightweight container",
+  "pkgname": "docker",
+  "pkgrel": "1",
+  "pkgver": "29.1.3",
+  "provides": [],
+  "replaces": [],
+  "repo": "extra",
+  "url": "https://www.docker.com/"
+}

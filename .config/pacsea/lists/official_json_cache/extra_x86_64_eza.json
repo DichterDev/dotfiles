@@ -1,0 +1,47 @@
+{
+  "arch": "x86_64",
+  "build_date": "2025-10-03T22:04:35Z",
+  "checkdepends": [],
+  "compressed_size": 600090,
+  "conflicts": [
+    "exa"
+  ],
+  "depends": [
+    "gcc-libs",
+    "glibc",
+    "libgit2",
+    "libgit2.so=1.9-64"
+  ],
+  "epoch": 0,
+  "filename": "eza-0.23.4-1-x86_64.pkg.tar.zst",
+  "flag_date": null,
+  "groups": [],
+  "installed_size": 1578657,
+  "last_update": "2025-10-03T22:07:47.250Z",
+  "licenses": [
+    "EUPL-1.2"
+  ],
+  "maintainers": [
+    "alerque",
+    "orhun"
+  ],
+  "makedepends": [
+    "cargo",
+    "pandoc"
+  ],
+  "optdepends": [],
+  "packager": "alerque",
+  "pkgbase": "eza",
+  "pkgdesc": "A modern replacement for ls (community fork of exa)",
+  "pkgname": "eza",
+  "pkgrel": "1",
+  "pkgver": "0.23.4",
+  "provides": [
+    "exa"
+  ],
+  "replaces": [
+    "exa"
+  ],
+  "repo": "extra",
+  "url": "https://github.com/eza-community/eza"
+}
