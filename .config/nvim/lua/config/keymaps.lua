@@ -18,6 +18,10 @@ Map("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 Map("n", "<C-j>", "<C-w>j", { desc = "Move to lower window" })
 Map("n", "<C-k>", "<C-w>k", { desc = "Move to upper window" })
 
+-- Split windows
+Map("n", "<leader>vs", "<CMD>vsplit<CR>", { desc = "[v]ertical [s]plit" })
+Map("n", "<leader>hs", "<CMD>:hsplit", { desc = "[h]orizontal [s]plit" })
+
 -- Resizing windows
 Map("n", "<leader>h", "<C-w><", { desc = "Decrease window width" })
 Map("n", "<leader>l", "<C-w>>", { desc = "Increase window width" })

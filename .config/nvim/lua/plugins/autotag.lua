@@ -13,5 +13,11 @@ return {
   },
   ---@module "nvim-ts-autotag"
   ---@class nvim-ts-autotag.PluginSetup
-  opts = {},
+  opts = {
+    opts = {
+      enable_close = true,
+      enable_rename = true,
+      enable_close_on_slash = false
+    },
+  }
 }

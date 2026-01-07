@@ -25,25 +25,40 @@ return {
     opts = {
       auto_update = true,
       ensure_installed = {
-        "jsonls",
-        "lua_ls",
-        "clangd",
-        "rust-analyzer",
-        "ruff",
-        "ty",
-        "html-lsp",
-        "css-lsp",
-        "dockerls",
-        "java-test",
-        "jdtls",
-        "java-debug-adapter",
-        "prettier",
-        "marksman",
+        -- CONFIG
         "fish-lsp",
+        -- LUA
+        "lua_ls",
+        -- JSON
+        "jsonls",
+        -- MARKDOWN
+        "marksman",
+        -- DOCKER
+        "docker-language-server",
+        -- PRETTIER
+        "prettierd", -- formatter
+        -- HTML
+        "superhtml",
         "htmx-lsp",
-        "vscode-spring-boot-tools",
+        -- CSS
+        "css-lsp",
+        -- JS / TS
+        "tsgo",
+        "vtsls", -- only used for VUE
+        -- VUE
         "vue-language-server",
-        "tsgo"
+        -- PYTHON
+        "ty",
+        "ruff", -- formatter
+        -- C / C++
+        "clangd",
+        -- RUST
+        "rust-analyzer",
+        -- JAVA
+        "jdtls",
+        "java-test",
+        "java-debug-adapter",
+        "vscode-spring-boot-tools",
       },
     }
   }
