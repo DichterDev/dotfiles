@@ -1,4 +1,5 @@
 return {
+  enabled = false,
   cmd = { "roslyn" },
   settings = {
     ["csharp|inlay_hints"] = {

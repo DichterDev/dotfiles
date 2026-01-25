@@ -22,9 +22,17 @@ return {
     },
   },
   filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
     "vue"
   },
   root_markers = {
+    "package.json",
+    "tsconfig.json",
     "package-lock.json",
     "yarn.lock",
     "pnpm-lock.yaml",

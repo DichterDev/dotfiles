@@ -7,6 +7,11 @@ local function setup(server)
     root_markers = { ".git" },
   }
   local ok, lspconfig = pcall(require, "lsp." .. server)
+
+  if (ok == false or lspconfig.enable == false) then
+    return
+  end
+
   local config = vim.tbl_deep_extend("force", defaults, ok and lspconfig or {})
   vim.lsp.config(server, config)
   vim.lsp.enable(server)
