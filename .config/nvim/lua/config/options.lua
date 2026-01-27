@@ -7,6 +7,7 @@ vim.o.cmdheight = 1
 vim.o.signcolumn = "yes"
 vim.o.wrap = false
 vim.o.termguicolors = true
+vim.o.syntax = "on"
 
 -- Indentation
 vim.o.tabstop = 2

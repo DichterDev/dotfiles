@@ -59,6 +59,7 @@ return {
         "java-test",
         "java-debug-adapter",
         "vscode-spring-boot-tools",
+        "glsl_analyzer"
       },
     }
   }

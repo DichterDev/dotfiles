@@ -8,6 +8,8 @@ return {
       install_dir = vim.fn.stdpath("data") .. "/site",
     })
 
+    local available = require("nvim-treesitter.parsers")
+
     local parsers = {
       -- CORE
       "c",
@@ -44,13 +46,12 @@ return {
       "markdown_inline",
       "make",
       "gitignore",
+      "git_config",
+      "caddy",
+      "glsl"
     }
 
-
     ts.install(parsers)
-
-    parsers = require("nvim-treesitter.parsers")
-
 
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "*",
