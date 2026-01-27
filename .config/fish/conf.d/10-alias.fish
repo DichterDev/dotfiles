@@ -9,9 +9,10 @@ alias ssh="kitten ssh"
 alias icat="kitten icat"
 
 # LS
-alias l="eza -1F --git --icons --group-directories-first --time-style=long-iso"
-alias la="l -alh"
-alias lt="la -T --level=2"
+alias ls="eza -1F --git --icons --group-directories-first --time-style=long-iso"
+alias la="ls -alh"
+alias lt="ls -T --level=2"
+alias lta="la -T --level=2"
 
 # GIT
 alias ga="git add"
