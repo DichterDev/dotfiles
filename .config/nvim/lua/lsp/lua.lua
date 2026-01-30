@@ -5,14 +5,18 @@ return {
   settings = {
     Lua = {
       runtime = {
-        version = "LuaJIT"
+        version = "LuaJIT",
+        pathStrict = false
       },
       completion = {
-        callSnippet = "Replace", -- makes :method() completion nicer
+        callSnippet = "Replace",
       },
-      hint = {
-        enable = true,
+      workspace = {
+        checkThirdParty = false,
+        ignoreDir = {},
       },
+      hint = { enable = true, },
+      telemetry = { enable = false }
     }
   }
 }

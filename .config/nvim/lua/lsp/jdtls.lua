@@ -1,17 +1,37 @@
-local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-local workspace_dir = vim.fn.stdpath("data") .. "/jdtls/workspace/" .. project_name
-local mason = vim.fn.stdpath("data") .. "/mason"
+local data = vim.fn.stdpath("data")
+local config = vim.fn.stdpath("config")
+local glob = vim.fn.glob
 
-local bundels = {
-  vim.fn.glob(mason .. "/share/vscode-spring-boot-tools/jdtls/*-extension.jar", true),
-  vim.fn.glob(mason .. "/share/java-test/*.jar", true),
+local root_markers = {
+  "build.xml",
+  "mvnw",
+  "pom.xml",
+  "gradlew",
+  "settings.gradle",
+  "settings.gradle.kts",
+  "build.gradle",
+  "build.gradle.kts",
 }
 
-local lombok = vim.fn.glob(mason .. "/share/jdtls/lombok.jar", true)
+local root_dir = vim.fs.root(0, root_markers) or vim.fn.getcwd()
+
+local project_name = vim.fn.fnamemodify(root_dir, ":p:h:t")
+local workspace_dir = data .. "/jdtls/workspace/" .. project_name
+local mason = data .. "/mason"
+local plugins = config .. "/lua/jdtls/plugins"
+
+local bundels = {
+  glob(mason .. "/share/vscode-spring-boot-tools/jdtls/*-extension.jar", true),
+  glob(mason .. "/share/java-test/*.jar", true),
+  glob(plugins .. "/*.jar", true)
+}
+
+local lombok = glob(mason .. "/share/jdtls/lombok.jar", true)
 
 ---@type vim.lsp.Config
 return {
   cmd = { "jdtls", "--data", workspace_dir, "--jvm-arg=-javaagent:" .. lombok },
+  root_markers = root_markers,
   settings = {
     java = {
       format = {
