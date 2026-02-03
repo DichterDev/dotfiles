@@ -87,7 +87,6 @@ layout {
     struts {}
 }
 
-spawn-sh-at-startup "swaybg -i ~/wallpapers/miku-kageyu.png"
 spawn-sh-at-startup "dms run"
 
 hotkey-overlay {
