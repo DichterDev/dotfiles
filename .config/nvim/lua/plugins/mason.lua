@@ -27,6 +27,7 @@ return {
       ensure_installed = {
         -- CONFIG
         "fish-lsp",
+        "tombi",
         -- LUA
         "lua_ls",
         -- JSON
