@@ -48,7 +48,8 @@ return {
       "gitignore",
       "git_config",
       "caddy",
-      "glsl"
+      "glsl",
+      "typst"
     }
 
     ts.install(parsers)
