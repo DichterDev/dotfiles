@@ -1,4 +1,5 @@
 return {
+  -- enabled = false,
   "stevearc/oil.nvim",
   lazy = false,
   dependencies = { "nvim-mini/mini.icons", "nvim-tree/nvim-web-devicons", },
