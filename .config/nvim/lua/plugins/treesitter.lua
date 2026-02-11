@@ -1,4 +1,4 @@
----@class ParserInfo
+---@class Parser : ParserInfo
 ---@field name string
 
 return {
@@ -11,9 +11,7 @@ return {
       install_dir = vim.fn.stdpath("data") .. "/site",
     })
 
-
-
-    local av = require("nvim-treesitter.parsers")
+    local av = require("nvim-treesitter.parsers") --[[@as table<string, Parser>]]
 
     for k, _ in pairs(av) do
       av[k].name = k
