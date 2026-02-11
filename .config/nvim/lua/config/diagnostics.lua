@@ -15,4 +15,5 @@ local diagnostic_opts = {
   },
 }
 
+vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#ff5555" })
 vim.diagnostic.config(diagnostic_opts)

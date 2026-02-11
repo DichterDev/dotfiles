@@ -45,7 +45,7 @@ return {
         "css-lsp",
         -- JS / TS
         "tsgo",
-        "vtsls", -- only used for VUE
+        "vtsls",
         -- VUE
         "vue-language-server",
         -- PYTHON
@@ -64,6 +64,8 @@ return {
         -- TYPST
         "tinymist",
         "typstyle",
+        -- SPELLING
+        -- "typos-lsp"
       },
     }
   }

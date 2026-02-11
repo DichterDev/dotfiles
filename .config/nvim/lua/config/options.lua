@@ -5,9 +5,14 @@ vim.o.mouse = "a"
 vim.o.showmode = false
 vim.o.cmdheight = 1
 vim.o.signcolumn = "yes"
-vim.o.wrap = false
 vim.o.termguicolors = true
 vim.o.syntax = "on"
+
+-- Wrapping
+vim.o.wrap = true
+vim.o.linebreak = true
+vim.o.breakindent = true
+-- vim.o.showbreak = "↳"
 
 -- Indentation
 vim.o.tabstop = 2
@@ -38,3 +43,8 @@ vim.o.winborder = "rounded"
 
 -- SHELL
 vim.o.sh = "/bin/fish"
+
+-- SPELL
+vim.o.spell = true
+vim.opt.spelllang = { "en", "de" }
+vim.opt.spelloptions:append({ "noplainbuffer", "camel" })
