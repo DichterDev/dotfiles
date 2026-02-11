@@ -32,29 +32,22 @@ local lombok = glob(mason .. "/share/jdtls/lombok.jar", true)
 return {
   cmd = { "jdtls", "--data", workspace_dir, "--jvm-arg=-javaagent:" .. lombok },
   root_markers = root_markers,
+  filetypes = { "java", },
   settings = {
-    java = {
-      format = {
-        enabled = true,
-      },
-    },
+    java = { format = { enabled = true, }, },
     spring = {
-      boot = {
-        ls = {
-          enabled = true,
-        },
-      },
-      validation = {
-        enabled = true,
-      },
-      project = {
-        detection = {
-          enabled = true,
-        },
-      },
+      boot = { ls = { enabled = true, }, },
+      validation = { enabled = true, },
+      project = { detection = { enabled = true, }, },
+    },
+    quarkus = {
+      tools = {
+        completion = { enabled = true },
+        validation = { enabled = true }
+      }
     },
   },
   init_options = {
-    bundles = bundels
+    bundles = bundels,
   }
 }
