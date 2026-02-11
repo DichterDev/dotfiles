@@ -18,12 +18,12 @@ local root_dir = vim.fs.root(0, root_markers) or vim.fn.getcwd()
 local project_name = vim.fn.fnamemodify(root_dir, ":p:h:t")
 local workspace_dir = data .. "/jdtls/workspace/" .. project_name
 local mason = data .. "/mason"
-local plugins = config .. "/lua/jdtls/plugins"
+local extras = config .. "/lua/lsp/extras/java"
 
 local bundels = {
   glob(mason .. "/share/vscode-spring-boot-tools/jdtls/*-extension.jar", true),
   glob(mason .. "/share/java-test/*.jar", true),
-  glob(plugins .. "/*.jar", true)
+  glob(extras .. "/*/*.jar", true)
 }
 
 local lombok = glob(mason .. "/share/jdtls/lombok.jar", true)
