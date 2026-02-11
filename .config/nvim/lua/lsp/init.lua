@@ -8,7 +8,7 @@ local function setup(server)
   }
   local ok, lspconfig = pcall(require, "lsp." .. server)
 
-  if (ok == false or lspconfig.enable == false) then
+  if (ok == false or lspconfig.enabled == false) then
     return
   end
 

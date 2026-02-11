@@ -1,6 +1,6 @@
 ---@type vim.lsp.Config
 return {
-  enable = true,
+  enabled = true,
   cmd = { "tsgo", "--lsp", "--stdio" },
   filetypes = {
     "html",
