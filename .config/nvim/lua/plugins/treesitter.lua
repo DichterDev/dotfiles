@@ -1,3 +1,6 @@
+---@class ParserInfo
+---@field name string
+
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
@@ -8,49 +11,84 @@ return {
       install_dir = vim.fn.stdpath("data") .. "/site",
     })
 
-    local available = require("nvim-treesitter.parsers")
 
-    local parsers = {
-      -- CORE
-      "c",
-      "cpp",
-      "lua",
-      "vim",
-      "vimdoc",
-      "query",
-      -- WEB
-      "html",
-      "css",
-      "javascript",
-      "typescript",
-      "tsx",
-      "scss",
-      "vue",
-      -- FULL
-      "python",
-      "java",
-      "go",
-      "rust",
-      -- CONFIG
-      "bash",
-      "fish",
-      -- DATA
-      "json",
-      "yaml",
-      "toml",
-      -- DB
-      "sql",
-      -- MORE
-      "dockerfile",
-      "markdown",
-      "markdown_inline",
-      "make",
-      "gitignore",
-      "git_config",
-      "caddy",
-      "glsl",
-      "typst"
+
+    local av = require("nvim-treesitter.parsers")
+
+    for k, _ in pairs(av) do
+      av[k].name = k
+    end
+
+    local parser = {
+      lang = {
+        av.c,
+        av.cpp,
+        av.vim,
+        av.lua,
+        av.python,
+        av.go,
+        av.rust,
+        av.java,
+        av.bash,
+        av.fish,
+        av.c_sharp,
+        av.query,
+        av.make,
+        av.glsl,
+        av.properties,
+        av.groovy
+      },
+      git = {
+        av.gitignore,
+        av.gitcommit,
+        av.gitattributes,
+        av.git_config,
+        av.git_rebase,
+      },
+      js = {
+        av.jsx,
+        av.javascript,
+        av.tsx,
+        av.typescript,
+      },
+      web = {
+        av.css,
+        av.scss,
+        av.html,
+        av.html_tags,
+        av.vue,
+      },
+      data = {
+        av.json,
+        av.yaml,
+        av.toml
+      },
+      db = {
+        av.sql,
+      },
+      docker = {
+        av.dockerfile,
+        av.caddy
+      },
+      markup = {
+        av.typst,
+        av.markdown,
+        av.markdown_inline
+      },
+      doc = {
+        av.vimdoc,
+        av.javadoc,
+        av.jsdoc,
+      }
     }
+
+    local parsers = {}
+
+    for _, v in pairs(parser) do
+      for _, p in pairs(v) do
+        table.insert(parsers, p.name)
+      end
+    end
 
     ts.install(parsers)
 
