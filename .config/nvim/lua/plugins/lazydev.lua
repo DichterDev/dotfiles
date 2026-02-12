@@ -9,9 +9,9 @@ return {
     ft = { "lua" },
     opts = {
       library = {
+        "lazy.nvim",
         { path = vim.fn.stdpath("config") .. "/lua", words = { "config" } },
         { path = "luvit-meta/library",               words = { "vim%.uv" } },
-        { path = "LazyVim",                          words = { "LazyVim" } },
       },
     },
     config = function(_, opts)
