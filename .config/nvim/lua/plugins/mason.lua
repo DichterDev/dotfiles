@@ -13,24 +13,24 @@ return {
         }
       },
     },
-    {
-      "WhoIsSethDaniel/mason-tool-installer.nvim",
-      dependencies = { "mason-org/mason.nvim" },
-      ---@module "mason-tool-installer"
-      ---@type MasonToolInstallerSettings
-      opts = {
-        ensure_installed = {
-          -- LUA
-          "lua-language-server",
-          -- "stylua",
-          -- JAVA
-          "jdtls",
-          "java-test",
-          "java-debug-adapter",
-          -- "google-java-format",
-          "vscode-spring-boot-tools"
-        }
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = { "mason-org/mason.nvim" },
+    ---@module "mason-tool-installer"
+    ---@type MasonToolInstallerSettings
+    opts = {
+      ensure_installed = {
+        -- LUA
+        "lua-language-server",
+        "stylua",
+        -- JAVA
+        "jdtls",
+        "java-test",
+        "java-debug-adapter",
+        "google-java-format",
+        "vscode-spring-boot-tools"
       }
     }
-  },
+  }
 }

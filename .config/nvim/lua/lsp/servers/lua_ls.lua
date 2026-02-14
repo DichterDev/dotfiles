@@ -1,14 +1,11 @@
 local M = {}
 
-local defaults = require("lsp.default")
-
 ---@type vim.lsp.Config
 M.config = {
   name = "lua_ls",
   cmd = { "lua-language-server" },
   filetypes = { "lua" },
   root_markers = { ".luarc.json" },
-  capabilities = defaults.capabilities(),
   settings = {
     Lua = {
       runtime = {

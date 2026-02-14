@@ -2,18 +2,19 @@
 ---@field config vim.lsp.Config
 
 local utils = require("core.utils")
-local defaults = require("lsp.default")
+local defaults = require("lsp.defaults")
 
 local exclude = { "jdtls" }
 
 local function start(name)
   local ok, srv = pcall(require, "lsp.servers." .. name)
   if not ok then
-    vim.notify(name)
     return
   end
 
   ---@cast srv Server
+
+  srv.config.capabilities = defaults.capabilities(srv.config.capabilities)
 
   vim.lsp.config(name, srv.config)
   vim.lsp.enable(name)
