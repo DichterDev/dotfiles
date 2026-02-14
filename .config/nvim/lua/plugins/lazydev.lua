@@ -7,6 +7,8 @@ return {
       { "Bilal2453/luvit-meta", lazy = true },
     },
     ft = { "lua" },
+    ---@module "lazydev"
+    ---@type lazydev.Config
     opts = {
       library = {
         "lazy.nvim",

@@ -1,3 +1,3 @@
-local config = require("lsp.servers.lua_ls").config
-
-vim.lsp.start(config)
+vim.bo.shiftwidth = 2
+vim.bo.tabstop = 2
+vim.bo.softtabstop = 2

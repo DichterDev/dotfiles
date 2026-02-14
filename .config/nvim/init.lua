@@ -8,3 +8,6 @@ require("core.diagnostics")
 
 -- PLUGINS
 require("core.lazy")
+
+-- LSP
+require("lsp")

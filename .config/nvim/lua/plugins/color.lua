@@ -25,6 +25,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   callback = set_transparent
 })
 
+---@type LazySpec
 return {
   {
     "darianmorat/gruvdark.nvim",

@@ -1,3 +1,4 @@
+---@type LazySpec
 return {
   -- enabled = false,
   "stevearc/oil.nvim",
