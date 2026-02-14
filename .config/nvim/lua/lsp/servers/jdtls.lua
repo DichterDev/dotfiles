@@ -25,6 +25,14 @@ local bundles = {}
 
 vim.list_extend(bundles, vim.fn.glob(mason .. "/share/vscode-spring-boot-tools/jdtls/*.jar", true, true))
 vim.list_extend(bundles, vim.fn.glob(mason .. "/share/java-test/*.jar", true, true))
+vim.list_extend(bundles,
+  vim.fn.glob(mason .. "/share/java-debug-adapter/com.microsoft.java.debug.plugin.jar", true, true))
+
+local quarkus = require("quarkus")
+local microprofile = require("microprofile")
+
+vim.list_extend(bundles, microprofile.java_extensions())
+vim.list_extend(bundles, quarkus.java_extensions())
 
 M.config = {
   cmd = { "jdtls", "--data", workspace_dir, "--jvm-arg=-javaagent:" .. lombok, "--jvm-arg=-Xmx2g" },
@@ -46,7 +54,11 @@ M.config = {
   },
   init_options = {
     bundles = bundles,
-  }
+  },
+  on_init = function(_, _)
+    require("quarkus.bind").try_bind_qute_all_request()
+    require("microprofile.bind").try_bind_microprofile_all_request()
+  end
 }
 
 return M
