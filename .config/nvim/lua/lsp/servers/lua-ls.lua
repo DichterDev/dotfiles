@@ -1,3 +1,4 @@
+---@type Server
 local M = {}
 
 ---@type vim.lsp.Config
