@@ -21,7 +21,7 @@ end
 
 config.cmd = {
   "jdtls",
-  "--data",
+  "-data",
   utils.java.get_workspace_dir(root_dir),
   "--jvm-arg=-javaagent:" .. utils.java.get_lombok(),
   "--jvm-arg=-Xmx2g"
