@@ -56,14 +56,14 @@ Map("v", "<", "<gv", { desc = "Unindent (Visual)" })
 Map("v", ">", ">gv", { desc = "Indent (Visual)" })
 
 -- LSP
-Map("n", "gd", vim.lsp.buf.definition, { desc = "[g]o [d]efinition" })
-Map("n", "gr", vim.lsp.buf.references, { desc = "[g]o [r]efrences" })
-Map("n", "gD", vim.lsp.buf.declaration, { desc = "[g]o [D]eclarations" })
-Map("n", "gi", vim.lsp.buf.implementation, { desc = "[g]o [i]mplementation" })
-Map("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
-Map("n", "<C-.>", vim.lsp.buf.code_action, { desc = "[c]ode [a]ctions" })
-Map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "[r]e[n]ame" })
-Map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, { desc = "[f]ormat buffer" })
+-- Map("n", "gd", vim.lsp.buf.definition, { desc = "[g]o [d]efinition" })
+-- Map("n", "gr", vim.lsp.buf.references, { desc = "[g]o [r]efrences" })
+-- Map("n", "gD", vim.lsp.buf.declaration, { desc = "[g]o [D]eclarations" })
+-- Map("n", "gi", vim.lsp.buf.implementation, { desc = "[g]o [i]mplementation" })
+-- Map("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
+-- Map("n", "<C-.>", vim.lsp.buf.code_action, { desc = "[c]ode [a]ctions" })
+-- Map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "[r]e[n]ame" })
+-- Map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, { desc = "[f]ormat buffer" })
 
 -- Diagnostics
 Map("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Show line diagnostics" })

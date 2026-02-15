@@ -1,12 +1,20 @@
+Autocmd = vim.api.nvim_create_autocmd
+
+function Augroup(name)
+  return vim.api.nvim_create_augroup("dichter" .. name, { clear = true })
+end
+
 -- Highlight on yank
-vim.api.nvim_create_autocmd("TextYankPost", {
+Autocmd("TextYankPost", {
+  group = Augroup("highlight_yank"),
   callback = function()
     (vim.hl or vim.highlight).on_yank()
   end,
 })
 
 -- resize splits if window got resized
-vim.api.nvim_create_autocmd({ "VimResized" }, {
+Autocmd({ "VimResized" }, {
+  group = Augroup("resize_split"),
   callback = function()
     local current_tab = vim.fn.tabpagenr()
     vim.cmd("tabdo wincmd =")
