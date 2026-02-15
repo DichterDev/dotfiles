@@ -3,9 +3,7 @@ return {
   "ibhagwan/fzf-lua",
   dependencies = { "echasnovski/mini.icons" },
   ---@module "fzf-lua"
-  opts = {
-    
-  },
+  opts = {},
   config = function()
     local fzf = require("fzf-lua")
 
@@ -21,6 +19,6 @@ return {
     Map("n", "<leader>fo", fzf.oldfiles, { desc = "[f]ind [o]ldfiles" })
     Map("n", "<leader>fq", fzf.lgrep_quickfix, { desc = "[f]ind [q]ickfix" })
     Map("n", "<leader>fh", fzf.quickfix_stack, { desc = "[f]ind [h]istory" })
-    -- Map("n", "<leader>fd", fzf.),
+    Map("n", "<leader>fk", fzf.keymaps, { desc = "[f]ind [k]eymaps" })
   end
 }
