@@ -1,7 +1,11 @@
 ---@type Server
 local M = {}
 
+local utils = require("core.utils")
+local defaults = require("lsp.defaults")
+
 local data = vim.fn.stdpath("data")
+local cache = vim.fn.stdpath("cache")
 local mason = data .. "/mason"
 
 local root_markers = {
@@ -15,31 +19,49 @@ local root_markers = {
   "build.gradle.kts",
 }
 
-local root_dir = vim.fs.root(0, root_markers) or vim.fn.getcwd()
-local project_name = vim.fn.fnamemodify(root_dir, ":p:h:t")
-local workspace_dir = data .. "/jdtls/workspace/" .. project_name
+-- vim.tbl_extend("keep", root_markers, defaults.root_markers)
 
-local lombok = vim.fn.glob(mason .. "/share/jdtls/lombok.jar", true)
 
 local bundles = {}
 
-vim.list_extend(bundles, vim.fn.glob(mason .. "/share/vscode-spring-boot-tools/jdtls/*.jar", true, true))
+-- vim.list_extend(bundles, vim.fn.glob(mason .. "/share/vscode-spring-boot-tools/jdtls/*.jar", true, true))
 vim.list_extend(bundles, vim.fn.glob(mason .. "/share/java-test/*.jar", true, true))
 vim.list_extend(bundles,
   vim.fn.glob(mason .. "/share/java-debug-adapter/com.microsoft.java.debug.plugin.jar", true, true))
 
-local quarkus = require("quarkus")
-local microprofile = require("microprofile")
-
-vim.list_extend(bundles, microprofile.java_extensions())
-vim.list_extend(bundles, quarkus.java_extensions())
+M.ignored = true
 
 M.config = {
-  cmd = { "jdtls", "--data", workspace_dir, "--jvm-arg=-javaagent:" .. lombok, "--jvm-arg=-Xmx2g" },
+  name = "jdtls",
+  cmd = {
+  },
   root_markers = root_markers,
-  filetypes = { "java", "jproperties" },
+  capabilities = defaults.capabilities({}),
   settings = {
-    java = { format = { enabled = true, }, },
+    java = {
+      format = { enabled = true, },
+      completion = {
+        favoriteStaticMembers = {
+          "io.crate.testing.Asserts.assertThat",
+          "org.assertj.core.api.Assertions.assertThat",
+          "org.assertj.core.api.Assertions.assertThatThrownBy",
+          "org.assertj.core.api.Assertions.catchThrowable",
+          "java.util.Objects.requireNonNull",
+          "java.util.Objects.requireNonNullElse",
+          "org.mockito.Mockito.mock",
+          "org.mockito.Mockito.when",
+          "jakarta.ws.rs.core.Response.*",
+          "io.quarkus.test.junit.QuarkusTest.*",
+        },
+        filteredTypes = {
+          "com.sun.*",
+          "io.micrometer.shaded.*",
+          "java.awt.*",
+          "jdk.*",
+          "sun.*",
+        },
+      },
+    },
     spring = {
       boot = { ls = { enabled = true, }, },
       validation = { enabled = true, },
@@ -55,10 +77,6 @@ M.config = {
   init_options = {
     bundles = bundles,
   },
-  on_init = function(_, _)
-    require("quarkus.bind").try_bind_qute_all_request()
-    require("microprofile.bind").try_bind_microprofile_all_request()
-  end
 }
 
 return M

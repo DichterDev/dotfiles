@@ -14,4 +14,6 @@ end
 M.on_attach = function(client, bufnr)
 end
 
+M.root_markers = { ".git" }
+
 return M

@@ -1,3 +1,4 @@
+local defaults = require("lsp.defaults")
 ---@type Server
 local M = {}
 
@@ -5,6 +6,7 @@ local M = {}
 M.config = {
   name = "lua_ls",
   cmd = { "lua-language-server" },
+  capabilities = defaults.capabilities({}),
   filetypes = { "lua" },
   root_markers = { ".luarc.json" },
   settings = {

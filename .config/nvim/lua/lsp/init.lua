@@ -1,9 +1,8 @@
 ---@class Server
----@field config? vim.lsp.Config
+---@field config? vim.lsp.ClientConfig
 ---@field ignored? boolean
 
 local utils = require("core.utils")
-local defaults = require("lsp.defaults")
 
 local function start(name)
   local ok, srv = pcall(require, "lsp.servers." .. name)
@@ -16,8 +15,6 @@ local function start(name)
   if srv.ignored then
     return
   end
-
-  srv.config.capabilities = defaults.capabilities(srv.config.capabilities)
 
   name = srv.config.name or name
   vim.lsp.config(name, srv.config)
@@ -46,6 +43,7 @@ Autocmd("LspAttach", {
     Map("n", "<C-.>", fzf.lsp_code_actions, opts("[c]ode [a]ctions"))
     Map("n", "<leader>rn", vim.lsp.buf.rename, opts("[r]e[n]ame"))
     Map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, opts("[f]ormat"))
-    Map("n", "<leader>fD", function() fzf.lsp_document_symbols({ query = "Function | Method " }) end, opts("[f]ind [D]ocument methods"))
+    Map("n", "<leader>fD", function() fzf.lsp_document_symbols({ query = "Function | Method " }) end,
+      opts("[f]ind [D]ocument methods"))
   end
 })

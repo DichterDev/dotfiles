@@ -1,7 +1,7 @@
 Autocmd = vim.api.nvim_create_autocmd
 
 function Augroup(name)
-  return vim.api.nvim_create_augroup("dichter" .. name, { clear = true })
+  return vim.api.nvim_create_augroup("dichter_" .. name, { clear = true })
 end
 
 -- Highlight on yank
