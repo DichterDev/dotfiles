@@ -1,5 +1,6 @@
 local M = {}
 
+---@param opt lsp.ClientCapabilities
 M.capabilities = function(opt)
   if opt then
     return require("blink.cmp").get_lsp_capabilities(opt)

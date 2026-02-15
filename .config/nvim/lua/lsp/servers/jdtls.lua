@@ -37,7 +37,7 @@ vim.list_extend(bundles, quarkus.java_extensions())
 M.config = {
   cmd = { "jdtls", "--data", workspace_dir, "--jvm-arg=-javaagent:" .. lombok, "--jvm-arg=-Xmx2g" },
   root_markers = root_markers,
-  filetypes = { "java", },
+  filetypes = { "java", "jproperties" },
   settings = {
     java = { format = { enabled = true, }, },
     spring = {
