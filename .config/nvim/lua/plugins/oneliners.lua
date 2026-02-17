@@ -4,4 +4,6 @@ return {
 	{ "saghen/blink.indent", opts = {} },
 	{ "HiPhish/rainbow-delimiters.nvim" },
 	{ "Eandrju/cellular-automaton.nvim" },
+	{ "catgoose/nvim-colorizer.lua", event = "BufReadPre", opts = {} },
+	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
 }
