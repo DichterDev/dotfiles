@@ -44,6 +44,8 @@ return {
 				-- RUST
 				-- "rust-analyzer",
 				-- "rustfmt",
+				-- TYPST
+				"tinymist",
 			},
 		},
 	},

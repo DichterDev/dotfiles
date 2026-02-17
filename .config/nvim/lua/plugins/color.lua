@@ -20,6 +20,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		set_hl("Pmenu")
 		set_hl("PmenuSbar")
 		set_hl("PmenuThumb")
+
+		-- === TS CONTEXT
+		set_hl("TreesitterContext")
 	end,
 })
 
