@@ -43,4 +43,3 @@ vim.o.winborder = "rounded"
 
 -- SHELL
 vim.o.sh = "/bin/fish"
-
