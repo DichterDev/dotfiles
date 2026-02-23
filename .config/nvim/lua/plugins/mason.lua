@@ -41,6 +41,10 @@ return {
 				"oxlint",
 				"oxfmt",
 				"vue-language-server",
+				-- GO
+				"gopls",
+				"gofumpt",
+				"goimports",
 				-- RUST
 				-- "rust-analyzer",
 				-- "rustfmt",

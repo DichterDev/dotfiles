@@ -10,6 +10,7 @@ return {
 			rust = { "rustfmt" },
 			html = { "superhtml" },
 			css = { "oxfmt" },
+			go = { "goimports", "gofumpt" },
 			javascript = { "oxlint", "oxfmt" },
 			typescript = { "oxlint", "oxfmt" },
 			vue = { "oxlint", "oxfmt" },
