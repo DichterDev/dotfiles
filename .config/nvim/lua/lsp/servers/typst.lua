@@ -1,10 +1,6 @@
----@type Server
-local M = {}
-
-M.config = {
-	name = "typst",
-	cmd = { "tinymist" },
-	filetypes = { "typst" },
+---@type vim.lsp.Config
+local config = {
+	capabilities = require("lsp.defaults").capabilities({}),
 	settings = {
 		formatterMode = "typstyle",
 		exportPdf = "disable",
@@ -12,4 +8,5 @@ M.config = {
 	},
 }
 
-return M
+vim.lsp.config("tinymist", config)
+vim.lsp.enable("tinymist")

@@ -6,72 +6,85 @@ local mason = data .. "/mason"
 
 ---@return table<string>
 M.get_root_markers = function()
-  return {
-    "build.xml",
-    "mvnw",
-    "pom.xml",
-    "gradlew",
-    "settings.gradle",
-    "settings.gradle.kts",
-    "build.gradle",
-    "build.gradle.kts",
-  }
+	return {
+		"build.xml",
+		"mvnw",
+		"pom.xml",
+		"gradlew",
+		"settings.gradle",
+		"settings.gradle.kts",
+		"build.gradle",
+		"build.gradle.kts",
+	}
 end
 
 ---@param root_markers table<string>
 ---@return string
 M.get_root_dir = function(root_markers)
-  return vim.fs.root(0, root_markers) or vim.fn.getcwd()
+	return vim.fs.root(0, root_markers) or vim.fn.getcwd()
 end
-
 
 ---@param root_dir string
 ---@return string
 M.get_workspace_dir = function(root_dir)
-  local root_hash = vim.fn.sha256(root_dir):sub(1, 8)
+	local root_hash = vim.fn.sha256(root_dir):sub(1, 8)
+	local project_name = vim.fn.fnamemodify(root_dir, ":p:h:t")
+	local workspace_name = project_name .. "-" .. root_hash
+	local workspace_dir = cache .. "/jdtls/workspace/" .. workspace_name
 
-  local project_name = vim.fn.fnamemodify(root_dir, ":p:h:t")
-  local workspace_dir = cache .. "/jdtls/workspace/" .. project_name .. "-" .. root_hash
+	if vim.fn.isdirectory(workspace_dir) == 0 then
+		vim.fn.mkdir(workspace_dir, "p")
+		vim.notify("Created Workspace Directory: " .. workspace_name, vim.log.levels.INFO)
+	else
+		vim.notify("Workspace: " .. workspace_name, vim.log.levels.INFO)
+	end
 
-  if vim.fn.isdirectory(workspace_dir) == 0 then
-    vim.fn.mkdir(workspace_dir, "p")
-    vim.notify("Created Workspace Directory: " .. workspace_dir, vim.log.levels.INFO)
-  else
-    vim.notify("Workspace: " .. workspace_dir, vim.log.levels.INFO)
-  end
-
-  return workspace_dir
+	return workspace_dir
 end
 
 ---@return string
 M.get_lombok = function()
-  return vim.fn.glob(mason .. "/share/jdtls/lombok.jar", true)
+	return vim.fn.glob(mason .. "/share/jdtls/lombok.jar", true)
+end
+
+M.extensions = {}
+
+---@return table<string>
+M.extensions.get_java_test = function()
+	return vim.fn.glob(mason .. "/share/java-test/*.jar", true, true)
 end
 
 ---@return table<string>
-M.get_spring_boot_extensions = function()
-  return vim.fn.glob(mason .. "/share/vscode-spring-boot-tools/jdtls/*.jar", true, true)
+M.extensions.get_java_debug_adapter = function()
+	return vim.fn.glob(mason .. "/share/java-debug-adapter/com.microsoft.java.debug.plugin.jar", true, true)
+end
+
+---@return table<string>
+M.extensions.get_spring_boot = function()
+	return vim.fn.glob(mason .. "/share/vscode-spring-boot-tools/jdtls/*.jar", true, true)
 end
 
 ---@param root_dir string
----@return "unknown" | "quarkus" | "spring"
 M.detect_framework = function(root_dir)
-  local build_files = { "pom.xml", "build.gradle", "build.gradle.kts" }
+	local build_files = { "pom.xml", "build.gradle", "build.gradle.kts" }
 
-  for _, file in ipairs(build_files) do
-    file = root_dir .. "/" .. file
-    vim.notify(file)
-    if vim.fn.filereadable(file) == 1 then
-      local content = table.concat(vim.fn.readfile(file), " ")
+	for _, file in ipairs(build_files) do
+		file = root_dir .. "/" .. file
+		if vim.fn.filereadable(file) == 1 then
+			local content = table.concat(vim.fn.readfile(file), " ")
 
-      if content:find("quarkus") then
-        return "quarkus"
-      elseif content:find("spring%-boot") or content:find("springframework") then
-        return "spring"
-      end
-    end
-  end
-  return "unknown"
+			if content:find("quarkus") then
+				vim.g.quarkus = true
+			elseif content:find("spring%-boot") or content:find("springframework") then
+				vim.g.springboot = true
+			end
+		end
+	end
+end
+
+M.reset_framework = function()
+	vim.g.quarkus = false
+	vim.g.sprinboot = false
 end
 
 return M

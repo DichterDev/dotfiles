@@ -1,7 +1,7 @@
 ---@type vim.lsp.Config
-local config = {
+local ty = {
 	capabilities = require("lsp.defaults").capabilities({}),
 }
 
-vim.lsp.config("gopls", config)
-vim.lsp.enable("gopls")
+vim.lsp.config("ty", ty)
+vim.lsp.enable("ty")

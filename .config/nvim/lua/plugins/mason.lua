@@ -21,35 +21,56 @@ return {
 		---@type MasonToolInstallerSettings
 		opts = {
 			ensure_installed = {
-				-- LUA
+				-- LANGUAGE
+				--- LUA
 				"lua-language-server",
 				"stylua",
-				-- JAVA
-				"jdtls",
-				"java-test",
-				"java-debug-adapter",
-				"google-java-format",
-				"vscode-spring-boot-tools",
-				-- WEB
-				"superhtml",
-				"htmx-lsp",
-				"css-lsp",
-				"css-variables-language-server",
-				-- JS & TS
+				--- JS & TS
 				"vtsls",
 				"tsgo",
 				"oxlint",
 				"oxfmt",
 				"vue-language-server",
-				-- GO
+				--- GO
 				"gopls",
 				"gofumpt",
 				"goimports",
-				-- RUST
-				-- "rust-analyzer",
-				-- "rustfmt",
-				-- TYPST
+				--- PYTHON
+				"ty",
+				"ruff",
+				--- RUST
+				--- "rust-analyzer",
+				--- "rustfmt",
+				--- JAVA
+				"jdtls",
+				"java-test",
+				"java-debug-adapter",
+				"google-java-format",
+				"vscode-spring-boot-tools",
+
+				-- WEB
+				"superhtml",
+				"htmx-lsp",
+				"css-lsp",
+				"css-variables-language-server",
+				"glsl_analyzer",
+
+				-- MARKUP
+				--- TYPST
 				"tinymist",
+				-- MARKDOWN
+				"marksman",
+
+				-- SCRIPT
+				"fish-lsp",
+				"bash-language-server",
+
+				-- DATA
+				"tombi",
+				"yaml-language-server",
+				"json-lsp",
+				--- DOCKER
+				"docker-language-server",
 			},
 		},
 	},

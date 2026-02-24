@@ -3,5 +3,5 @@ local config = {
 	capabilities = require("lsp.defaults").capabilities({}),
 }
 
-vim.lsp.config("gopls", config)
-vim.lsp.enable("gopls")
+vim.lsp.config("tombi", config)
+vim.lsp.enable("tombi")

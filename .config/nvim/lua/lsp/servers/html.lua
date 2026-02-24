@@ -1,15 +1,16 @@
----@type Server
-local M = {}
-
-local capabilities = {
-	"documentFormattingProvider",
-}
-
-M.config = {
-	name = "superhtml",
+---@type vim.lsp.Config
+local html = {
 	cmd = { "superhtml", "lsp", "--syntax-only" },
-	capabilities = require("lsp.defaults").capabilities(capabilities),
-	filetypes = { "html" },
+	capabilities = require("lsp.defaults").capabilities({ "documentFormattingProvider" }),
 }
 
-return M
+vim.lsp.config("superhtml", html)
+vim.lsp.enable("superhtml")
+
+---@type vim.lsp.Config
+local htmx = {
+	capabilities = require("lsp.defaults").capabilities({}),
+}
+
+vim.lsp.config("htmx", htmx)
+vim.lsp.enable("htmx")

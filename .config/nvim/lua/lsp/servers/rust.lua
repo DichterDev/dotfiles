@@ -1,12 +1,5 @@
----@type Server
-local M = {}
-
-M.config = {
-	name = "rust_analyzer",
-	cmd = { "rustup", "run", "nightly", "rust-analyzer" },
+local config = {
 	capabilities = require("lsp.defaults").capabilities({}),
-	filetypes = { "rust" },
-	root_dir = vim.fs.root(0, { "Cargo.toml", "rust-project.json" }),
 	settings = {
 		["rust-analyzer"] = {
 			cargo = {
@@ -49,4 +42,5 @@ M.config = {
 	},
 }
 
-return M
+vim.lsp.config("rust_analyzer", config)
+vim.lsp.enable("rust_analyzer")

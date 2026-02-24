@@ -3,5 +3,5 @@ local config = {
 	capabilities = require("lsp.defaults").capabilities({}),
 }
 
-vim.lsp.config("gopls", config)
-vim.lsp.enable("gopls")
+vim.lsp.config("stylua", config)
+vim.lsp.enable("stylua")
