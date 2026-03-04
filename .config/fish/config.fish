@@ -1,6 +1,8 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+  mise activate fish | source
 end
 
 # uv
-fish_add_path "/home/dichter/.local/bin"
+fish_add_path "$HOME/.local/bin"
+# cargo
+fish_add_path "$HOME/.cargo/bin"
