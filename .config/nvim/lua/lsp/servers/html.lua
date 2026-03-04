@@ -11,6 +11,6 @@ vim.lsp.enable("superhtml")
 local htmx = {
 	capabilities = require("lsp.defaults").capabilities({}),
 }
-
-vim.lsp.config("htmx", htmx)
-vim.lsp.enable("htmx")
+-- WARN: not working and breaks tsgo
+-- vim.lsp.config("htmx", htmx)
+-- vim.lsp.enable("htmx")

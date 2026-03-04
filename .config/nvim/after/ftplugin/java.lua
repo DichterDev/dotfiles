@@ -40,6 +40,7 @@ local jdtls = {
 		"--jvm-arg=-Xmx2g",
 	},
 	capabilities = capabilities,
+	-- root_markers = root_markers,
 	root_dir = root_dir,
 	on_init = function(client, _)
 		if vim.g.quarkus then

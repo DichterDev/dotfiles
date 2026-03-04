@@ -19,15 +19,6 @@ return {
 			timeout_ms = 1000,
 			lsp_format = "fallback",
 		},
-		formatters = {
-			oxlint = {
-				command = "oxlint",
-				args = { "--fix", "--stdio" },
-			},
-			oxfmt = {
-				command = "oxfmt",
-				args = { "--stdio" },
-			},
-		},
+		formatters = {},
 	},
 }
