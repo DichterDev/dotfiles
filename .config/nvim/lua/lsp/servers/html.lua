@@ -1,6 +1,6 @@
 ---@type vim.lsp.Config
 local html = {
-	cmd = { "superhtml", "lsp", "--syntax-only" },
+	cmd = { "superhtml", "lsp" },
 	capabilities = require("lsp.defaults").capabilities({ "documentFormattingProvider" }),
 }
 
