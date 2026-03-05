@@ -26,29 +26,6 @@ input {
 }
 
 
-output "eDP-1" {
-    mode "1920x1080@60.000"
-    scale 1
-    transform "normal"
-    position x=0 y=0
-}
-
-output "DP-1" {
-    mode "2560x1440@120.000"
-    position x=0 y=0
-    variable-refresh-rate
-}
-
-output "DP-2" {
-    mode "1920x1080@60.000"
-    position x=-1920 y=0
-}
-
-output "DP-3" {
-    mode "1920x1080"
-    position x=2560 y=0
-}
-
 layout {
     gaps 5
     center-focused-column "never"
@@ -116,7 +93,6 @@ binds {
     Mod+S { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    // Mod+Space hotkey-overlay-title="Run an Application" { spawn-sh "dms ipc widget toggle launcherButton"; }
 
     Mod+Space hotkey-overlay-title="Application Launcher" { spawn-sh "fuzzel"; }
 
@@ -283,3 +259,5 @@ binds {
     Mod+Alt+Up { set-window-height "-10%"; }
     Mod+Alt+Down { set-window-height "+10%"; }
 }
+
+include "dms.kdl"
