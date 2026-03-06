@@ -47,6 +47,7 @@ return {
 				"java-debug-adapter",
 				"google-java-format",
 				"vscode-spring-boot-tools",
+				"groovy-language-server",
 
 				-- WEB
 				"superhtml",

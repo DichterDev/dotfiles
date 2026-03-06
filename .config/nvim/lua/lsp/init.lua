@@ -16,6 +16,7 @@ require("lsp.servers.ts")
 require("lsp.servers.lua")
 require("lsp.servers.rust")
 require("lsp.servers.python")
+require("lsp..servers.groovy")
 
 -- Web
 require("lsp.servers.html")
