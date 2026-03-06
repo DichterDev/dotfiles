@@ -27,6 +27,16 @@ vim.o.smartcase = true
 vim.o.hlsearch = true
 vim.o.incsearch = true
 
+-- Hidden characters
+vim.o.list = true
+vim.o.listchars = "trail:·,tab:»·,nbsp:+"
+
+-- Folding
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.o.foldlevel = 99
+vim.o.foldenable = true
+
 -- Neovim specific
 vim.o.updatetime = 300
 vim.o.timeoutlen = 500

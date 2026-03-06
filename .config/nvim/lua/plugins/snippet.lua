@@ -10,6 +10,12 @@ return {
 			require("luasnip.loaders.from_lua").lazy_load({
 				paths = { vim.fn.stdpath("config") .. "/snippets" },
 			})
+
+			Map({ "i", "s" }, "<C-j>", function()
+				if ls.expandable() then
+					ls.expand()
+				end
+			end)
 		end,
 	},
 }
