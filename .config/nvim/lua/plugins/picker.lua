@@ -3,8 +3,17 @@ return {
 	"ibhagwan/fzf-lua",
 	dependencies = { "echasnovski/mini.icons" },
 	---@module "fzf-lua"
-	---@type fzf-lua.Config
-	opts = {},
+	---@type fzf-lua.Config|{}
+	---@diagnostic disable: missing-fields
+	opts = {
+		file_ignore_patterns = {
+			"node_modules/.*",
+			"build/.*",
+			"bin/.*",
+			"target/.*",
+		},
+	},
+	---@diagnostic enable: missing-fields
 	config = function(_, opts)
 		local fzf = require("fzf-lua")
 		fzf.setup(opts)
