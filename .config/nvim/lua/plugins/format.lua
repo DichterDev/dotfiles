@@ -14,11 +14,23 @@ return {
 			javascript = { "oxlint", "oxfmt" },
 			typescript = { "oxlint", "oxfmt" },
 			vue = { "oxlint", "oxfmt" },
+			groovy = { "indent_only" },
 		},
 		format_on_save = {
 			timeout_ms = 1000,
 			lsp_format = "fallback",
 		},
-		formatters = {},
+		formatters = {
+			indent_only = {
+				format = function(_, ctx, _, cb)
+					local view = vim.fn.winsaveview()
+					vim.api.nvim_buf_call(ctx.buf, function()
+						vim.cmd("normal! gg=G")
+					end)
+					vim.fn.winrestview(view)
+					cb(nil)
+				end,
+			},
+		},
 	},
 }
