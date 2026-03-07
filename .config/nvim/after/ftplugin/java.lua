@@ -50,7 +50,13 @@ local jdtls = {
 	end,
 	settings = {
 		java = {
-			format = { enabled = true },
+			format = {
+				enabled = true,
+				settings = {
+					url = vim.fn.stdpath("config") .. "/lang-servers/eclipse-java-google-style.xml",
+					profile = "GoogleStyle",
+				},
+			},
 			completion = {
 				favoriteStaticMembers = {
 					"io.crate.testing.Asserts.assertThat",
