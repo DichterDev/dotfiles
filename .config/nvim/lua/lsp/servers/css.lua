@@ -13,3 +13,11 @@ local var = {
 
 vim.lsp.config("css_variables", var)
 vim.lsp.enable("css_variables")
+
+---@type vim.lsp.Config
+local tailwind = {
+	capabilities = require("lsp.defaults").capabilities({}),
+}
+
+vim.lsp.config("tailwindcss", tailwind)
+vim.lsp.enable("tailwindcss")

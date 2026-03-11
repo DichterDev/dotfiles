@@ -54,6 +54,7 @@ return {
 				"htmx-lsp",
 				"css-lsp",
 				"css-variables-language-server",
+				"tailwindcss-language-server",
 				"glsl_analyzer",
 
 				-- MARKUP
