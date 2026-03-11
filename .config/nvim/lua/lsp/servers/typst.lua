@@ -1,5 +1,6 @@
 ---@type vim.lsp.Config
 local config = {
+	root_markers = { ".git", ".root", "typst.toml" },
 	capabilities = require("lsp.defaults").capabilities({}),
 	settings = {
 		formatterMode = "typstyle",
