@@ -72,7 +72,7 @@ return {
 				},
 				lsp = { min_keyword_length = 0 },
 				path = { min_keyword_length = 0 },
-				snippets = { min_keyword_length = 2, score_offset = 500 },
+				snippets = { min_keyword_length = 2 },
 				buffer = { min_keyword_length = 4, max_items = 5 },
 				cmdline = { min_keyword_length = 2, max_items = 5 },
 			},
