@@ -25,12 +25,14 @@ return {
 				--- LUA
 				"lua-language-server",
 				"stylua",
+
 				--- JS & TS
 				"vtsls",
 				"tsgo",
 				"oxlint",
 				"oxfmt",
 				"vue-language-server",
+
 				--- GO
 				"gopls",
 				"gofumpt",
@@ -41,6 +43,7 @@ return {
 				--- RUST
 				--- "rust-analyzer",
 				--- "rustfmt",
+
 				--- JAVA
 				"jdtls",
 				"java-test",
@@ -48,6 +51,9 @@ return {
 				"google-java-format",
 				"vscode-spring-boot-tools",
 				"groovy-language-server",
+
+				--- JUST
+				"just-lsp",
 
 				-- WEB
 				"superhtml",

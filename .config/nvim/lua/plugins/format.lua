@@ -15,6 +15,7 @@ return {
 			typescript = { "oxlint", "oxfmt" },
 			vue = { "oxlint", "oxfmt" },
 			groovy = { "indent_only" },
+			just = { "just" },
 		},
 		format_on_save = {
 			timeout_ms = 1000,

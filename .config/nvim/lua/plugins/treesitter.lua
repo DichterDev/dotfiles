@@ -37,6 +37,7 @@ return {
 					av.glsl,
 					av.properties,
 					av.groovy,
+					av.just,
 				},
 				git = {
 					av.gitignore,
