@@ -33,3 +33,10 @@ Autocmd({ "VimLeave" }, {
 		end
 	end,
 })
+
+Autocmd({ "BufEnter" }, {
+	group = Augroup("text_wrapping"),
+	callback = function()
+		vim.o.wrap = true
+	end,
+})

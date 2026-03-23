@@ -9,7 +9,7 @@ vim.o.termguicolors = true
 vim.o.syntax = "on"
 
 -- Wrapping
-vim.o.wrap = true
+vim.o.wrap = false
 vim.o.linebreak = true
 vim.o.breakindent = true
 -- vim.o.showbreak = "↳"

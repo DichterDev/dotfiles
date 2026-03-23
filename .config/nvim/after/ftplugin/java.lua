@@ -58,6 +58,16 @@ local jdtls = {
 				},
 			},
 			completion = {
+				importOrder = {
+					"java",
+					"javax",
+					"jakarta",
+					"com",
+					"org",
+					"at",
+					"",
+					"#",
+				},
 				favoriteStaticMembers = {
 					"io.crate.testing.Asserts.assertThat",
 					"org.assertj.core.api.Assertions.assertThat",

@@ -23,6 +23,18 @@ return {
 					ls.expand()
 				end
 			end)
+
+			Autocmd("InsertLeave", {
+				group = Augroup("luasnip_remove_i"),
+				callback = function()
+					if
+						require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()]
+						and not require("luasnip").session.jump_active
+					then
+						require("luasnip").unlink_current()
+					end
+				end,
+			})
 		end,
 	},
 }
