@@ -2,6 +2,7 @@
 return {
 	{
 		"stevearc/oil.nvim",
+		enabled = false,
 		lazy = false,
 		dependencies = { "nvim-mini/mini.icons", "nvim-tree/nvim-web-devicons" },
 		---@module "oil"
