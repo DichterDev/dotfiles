@@ -27,6 +27,19 @@ return {
 			map_multistep("i", "<S-Tab>", { "pmenu_prev" })
 			map_multistep("i", "<CR>", { "pmenu_accept", "minipairs_cr" })
 			map_multistep("i", "<BS>", { "minipairs_bs" })
+
+			require("mini.files").setup({
+				mappings = {
+					go_in = "L",
+					go_in_plus = "l",
+					synchronize = "<CR>",
+				},
+				options = {
+					use_as_default_explorer = true,
+				},
+			})
+
+			Map("n", "<leader>x", "<CMD>lua MiniFiles.open()<CR>", { desc = "File Explorer" })
 		end,
 	},
 }

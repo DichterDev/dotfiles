@@ -5,24 +5,25 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 			vim.api.nvim_set_hl(0, name, { bg = "none" })
 		end
 
-		-- === FLOATS ===
 		set_hl("NormalFloat")
 		set_hl("FloatBorder")
 		set_hl("FloatTitle")
 
-		-- === BLINK.CMP ===
 		set_hl("BlinkCmpMenu")
 		set_hl("BlinkCmpMenuBorder")
 		set_hl("BlinkCmpDoc")
 		set_hl("BlinkCmpDocBorder")
 
-		-- === STANDARD VIM POPUPS ===
 		set_hl("Pmenu")
 		set_hl("PmenuSbar")
 		set_hl("PmenuThumb")
 
-		-- === TS CONTEXT
 		set_hl("TreesitterContext")
+
+		set_hl("MiniMapNormal")
+		set_hl("MiniFilesBorder")
+		set_hl("MiniFilesNormal")
+		set_hl("MiniFilesTitle")
 	end,
 })
 
