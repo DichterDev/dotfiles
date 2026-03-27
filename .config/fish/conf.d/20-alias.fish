@@ -4,9 +4,16 @@ alias src="exec fish"
 # SYSTEMCTL
 alias sv="systemctl --user"
 
+# PACMAN
+alias pcmni="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
+
 # KITTENS
 alias ssh="kitten ssh"
 alias icat="kitten icat"
+
+# BASE
+alias rm="rm -Irf"
+alias cp="cp -av"
 
 # LS
 alias ls="eza -1F --git --icons --group-directories-first --time-style=long-iso"
