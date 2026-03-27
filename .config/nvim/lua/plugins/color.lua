@@ -20,10 +20,10 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 		set_hl("TreesitterContext")
 
-		set_hl("MiniMapNormal")
-		set_hl("MiniFilesBorder")
-		set_hl("MiniFilesNormal")
-		set_hl("MiniFilesTitle")
+		-- set_hl("MiniMapNormal")
+		-- set_hl("MiniFilesBorder")
+		-- set_hl("MiniFilesNormal")
+		-- set_hl("MiniFilesTitle")
 	end,
 })
 

@@ -37,15 +37,21 @@ vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldlevel = 99
 vim.o.foldenable = true
 
+-- Scrolloff
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8
+
 -- Neovim specific
 vim.o.updatetime = 300
 vim.o.timeoutlen = 500
 vim.o.conceallevel = 0
 -- vim.o.clipboard = "unnamedplus"
+vim.o.undofile = true
+vim.o.wildmode = "longest:full,full"
+vim.o.virtualedit = "block"
 
 -- Performance
 vim.o.lazyredraw = false
-vim.o.undofile = false
 vim.o.syntax = "on"
 
 -- Advanced UI

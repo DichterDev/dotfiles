@@ -29,7 +29,16 @@ return {
 		"folke/flash.nvim",
 		event = "VeryLazy",
 		---@type Flash.Config
-		opts = {},
+		opts = {
+			mode = "fuzzy",
+			incremental = true,
+			label = {
+				rainbow = {
+					enabled = true,
+					shade = 4,
+				},
+			},
+		},
 		keys = {
 			{
 				"s",
@@ -84,6 +93,34 @@ return {
 					require("which-key").show({ global = false })
 				end,
 				desc = "Buffer Local Keymaps (which-key)",
+			},
+		},
+	},
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
+		---@module "noice"
+		---@type NoiceConfig
+		opts = {
+			lsp = {
+				progress = {
+					enabled = false,
+				},
+				override = {
+					["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+					["vim.lsp.util.stylize_markdown"] = true,
+					["cmp.entry.get_documentation"] = true,
+				},
+			},
+			presets = {
+				bottom_search = true,
+				command_palette = true,
+				long_message_to_split = true,
+				inc_rename = false,
+				lsp_doc_border = true,
 			},
 		},
 	},

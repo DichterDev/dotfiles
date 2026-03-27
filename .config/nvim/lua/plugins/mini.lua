@@ -18,8 +18,13 @@ return {
 			require("mini.trailspace").setup({})
 			require("mini.align").setup({})
 			require("mini.keymap").setup({})
-			require("mini.jump").setup({})
 			require("mini.bracketed").setup({})
+
+			require("mini.animate").setup({
+				scroll = {
+					enable = false,
+				},
+			})
 
 			local map_multistep = require("mini.keymap").map_multistep
 
@@ -39,7 +44,7 @@ return {
 				},
 			})
 
-			Map("n", "<leader>x", "<CMD>lua MiniFiles.open()<CR>", { desc = "File Explorer" })
+			Map("n", "<leader>x", MiniFiles.open, { desc = "File Explorer" })
 		end,
 	},
 }
