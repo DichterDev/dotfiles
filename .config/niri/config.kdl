@@ -72,6 +72,8 @@ hotkey-overlay {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
+  slowdown 2.5
+
   workspace-switch {
     spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
   }
