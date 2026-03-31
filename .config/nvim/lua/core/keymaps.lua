@@ -51,7 +51,8 @@ Map("n", "<leader>bd", ":bd<CR>", { desc = "Delete current buffer" })
 -- Save and Quit
 Map("n", "<leader>w", ":w<CR>", { desc = "Save" })
 Map("n", "<leader>W", ":wa!<CR>", { desc = "Save all" })
--- Map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
+
+Map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
 Map("n", "<leader>Q", ":qa!<CR>", { desc = "Quit all without saving" })
 
 -- Visual mode keymaps

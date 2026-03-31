@@ -8,7 +8,11 @@ return {
 		},
 		---@module "Otree"
 		opts = {
+			focus_on_enter = true,
 			git_signs = true,
+			keymaps = {
+				["q"] = "actions.close_win",
+			},
 		},
 		keys = {
 			{
@@ -19,6 +23,7 @@ return {
 						vim.cmd("Otree")
 					else
 						vim.cmd("OtreeFocus")
+						require("Otree.actions").focus_file()
 					end
 				end,
 				desc = "File Explorer",
@@ -27,29 +32,14 @@ return {
 		config = function(_, opts)
 			require("Otree").setup(opts)
 
-			Autocmd("BufWinEnter", {
-				group = Augroup("OtreeSync"),
+			Autocmd("BufEnter", {
+				group = Augroup("sync_Otree"),
 				callback = function()
 					local bufname = vim.api.nvim_buf_get_name(0)
-
-					if vim.bo.filetype ~= "Otree" and bufname ~= "" and vim.bo.buftype == "" then
-						local otree_win = nil
-						for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
-							local buf = vim.api.nvim_win_get_buf(win)
-							if vim.bo[buf].filetype == "Otree" then
-								otree_win = win
-								break
-							end
-						end
-
-						if otree_win then
-							vim.schedule(function()
-								require("Otree.actions").focus_file()
-								if vim.api.nvim_get_current_win() == otree_win then
-									vim.cmd("wincmd p")
-								end
-							end)
-						end
+					if vim.bo.filetype ~= "Otree" and vim.bo.buftype == "" and bufname ~= "" then
+						pcall(function()
+							require("Otree.actions").focus_file()
+						end)
 					end
 				end,
 			})
