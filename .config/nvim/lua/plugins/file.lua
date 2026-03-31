@@ -43,7 +43,12 @@ return {
 						end
 
 						if otree_win then
-							require("Otree.actions").focus_file()
+							vim.schedule(function()
+								require("Otree.actions").focus_file()
+								if vim.api.nvim_get_current_win() == otree_win then
+									vim.cmd("wincmd p")
+								end
+							end)
 						end
 					end
 				end,
