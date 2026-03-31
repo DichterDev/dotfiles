@@ -66,23 +66,22 @@ Map("n", "<leader>vt", ":vsplit | term<CR>", { desc = "[v]ertical [t]erminal" })
 Map("n", "<leader>ht", ":vsplit | term<CR>", { desc = "[h]orizontal [t]erminal" })
 
 -- Quickfix List
-Map("n", "[q", ":cprev<CR>", { desc = "Previous Quickfix item" })
-Map("n", "]q", ":cnext<CR>", { desc = "Next Quickfix item" })
-Map("n", "[Q", ":cfirst<CR>", { desc = "First Quickfix item" })
-Map("n", "]Q", ":clast<CR>", { desc = "Last Quickfix item" })
-
-Map("n", "<leader>qo", ":copen<CR>", { desc = "[q]uickfix [o]pen" })
-Map("n", "<leader>qc", ":cclose<CR>", { desc = "[q]uickfix [c]lose" })
-Map("n", "<leader>qt", function()
-	local exists = false
-	for _, win in pairs(vim.fn.getwininfo()) do
-		if win["quickfix"] == 1 then
-			exists = true
-		end
-	end
-	if exists then
-		vim.cmd("cclose")
-	else
-		vim.cmd("copen")
-	end
-end, { desc = "[q]uickfix [t]oggle" })
+-- Map("n", "[q", ":cprev<CR>", { desc = "Previous Quickfix item" })
+-- Map("n", "]q", ":cnext<CR>", { desc = "Next Quickfix item" })
+-- Map("n", "[Q", ":cfirst<CR>", { desc = "First Quickfix item" })
+-- Map("n", "]Q", ":clast<CR>", { desc = "Last Quickfix item" })
+-- Map("n", "<leader>qo", ":copen<CR>", { desc = "[q]uickfix [o]pen" })
+-- Map("n", "<leader>qc", ":cclose<CR>", { desc = "[q]uickfix [c]lose" })
+-- Map("n", "<leader>qt", function()
+-- 	local exists = false
+-- 	for _, win in pairs(vim.fn.getwininfo()) do
+-- 		if win["quickfix"] == 1 then
+-- 			exists = true
+-- 		end
+-- 	end
+-- 	if exists then
+-- 		vim.cmd("cclose")
+-- 	else
+-- 		vim.cmd("copen")
+-- 	end
+-- end, { desc = "[q]uickfix [t]oggle" })

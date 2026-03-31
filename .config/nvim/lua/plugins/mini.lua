@@ -24,6 +24,15 @@ return {
 				scroll = {
 					enable = false,
 				},
+				resize = {
+					enable = false,
+				},
+				open = {
+					enable = false,
+				},
+				close = {
+					enable = false,
+				},
 			})
 
 			local map_multistep = require("mini.keymap").map_multistep
@@ -33,18 +42,18 @@ return {
 			map_multistep("i", "<CR>", { "pmenu_accept", "minipairs_cr" })
 			map_multistep("i", "<BS>", { "minipairs_bs" })
 
-			require("mini.files").setup({
-				mappings = {
-					go_in = "L",
-					go_in_plus = "l",
-					synchronize = "<CR>",
-				},
-				options = {
-					use_as_default_explorer = true,
-				},
-			})
-
-			Map("n", "<leader>x", MiniFiles.open, { desc = "File Explorer" })
+			-- require("mini.files").setup({
+			-- 	mappings = {
+			-- 		go_in = "L",
+			-- 		go_in_plus = "l",
+			-- 		synchronize = "<CR>",
+			-- 	},
+			-- 	options = {
+			-- 		use_as_default_explorer = true,
+			-- 	},
+			-- })
+			--
+			-- Map("n", "<leader>x", MiniFiles.open, { desc = "File Explorer" })
 		end,
 	},
 }
