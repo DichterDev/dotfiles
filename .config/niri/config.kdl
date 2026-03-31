@@ -27,32 +27,26 @@ input {
 
 
 layout {
-    gaps 5
+    gaps 8
     center-focused-column "never"
 
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
+        proportion 1.0
     }
 
 
     default-column-width { proportion 0.5; }
-    // default-column-width {}
 
     focus-ring {
-        width 2
-        active-color "#7fc8ff"
-        inactive-color "#505050"
+      width 2
+      active-gradient from="#00868b" to="#FF66CC" angle=180 in="oklch shorter hue"
+      inactive-color "#505050"
     }
 
-    border {
-        off
-        width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
-    }
+    border { off; }
 
     shadow {
         softness 30
@@ -61,7 +55,12 @@ layout {
         color "#0007"
     }
 
-    struts {}
+    struts {
+        left 16
+        right 16
+        top 8
+        bottom 8
+    }
 }
 
 spawn-sh-at-startup "dms run"
@@ -72,7 +71,21 @@ hotkey-overlay {
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-animations {}
+animations {
+  workspace-switch {
+    spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+  }
+
+  window-open {
+    duration-ms 150
+    curve "ease-out-expo"
+  }
+
+  window-close {
+    duration-ms 150
+    curve "ease-out-quad"
+  }
+}
 
 window-rule {
   match app-id="firefox"
@@ -85,7 +98,7 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 12
+    geometry-corner-radius 4
     clip-to-geometry true
 }
 
@@ -130,6 +143,7 @@ binds {
     Mod+Ctrl+K     { move-window-up; }
     Mod+Ctrl+L     { move-column-right; }
 
+    // Full Size Keyboard
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
     Mod+Ctrl+Home { move-column-to-first; }
@@ -166,8 +180,10 @@ binds {
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
     // ...
 
+    // Full Size Keyboard
     Mod+Shift+Page_Down { move-workspace-down; }
     Mod+Shift+Page_Up   { move-workspace-up; }
+
     Mod+Shift+U         { move-workspace-down; }
     Mod+Shift+I         { move-workspace-up; }
 
