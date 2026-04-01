@@ -8,6 +8,7 @@ return {
 		},
 		---@module "Otree"
 		opts = {
+			win_size = 50,
 			focus_on_enter = true,
 			git_signs = true,
 			keymaps = {

@@ -36,6 +36,7 @@ Autocmd({ "VimLeave" }, {
 
 Autocmd({ "BufEnter" }, {
 	group = Augroup("text_wrapping"),
+	pattern = { "typst", "markdown", "text" },
 	callback = function()
 		vim.o.wrap = true
 	end,
