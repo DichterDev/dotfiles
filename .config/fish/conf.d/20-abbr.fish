@@ -16,7 +16,7 @@ abbr -a rm "rm -Irf"
 abbr -a cp "cp -av"
 
 # LS
-abbr -a ls "eza -1F --git --icons --group-directories-first --time-style=long-iso"
+alias ls="eza -1F --git --icons --group-directories-first --time-style=long-iso"
 abbr -a la "ls -alh"
 abbr -a lt "ls -T --level=2"
 abbr -a lta "la -T --level=2"
