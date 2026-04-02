@@ -6,4 +6,4 @@ Keywords=Mirror,Output
 
 Type=Application
 Icon=utilities-terminal
-Exec=bash -c "wl-mirror $(niri msg outputs | grep '^Output' | cut -d'(' -f 2 | cut -d')' -f 1 | rofi -dmenu -p 'src? ' -i)"
+Exec=bash -c "wl-mirror $(niri msg outputs | grep '^Output' | cut -d'(' -f 2 | cut -d')' -f 1 | fuzzel -d -p 'src? ')"
