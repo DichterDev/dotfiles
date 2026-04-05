@@ -38,7 +38,7 @@ vim.o.foldlevel = 99
 vim.o.foldenable = true
 
 -- Scrolloff
-vim.o.scrolloff = 8
+vim.o.scrolloff = 12
 vim.o.sidescrolloff = 8
 
 -- Neovim specific
@@ -54,8 +54,8 @@ vim.o.virtualedit = "block"
 vim.o.lazyredraw = false
 vim.o.syntax = "on"
 
--- Advanced UI
-vim.o.winborder = "rounded"
-
 -- SHELL
 vim.o.sh = "/bin/fish"
+
+-- LSP
+vim.o.autocomplete = true

@@ -9,6 +9,10 @@ Map({ "n", "x", "o" }, "ö", "[", { desc = "Left bracket [", remap = true })
 Map({ "n", "x", "o" }, "ä", "]", { desc = "Right bracket ]", remap = true })
 Map({ "n", "x", "o" }, "ü", "\\", { desc = "Backslash \\", remap = true })
 
+Map("n", "<A-o>", "v", { desc = "Enter visual for selection" })
+Map("x", "<A-o>", "an", { remap = true, desc = "Expand selection" })
+Map("x", "<A-i>", "in", { remap = true, desc = "Shrink selection" })
+
 -- Select all
 Map("n", "<C-a>", "ggVG", { desc = "Visual select all" })
 

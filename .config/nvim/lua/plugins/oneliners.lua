@@ -8,5 +8,5 @@ return {
 	{ "pcolladosoto/tinygo.nvim", opts = {} },
 	{ "neovim/nvim-lspconfig" },
 	{ "windwp/nvim-ts-autotag", opts = {} },
-	-- { "code-biscuits/nvim-biscuits", dependencies = { "nvim-treesitter/nvim-treesitter" }, opts = {} },
+	{ "Aasim-A/scrollEOF.nvim", event = { "CursorMoved", "WinScrolled" }, opts = {} },
 }

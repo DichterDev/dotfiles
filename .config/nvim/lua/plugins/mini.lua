@@ -4,7 +4,10 @@ return {
 		"nvim-mini/mini.nvim",
 		version = false,
 		config = function()
-			require("mini.statusline").setup({})
+			require("mini.statusline").setup({ use_icons = true })
+
+			require("mini.tabline").setup({})
+
 			require("mini.pairs").setup({})
 			require("mini.ai").setup({})
 			require("mini.surround").setup({})
@@ -14,6 +17,7 @@ return {
 				window = { winblend = 0 },
 				lsp_progress = { enable = false },
 			})
+
 			require("mini.icons").setup({})
 			require("mini.trailspace").setup({})
 			require("mini.align").setup({})
@@ -21,18 +25,10 @@ return {
 			require("mini.bracketed").setup({})
 
 			require("mini.animate").setup({
-				scroll = {
-					enable = false,
-				},
-				resize = {
-					enable = false,
-				},
-				open = {
-					enable = false,
-				},
-				close = {
-					enable = false,
-				},
+				scroll = { enable = false },
+				resize = { enable = false },
+				open = { enable = false },
+				close = { enable = false },
 			})
 
 			local map_multistep = require("mini.keymap").map_multistep
@@ -41,19 +37,6 @@ return {
 			map_multistep("i", "<S-Tab>", { "pmenu_prev" })
 			map_multistep("i", "<CR>", { "pmenu_accept", "minipairs_cr" })
 			map_multistep("i", "<BS>", { "minipairs_bs" })
-
-			-- require("mini.files").setup({
-			-- 	mappings = {
-			-- 		go_in = "L",
-			-- 		go_in_plus = "l",
-			-- 		synchronize = "<CR>",
-			-- 	},
-			-- 	options = {
-			-- 		use_as_default_explorer = true,
-			-- 	},
-			-- })
-			--
-			-- Map("n", "<leader>x", MiniFiles.open, { desc = "File Explorer" })
 		end,
 	},
 }
