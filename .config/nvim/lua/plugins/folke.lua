@@ -118,6 +118,14 @@ return {
 					["blink.entry.get_documentation"] = true,
 				},
 			},
+			routes = {
+				{
+					filter = {
+						event = "lsp",
+					},
+					opts = { skip = true },
+				},
+			},
 			presets = {
 				bottom_search = true,
 				command_palette = true,

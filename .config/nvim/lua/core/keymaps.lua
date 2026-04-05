@@ -9,9 +9,23 @@ Map({ "n", "x", "o" }, "ö", "[", { desc = "Left bracket [", remap = true })
 Map({ "n", "x", "o" }, "ä", "]", { desc = "Right bracket ]", remap = true })
 Map({ "n", "x", "o" }, "ü", "\\", { desc = "Backslash \\", remap = true })
 
-Map("n", "<A-o>", "v", { desc = "Enter visual for selection" })
-Map("x", "<A-o>", "an", { remap = true, desc = "Expand selection" })
-Map("x", "<A-i>", "in", { remap = true, desc = "Shrink selection" })
+-- Incremental Selection
+-- src: https://www.reddit.com/r/neovim/comments/1scauyd/comment/oecobq8/
+Map({ "x", "o" }, "v", function()
+	if vim.treesitter.get_parser(nil, nil, { error = false }) then
+		require("vim.treesitter._select").select_parent(vim.v.count1)
+	else
+		vim.lsp.buf.selection_range(vim.v.count1)
+	end
+end)
+
+Map({ "x", "o" }, "V", function()
+	if vim.treesitter.get_parser(nil, nil, { error = false }) then
+		require("vim.treesitter._select").select_child(vim.v.count1)
+	else
+		vim.lsp.buf.selection_range(-vim.v.count1)
+	end
+end)
 
 -- Select all
 Map("n", "<C-a>", "ggVG", { desc = "Visual select all" })
@@ -25,12 +39,6 @@ Map("n", "<C-k>", "<C-w>k", { desc = "Move to upper window" })
 -- Split windows
 Map("n", "<leader>vs", "<CMD>vsplit<CR>", { desc = "[v]ertical [s]plit" })
 Map("n", "<leader>hs", "<CMD>:hsplit", { desc = "[h]orizontal [s]plit" })
-
--- Resizing windows
-Map("n", "<leader>h", "<C-w><", { desc = "Decrease window width" })
-Map("n", "<leader>l", "<C-w>>", { desc = "Increase window width" })
-Map("n", "<leader>j", "<C-w>+", { desc = "Increase window height" })
-Map("n", "<leader>k", "<C-w>-", { desc = "Decrease window height" })
 
 -- Clear search highlights
 Map("n", "<leader>cs", ":nohlsearch<CR>", { desc = "Clear search highlights" })
