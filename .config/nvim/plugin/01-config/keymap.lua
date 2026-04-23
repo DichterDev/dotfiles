@@ -10,6 +10,9 @@ vim.keymap.set({ "n", "x", "o" }, "ü", "\\", { desc = "Backslash \\", remap = t
 -- Select all
 vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Visual select all" })
 
+-- Quit
+vim.keymap.set("n", "<leader>Q", ":qa<CR>", { desc = "[Q]it all" })
+
 -- Incremental Selection
 -- src: https://www.reddit.com/r/neovim/comments/1scauyd/comment/oecobq8/
 vim.keymap.set({ "x", "o" }, "v", function()
