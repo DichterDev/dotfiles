@@ -8,7 +8,7 @@ vim.keymap.set({ "n", "x", "o" }, "ä", "]", { desc = "Right bracket ]", remap =
 vim.keymap.set({ "n", "x", "o" }, "ü", "\\", { desc = "Backslash \\", remap = true })
 
 -- Select all
-vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Visual select all" })
+vim.keymap.set("n", "<leader>a", "ggVG", { desc = "Visual select all" })
 
 -- Quit
 vim.keymap.set("n", "<leader>Q", ":qa<CR>", { desc = "[Q]it all" })

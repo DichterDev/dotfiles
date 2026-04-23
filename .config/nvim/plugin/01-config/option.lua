@@ -24,14 +24,16 @@ vim.o.listchars = "trail:·,tab:»·,nbsp:+"
 vim.o.scrolloff = 12
 vim.o.sidescrolloff = 8
 
+-- FILES
+vim.o.undofile = true
+vim.o.swapfile = false
+
 -- Neovim specific
 vim.o.updatetime = 300
 vim.o.timeoutlen = 500
 vim.o.conceallevel = 0
-vim.o.undofile = true
 vim.o.wildmode = "longest:full,full"
 vim.o.virtualedit = "block"
-vim.o.swapfile = false
 
 -- SHELL
 vim.o.sh = "/bin/fish"
