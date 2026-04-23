@@ -39,7 +39,6 @@ abbr -a grbc "grb --continue"
 
 # NVIM
 alias nv="nvim"
-alias nv12="NVIM_APPNAME=nvim-12 nvim"
 
 # DOCKER
 abbr -a dc "docker compose"
