@@ -21,6 +21,9 @@ abbr -a la "ls -alh"
 abbr -a lt "ls -T --level=2"
 abbr -a lta "la -T --level=2"
 
+# CD
+alias cd="z"
+
 # GIT
 abbr -a ga "git add"
 abbr -a gs "git status"
@@ -35,11 +38,12 @@ abbr -a grba "grb --abort"
 abbr -a grbc "grb --continue"
 
 # NVIM
-abbr -a nv "nvim ."
+alias nv="nvim"
+alias nv12="NVIM_APPNAME=nvim-12 nvim"
 
 # DOCKER
 abbr -a dc "docker compose"
-abbr -a dps "docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}'"
+abbr -a dps "docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}'"
 abbr -a dcu "docker compose up -d"
 abbr -a dcuf "docker compose up -d --force-recreate"
 abbr -a dcr "docker compose restart"

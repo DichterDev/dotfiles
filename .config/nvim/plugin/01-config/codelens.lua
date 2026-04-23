@@ -1,0 +1,22 @@
+-- vim.lsp.codelens.enable(true)
+--
+-- vim.lsp.handlers["textDocument/codeLens"] = function(err, result, ctx, _)
+-- 	if err or not result then
+-- 		return
+-- 	end
+-- 	local bufnr = ctx.bufnr
+-- 	local ns = vim.api.nvim_create_namespace("lsp_codelens")
+-- 	vim.api.nvim_buf_clear_namespace(bufnr, ns, 0, -1)
+--
+-- 	for _, lens in ipairs(result) do
+-- 		local line = lens.range.start.line
+-- 		local title = lens.command and lens.command.title or ""
+--
+-- 		if title ~= "" then
+-- 			vim.api.nvim_buf_set_extmark(bufnr, ns, line, 0, {
+-- 				virt_text = { { "  󰌹 " .. title, "LspCodeLens" } },
+-- 				virt_text_pos = "eol",
+-- 			})
+-- 		end
+-- 	end
+-- end
