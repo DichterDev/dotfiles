@@ -37,3 +37,5 @@ vim.o.virtualedit = "block"
 
 -- SHELL
 vim.o.sh = "/bin/fish"
+
+vim.o.background = "dark"

@@ -12,7 +12,11 @@ local gh = require("util").pack.gh
 -- vim.api.nvim_set_hl(0, "MiniPickPromptCaret", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "MiniPickPromptPrefix", { bg = "none" })
 
-vim.pack.add({ gh("ibhagwan/fzf-lua"), gh("nvim-mini/mini.icons") })
+vim.pack.add({
+	gh("ibhagwan/fzf-lua"),
+	gh("nvim-mini/mini.icons"),
+	gh("folke/tokyonight.nvim"),
+})
 
 local fzf = require("fzf-lua")
 fzf.setup({
@@ -39,8 +43,14 @@ vim.keymap.set("n", "<leader>fk", fzf.keymaps, { desc = "[f]ind [k]eymaps" })
 vim.keymap.set("n", "/", fzf.blines, { desc = "Search" })
 vim.keymap.set("n", "<leader>ft", fzf.tags_live_grep, { desc = "[f]ind [t]ags" })
 
--- vim.api.nvim_set_hl(0, "FzfLuaNormal", { bg = "none", link = "" })
--- vim.api.nvim_set_hl(0, "FzfLuaPreviewNormal", { bg = "none", link = "" })
+vim.api.nvim_create_autocmd("ColorScheme", {
+	callback = function()
+		local remove_bg = require("util").hl.remove_bg
+		remove_bg("FzfLuaNormal")
+		remove_bg("FzfLuaPreviewNormal")
+		remove_bg("FzfLuaBackdrop")
+	end,
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)

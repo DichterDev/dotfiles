@@ -1,5 +1,4 @@
 local gh = require("util").pack.gh
-local remove_bg = require("util").hl.remove_bg
 
 vim.pack.add({
 	{
@@ -88,5 +87,10 @@ require("blink.cmp").setup({
 	fuzzy = { implementation = "prefer_rust_with_warning" },
 })
 
-remove_bg("BlinkCmpDoc")
-remove_bg("BlinkCmpSignatureHelp")
+vim.api.nvim_create_autocmd("ColorScheme", {
+	callback = function()
+		local remove_bg = require("util").hl.remove_bg
+		remove_bg("BlinkCmpDoc")
+		remove_bg("BlinkCmpSignatureHelp")
+	end,
+})

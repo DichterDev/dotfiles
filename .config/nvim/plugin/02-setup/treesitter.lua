@@ -41,6 +41,10 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-remove_bg("TreesitterContext")
+vim.api.nvim_create_autocmd("ColorScheme", {
+	callback = function()
+		remove_bg("TreesitterContext")
+	end,
+})
 
 require("nvim-ts-autotag").setup({})
