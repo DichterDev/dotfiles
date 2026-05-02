@@ -8,6 +8,7 @@ vim.pack.add({
 	gh("navarasu/onedark.nvim"),
 	gh("scottmckendry/cyberdream.nvim"),
 	gh("sainnhe/sonokai"),
+	gh("jpwol/thorn.nvim"),
 })
 
 require("kanagawa").setup({
