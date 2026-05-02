@@ -28,6 +28,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 					MiniSessions.write(session_name)
 				end
 			end
+			vim.cmd("MilliPreview spinner")
 		end)
 	end,
 })
