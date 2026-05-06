@@ -43,3 +43,6 @@ vim.keymap.set("n", "<leader>Y", '"+y_', { desc = "[Y]ank to clipboard" })
 -- Pasting
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "[p]aste from clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>P", '"+P"', { desc = "[P]aste from clipboard" })
+
+-- Diagnostic
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "[d]iagnostic float" })

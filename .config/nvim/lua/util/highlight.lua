@@ -4,7 +4,7 @@ M.bg = "#000000"
 M.fg = "#ffffff"
 
 M.remove_bg = function(name)
-	vim.api.nvim_set_hl(0, name, { bg = "none" })
+	vim.api.nvim_set_hl(0, name, { update = true, bg = "NONE", link = "NONE" })
 end
 
 ---@param hex_str string hexadecimal value of a color

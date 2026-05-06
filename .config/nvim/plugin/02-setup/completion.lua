@@ -56,7 +56,8 @@ require("blink.cmp").setup({
 			update_delay_ms = 50,
 			treesitter_highlighting = true,
 			window = {
-				border = "rounded",
+				border = { " ", " ", " ", " ", " ", " ", " ", " " },
+				treesitter_highlighting = true,
 			},
 		},
 		list = { selection = { preselect = false, auto_insert = false } },
@@ -65,7 +66,7 @@ require("blink.cmp").setup({
 	signature = {
 		enabled = true,
 		window = {
-			border = "rounded",
+			border = { " ", " ", " ", " ", " ", " ", " ", " " },
 			treesitter_highlighting = true,
 		},
 	},

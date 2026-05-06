@@ -1,5 +1,4 @@
 local gh = require("util").pack.gh
-local remove_bg = require("util").hl.remove_bg
 
 vim.api.nvim_create_autocmd("PackChanged", {
 	callback = function(ev)
@@ -43,6 +42,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
+		local remove_bg = require("util").hl.remove_bg
 		remove_bg("TreesitterContext")
 	end,
 })
