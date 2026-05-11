@@ -15,6 +15,6 @@ local tailwind = {
 	settings = {},
 }
 
-setup("cssls", css)
+-- setup("cssls", css)
 setup("css_variables", var)
 setup("tailwindcss", tailwind)
