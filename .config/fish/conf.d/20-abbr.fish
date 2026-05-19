@@ -24,6 +24,13 @@ abbr -a lta "la -T --level=2"
 # CD
 alias cd="z"
 
+# SUDO
+function last_history_item
+    echo $history[1]
+end
+
+abbr -a !! --position anywhere --function last_history_item
+
 # GIT
 abbr -a ga "git add"
 abbr -a gs "git status"
