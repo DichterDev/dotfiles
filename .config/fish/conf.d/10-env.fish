@@ -1,3 +1,4 @@
+set BROWSER firefox
 set TERM kitty
 set SHELL /bin/fish
 
