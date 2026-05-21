@@ -43,6 +43,20 @@ vim.keymap.set("n", "<leader>fk", fzf.keymaps, { desc = "[f]ind [k]eymaps" })
 vim.keymap.set("n", "/", fzf.blines, { desc = "Search" })
 vim.keymap.set("n", "<leader>ft", fzf.tags_live_grep, { desc = "[f]ind [t]ags" })
 
+vim.keymap.set("n", "<leader>fa", function()
+	require("fzf-lua").fzf_live("ast-grep --context 0 --heading never --pattern <query> 2>/dev/null", {
+		exec_empty_query = false,
+		prompt = "AST❯ ",
+		actions = {
+			["default"] = require("fzf-lua").actions.file_edit,
+			["ctrl-q"] = {
+				fn = require("fzf-lua").actions.file_edit_or_qf,
+				prefix = "select-all+",
+			},
+		},
+	})
+end, { desc = "[f]ind [a]st" })
+
 vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		local remove_bg = require("util").hl.remove_bg

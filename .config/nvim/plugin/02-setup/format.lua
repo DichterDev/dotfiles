@@ -7,8 +7,7 @@ vim.pack.add({ gh("stevearc/conform.nvim") })
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
-		java = { "jdtls" },
-		html = { "superhtml" },
+		html = { "prettierd" },
 		javascript = { "prettierd", "eslint_d" },
 		typescript = { "prettierd", "eslint_d" },
 		javascriptreact = { "prettierd", "eslint_d" },
@@ -16,7 +15,7 @@ require("conform").setup({
 		vue = { "prettierd", "eslint_d" },
 	},
 	format_on_save = {
-		timeout_ms = 1000,
+		timeout_ms = 500,
 		lsp_format = "fallback",
 	},
 	formatters = {

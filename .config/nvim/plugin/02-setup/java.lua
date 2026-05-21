@@ -1,3 +1,22 @@
 local gh = require("util").pack.gh
 
-vim.pack.add({ gh("mfussenegger/nvim-jdtls") })
+vim.pack.add({
+	gh("mfussenegger/nvim-jdtls"),
+	-- gh("idelice/nvim-jls"),
+})
+
+-- require("jls").setup({
+-- 	root_markers = {
+-- 		"settings.gradle",
+-- 		"settings.gradle.kts",
+-- 		".git",
+-- 	},
+-- 	settings = {
+-- 		java = {
+-- 			classPath = {
+-- 				"shared/build/classes/java/main",
+-- 				"services/ship/build/classes/java/main",
+-- 			},
+-- 		},
+-- 	},
+-- })

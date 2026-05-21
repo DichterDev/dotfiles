@@ -5,9 +5,9 @@ M.default = {}
 ---@param capabilities lsp.ClientCapabilities
 M.default.capabilities = function(capabilities)
 	if capabilities then
-		require("blink.cmp").get_lsp_capabilities(capabilities, true)
+		return require("blink.cmp").get_lsp_capabilities(capabilities, true)
 	end
-	require("blink.cmp").get_lsp_capabilities({}, true)
+	return require("blink.cmp").get_lsp_capabilities({}, true)
 end
 
 ---@param name string
