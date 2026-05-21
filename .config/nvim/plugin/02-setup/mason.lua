@@ -6,6 +6,10 @@ vim.pack.add({
 })
 
 require("mason").setup({
+	registries = {
+		"github:Crashdummyy/mason-registry",
+		"github:mason-org/mason-registry",
+	},
 	ui = {
 		icons = {
 			package_installed = "✓",
@@ -42,6 +46,8 @@ require("mason-tool-installer").setup({
 		"java-test",
 		"java-debug-adapter",
 		"vscode-spring-boot-tools",
+
+		"roslyn",
 
 		"superhtml",
 		-- "htmx-lsp",
