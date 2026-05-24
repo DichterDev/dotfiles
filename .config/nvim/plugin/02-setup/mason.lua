@@ -21,11 +21,17 @@ require("mason").setup({
 
 require("mason-tool-installer").setup({
 	ensure_installed = {
+		-- LUA
 		"lua-language-server",
 		"stylua",
 
+		-- TypeScript / JavaScript
 		"tsgo",
+
+		-- PRETTIER
 		"prettierd",
+
+		-- ESLINT
 		"eslint_d",
 		"eslint-lsp",
 
@@ -35,34 +41,49 @@ require("mason-tool-installer").setup({
 		-- "oxlint",
 		-- "oxfmt",
 
+		-- GO
 		"gopls",
 		"gofumpt",
 		"goimports",
 
+		-- PYTHON
 		"ty",
 		"ruff",
 
+		-- JAVA
 		"jdtls",
 		"java-test",
 		"java-debug-adapter",
 		"vscode-spring-boot-tools",
 
+		-- CSHARP
 		"roslyn",
 
+		-- HTML
 		"superhtml",
 		-- "htmx-lsp",
+
+		-- CSS
 		"css-lsp",
 		"css-variables-language-server",
 		"tailwindcss-language-server",
+
+		-- GLSL
 		-- "glsl_analyzer",
 
+		-- FISH
 		"fish-lsp",
+		-- BASH
 		"bash-language-server",
 
+		-- TOML
 		"tombi",
+		-- YAML
 		"yaml-language-server",
+		-- JSON
 		"json-lsp",
 
-		"docker-language-server",
+		-- DOCKER
+		-- "docker-language-server",
 	},
 })
