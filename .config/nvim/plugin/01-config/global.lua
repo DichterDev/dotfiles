@@ -5,5 +5,3 @@ vim.env.JDK25 = "/usr/lib/jvm/java-25-openjdk/"
 
 vim.g.quarkus = false
 vim.g.springboot = false
-
-vim.g.lazy_init = false

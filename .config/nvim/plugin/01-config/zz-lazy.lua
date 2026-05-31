@@ -2,17 +2,17 @@ local gh = require("util").pack.gh
 
 vim.pack.add({ gh("folke/lazy.nvim") })
 
+local rtp = vim.opt.rtp:get()
+
 require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 	},
-	defaults = {
-		lazy = false,
-	},
 	performance = {
 		reset_packpath = false,
 		rtp = {
-			reset = false,
+			reset = true,
+			paths = rtp,
 		},
 	},
 	rocks = {
