@@ -42,6 +42,8 @@ vim.keymap.set("n", "<leader>fh", fzf.quickfix_stack, { desc = "[f]ind [h]istory
 vim.keymap.set("n", "<leader>fk", fzf.keymaps, { desc = "[f]ind [k]eymaps" })
 vim.keymap.set("n", "/", fzf.blines, { desc = "Search" })
 vim.keymap.set("n", "<leader>ft", fzf.tags_live_grep, { desc = "[f]ind [t]ags" })
+vim.keymap.set("n", "<leader>fd", fzf.lsp_workspace_diagnostics, { desc = "[f]ind [d]iagnostics" })
+vim.keymap.set("n", "<leader>fx", fzf.lsp_document_diagnostics, { desc = "[f]ind buffer diagnostics" })
 
 vim.keymap.set("n", "<leader>fa", function()
 	require("fzf-lua").fzf_live("ast-grep --context 0 --heading never --pattern <query> 2>/dev/null", {

@@ -57,7 +57,6 @@ require("blink.cmp").setup({
 			treesitter_highlighting = true,
 			window = {
 				border = { " ", " ", " ", " ", " ", " ", " ", " " },
-				treesitter_highlighting = true,
 			},
 		},
 		list = { selection = { preselect = false, auto_insert = false } },

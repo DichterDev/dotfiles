@@ -3,6 +3,7 @@ local M = {}
 M.bg = "#000000"
 M.fg = "#ffffff"
 
+---@param name string
 M.remove_bg = function(name)
 	vim.api.nvim_set_hl(0, name, { update = true, bg = "NONE", link = "NONE" })
 end
@@ -35,12 +36,10 @@ function M.blend(fg, bg, alpha)
 end
 
 function M.darken(hex, amount, bg)
-	vim.notify(vim.inspect(hex))
 	return M.blend(hex, bg or M.bg, math.abs(amount))
 end
 
 function M.lighten(hex, amount, fg)
-	vim.notify(vim.inspect(hex))
 	return M.blend(hex, fg or M.fg, math.abs(amount))
 end
 

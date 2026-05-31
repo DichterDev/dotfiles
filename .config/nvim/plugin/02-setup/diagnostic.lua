@@ -1,6 +1,8 @@
 local gh = require("util").pack.gh
 
-vim.pack.add({ gh("rachartier/tiny-inline-diagnostic.nvim") })
+vim.pack.add({
+	gh("rachartier/tiny-inline-diagnostic.nvim"),
+})
 
 require("tiny-inline-diagnostic").setup({
 	preset = "powerline",

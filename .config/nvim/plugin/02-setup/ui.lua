@@ -19,7 +19,7 @@ vim.pack.add({
 
 require("vim._core.ui2").enable({})
 
-vim.o.cmdheight = 0
+vim.o.cmdheight = 1
 
 ---@diagnostic disable: missing-fields
 require("tiny-cmdline").setup({ on_reposition = require("tiny-cmdline").adapters.blink })
@@ -29,5 +29,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		local remove_bg = require("util.highlight").remove_bg
 		remove_bg("FloatBorder")
+		remove_bg("TinyCmdlineNormal")
+		remove_bg("TinyCmdlineBorder")
 	end,
 })
