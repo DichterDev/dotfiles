@@ -1,0 +1,5 @@
+[rocks]
+
+[plugins]
+"rocks.nvim" = "2.49.0"
+neorg = "9.6.4"
