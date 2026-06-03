@@ -1,18 +1,25 @@
-require("neorg").setup({
-	load = {
-		["core.defaults"] = {},
-		["core.concealer"] = {
-			config = {
-				icon_preset = "diamond",
-			},
-		},
-		["core.dirman"] = {
-			config = {
-				workspaces = {
-					notes = "~/notes",
-				},
-				default_workspace = "notes",
-			},
-		},
-	},
-})
+-- require("neorg").setup({
+-- 	load = {
+-- 		["core.defaults"] = {},
+-- 		["core.concealer"] = {
+-- 			config = {
+-- 				icon_preset = "basic",
+-- 			},
+-- 		},
+-- 		["core.journal"] = {
+-- 			config = {
+-- 				workspace = "notes",
+-- 				strategy = "nested",
+-- 			},
+-- 		},
+-- 		["core.dirman"] = {
+-- 			config = {
+-- 				workspaces = {
+-- 					notes = "~/notes",
+-- 				},
+-- 				default_workspace = "notes",
+-- 			},
+-- 		},
+-- 		["core.ui.calendar"] = {},
+-- 	},
+-- })
