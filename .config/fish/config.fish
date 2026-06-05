@@ -1,5 +1,5 @@
 if status is-interactive
-  mise activate fish | source
+    mise activate fish | source
 end
 
 # uv

@@ -2,6 +2,10 @@ set BROWSER firefox
 set TERM kitty
 set SHELL /bin/fish
 
+# C/C++
+set CC gcc
+set CXX g++
+
 # JAVA
 set JAVA_HOME /usr/lib/jvm/default
 set JDK21 /usr/lib/jvm/java-21-openjdk
