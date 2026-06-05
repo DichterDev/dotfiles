@@ -13,4 +13,11 @@ M.autocmd = function(events, group, opts)
 	vim.api.nvim_create_autocmd(events, args)
 end
 
+---@param name string
+---@param cmd string|fun(args: vim.api.keyset.create_user_command.command_args)
+---@param opts vim.api.keyset.user_command
+M.usercmd = function(name, cmd, opts)
+	vim.api.nvim_create_user_command(name, cmd, opts)
+end
+
 return M

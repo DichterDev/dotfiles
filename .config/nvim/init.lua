@@ -2,7 +2,7 @@ local util = require("util")
 
 Gh = util.pack.gh
 Map = util.keymap.set
-Autocmd = util.autocmd.autocmd
+Autocmd = util.cmd.autocmd
 RemoveBG = util.hl.remove_bg
 LspSetup = util.lsp.setup
 
