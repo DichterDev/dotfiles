@@ -76,10 +76,15 @@ require("mason-tool-installer").setup({
 		-- BASH
 		"bash-language-server",
 
+		-- TYPST
+		"tinymist",
+
 		-- TOML
 		"tombi",
+
 		-- YAML
 		"yaml-language-server",
+
 		-- JSON
 		"json-lsp",
 
