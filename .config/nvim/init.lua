@@ -72,7 +72,7 @@ Map({ "x", "o" }, "v", function()
 	else
 		vim.lsp.buf.selection_range(vim.v.count1)
 	end
-end, {})
+end, { desc = "[v]isual increment" })
 
 Map({ "x", "o" }, "V", function()
 	if vim.treesitter.get_parser(nil, nil, { error = false }) then
@@ -80,7 +80,7 @@ Map({ "x", "o" }, "V", function()
 	else
 		vim.lsp.buf.selection_range(-vim.v.count1)
 	end
-end, {})
+end, { desc = "[V]isual decrement" })
 
 Map("n", "<leader>vs", "<CMD>vsplit<CR>", { desc = "[v]ertical [s]plit" })
 Map("n", "<leader>hs", "<CMD>:hsplit", { desc = "[h]orizontal [s]plit" })
