@@ -1,9 +1,7 @@
-local gh = require("util").pack.gh
-
 vim.pack.add({
-	gh("ibhagwan/fzf-lua"),
-	gh("nvim-mini/mini.icons"),
-	gh("folke/tokyonight.nvim"),
+	Gh("ibhagwan/fzf-lua"),
+	Gh("nvim-mini/mini.icons"),
+	Gh("folke/tokyonight.nvim"),
 })
 
 local fzf = require("fzf-lua")
@@ -19,19 +17,19 @@ fzf.setup({
 
 fzf.register_ui_select()
 
-vim.keymap.set("n", "<leader>F", fzf.global, { desc = "[F]ind" })
-vim.keymap.set("n", "<leader>ff", fzf.files, { desc = "[f]ind [f]iles" })
-vim.keymap.set("n", "<leader>fg", fzf.git_files, { desc = "[f] [g]it files" })
-vim.keymap.set("n", "<leader>fr", fzf.live_grep, { desc = "[f]ind [r]ipgrep" })
-vim.keymap.set("n", "<leader>fb", fzf.buffers, { desc = "[f]ind [b]uffers" })
-vim.keymap.set("n", "<leader>fo", fzf.oldfiles, { desc = "[f]ind [o]ldfiles" })
-vim.keymap.set("n", "<leader>fq", fzf.quickfix, { desc = "[f]ind [q]ickfix" })
-vim.keymap.set("n", "<leader>fh", fzf.quickfix_stack, { desc = "[f]ind [h]istory" })
-vim.keymap.set("n", "<leader>fk", fzf.keymaps, { desc = "[f]ind [k]eymaps" })
-vim.keymap.set("n", "/", fzf.blines, { desc = "Search" })
-vim.keymap.set("n", "<leader>ft", fzf.tags_live_grep, { desc = "[f]ind [t]ags" })
-vim.keymap.set("n", "<leader>fd", fzf.lsp_workspace_diagnostics, { desc = "[f]ind [d]iagnostics" })
-vim.keymap.set("n", "<leader>fx", fzf.lsp_document_diagnostics, { desc = "[f]ind buffer diagnostics" })
+Map("n", "<leader>F", fzf.global, { desc = "[F]ind" })
+Map("n", "<leader>ff", fzf.files, { desc = "[f]ind [f]iles" })
+Map("n", "<leader>fg", fzf.git_files, { desc = "[f] [g]it files" })
+Map("n", "<leader>fr", fzf.live_grep, { desc = "[f]ind [r]ipgrep" })
+Map("n", "<leader>fb", fzf.buffers, { desc = "[f]ind [b]uffers" })
+Map("n", "<leader>fo", fzf.oldfiles, { desc = "[f]ind [o]ldfiles" })
+Map("n", "<leader>fq", fzf.quickfix, { desc = "[f]ind [q]ickfix" })
+Map("n", "<leader>fh", fzf.quickfix_stack, { desc = "[f]ind [h]istory" })
+Map("n", "<leader>fk", fzf.keymaps, { desc = "[f]ind [k]eymaps" })
+Map("n", "/", fzf.blines, { desc = "Search" })
+Map("n", "<leader>ft", fzf.tags_live_grep, { desc = "[f]ind [t]ags" })
+Map("n", "<leader>fd", fzf.lsp_workspace_diagnostics, { desc = "[f]ind [d]iagnostics" })
+Map("n", "<leader>fx", fzf.lsp_document_diagnostics, { desc = "[f]ind buffer diagnostics" })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
@@ -49,27 +47,27 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			return { desc = desc, noremap = true, silent = true, buffer = args.buf }
 		end
 
-		vim.keymap.set("n", "gd", fzf.lsp_definitions, opts("[g]o [d]efinition"))
-		vim.keymap.set("n", "gr", fzf.lsp_references, opts("[g]o [r]efrences"))
-		vim.keymap.set("n", "gD", fzf.lsp_declarations, opts("[g]o [D]eclaration"))
-		vim.keymap.set("n", "gi", fzf.lsp_implementations, opts("[g]o [i]mplementation"))
-		vim.keymap.set("n", "<C-.>", fzf.lsp_code_actions, opts("[c]ode [a]ctions"))
+		Map("n", "gd", fzf.lsp_definitions, opts("[g]o [d]efinition"))
+		Map("n", "gr", fzf.lsp_references, opts("[g]o [r]efrences"))
+		Map("n", "gD", fzf.lsp_declarations, opts("[g]o [D]eclaration"))
+		Map("n", "gi", fzf.lsp_implementations, opts("[g]o [i]mplementation"))
+		Map("n", "<C-.>", fzf.lsp_code_actions, opts("[c]ode [a]ctions"))
 
-		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts("[r]e[n]ame"))
+		Map("n", "<leader>rn", vim.lsp.buf.rename, opts("[r]e[n]ame"))
 
-		vim.keymap.set("n", "K", function()
+		Map("n", "K", function()
 			vim.lsp.buf.hover({ border = { " ", " ", " ", " ", " ", " ", " ", " " } })
 		end, opts("Hover Documentation"))
 
-		vim.keymap.set("n", "<leader>fD", function()
+		Map("n", "<leader>fD", function()
 			fzf.lsp_document_symbols({ query = "Function | Method " })
 		end, opts("[f]ind [D]ocument methods"))
 	end,
 })
 
-vim.pack.add({ gh("stephansama/fzf-nerdfont.nvim") })
+vim.pack.add({ Gh("stephansama/fzf-nerdfont.nvim") })
 
-vim.api.nvim_create_autocmd("PackChanged", {
+Autocmd("PackChanged", "packchanged-fzf", {
 	callback = function(ev)
 		local name, kind = ev.data.spec.name, ev.data.kind
 
@@ -84,4 +82,4 @@ vim.api.nvim_create_autocmd("PackChanged", {
 
 require("fzf-nerdfont").setup({})
 
-vim.keymap.set("n", "<leader>fi", ":FzfNerdfont<CR>", { desc = "[f]ind [i]con" })
+Map("n", "<leader>fi", ":FzfNerdfont<CR>", { desc = "[f]ind [i]con" })
