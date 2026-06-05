@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=wl-mirror
+Name=Mirror
 
 Comment=Mirrors a wayland output to a window
 Keywords=Mirror,Output
