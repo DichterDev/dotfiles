@@ -1,17 +1,5 @@
 local gh = require("util").pack.gh
 
--- vim.pack.add({ gh("nvim-mini/mini.nvim") })
---
--- require("mini.pick").setup({ use_icons = true })
---
--- vim.keymap.set("n", "<leader>ff", ":lua MiniPick.builtin.files()<CR>", { desc = "[f]ind [f]iles" })
--- vim.api.nvim_set_hl(0, "MiniPickBorder", { bg = "none" })
--- vim.api.nvim_set_hl(0, "MiniPickBorderBusy", { bg = "none" })
--- vim.api.nvim_set_hl(0, "MiniPickBorderText", { bg = "none" }) vim.api.nvim_set_hl(0, "MiniPickNormal", { bg = "none" })
--- vim.api.nvim_set_hl(0, "MiniPickPrompt", { bg = "none" })
--- vim.api.nvim_set_hl(0, "MiniPickPromptCaret", { bg = "none" })
--- vim.api.nvim_set_hl(0, "MiniPickPromptPrefix", { bg = "none" })
-
 vim.pack.add({
 	gh("ibhagwan/fzf-lua"),
 	gh("nvim-mini/mini.icons"),
@@ -44,20 +32,6 @@ vim.keymap.set("n", "/", fzf.blines, { desc = "Search" })
 vim.keymap.set("n", "<leader>ft", fzf.tags_live_grep, { desc = "[f]ind [t]ags" })
 vim.keymap.set("n", "<leader>fd", fzf.lsp_workspace_diagnostics, { desc = "[f]ind [d]iagnostics" })
 vim.keymap.set("n", "<leader>fx", fzf.lsp_document_diagnostics, { desc = "[f]ind buffer diagnostics" })
-
-vim.keymap.set("n", "<leader>fa", function()
-	require("fzf-lua").fzf_live("ast-grep --context 0 --heading never --pattern <query> 2>/dev/null", {
-		exec_empty_query = false,
-		prompt = "AST❯ ",
-		actions = {
-			["default"] = require("fzf-lua").actions.file_edit,
-			["ctrl-q"] = {
-				fn = require("fzf-lua").actions.file_edit_or_qf,
-				prefix = "select-all+",
-			},
-		},
-	})
-end, { desc = "[f]ind [a]st" })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
