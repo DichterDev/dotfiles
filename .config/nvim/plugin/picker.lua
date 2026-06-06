@@ -1,7 +1,6 @@
-vim.pack.add({
-	Gh("ibhagwan/fzf-lua"),
-	Gh("nvim-mini/mini.icons"),
-	Gh("folke/tokyonight.nvim"),
+PackAdd({
+	"gh:ibhagwan/fzf-lua",
+	"gh:nvim-mini/mini.icons",
 })
 
 local fzf = require("fzf-lua")
@@ -12,6 +11,7 @@ fzf.setup({
 		"bin/.*",
 		"target/.*",
 		".next/*",
+		"!*.java",
 	},
 })
 
@@ -21,7 +21,7 @@ Map("n", "<leader>F", fzf.global, { desc = "[F]ind" })
 Map("n", "<leader>ff", fzf.files, { desc = "[f]ind [f]iles" })
 Map("n", "<leader>fg", fzf.git_files, { desc = "[f] [g]it files" })
 Map("n", "<leader>fr", fzf.live_grep, { desc = "[f]ind [r]ipgrep" })
-Map("n", "<leader>fb", fzf.buffers, { desc = "[f]ind [b]uffers" })
+Map("n", "<leader><Tab>", fzf.buffers, { desc = "[f]ind [b]uffers" })
 Map("n", "<leader>fo", fzf.oldfiles, { desc = "[f]ind [o]ldfiles" })
 Map("n", "<leader>fq", fzf.quickfix, { desc = "[f]ind [q]ickfix" })
 Map("n", "<leader>fh", fzf.quickfix_stack, { desc = "[f]ind [h]istory" })
@@ -31,16 +31,13 @@ Map("n", "<leader>ft", fzf.tags_live_grep, { desc = "[f]ind [t]ags" })
 Map("n", "<leader>fd", fzf.lsp_workspace_diagnostics, { desc = "[f]ind [d]iagnostics" })
 Map("n", "<leader>fx", fzf.lsp_document_diagnostics, { desc = "[f]ind buffer diagnostics" })
 
-vim.api.nvim_create_autocmd("ColorScheme", {
+Autocmd("ColorScheme", "fzf-lua-bg", {
 	callback = function()
-		local remove_bg = require("util").hl.remove_bg
-		remove_bg("FzfLuaNormal")
-		remove_bg("FzfLuaPreviewNormal")
-		remove_bg("FzfLuaBackdrop")
+		RemoveBG({ "FfzLuaNormal", "FzfLuaPreviewNormal", "FzfLuaBackdrop" })
 	end,
 })
 
-vim.api.nvim_create_autocmd("LspAttach", {
+Autocmd("LspAttach", "fzf-lua-lsp", {
 	callback = function(args)
 		local fzf = require("fzf-lua")
 		local function opts(desc)
@@ -65,9 +62,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-vim.pack.add({ Gh("stephansama/fzf-nerdfont.nvim") })
+PackAdd("gh:stephansama/fzf-nerdfont.nvim")
 
-Autocmd("PackChanged", "packchanged-fzf", {
+Autocmd("PackChanged", "fzf-nerdfont-update", {
 	callback = function(ev)
 		local name, kind = ev.data.spec.name, ev.data.kind
 
@@ -82,4 +79,4 @@ Autocmd("PackChanged", "packchanged-fzf", {
 
 require("fzf-nerdfont").setup({})
 
-Map("n", "<leader>fi", ":FzfNerdfont<CR>", { desc = "[f]ind [i]con" })
+Map("n", "<leader>fi", "<CMD>FzfNerdfont<CR>", { desc = "[f]ind [i]con" })

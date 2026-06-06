@@ -1,6 +1,4 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({ gh("hedyhli/outline.nvim") })
+PackAdd("gh:hedyhli/outline.nvim")
 
 require("outline").setup({})
 

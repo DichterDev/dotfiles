@@ -1,6 +1,4 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({ gh("nvim-mini/mini.nvim") })
+PackAdd("gh:nvim-mini/mini.nvim")
 
 require("mini.snippets").setup({
 	snippets = {

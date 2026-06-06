@@ -1,5 +1,4 @@
-local gh = require("util").pack.gh
-vim.pack.add({ gh("monaqa/dial.nvim") })
+PackAdd("gh:monaqa/dial.nvim")
 
 local dial = require("dial.map")
 local augend = require("dial.augend")
@@ -10,6 +9,11 @@ require("dial.config").augends:register_group({
 		augend.constant.alias.bool,
 		augend.constant.new({
 			elements = { "and", "or" },
+			word = true,
+			cyclic = true,
+		}),
+		augend.constant.new({
+			elements = { "public", "private", "protected" },
 			word = true,
 			cyclic = true,
 		}),

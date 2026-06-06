@@ -1,6 +1,4 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({ gh("stevearc/conform.nvim") })
+PackAdd("gh:stevearc/conform.nvim")
 
 ---@module "conform"
 ---@type conform.setupOpts

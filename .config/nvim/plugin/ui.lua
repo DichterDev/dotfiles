@@ -1,8 +1,4 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({
-	gh("nvim-mini/mini.nvim"),
-})
+PackAdd("gh:nvim-mini/mini.nvim")
 
 require("mini.tabline").setup({
 	format = function(buf_id, label)
@@ -13,9 +9,7 @@ require("mini.tabline").setup({
 
 require("mini.statusline").setup({ use_icons = true })
 
-vim.pack.add({
-	gh("rachartier/tiny-cmdline.nvim"),
-})
+PackAdd("gh:rachartier/tiny-cmdline.nvim")
 
 require("vim._core.ui2").enable({})
 
@@ -25,11 +19,8 @@ vim.o.cmdheight = 1
 require("tiny-cmdline").setup({ on_reposition = require("tiny-cmdline").adapters.blink })
 ---@diagnostic enable: missing-fields
 
-vim.api.nvim_create_autocmd("ColorScheme", {
+Autocmd("ColorScheme", "tiny-cmdline-bg", {
 	callback = function()
-		local remove_bg = require("util.highlight").remove_bg
-		remove_bg("FloatBorder")
-		remove_bg("TinyCmdlineNormal")
-		remove_bg("TinyCmdlineBorder")
+		RemoveBG({ "TinyCmdlineNormal", "TinyCmdlineBorder" })
 	end,
 })

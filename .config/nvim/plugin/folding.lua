@@ -1,8 +1,6 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({
-	gh("kevinhwang91/nvim-ufo"),
-	gh("kevinhwang91/promise-async"),
+PackAdd({
+	"gh:kevinhwang91/nvim-ufo",
+	"gh:kevinhwang91/promise-async",
 })
 
 vim.o.foldcolumn = "1"

@@ -1,16 +1,20 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({ gh("nvim-mini/mini.nvim") })
+PackAdd("gh:nvim-mini/mini.nvim")
 
 require("mini.notify").setup({
 	lsp_progress = { enable = false },
 })
 
-vim.api.nvim_set_hl(0, "MiniNotifyNormal", { bg = "none", update = true })
-vim.api.nvim_set_hl(0, "MiniNotifyBorder", { bg = "none", update = true })
-vim.api.nvim_set_hl(0, "MiniNotifyTitle", { bg = "none", update = true })
+Autocmd("ColorScheme", "mini-notify-bg", {
+	callback = function()
+		RemoveBG({
+			"MiniNotifyNormal",
+			"MiniNotifyTitle",
+			"MiniNotifyBorder",
+		})
+	end,
+})
 
-vim.pack.add({ gh("j-hui/fidget.nvim") })
+PackAdd("gh:j-hui/fidget.nvim")
 
 require("fidget").setup({
 	notification = {

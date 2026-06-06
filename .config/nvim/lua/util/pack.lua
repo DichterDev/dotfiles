@@ -1,9 +1,6 @@
 local M = {}
 
----@param url string
-M.gh = function(url)
-	return "https://github.com/" .. url
-end
+---@alias Spec vim.pack.Spec | string
 
 local prefixes = {
 	["gh:"] = "https://github.com/",
@@ -22,13 +19,12 @@ local function expand_url(url)
 	return url
 end
 
----@param specs (string|vim.pack.Spec)[]
+---@param specs Spec | Spec[]
 ---@param opts? vim.pack.keyset.add
 M.add = function(specs, opts)
-	if type(specs) == "string" or (type(specs) == "table" and specs[1] == nil and not vim.islist(specs)) then
+	if type(specs) == "string" or (type(specs) == "table" and not vim.islist(specs)) then
 		specs = { specs }
 	end
-
 	local pkgs = {}
 
 	for _, spec in ipairs(specs) do
@@ -36,7 +32,7 @@ M.add = function(specs, opts)
 			table.insert(pkgs, expand_url(spec))
 		elseif type(spec) == "table" then
 			if type(spec.src) == "string" then
-				spec.src = expand_url(spec.src)
+				spec = vim.tbl_extend("force", spec, { src = expand_url(spec.src) })
 			end
 			table.insert(pkgs, spec)
 		end

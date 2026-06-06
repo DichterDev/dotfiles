@@ -1,8 +1,6 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({
-	gh("mfussenegger/nvim-jdtls"),
-	-- gh("idelice/nvim-jls"),
+PackAdd({
+	"gh:mfussenegger/nvim-jdtls",
+	-- "gh:idelice/nvim-jls",
 })
 
 -- require("jls").setup({

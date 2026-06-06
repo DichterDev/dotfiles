@@ -3,11 +3,18 @@ local M = {}
 M.bg = "#000000"
 M.fg = "#ffffff"
 
----@param name string
-M.remove_bg = function(name)
-	vim.api.nvim_set_hl(0, name, { update = true, bg = "NONE", link = "NONE" })
-end
+---@param names string | string[]
+M.remove_bg = function(names)
+	if type(names) == "string" or (type(names) == "table" and not vim.islist(names)) then
+		names = { names }
+	end
 
+	for _, name in ipairs(names) do
+		if type(name) == "string" then
+			vim.api.nvim_set_hl(0, name, { update = true, bg = "NONE", link = "NONE" })
+		end
+	end
+end
 ---@param hex_str string hexadecimal value of a color
 local hex_to_rgb = function(hex_str)
 	local hex = "[abcdef0-9][abcdef0-9]"

@@ -1,6 +1,4 @@
-local gh = require("util").pack.gh
-
-vim.api.nvim_create_autocmd("PackChanged", {
+Autocmd("PackChanged", "ts-update", {
 	callback = function(ev)
 		local name, kind = ev.data.spec.name, ev.data.kind
 
@@ -13,10 +11,10 @@ vim.api.nvim_create_autocmd("PackChanged", {
 	end,
 })
 
-vim.pack.add({
-	gh("nvim-treesitter/nvim-treesitter"),
-	gh("nvim-treesitter/nvim-treesitter-context"),
-	gh("windwp/nvim-ts-autotag"),
+PackAdd({
+	"gh:nvim-treesitter/nvim-treesitter",
+	"gh:nvim-treesitter/nvim-treesitter-context",
+	"gh:windwp/nvim-ts-autotag",
 })
 
 local ts = require("nvim-treesitter")
@@ -27,7 +25,7 @@ ts.setup({ install_dir = vim.fn.stdpath("data") .. "/site" })
 
 -- Auto Parser Install
 -- src: https://www.reddit.com/r/neovim/comments/1sezoxf
-vim.api.nvim_create_autocmd("FileType", {
+Autocmd("FileType", "ts-parser-install", {
 	callback = function(ev)
 		local lang = vim.treesitter.language.get_lang(ev.match)
 		local available_langs = require("nvim-treesitter").get_available()
@@ -40,10 +38,9 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("ColorScheme", {
+Autocmd("ColorScheme", "ts-context-bg", {
 	callback = function()
-		local remove_bg = require("util").hl.remove_bg
-		remove_bg("TreesitterContext")
+		RemoveBG("TreesitterContext")
 	end,
 })
 

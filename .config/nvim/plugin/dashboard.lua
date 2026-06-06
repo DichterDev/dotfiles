@@ -1,3 +1,3 @@
-local gh = require("util").pack.gh
+PackAdd("gh:Amansingh-afk/milli.nvim")
 
-vim.pack.add({ gh("Amansingh-afk/milli.nvim") })
+-- TODO: screensaver script

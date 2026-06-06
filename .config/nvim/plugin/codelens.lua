@@ -1,10 +1,6 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({
-	{
-		src = gh("oribarilan/lensline.nvim"),
-		version = vim.version.range("2.*"),
-	},
+PackAdd({
+	src = "gh:oribarilan/lensline.nvim",
+	version = vim.version.range("2.*"),
 })
 
 local lensline = require("lensline")

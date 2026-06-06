@@ -1,8 +1,6 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({
-	gh("mason-org/mason.nvim"),
-	gh("WhoIsSethDaniel/mason-tool-installer.nvim"),
+PackAdd({
+	"gh:mason-org/mason.nvim",
+	"gh:WhoIsSethDaniel/mason-tool-installer.nvim",
 })
 
 require("mason").setup({

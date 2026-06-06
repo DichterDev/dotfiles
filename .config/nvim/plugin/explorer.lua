@@ -1,6 +1,4 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({ gh("stevearc/oil.nvim") })
+PackAdd("gh:stevearc/oil.nvim")
 
 require("oil").setup({
 	view_options = {
@@ -18,15 +16,15 @@ require("oil").setup({
 	},
 })
 
-vim.keymap.set("n", "<leader>x", ":Oil<CR>", { desc = "e[x]plore" })
-vim.keymap.set("n", "<leader>X", function()
+Map("n", "<leader>x", ":Oil<CR>", { desc = "e[x]plore" })
+Map("n", "<leader>X", function()
 	require("oil").open(vim.fn.getcwd())
 end, { desc = "e[X]plore cwd" })
 
-vim.pack.add({
-	{ src = gh("nvim-neo-tree/neo-tree.nvim"), version = vim.version.range("3") },
-	gh("nvim-lua/plenary.nvim"),
-	gh("MunifTanjim/nui.nvim"),
+PackAdd({
+	{ src = "gh:nvim-neo-tree/neo-tree.nvim", version = vim.version.range("3") },
+	"gh:nvim-lua/plenary.nvim",
+	"gh:MunifTanjim/nui.nvim",
 })
 
 require("neo-tree").setup({
@@ -48,4 +46,4 @@ require("neo-tree").setup({
 	},
 })
 
-vim.keymap.set("n", "<leader>e", ":Neotree toggle show right<CR>", { desc = "toggle neotree" })
+Map("n", "<leader>e", ":Neotree toggle show right<CR>", { desc = "toggle neotree" })

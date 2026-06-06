@@ -1,6 +1,6 @@
 local gh = require("util").pack.gh
 
-vim.pack.add({ gh("nvim-mini/mini.nvim") })
+PackAdd("gh:nvim-mini/mini.nvim")
 
 vim.o.sessionoptions = "buffers,curdir,tabpages,winsize,help,globals,folds,terminal"
 
@@ -16,8 +16,7 @@ local get_session_name = function()
 	return string.format("%s-%s", folder_name, hash)
 end
 
-vim.api.nvim_create_autocmd("VimEnter", {
-	group = vim.api.nvim_create_augroup("MiniSessionsAuto", { clear = true }),
+Autocmd("VimEnter", "mini-session", {
 	callback = function()
 		vim.schedule(function()
 			if vim.fn.argc() == 0 then
@@ -28,9 +27,8 @@ vim.api.nvim_create_autocmd("VimEnter", {
 					MiniSessions.write(session_name)
 				end
 			end
-			-- vim.cmd("MilliPreview spinner")
 		end)
 	end,
 })
 
-vim.keymap.set("n", "<leader>fs", MiniSessions.select, { desc = "[f]ind [s]ession" })
+Map("n", "<leader>fs", MiniSessions.select, { desc = "[f]ind [s]ession" })

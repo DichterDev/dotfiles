@@ -1,6 +1,4 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({ gh("nvim-mini/mini.nvim") })
+PackAdd("gh:nvim-mini/mini.nvim")
 
 require("mini.ai").setup({})
 require("mini.bracketed").setup({})
@@ -12,10 +10,10 @@ require("mini.splitjoin").setup({})
 
 require("mini.move").setup({})
 
-vim.pack.add({ gh("saghen/blink.indent") })
+PackAdd("gh:saghen/blink.indent")
 
 require("blink.indent").setup({})
 
-vim.pack.add({ gh("HiPhish/rainbow-delimiters.nvim") })
+PackAdd("gh:HiPhish/rainbow-delimiters.nvim")
 
 require("rainbow-delimiters")

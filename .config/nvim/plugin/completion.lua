@@ -1,12 +1,10 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({
+PackAdd({
 	{
-		src = gh("saghen/blink.cmp"),
+		src = "gh:saghen/blink.cmp",
 		version = vim.version.range("1.*"),
 	},
-	gh("neovim/nvim-lspconfig"),
-	gh("rafamadriz/friendly-snippets"),
+	"gh:neovim/nvim-lspconfig",
+	"gh:rafamadriz/friendly-snippets",
 })
 
 require("blink.cmp").setup({
@@ -87,10 +85,8 @@ require("blink.cmp").setup({
 	fuzzy = { implementation = "prefer_rust_with_warning" },
 })
 
-vim.api.nvim_create_autocmd("ColorScheme", {
+Autocmd("ColorScheme", "blink-cmp-bg", {
 	callback = function()
-		local remove_bg = require("util").hl.remove_bg
-		remove_bg("BlinkCmpDoc")
-		remove_bg("BlinkCmpSignatureHelp")
+		RemoveBG({ "BlinkCmpDoc", "BlinkCmpSignatureHelp" })
 	end,
 })

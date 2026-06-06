@@ -1,6 +1,4 @@
-local gh = require("util").pack.gh
-
-vim.pack.add({ gh("nvim-mini/mini.nvim") })
+PackAdd("gh:nvim-mini/mini.nvim")
 
 require("mini.animate").setup({
 	scroll = { enable = false },
@@ -9,7 +7,7 @@ require("mini.animate").setup({
 	close = { enable = false },
 })
 
-vim.pack.add({ gh("rachartier/tiny-glimmer.nvim") })
+PackAdd("gh:rachartier/tiny-glimmer.nvim")
 
 require("tiny-glimmer").setup({
 	overwrite = {
