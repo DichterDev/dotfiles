@@ -42,7 +42,7 @@ Map("n", "<leader>fo", "<CMD>FzfLua oldfiles<CR>", { desc = "[f]ind [o]ldfiles" 
 Map("n", "<leader>fq", "<CMD>FzfLua quickfix<CR>", { desc = "[f]ind [q]ickfix" })
 Map("n", "<leader>fh", "<CMD>FzfLua quickfix_stack", { desc = "[f]ind [h]istory" })
 Map("n", "<leader>fk", "<CMD>FzfLua keymaps<CR>", { desc = "[f]ind [k]eymaps" })
-Map("n", "/", "<CMD>FzfLua blines<CR>", { desc = "Search" })
+Map("n", "<leader>fb", "<CMD>FzfLua blines<CR>", { desc = "[f]ind [b]uffer lines" })
 Map("n", "<leader>ft", "<CMD>FzfLua tags_live_grep<CR>", { desc = "[f]ind [t]ags" })
 Map("n", "<leader>fd", "<CMD>FzfLua lsp_workspace_diagnostics<CR>", { desc = "[f]ind [d]iagnostics" })
 Map("n", "<leader>fx", "<CMD> FzfLua lsp_document_diagnostics<CR>", { desc = "[f]ind buffer diagnostics" })
@@ -59,7 +59,7 @@ Autocmd("LspAttach", "fzf-lua-lsp", {
 			return { desc = desc, noremap = true, silent = true, buffer = args.buf }
 		end
 
-		Map("n", "gd", "<CMD>FzfLua lsp_defintions", opts("[g]o [d]efinition"))
+		Map("n", "gd", "<CMD>FzfLua lsp_definitions<CR>", opts("[g]o [d]efinition"))
 		Map("n", "gr", "<CMD>FzfLua lsp_references<CR>", opts("[g]o [r]efrences"))
 		Map("n", "gD", "<CMD>FzfLua lsp_declarations<CR>", opts("[g]o [D]eclaration"))
 		Map("n", "gi", "<CMD>FzfLua lsp_implementations<CR>", opts("[g]o [i]mplementation"))

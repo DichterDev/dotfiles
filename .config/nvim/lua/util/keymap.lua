@@ -5,7 +5,7 @@ local M = {}
 ---@param modes Mode|Mode[]
 ---@param lhs string
 ---@param rhs string|function
----@param opts vim.keymap.set.Opts
+---@param opts? vim.keymap.set.Opts
 M.set = function(modes, lhs, rhs, opts)
 	---@type vim.keymap.set.Opts
 	local args = {
@@ -13,6 +13,8 @@ M.set = function(modes, lhs, rhs, opts)
 		silent = modes ~= "c",
 		nowait = modes ~= "t",
 	}
+
+	opts = opts or {}
 
 	args = vim.tbl_deep_extend("force", args, opts)
 
