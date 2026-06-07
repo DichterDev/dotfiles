@@ -13,23 +13,39 @@ fzf.setup({
 		".next/*",
 		"!*.java",
 	},
+	fzf_opts = {
+		["--cycle"] = true,
+	},
+	keymap = {
+		fzf = {
+			["tab"] = "down",
+			["shift-tab"] = "up",
+
+			["alt-j"] = "toggle+down",
+			["alt-n"] = "toggle+down",
+			["alt-down"] = "toggle+down",
+			["alt-k"] = "toggle+up",
+			["alt-p"] = "toggle+up",
+			["alt-up"] = "toggle+up",
+		},
+	},
 })
 
 fzf.register_ui_select()
 
-Map("n", "<leader>F", fzf.global, { desc = "[F]ind" })
-Map("n", "<leader>ff", fzf.files, { desc = "[f]ind [f]iles" })
-Map("n", "<leader>fg", fzf.git_files, { desc = "[f] [g]it files" })
-Map("n", "<leader>fr", fzf.live_grep, { desc = "[f]ind [r]ipgrep" })
-Map("n", "<leader><Tab>", fzf.buffers, { desc = "[f]ind [b]uffers" })
-Map("n", "<leader>fo", fzf.oldfiles, { desc = "[f]ind [o]ldfiles" })
-Map("n", "<leader>fq", fzf.quickfix, { desc = "[f]ind [q]ickfix" })
-Map("n", "<leader>fh", fzf.quickfix_stack, { desc = "[f]ind [h]istory" })
-Map("n", "<leader>fk", fzf.keymaps, { desc = "[f]ind [k]eymaps" })
-Map("n", "/", fzf.blines, { desc = "Search" })
-Map("n", "<leader>ft", fzf.tags_live_grep, { desc = "[f]ind [t]ags" })
-Map("n", "<leader>fd", fzf.lsp_workspace_diagnostics, { desc = "[f]ind [d]iagnostics" })
-Map("n", "<leader>fx", fzf.lsp_document_diagnostics, { desc = "[f]ind buffer diagnostics" })
+Map("n", "<leader>F", "<CMD>FzfLua global<CR>", { desc = "[F]ind" })
+Map("n", "<leader>ff", "<CMD>FzfLua files<CR>", { desc = "[f]ind [f]iles" })
+Map("n", "<leader>fg", "<CMD>FzfLua git_files<CR>", { desc = "[f] [g]it files" })
+Map("n", "<leader>fr", "<CMD>FzfLua live_grep", { desc = "[f]ind [r]ipgrep" })
+Map("n", "<leader><Tab>", "<CMD>FzfLua buffers<CR>", { desc = "[f]ind [b]uffers" })
+Map("n", "<leader>fo", "<CMD>FzfLua oldfiles<CR>", { desc = "[f]ind [o]ldfiles" })
+Map("n", "<leader>fq", "<CMD>FzfLua quickfix<CR>", { desc = "[f]ind [q]ickfix" })
+Map("n", "<leader>fh", "<CMD>FzfLua quickfix_stack", { desc = "[f]ind [h]istory" })
+Map("n", "<leader>fk", "<CMD>FzfLua keymaps<CR>", { desc = "[f]ind [k]eymaps" })
+Map("n", "/", "<CMD>FzfLua blines<CR>", { desc = "Search" })
+Map("n", "<leader>ft", "<CMD>FzfLua tags_live_grep<CR>", { desc = "[f]ind [t]ags" })
+Map("n", "<leader>fd", "<CMD>FzfLua lsp_workspace_diagnostics<CR>", { desc = "[f]ind [d]iagnostics" })
+Map("n", "<leader>fx", "<CMD> FzfLua lsp_document_diagnostics<CR>", { desc = "[f]ind buffer diagnostics" })
 
 Autocmd("ColorScheme", "fzf-lua-bg", {
 	callback = function()
@@ -39,16 +55,15 @@ Autocmd("ColorScheme", "fzf-lua-bg", {
 
 Autocmd("LspAttach", "fzf-lua-lsp", {
 	callback = function(args)
-		local fzf = require("fzf-lua")
 		local function opts(desc)
 			return { desc = desc, noremap = true, silent = true, buffer = args.buf }
 		end
 
-		Map("n", "gd", fzf.lsp_definitions, opts("[g]o [d]efinition"))
-		Map("n", "gr", fzf.lsp_references, opts("[g]o [r]efrences"))
-		Map("n", "gD", fzf.lsp_declarations, opts("[g]o [D]eclaration"))
-		Map("n", "gi", fzf.lsp_implementations, opts("[g]o [i]mplementation"))
-		Map("n", "<C-.>", fzf.lsp_code_actions, opts("[c]ode [a]ctions"))
+		Map("n", "gd", "<CMD>FzfLua lsp_defintions", opts("[g]o [d]efinition"))
+		Map("n", "gr", "<CMD>FzfLua lsp_references<CR>", opts("[g]o [r]efrences"))
+		Map("n", "gD", "<CMD>FzfLua lsp_declarations<CR>", opts("[g]o [D]eclaration"))
+		Map("n", "gi", "<CMD>FzfLua lsp_implementations<CR>", opts("[g]o [i]mplementation"))
+		Map("n", "<C-.>", "<CMD>FzfLua lsp_code_actions<CR>", opts("[c]ode [a]ctions"))
 
 		Map("n", "<leader>rn", vim.lsp.buf.rename, opts("[r]e[n]ame"))
 
@@ -56,9 +71,12 @@ Autocmd("LspAttach", "fzf-lua-lsp", {
 			vim.lsp.buf.hover({ border = { " ", " ", " ", " ", " ", " ", " ", " " } })
 		end, opts("Hover Documentation"))
 
-		Map("n", "<leader>fD", function()
-			fzf.lsp_document_symbols({ query = "Function | Method " })
-		end, opts("[f]ind [D]ocument methods"))
+		Map(
+			"n",
+			"<leader>fF",
+			"<CMD>FzfLua lsp_document_symbols query=Function\\ |\\ Method<CR>",
+			opts("[f]ind [F]unctions")
+		)
 	end,
 })
 
