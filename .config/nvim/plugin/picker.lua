@@ -11,7 +11,6 @@ fzf.setup({
 		"bin/.*",
 		"target/.*",
 		".next/*",
-		"!*.java",
 	},
 	fzf_opts = {
 		["--cycle"] = true,
@@ -36,7 +35,7 @@ fzf.register_ui_select()
 Map("n", "<leader>F", "<CMD>FzfLua global<CR>", { desc = "[F]ind" })
 Map("n", "<leader>ff", "<CMD>FzfLua files<CR>", { desc = "[f]ind [f]iles" })
 Map("n", "<leader>fg", "<CMD>FzfLua git_files<CR>", { desc = "[f] [g]it files" })
-Map("n", "<leader>fr", "<CMD>FzfLua live_grep", { desc = "[f]ind [r]ipgrep" })
+Map("n", "<leader>fr", "<CMD>FzfLua live_grep<CR>", { desc = "[f]ind [r]ipgrep" })
 Map("n", "<leader><Tab>", "<CMD>FzfLua buffers<CR>", { desc = "[f]ind [b]uffers" })
 Map("n", "<leader>fo", "<CMD>FzfLua oldfiles<CR>", { desc = "[f]ind [o]ldfiles" })
 Map("n", "<leader>fq", "<CMD>FzfLua quickfix<CR>", { desc = "[f]ind [q]ickfix" })
