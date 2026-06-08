@@ -1,5 +1,3 @@
-PackAdd("gh:nvim-mini/mini.nvim")
-
 require("mini.basics").setup({
 	options = {
 		win_borders = "rounded",

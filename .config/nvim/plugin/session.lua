@@ -1,7 +1,3 @@
-local gh = require("util").pack.gh
-
-PackAdd("gh:nvim-mini/mini.nvim")
-
 vim.o.sessionoptions = "buffers,curdir,tabpages,winsize,help,globals,folds,terminal"
 
 require("mini.sessions").setup({

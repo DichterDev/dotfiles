@@ -1,5 +1,3 @@
-PackAdd("gh:nvim-mini/mini.nvim")
-
 require("mini.tabline").setup({
 	format = function(buf_id, label)
 		local suffix = vim.bo[buf_id].modified and "+ " or ""
@@ -8,8 +6,6 @@ require("mini.tabline").setup({
 })
 
 require("mini.statusline").setup({ use_icons = true })
-
-PackAdd("gh:rachartier/tiny-cmdline.nvim")
 
 require("vim._core.ui2").enable({})
 

@@ -11,12 +11,6 @@ Autocmd("PackChanged", "ts-update", {
 	end,
 })
 
-PackAdd({
-	"gh:nvim-treesitter/nvim-treesitter",
-	"gh:nvim-treesitter/nvim-treesitter-context",
-	"gh:windwp/nvim-ts-autotag",
-})
-
 local ts = require("nvim-treesitter")
 
 require("nvim-treesitter.config")

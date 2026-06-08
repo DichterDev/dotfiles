@@ -1,5 +1,3 @@
-PackAdd("gh:stevearc/conform.nvim")
-
 ---@module "conform"
 ---@type conform.setupOpts
 require("conform").setup({

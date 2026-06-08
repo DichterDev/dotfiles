@@ -1,5 +1,3 @@
-PackAdd("gh:nvim-mini/mini.nvim")
-
 require("mini.notify").setup({
 	lsp_progress = { enable = false },
 })
@@ -13,8 +11,6 @@ Autocmd("ColorScheme", "mini-notify-bg", {
 		})
 	end,
 })
-
-PackAdd("gh:j-hui/fidget.nvim")
 
 require("fidget").setup({
 	notification = {

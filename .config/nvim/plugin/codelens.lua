@@ -1,8 +1,3 @@
-PackAdd({
-	src = "gh:oribarilan/lensline.nvim",
-	version = vim.version.range("2.*"),
-})
-
 local lensline = require("lensline")
 
 lensline.setup({

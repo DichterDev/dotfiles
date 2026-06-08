@@ -1,5 +1,3 @@
-PackAdd("gh:stevearc/oil.nvim")
-
 require("oil").setup({
 	view_options = {
 		show_hidden = true,
@@ -20,12 +18,6 @@ Map("n", "<leader>x", ":Oil<CR>", { desc = "e[x]plore" })
 Map("n", "<leader>X", function()
 	require("oil").open(vim.fn.getcwd())
 end, { desc = "e[X]plore cwd" })
-
-PackAdd({
-	{ src = "gh:nvim-neo-tree/neo-tree.nvim", version = vim.version.range("3") },
-	"gh:nvim-lua/plenary.nvim",
-	"gh:MunifTanjim/nui.nvim",
-})
 
 require("neo-tree").setup({
 	filesystem = {

@@ -1,12 +1,3 @@
-PackAdd({
-	{
-		src = "gh:saghen/blink.cmp",
-		version = vim.version.range("1.*"),
-	},
-	"gh:neovim/nvim-lspconfig",
-	"gh:rafamadriz/friendly-snippets",
-})
-
 require("blink.cmp").setup({
 	snippets = { preset = "mini_snippets" },
 	appearance = {

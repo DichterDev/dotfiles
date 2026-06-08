@@ -1,8 +1,3 @@
-PackAdd({
-	"gh:ibhagwan/fzf-lua",
-	"gh:nvim-mini/mini.icons",
-})
-
 local fzf = require("fzf-lua")
 fzf.setup({
 	file_ignore_patterns = {
@@ -78,8 +73,6 @@ Autocmd("LspAttach", "fzf-lua-lsp", {
 		)
 	end,
 })
-
-PackAdd("gh:stephansama/fzf-nerdfont.nvim")
 
 Autocmd("PackChanged", "fzf-nerdfont-update", {
 	callback = function(ev)

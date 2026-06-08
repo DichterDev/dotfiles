@@ -1,13 +1,9 @@
-PackAdd("gh:nvim-mini/mini.nvim")
-
 require("mini.animate").setup({
 	scroll = { enable = false },
 	resize = { enable = false },
 	open = { enable = false },
 	close = { enable = false },
 })
-
-PackAdd("gh:rachartier/tiny-glimmer.nvim")
 
 require("tiny-glimmer").setup({
 	overwrite = {

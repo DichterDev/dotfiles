@@ -1,7 +1,3 @@
-PackAdd({
-	"gh:mfussenegger/nvim-jdtls",
-	-- "gh:idelice/nvim-jls",
-})
 
 -- require("jls").setup({
 -- 	root_markers = {

@@ -1,5 +1,3 @@
-PackAdd("gh:stevearc/quicker.nvim")
-
 require("quicker").setup()
 
 Map("n", "<leader>q", require("quicker").toggle, { desc = "toggle [q]uickfix" })

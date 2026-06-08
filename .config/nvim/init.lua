@@ -182,8 +182,96 @@ vim.lsp.inlay_hint.enable(false)
 -- 	})
 -- end
 
+-- PACK
+
 vim.cmd.packadd("nvim.undotree")
 
 Map("n", "<leader>u", ":Undotree<CR>", { desc = "[u]ndotree" })
 
 vim.cmd.packadd("nohlsearch")
+
+-- COLOR
+PackAdd({
+	"gh:rebelot/kanagawa.nvim",
+	"gh:darianmorat/gruvdark.nvim",
+	"gh:catppuccin/nvim",
+	"gh:pankvitek/bonbon.nvim",
+	"gh:navarasu/onedark.nvim",
+	"gh:scottmckendry/cyberdream.nvim",
+	"gh:sainnhe/sonokai",
+	"gh:jpwol/thorn.nvim",
+})
+
+-- PLUGIN
+PackAdd({
+	"gh:nvim-mini/mini.nvim",
+	"gh:nvim-mini/mini.icons",
+	"gh:monaqa/dial.nvim",
+
+	"gh:Amansingh-afk/milli.nvim",
+	"gh:rafamadriz/friendly-snippets",
+	"gh:lewis6991/gitsigns.nvim",
+	"gh:Aasim-A/scrollEOF.nvim",
+	"gh:HiPhish/rainbow-delimiters.nvim",
+
+	"gh:Bilal2453/luvit-meta",
+	"gh:j-hui/fidget.nvim",
+
+	{
+		src = "gh:oribarilan/lensline.nvim",
+		version = vim.version.range("2.*"),
+	},
+
+	-- TREESITTER
+	"gh:nvim-treesitter/nvim-treesitter",
+	"gh:nvim-treesitter/nvim-treesitter-context",
+	"gh:windwp/nvim-ts-autotag",
+
+	-- MASON
+	"gh:mason-org/mason.nvim",
+	"gh:WhoIsSethDaniel/mason-tool-installer.nvim",
+
+	-- LSP
+	"gh:neovim/nvim-lspconfig",
+	"gh:mfussenegger/nvim-jdtls",
+	-- "gh:idelice/nvim-jls",
+	"gh:seblyng/roslyn.nvim",
+
+	-- STEVEARC
+	"gh:stevearc/oil.nvim",
+	"gh:stevearc/conform.nvim",
+	"gh:stevearc/quicker.nvim",
+	"gh:stevearc/overseer.nvim",
+	"gh:stevearc/aerial.nvim",
+
+	-- FOLKE
+	"gh:folke/flash.nvim",
+	"gh:folke/lazydev.nvim",
+
+	-- FOLDING
+	"gh:kevinhwang91/nvim-ufo",
+	"gh:kevinhwang91/promise-async",
+
+	{
+		src = "gh:nvim-neo-tree/neo-tree.nvim",
+		version = vim.version.range("3"),
+	},
+	"gh:nvim-lua/plenary.nvim",
+	"gh:MunifTanjim/nui.nvim",
+
+	-- FZF
+	"gh:ibhagwan/fzf-lua",
+	"gh:stephansama/fzf-nerdfont.nvim",
+
+	-- TINY
+	"gh:rachartier/tiny-cmdline.nvim",
+	"gh:rachartier/tiny-glimmer.nvim",
+	"gh:rachartier/tiny-inline-diagnostic.nvim",
+
+	-- BLINK
+	"gh:saghen/blink.indent",
+	{
+		src = "gh:saghen/blink.cmp",
+		version = vim.version.range("1.*"),
+	},
+})

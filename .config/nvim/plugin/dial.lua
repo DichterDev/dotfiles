@@ -1,5 +1,3 @@
-PackAdd("gh:monaqa/dial.nvim")
-
 local dial = require("dial.map")
 local augend = require("dial.augend")
 
