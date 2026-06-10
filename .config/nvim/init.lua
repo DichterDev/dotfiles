@@ -118,7 +118,6 @@ Autocmd("ColorScheme", "transparent-bg", {
 		local hls = vim.api.nvim_get_hl(0, { link = true })
 
 		local normal = vim.api.nvim_get_hl(0, { name = "Normal" })
-		local keyword = vim.api.nvim_get_hl(0, { name = "Keyword" })
 
 		for name, hl in pairs(hls) do
 			if hl.link == "Normal" then
@@ -128,7 +127,7 @@ Autocmd("ColorScheme", "transparent-bg", {
 			end
 		end
 
-		vim.api.nvim_set_hl(0, "FloatBorder", { fg = keyword.fg, update = true })
+		vim.api.nvim_set_hl(0, "FloatBorder", { fg = util.hl.get_prop("Keyword", "fg"), update = true })
 		vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", update = true })
 	end,
 })

@@ -56,7 +56,7 @@ Autocmd("LspAttach", "fzf-lua-lsp", {
 		Map("n", "<leader>rn", vim.lsp.buf.rename, opts("[r]e[n]ame"))
 
 		Map("n", "K", function()
-			vim.lsp.buf.hover({ border = "rounded" })
+			vim.lsp.buf.hover({ border = "rounded", max_width = 120, max_height = 10 })
 		end, opts("Hover Documentation"))
 
 		Map(

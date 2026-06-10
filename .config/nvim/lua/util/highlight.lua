@@ -19,6 +19,22 @@ M.remove_bg = function(names)
 	end
 end
 
+---@param name string
+---@param prop string
+M.get_prop = function(name, prop)
+	local hl = vim.api.nvim_get_hl(0, { name = name, link = true })
+
+	if hl[prop] then
+		return hl[prop]
+	end
+
+	if hl.link then
+		return M.get_prop(hl.link, prop)
+	end
+
+	return {}
+end
+
 ---@param hex_str string hexadecimal value of a color
 local hex_to_rgb = function(hex_str)
 	local hex = "[abcdef0-9][abcdef0-9]"
