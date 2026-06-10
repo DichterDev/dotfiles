@@ -41,12 +41,6 @@ Map("n", "<leader>ft", "<CMD>FzfLua tags_live_grep<CR>", { desc = "[f]ind [t]ags
 Map("n", "<leader>fd", "<CMD>FzfLua lsp_workspace_diagnostics<CR>", { desc = "[f]ind [d]iagnostics" })
 Map("n", "<leader>fx", "<CMD> FzfLua lsp_document_diagnostics<CR>", { desc = "[f]ind buffer diagnostics" })
 
-Autocmd("ColorScheme", "fzf-lua-bg", {
-	callback = function()
-		RemoveBG({ "FfzLuaNormal", "FzfLuaPreviewNormal", "FzfLuaBackdrop" })
-	end,
-})
-
 Autocmd("LspAttach", "fzf-lua-lsp", {
 	callback = function(args)
 		local function opts(desc)
@@ -62,7 +56,7 @@ Autocmd("LspAttach", "fzf-lua-lsp", {
 		Map("n", "<leader>rn", vim.lsp.buf.rename, opts("[r]e[n]ame"))
 
 		Map("n", "K", function()
-			vim.lsp.buf.hover({ border = { " ", " ", " ", " ", " ", " ", " ", " " } })
+			vim.lsp.buf.hover({ border = "rounded" })
 		end, opts("Hover Documentation"))
 
 		Map(

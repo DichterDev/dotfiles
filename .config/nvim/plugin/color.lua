@@ -16,4 +16,6 @@ require("catppuccin").setup({
 
 require("bonbon").setup({})
 
-vim.cmd.colorscheme("kanagawa")
+vim.schedule(function()
+	vim.cmd.colorscheme("kanagawa")
+end)

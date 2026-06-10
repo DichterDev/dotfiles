@@ -9,14 +9,8 @@ require("mini.statusline").setup({ use_icons = true })
 
 require("vim._core.ui2").enable({})
 
-vim.o.cmdheight = 1
+vim.o.cmdheight = 0
 
 ---@diagnostic disable: missing-fields
 require("tiny-cmdline").setup({ on_reposition = require("tiny-cmdline").adapters.blink })
 ---@diagnostic enable: missing-fields
-
-Autocmd("ColorScheme", "tiny-cmdline-bg", {
-	callback = function()
-		RemoveBG({ "TinyCmdlineNormal", "TinyCmdlineBorder" })
-	end,
-})

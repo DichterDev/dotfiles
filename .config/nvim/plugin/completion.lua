@@ -45,7 +45,7 @@ require("blink.cmp").setup({
 			update_delay_ms = 50,
 			treesitter_highlighting = true,
 			window = {
-				border = { " ", " ", " ", " ", " ", " ", " ", " " },
+				border = "rounded",
 			},
 		},
 		list = { selection = { preselect = false, auto_insert = false } },
@@ -54,7 +54,6 @@ require("blink.cmp").setup({
 	signature = {
 		enabled = true,
 		window = {
-			border = { " ", " ", " ", " ", " ", " ", " ", " " },
 			treesitter_highlighting = true,
 		},
 	},
@@ -74,10 +73,4 @@ require("blink.cmp").setup({
 		},
 	},
 	fuzzy = { implementation = "prefer_rust_with_warning" },
-})
-
-Autocmd("ColorScheme", "blink-cmp-bg", {
-	callback = function()
-		RemoveBG({ "BlinkCmpDoc", "BlinkCmpSignatureHelp" })
-	end,
 })

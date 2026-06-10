@@ -32,10 +32,4 @@ Autocmd("FileType", "ts-parser-install", {
 	end,
 })
 
-Autocmd("ColorScheme", "ts-context-bg", {
-	callback = function()
-		RemoveBG("TreesitterContext")
-	end,
-})
-
 require("nvim-ts-autotag").setup({})

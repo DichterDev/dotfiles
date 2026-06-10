@@ -52,6 +52,9 @@ vim.o.virtualedit = "block"
 vim.o.sh = "/bin/fish"
 vim.o.background = "dark"
 
+vim.o.winblend = 5
+vim.o.pumblend = 5
+
 -- KEYMAPS
 
 Map("i", "jk", "<Esc>", { desc = "Exit insert mode" })
@@ -94,16 +97,6 @@ Map({ "n", "v" }, "<leader>P", '"+P"', { desc = "[P]aste from clipboard" })
 
 Map("n", "<leader>d", vim.diagnostic.open_float, { desc = "[d]iagnostic float" })
 
--- AUTOCMD
-
-Autocmd("ColorScheme", "color-scheme", {
-	callback = function()
-		RemoveBG("Normal")
-		RemoveBG("FloatBorder")
-		RemoveBG("FloatTitle")
-	end,
-})
-
 -- Diagnostic
 
 vim.diagnostic.config({
@@ -113,6 +106,41 @@ vim.diagnostic.config({
 		border = "rounded",
 		source = true,
 	},
+})
+
+-- LSP
+vim.lsp.inlay_hint.enable(false)
+
+-- AUTOCMD
+
+Autocmd("ColorScheme", "transparent-bg", {
+	callback = function()
+		local hls = vim.api.nvim_get_hl(0, { link = true })
+
+		local normal = vim.api.nvim_get_hl(0, { name = "Normal" })
+		local keyword = vim.api.nvim_get_hl(0, { name = "Keyword" })
+
+		for name, hl in pairs(hls) do
+			if hl.link == "Normal" then
+				if not hl.bg then
+					vim.api.nvim_set_hl(0, name, { bg = normal.bg, link = "", update = true })
+				end
+			end
+		end
+
+		vim.api.nvim_set_hl(0, "FloatBorder", { fg = keyword.fg, update = true })
+		vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", update = true })
+	end,
+})
+
+Autocmd("ColorScheme", "remove-bg", {
+	callback = function()
+		local hls = util.hl.RM_BG
+
+		for _, name in ipairs(hls) do
+			vim.api.nvim_set_hl(0, name, { bg = "NONE", link = "", update = true })
+		end
+	end,
 })
 
 Autocmd("ColorScheme", "diagnostic-color-scheme", {
@@ -126,9 +154,6 @@ Autocmd("ColorScheme", "diagnostic-color-scheme", {
 		end
 	end,
 })
-
--- LSP
-vim.lsp.inlay_hint.enable(false)
 
 -- vim.lsp.codelens.enable(true)
 --
@@ -205,7 +230,6 @@ PackAdd({
 -- PLUGIN
 PackAdd({
 	"gh:nvim-mini/mini.nvim",
-	"gh:nvim-mini/mini.icons",
 	"gh:monaqa/dial.nvim",
 
 	"gh:Amansingh-afk/milli.nvim",

@@ -7,13 +7,8 @@ require("mini.basics").setup({
 	},
 })
 
-require("mini.extra").setup({})
-require("mini.icons").setup({})
-
-package.preload["nvim-web-devicons"] = function()
-	require("mini.icons").mock_nvim_web_devicons()
-	return package.loaded["nvim-web-devicons"]
-end
+require("mini.extra").setup()
+require("mini.icons").setup()
 
 local map_multistep = require("mini.keymap").map_multistep
 

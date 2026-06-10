@@ -2,14 +2,10 @@ require("mini.notify").setup({
 	lsp_progress = { enable = false },
 })
 
-Autocmd("ColorScheme", "mini-notify-bg", {
-	callback = function()
-		RemoveBG({
-			"MiniNotifyNormal",
-			"MiniNotifyTitle",
-			"MiniNotifyBorder",
-		})
-	end,
+RemoveBG({
+	"MiniNotifyNormal",
+	"MiniNotifyTitle",
+	"MiniNotifyBorder",
 })
 
 require("fidget").setup({
