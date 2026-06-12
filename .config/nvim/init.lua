@@ -108,7 +108,25 @@ vim.diagnostic.config({
 	},
 })
 
+-- Fletypes
+
+local ft = vim.filetype
+
+ft.add({
+	extension = {
+		launch = "xml",
+	},
+})
+
+ft.add({
+	extension = {
+		srv = "conf",
+		msg = "conf",
+	},
+})
+
 -- LSP
+
 vim.lsp.inlay_hint.enable(false)
 
 -- AUTOCMD

@@ -43,6 +43,9 @@ require("mason-tool-installer").setup({
 		"ty",
 		"ruff",
 
+		-- C/C++
+		"clangd",
+
 		-- JAVA
 		"jdtls",
 		"java-test",
