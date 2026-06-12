@@ -12,19 +12,19 @@ local get_session_name = function()
 	return string.format("%s-%s", folder_name, hash)
 end
 
-Autocmd("VimEnter", "mini-session", {
-	callback = function()
-		vim.schedule(function()
-			if vim.fn.argc() == 0 then
-				local session_name = get_session_name()
-				if MiniSessions.detected[session_name] then
-					MiniSessions.read(session_name)
-				else
-					MiniSessions.write(session_name)
-				end
-			end
-		end)
-	end,
-})
+-- Autocmd("VimEnter", "mini-session", {
+-- 	callback = function()
+-- 		vim.schedule(function()
+-- 			if vim.fn.argc() == 0 then
+-- 				local session_name = get_session_name()
+-- 				if MiniSessions.detected[session_name] then
+-- 					MiniSessions.read(session_name)
+-- 				else
+-- 					MiniSessions.write(session_name)
+-- 				end
+-- 			end
+-- 		end)
+-- 	end,
+-- })
 
 Map("n", "<leader>fs", MiniSessions.select, { desc = "[f]ind [s]ession" })
