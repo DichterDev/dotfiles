@@ -67,6 +67,9 @@ Map("n", "<leader>a", "ggVG", { desc = "Visual select all" })
 
 Map("n", "<leader>Q", ":qa<CR>", { desc = "[Q]it all" })
 
+Map("n", "gh", ":norm 0<CR>")
+Map("n", "gl", ":norm $<CR>")
+
 -- src: https://www.reddit.com/r/neovim/comments/1scauyd/comment/oecobq8/
 Map({ "x", "o" }, "v", function()
 	if vim.treesitter.get_parser(nil, nil, { error = false }) then

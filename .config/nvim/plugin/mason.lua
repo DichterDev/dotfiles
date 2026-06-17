@@ -31,8 +31,8 @@ require("mason-tool-installer").setup({
 		-- "vtsls",
 		-- "vue-language-server",
 
-		-- "oxlint",
-		-- "oxfmt",
+		"oxlint",
+		"oxfmt",
 
 		-- GO
 		"gopls",
