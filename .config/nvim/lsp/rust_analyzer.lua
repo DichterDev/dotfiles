@@ -1,5 +1,5 @@
 ---@type vim.lsp.Config
-local config = {
+return {
 	---@type lspconfig.settings.rust_analyzer
 	settings = {
 		["rust-analyzer"] = {
@@ -35,5 +35,3 @@ local config = {
 		},
 	},
 }
-
-require("util").lsp.setup("rust_analyzer", config)

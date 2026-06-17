@@ -1,5 +1,5 @@
 ---@type vim.lsp.Config
-local config = {
+return {
 	---@type lspconfig.settings.eslint
 	settings = {
 		eslint = {
@@ -7,5 +7,3 @@ local config = {
 		},
 	},
 }
-
-require("util").lsp.setup("eslint", config)

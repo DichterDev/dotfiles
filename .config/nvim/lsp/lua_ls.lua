@@ -1,7 +1,5 @@
-local setup = require("util").lsp.setup
-
 ---@type vim.lsp.Config
-local config = {
+return {
 	---@type lspconfig.settings.lua_ls
 	settings = {
 		Lua = {
@@ -22,9 +20,3 @@ local config = {
 		},
 	},
 }
-
----@type vim.lsp.Config
-local format = {}
-
-setup("lua_ls", config)
-setup("stylua", format)

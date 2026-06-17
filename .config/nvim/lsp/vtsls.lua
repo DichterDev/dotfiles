@@ -1,7 +1,5 @@
-local setup = require("util").lsp.setup
-
 ---@type vim.lsp.Config
-local vstls = {
+return {
 	filetypes = { "vue" },
 	settings = {
 		vtsls = {
@@ -19,9 +17,3 @@ local vstls = {
 		},
 	},
 }
-
----@type vim.lsp.Config
-local vue = {}
-
-setup("vstls", vstls)
-setup("vue_ls", vue)

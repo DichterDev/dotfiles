@@ -1,5 +1,5 @@
 ---@type vim.lsp.Config
-local config = {
+return {
 	settings = {
 		["csharp|inlay_hints"] = {
 			csharp_enable_inlay_hints_for_implicit_object_creation = true,
@@ -10,5 +10,3 @@ local config = {
 		},
 	},
 }
-
-require("util").lsp.setup("roslyn", config)

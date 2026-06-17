@@ -3,7 +3,6 @@ local util = require("util")
 Map = util.keymap.set
 Autocmd = util.cmd.autocmd
 RemoveBG = util.hl.remove_bg
-LspSetup = util.lsp.setup
 PackAdd = util.pack.add
 
 -- GLOBALS
@@ -254,6 +253,7 @@ PackAdd({
 	"gh:lewis6991/gitsigns.nvim",
 	"gh:Aasim-A/scrollEOF.nvim",
 	"gh:HiPhish/rainbow-delimiters.nvim",
+	"gh:chomosuke/typst-preview.nvim",
 
 	"gh:Bilal2453/luvit-meta",
 	"gh:j-hui/fidget.nvim",

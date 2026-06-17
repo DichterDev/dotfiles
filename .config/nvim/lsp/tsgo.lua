@@ -1,7 +1,5 @@
-local setup = require("util").lsp.setup
-
 ---@type vim.lsp.Config
-local config = {
+return {
 	settings = {
 		tsgo = {
 			typescript = {
@@ -18,5 +16,3 @@ local config = {
 		},
 	},
 }
-
-setup("tsgo", config)
