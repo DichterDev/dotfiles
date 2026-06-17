@@ -39,6 +39,18 @@ require("blink.cmp").setup({
 	},
 	completion = {
 		accept = { auto_brackets = { enabled = true } },
+		menu = {
+			border = "rounded",
+			winhighlight = "Normal:NormalFloat,Border:FloatBorder",
+			max_height = 15,
+			draw = {
+				columns = {
+					{ "label", "label_description", gap = 1 },
+					{ "kind_icon" },
+					{ "source_name" },
+				},
+			},
+		},
 		documentation = {
 			auto_show = true,
 			auto_show_delay_ms = 250,

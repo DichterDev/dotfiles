@@ -51,7 +51,7 @@ Autocmd("LspAttach", "fzf-lua-lsp", {
 		Map("n", "gr", "<CMD>FzfLua lsp_references<CR>", opts("[g]o [r]efrences"))
 		Map("n", "gD", "<CMD>FzfLua lsp_declarations<CR>", opts("[g]o [D]eclaration"))
 		Map("n", "gi", "<CMD>FzfLua lsp_implementations<CR>", opts("[g]o [i]mplementation"))
-		Map("n", "<C-.>", "<CMD>FzfLua lsp_code_actions<CR>", opts("[c]ode [a]ctions"))
+		Map("n", "<leader>ca", "<CMD>FzfLua lsp_code_actions<CR>", opts("[c]ode [a]ctions"))
 
 		Map("n", "<leader>rn", vim.lsp.buf.rename, opts("[r]e[n]ame"))
 
