@@ -50,6 +50,7 @@ vim.o.virtualedit = "block"
 
 vim.o.sh = "/bin/fish"
 vim.o.background = "dark"
+vim.o.termguicolors = true
 
 vim.o.winblend = 5
 vim.o.pumblend = 5
@@ -257,6 +258,7 @@ PackAdd({
 	"gh:Aasim-A/scrollEOF.nvim",
 	"gh:HiPhish/rainbow-delimiters.nvim",
 	"gh:chomosuke/typst-preview.nvim",
+	"gh:catgoose/nvim-colorizer.lua",
 
 	"gh:Bilal2453/luvit-meta",
 	"gh:j-hui/fidget.nvim",
@@ -291,6 +293,7 @@ PackAdd({
 	-- FOLKE
 	"gh:folke/flash.nvim",
 	"gh:folke/lazydev.nvim",
+	"gh:folke/todo-comments.nvim",
 
 	-- FOLDING
 	"gh:kevinhwang91/nvim-ufo",

@@ -62,6 +62,10 @@ local bundles = {}
 -- vim.list_extend(bundles, get_java_debug_adapter())
 -- vim.list_extend(bundles, get_spring_boot())
 
+local extendedClientCapabilities = require("jdtls").extendedClientCapabilities
+-- extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
+-- extendedClientCapabilities.progressReportProvider = true
+
 ---@type vim.lsp.Config
 local config = {
 	cmd = {
@@ -75,7 +79,7 @@ local config = {
 		"--jvm-arg=-XX:GCTimeRatio=4",
 		"--jvm-arg=-XX:TieredStopAtLevel=1",
 		"--jvm-arg=-Dsun.zip.disableMemoryMapping=true",
-		"--jvm-arg=-Xverify:none",
+		"--no-console",
 	},
 	root_dir = root_dir,
 	capabilities = require("blink-cmp").get_lsp_capabilities(),
@@ -153,7 +157,9 @@ local config = {
 	},
 	init_options = {
 		bundles = bundles,
+		extendedClientCapabilities = extendedClientCapabilities,
 	},
 }
 
-require("jdtls").start_or_attach(config, {})
+vim.lsp.config("jdtls", config)
+vim.lsp.enable("jdtls")

@@ -45,8 +45,8 @@ require("blink.cmp").setup({
 			max_height = 15,
 			draw = {
 				columns = {
-					{ "label", "label_description", gap = 1 },
 					{ "kind_icon" },
+					{ "label", "label_description", gap = 1 },
 					{ "source_name" },
 				},
 			},
