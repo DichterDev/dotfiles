@@ -148,7 +148,9 @@ Autocmd("ColorScheme", "transparent-bg", {
 			end
 		end
 
-		vim.api.nvim_set_hl(0, "FloatBorder", { fg = util.hl.get_prop("Keyword", "fg"), update = true })
+		vim.api.nvim_set_hl(0, "FloatBorder", { fg = util.hl.get_prop("Keyword", "fg"), bg = normal.bg, update = true })
+		vim.api.nvim_set_hl(0, "MsgArea", { bg = normal.bg, update = true })
+		vim.api.nvim_set_hl(0, "NormalFloat", { bg = normal.bg, update = true })
 		vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", update = true })
 	end,
 })
