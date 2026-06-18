@@ -10,6 +10,11 @@ PackAdd = util.pack.add
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
+vim.g.loaded_node_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+
 -- ENV
 
 vim.env.JAVA_HOME = "/usr/lib/jvm/default"
@@ -165,7 +170,7 @@ Autocmd("ColorScheme", "remove-bg", {
 	end,
 })
 
-Autocmd("ColorScheme", "diagnostic-color-scheme", {
+Autocmd("ColorScheme", "diagnostic-underline", {
 	callback = function()
 		for _, name in ipairs({ "Hint", "Info", "Warn", "Error" }) do
 			vim.api.nvim_set_hl(0, "DiagnosticUnderline" .. name, {
@@ -261,6 +266,8 @@ PackAdd({
 	"gh:HiPhish/rainbow-delimiters.nvim",
 	"gh:chomosuke/typst-preview.nvim",
 	"gh:catgoose/nvim-colorizer.lua",
+	"gh:chrisgrieser/nvim-spider",
+	"gh:tris203/precognition.nvim",
 
 	"gh:Bilal2453/luvit-meta",
 	"gh:j-hui/fidget.nvim",
