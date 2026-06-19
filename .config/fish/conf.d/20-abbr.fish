@@ -7,7 +7,7 @@ abbr -a sv "systemctl --user"
 abbr -a jv "journalctl --user -xeu"
 
 # PACMAN
-alias pcmni "pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
+alias pkg "pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 
 # KITTENS
 alias ssh "kitten ssh"
