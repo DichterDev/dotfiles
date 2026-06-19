@@ -43,8 +43,8 @@ vim.o.listchars = "trail:·,tab:»·,nbsp:+"
 
 vim.o.scrolloff = 12
 vim.o.sidescrolloff = 8
-
 vim.o.undofile = true
+
 vim.o.swapfile = false
 
 vim.o.updatetime = 300

@@ -19,4 +19,6 @@ vim.keymap.set({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<C
 vim.keymap.set({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>")
 vim.keymap.set({ "n", "o", "x" }, "ge", "<cmd>lua require('spider').motion('ge')<CR>")
 
-require("precognition").setup({})
+require("precognition").setup({
+	startVisible = false,
+})
