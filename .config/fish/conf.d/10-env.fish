@@ -1,6 +1,9 @@
-set BROWSER firefox
-set TERM kitty
-set SHELL /bin/fish
+set -gx BROWSER firefox
+set -gx TERM kitty
+set -gx SHELL /bin/fish
+set -gx EDITOR nvim
+set -gx SUDO_EDITOR nvim
+set -gx VISUAL nvim
 
 # C/C++
 set CC gcc
