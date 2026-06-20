@@ -15,9 +15,11 @@ run_if_exists() {
     fi
 }
 
-# 2. Global State Variables
-export ROS_DOMAIN_ID=30
-export TURTLEBOT3_MODEL=waffle_pi
+export GTK_THEME_VARIANT=dark
+export MOZ_ENABLE_WAYLAND=1
+
+# export ROS_DOMAIN_ID=30
+# export TURTLEBOT3_MODEL=waffle_pi
 
 # run_if_exists "/opt/ros/humble/setup.bash" source
 # run_if_exists "/usr/share/gazebo/setup.sh" source
