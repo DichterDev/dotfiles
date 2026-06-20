@@ -4,6 +4,7 @@ vim.lsp.config("*", {
 
 vim.lsp.enable({
 	"clangd",
+	"bashls",
 	"fish_lsp",
 	"gopls",
 	"jsonls",
