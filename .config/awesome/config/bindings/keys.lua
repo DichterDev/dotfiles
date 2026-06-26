@@ -1,6 +1,0 @@
-SUPER = "Mod4"
-SPACE = "space"
-CTRL = "Control"
-ALT = "Mod1"
-SHIFT = "Shift"
-RETURN = "Return"
