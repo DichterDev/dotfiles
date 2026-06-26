@@ -22,6 +22,7 @@ abbr -a cp "cp -av"
 if type -q eza
     alias ls="eza -1F --git --icons --group-directories-first --time-style=long-iso"
     abbr -a lt "ls -hT --level=2"
+    abbr -a lta "ls -ahT --level=2"
     abbr -a llt "ls -alhT --level=2"
 else
     alias ls="ls --color=auto --group-directories-first"
