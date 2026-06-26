@@ -65,6 +65,7 @@ layout {
         top 8
         bottom 8
     }
+
 }
 
 spawn-sh-at-startup "dms run"
@@ -91,21 +92,6 @@ animations {
     duration-ms 150
     curve "ease-out-quad"
   }
-}
-
-window-rule {
-  match app-id="firefox"
-  open-maximized true
-}
-
-window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-window-rule {
-    geometry-corner-radius 4
-    clip-to-geometry true
 }
 
 binds {
@@ -282,4 +268,6 @@ binds {
     Mod+Alt+Down { set-window-height "+10%"; }
 }
 
+include "window-rule.kdl"
+include "blur.kdl"
 include "dms.kdl"

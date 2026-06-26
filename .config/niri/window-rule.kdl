@@ -1,0 +1,31 @@
+window-rule {
+    geometry-corner-radius 4
+    clip-to-geometry true
+}
+
+window-rule {
+    match is-floating=true
+
+    min-width 600
+    min-height 500
+}
+
+window-rule {
+    match app-id="firefox"
+    open-maximized true
+}
+
+
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="^firefox$"
+    match title="^Extension: "
+
+    open-floating true
+    
+    open-maximized false
+}
