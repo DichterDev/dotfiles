@@ -5,7 +5,11 @@ require("mini.tabline").setup({
 	end,
 })
 
-require("mini.statusline").setup({ use_icons = true })
+vim.o.laststatus = 3
+
+require("mini.statusline").setup({
+	use_icons = true,
+})
 
 require("vim._core.ui2").enable({})
 
@@ -15,4 +19,8 @@ vim.o.cmdheight = 0
 require("tiny-cmdline").setup({ on_reposition = require("tiny-cmdline").adapters.blink })
 ---@diagnostic enable: missing-fields
 
-vim.api.nvim_set_hl(0, "TinyCmdlineNormal", { link = "NormalFloat", update = true })
+Autocmd("ColorScheme", "tiny-cmd-colorscheme", {
+	callback = function()
+		vim.api.nvim_set_hl(0, "TinyCmdlineNormal", { link = "NormalFloat", update = true })
+	end,
+})
