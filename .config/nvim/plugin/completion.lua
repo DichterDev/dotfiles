@@ -5,7 +5,7 @@ require("blink.cmp").setup({
 		nerd_font_variant = "mono",
 	},
 	keymap = {
-		["<C-Space>"] = { "show", "hide", "show_documentation", "hide_documentation" },
+		["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
 		["<C-e>"] = { "hide", "fallback" },
 		["<CR>"] = { "accept", "fallback" },
 		["<Tab>"] = {
