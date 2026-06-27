@@ -141,6 +141,8 @@ vim.lsp.inlay_hint.enable(false)
 
 Autocmd("ColorScheme", "transparent-bg", {
 	callback = function()
+		local set_hl = vim.api.nvim_set_hl
+
 		local hls = vim.api.nvim_get_hl(0, { link = true })
 
 		local normal = vim.api.nvim_get_hl(0, { name = "Normal" })
@@ -148,15 +150,20 @@ Autocmd("ColorScheme", "transparent-bg", {
 		for name, hl in pairs(hls) do
 			if hl.link == "Normal" then
 				if not hl.bg then
-					vim.api.nvim_set_hl(0, name, { bg = normal.bg, link = "", update = true })
+					set_hl(0, name, { bg = normal.bg, link = "", update = true })
 				end
 			end
 		end
 
-		vim.api.nvim_set_hl(0, "FloatBorder", { fg = util.hl.get_prop("Keyword", "fg"), bg = normal.bg, update = true })
-		vim.api.nvim_set_hl(0, "MsgArea", { bg = normal.bg, update = true })
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = normal.bg, update = true })
-		vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", update = true })
+		local keyword_fg = util.hl.get_prop("Keyword", "fg")
+
+		set_hl(0, "FloatTitle", { fg = keyword_fg, bg = normal.bg, update = true })
+		set_hl(0, "FloatBorder", { fg = keyword_fg, bg = normal.bg, update = true })
+		set_hl(0, "MsgArea", { bg = normal.bg, update = true })
+		set_hl(0, "NormalFloat", { bg = normal.bg, update = true })
+
+		set_hl(0, "Normal", { bg = "NONE", update = true })
+		set_hl(0, "TablineFill", { bg = "NONE", update = true })
 	end,
 })
 
@@ -274,11 +281,6 @@ PackAdd({
 	"gh:Bilal2453/luvit-meta",
 	"gh:j-hui/fidget.nvim",
 
-	{
-		src = "gh:oribarilan/lensline.nvim",
-		version = vim.version.range("2.*"),
-	},
-
 	-- TREESITTER
 	"gh:nvim-treesitter/nvim-treesitter",
 	"gh:nvim-treesitter/nvim-treesitter-context",
@@ -296,10 +298,10 @@ PackAdd({
 
 	-- STEVEARC
 	"gh:stevearc/oil.nvim",
+	"gh:stevearc/aerial.nvim",
 	"gh:stevearc/conform.nvim",
 	"gh:stevearc/quicker.nvim",
 	"gh:stevearc/overseer.nvim",
-	"gh:stevearc/aerial.nvim",
 
 	-- FOLKE
 	"gh:folke/flash.nvim",

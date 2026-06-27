@@ -5,9 +5,6 @@ require("oil").setup({
 			return name == ".." or name == ".git"
 		end,
 	},
-	win_options = {
-		winbar = "%{v:lua.require('oil').get_current_dir()}",
-	},
 	keymaps = {
 		["h"] = { "actions.parent", mode = "n" },
 		["l"] = { "actions.select", mode = "n" },
