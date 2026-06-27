@@ -256,6 +256,8 @@ PackAdd({
 
 -- PLUGIN
 PackAdd({
+	"cb:cryptomilk/nvim-pack-ui",
+
 	"gh:nvim-mini/mini.nvim",
 	"gh:monaqa/dial.nvim",
 
@@ -287,10 +289,10 @@ PackAdd({
 	"gh:WhoIsSethDaniel/mason-tool-installer.nvim",
 
 	-- LSP
+	"gh:seblyng/roslyn.nvim",
 	"gh:neovim/nvim-lspconfig",
 	"gh:mfussenegger/nvim-jdtls",
 	-- "gh:idelice/nvim-jls",
-	"gh:seblyng/roslyn.nvim",
 
 	-- STEVEARC
 	"gh:stevearc/oil.nvim",

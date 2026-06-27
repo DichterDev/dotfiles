@@ -14,7 +14,7 @@ require("colorizer").setup({
 		},
 		display = {
 			---@type "foreground" | "background" | "underline" | "virtualtext"
-			mode = "foreground",
+			mode = "background",
 			virtualtext = {
 				char = "",
 				position = "before",

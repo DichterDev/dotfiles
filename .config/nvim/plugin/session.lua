@@ -19,8 +19,6 @@ Autocmd("VimEnter", "mini-session", {
 				local session_name = get_session_name()
 				if MiniSessions.detected[session_name] then
 					MiniSessions.read(session_name)
-				else
-					MiniSessions.write(session_name)
 				end
 			end
 		end)

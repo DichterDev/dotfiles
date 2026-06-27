@@ -2,12 +2,6 @@ require("mini.notify").setup({
 	lsp_progress = { enable = false },
 })
 
-RemoveBG({
-	"MiniNotifyNormal",
-	"MiniNotifyTitle",
-	"MiniNotifyBorder",
-})
-
 require("fidget").setup({
 	notification = {
 		window = {
