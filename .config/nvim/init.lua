@@ -159,7 +159,6 @@ Autocmd("ColorScheme", "transparent-bg", {
 
 		set_hl(0, "FloatTitle", { fg = keyword_fg, bg = normal.bg, update = true })
 		set_hl(0, "FloatBorder", { fg = keyword_fg, bg = normal.bg, update = true })
-		set_hl(0, "MsgArea", { bg = normal.bg, update = true })
 		set_hl(0, "NormalFloat", { bg = normal.bg, update = true })
 
 		set_hl(0, "Normal", { bg = "NONE", update = true })

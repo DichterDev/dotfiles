@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 local fzf = require("fzf-lua")
 fzf.setup({
 	file_ignore_patterns = {
@@ -22,6 +23,12 @@ fzf.setup({
 			["alt-p"] = "toggle+up",
 			["alt-up"] = "toggle+up",
 		},
+	},
+	hls = {
+		title = "FloatTitle",
+		border = "FloatBorder",
+		preview_title = "FloatTitle",
+		preview_border = "FloatBorder",
 	},
 })
 
