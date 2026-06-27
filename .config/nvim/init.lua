@@ -57,8 +57,8 @@ vim.o.sh = "/bin/fish"
 vim.o.background = "dark"
 vim.o.termguicolors = true
 
-vim.o.winblend = 5
-vim.o.pumblend = 5
+vim.o.winblend = 0
+vim.o.pumblend = 0
 
 -- KEYMAPS
 
@@ -162,6 +162,7 @@ Autocmd("ColorScheme", "transparent-bg", {
 		set_hl(0, "NormalFloat", { bg = normal.bg, update = true })
 
 		set_hl(0, "Normal", { bg = "NONE", update = true })
+		set_hl(0, "NormalNC", { bg = "NONE", update = true })
 		set_hl(0, "TablineFill", { bg = "NONE", update = true })
 	end,
 })
