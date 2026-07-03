@@ -2,6 +2,7 @@ local util = require("util")
 
 Map = util.keymap.set
 Autocmd = util.cmd.autocmd
+Usercmd = util.cmd.usercmd
 RemoveBG = util.hl.remove_bg
 PackAdd = util.pack.add
 
@@ -273,13 +274,17 @@ PackAdd({
 	"gh:lewis6991/gitsigns.nvim",
 	"gh:Aasim-A/scrollEOF.nvim",
 	"gh:HiPhish/rainbow-delimiters.nvim",
-	"gh:chomosuke/typst-preview.nvim",
 	"gh:catgoose/nvim-colorizer.lua",
 	"gh:chrisgrieser/nvim-spider",
 	"gh:tris203/precognition.nvim",
 
 	"gh:Bilal2453/luvit-meta",
 	"gh:j-hui/fidget.nvim",
+
+	"gh:chomosuke/typst-preview.nvim",
+	"gh:quarto-dev/quarto-nvim",
+	"gh:jmbuhr/otter.nvim",
+	"gh:hakonharnes/img-clip.nvim",
 
 	-- TREESITTER
 	"gh:nvim-treesitter/nvim-treesitter",
