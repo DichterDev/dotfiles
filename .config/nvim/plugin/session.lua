@@ -25,4 +25,11 @@ Autocmd("VimEnter", "mini-session", {
 	end,
 })
 
+Usercmd("MkSession", function()
+	local session_name = get_session_name()
+	if not MiniSessions.detected[session_name] then
+		MiniSessions.write(session_name)
+	end
+end, { desc = "Make Session" })
+
 Map("n", "<leader>fs", MiniSessions.select, { desc = "[f]ind [s]ession" })
