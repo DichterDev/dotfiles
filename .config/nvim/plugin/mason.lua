@@ -56,8 +56,10 @@ require("mason-tool-installer").setup({
 		"roslyn",
 
 		-- HTML
-		"superhtml",
-		-- "htmx-lsp",
+		-- "superhtml",
+		"html-lsp",
+		"htmx-lsp",
+		"jinja-lsp",
 
 		-- CSS
 		"css-lsp",
