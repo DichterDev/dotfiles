@@ -266,7 +266,6 @@ PackAdd({
 PackAdd({
 	"cb:cryptomilk/nvim-pack-ui",
 
-	"gh:nvim-mini/mini.nvim",
 	"gh:monaqa/dial.nvim",
 
 	"gh:Amansingh-afk/milli.nvim",
@@ -326,11 +325,6 @@ PackAdd({
 	-- FZF
 	"gh:ibhagwan/fzf-lua",
 	"gh:stephansama/fzf-nerdfont.nvim",
-
-	-- TINY
-	"gh:rachartier/tiny-cmdline.nvim",
-	"gh:rachartier/tiny-glimmer.nvim",
-	"gh:rachartier/tiny-inline-diagnostic.nvim",
 
 	-- BLINK
 	"gh:saghen/blink.indent",
