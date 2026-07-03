@@ -271,7 +271,6 @@ PackAdd({
 
 	"gh:Amansingh-afk/milli.nvim",
 	"gh:rafamadriz/friendly-snippets",
-	"gh:lewis6991/gitsigns.nvim",
 	"gh:Aasim-A/scrollEOF.nvim",
 	"gh:HiPhish/rainbow-delimiters.nvim",
 	"gh:catgoose/nvim-colorizer.lua",
