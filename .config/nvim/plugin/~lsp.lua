@@ -17,6 +17,7 @@ vim.lsp.enable({
 	"ruff",
 	"rust_analyzer",
 	-- "superhtml",
+	"sqlls",
 	"tailwindcss",
 	"tinymist",
 	"tombi",

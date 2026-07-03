@@ -69,6 +69,10 @@ require("mason-tool-installer").setup({
 		-- GLSL
 		-- "glsl_analyzer",
 
+		-- SQL
+		"sqls",
+		"sleek",
+
 		-- FISH
 		"fish-lsp",
 		-- BASH

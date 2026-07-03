@@ -24,6 +24,9 @@ fzf.setup({
 			["alt-up"] = "toggle+up",
 		},
 	},
+	grep = {
+		rg_opts = "--column --line-number --no-heading --color=always --smart-case --hidden",
+	},
 	hls = {
 		title = "FloatTitle",
 		border = "FloatBorder",

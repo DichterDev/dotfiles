@@ -293,12 +293,6 @@ PackAdd({
 	"gh:mason-org/mason.nvim",
 	"gh:WhoIsSethDaniel/mason-tool-installer.nvim",
 
-	-- LSP
-	"gh:seblyng/roslyn.nvim",
-	"gh:neovim/nvim-lspconfig",
-	"gh:mfussenegger/nvim-jdtls",
-	-- "gh:idelice/nvim-jls",
-
 	-- STEVEARC
 	"gh:stevearc/oil.nvim",
 	"gh:stevearc/aerial.nvim",

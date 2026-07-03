@@ -13,6 +13,7 @@ require("conform").setup({
 		markdown = { "oxfmt" },
 		html = { "oxfmt" },
 		css = { "oxfmt" },
+		sql = { "sleek" },
 	},
 	format_on_save = {
 		async = false,
