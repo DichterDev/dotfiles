@@ -90,6 +90,9 @@ require("mason-tool-installer").setup({
 		-- JSON
 		"json-lsp",
 
+		-- NIX
+		"nil",
+
 		-- DOCKER
 		-- "docker-language-server",
 	},
