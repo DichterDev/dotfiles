@@ -12,6 +12,7 @@ vim.lsp.enable({
 	"jinja_lsp",
 	"jsonls",
 	"lua_ls",
+	"nil_ls",
 	"oxlint",
 	"roslyn",
 	"ruff",

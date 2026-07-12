@@ -92,6 +92,7 @@ require("mason-tool-installer").setup({
 
 		-- NIX
 		"nil",
+		"nixfmt",
 
 		-- DOCKER
 		-- "docker-language-server",

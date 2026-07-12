@@ -15,6 +15,7 @@ require("conform").setup({
 		css = { "oxfmt" },
 		sql = { "sleek" },
 		rust = { "rustfmt" },
+		nix = { "nixfmt" },
 	},
 	format_on_save = {
 		async = false,
