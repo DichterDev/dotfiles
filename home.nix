@@ -24,6 +24,10 @@ in
     btop
   ];
 
+  home.file = {
+    ".bashrc".source = ./bash/.bashrc;
+  };
+
   xdg.configFile = {
     "nvim".source = link "nvim";
     "fish".source = link "fish";
@@ -32,6 +36,10 @@ in
 
     "fuzzel".source = ./fuzzel;
     "niri".source = ./niri;
+    "btop".source = ./btop;
+    "bat".source = ./bat;
+    "mpd".source = ./mpd;
+    "mpv".source = ./mpv;
     "starship.toml".source = ./starship/starship.toml;
   };
 
