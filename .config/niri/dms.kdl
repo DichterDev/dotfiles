@@ -1,6 +1,0 @@
-binds {
-  Mod+x { spawn-sh "dms ipc powermenu open"; }
-  Mod+v { spawn-sh "dms ipc clipboard open"; }
-}
-
-include "dms/outputs.kdl"
