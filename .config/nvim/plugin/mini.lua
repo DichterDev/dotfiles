@@ -22,6 +22,9 @@ require("mini.icons").setup({
 	lsp = {
 		["function"] = { glyph = "󰊕", hl = "MiniIconsAzure" },
 	},
+	filetype = {
+		["env"] = { glyph = "", hl = "MiniIconsOrange" },
+	},
 })
 
 require("mini.tabline").setup({
@@ -35,6 +38,10 @@ vim.o.laststatus = 3
 
 require("mini.statusline").setup({
 	use_icons = true,
+})
+
+require("mini.notify").setup({
+	lsp_progress = { enable = false },
 })
 
 require("mini.animate").setup({

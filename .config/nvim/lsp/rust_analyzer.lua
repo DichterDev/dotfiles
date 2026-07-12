@@ -3,7 +3,9 @@ return {
 	---@type lspconfig.settings.rust_analyzer
 	settings = {
 		["rust-analyzer"] = {
-			cargo = {},
+			cargo = {
+				targetDir = true,
+			},
 			checkOnSave = true,
 			diagnostics = {
 				enable = true,

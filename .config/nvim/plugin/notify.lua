@@ -1,7 +1,3 @@
-require("mini.notify").setup({
-	lsp_progress = { enable = false },
-})
-
 require("fidget").setup({
 	notification = {
 		window = {

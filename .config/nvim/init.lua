@@ -136,7 +136,7 @@ ft.add({
 
 -- LSP
 
-vim.lsp.inlay_hint.enable(false)
+vim.lsp.inlay_hint.enable(true)
 
 -- AUTOCMD
 
@@ -157,7 +157,9 @@ Autocmd("ColorScheme", "transparent-bg", {
 		end
 
 		local keyword_fg = util.hl.get_prop("Keyword", "fg")
+		local comment_fg = util.hl.get_prop("Comment", "fg")
 
+		set_hl(0, "LspInlayHint", { fg = comment_fg, update = true })
 		set_hl(0, "FloatTitle", { fg = keyword_fg, bg = normal.bg, update = true })
 		set_hl(0, "FloatBorder", { fg = keyword_fg, bg = normal.bg, update = true })
 		set_hl(0, "NormalFloat", { bg = normal.bg, update = true })
@@ -278,11 +280,6 @@ PackAdd({
 
 	"gh:Bilal2453/luvit-meta",
 	"gh:j-hui/fidget.nvim",
-
-	"gh:chomosuke/typst-preview.nvim",
-	"gh:quarto-dev/quarto-nvim",
-	"gh:jmbuhr/otter.nvim",
-	"gh:hakonharnes/img-clip.nvim",
 
 	-- TREESITTER
 	"gh:nvim-treesitter/nvim-treesitter",
