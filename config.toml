@@ -1,0 +1,51 @@
+[[pkgs]]
+name = "fish"
+config = "./fish/"
+link = "~/.config/fish/"
+
+[[pkgs]]
+name = "kitty"
+config = "./kitty/"
+link = "~/.config/kitty/"
+
+[[pkgs]]
+name = "niri"
+config = "./niri/"
+link = "~/.config/niri/"
+
+[[pkgs]]
+name = "starship"
+config = "./starship/"
+link = "~/.config/starship/"
+
+[[pkgs]]
+name = "mpv"
+config = "./mpv/"
+link = "~/.config/mpv/"
+
+[[pkgs]]
+name = "mpd"
+config = "./mpd/"
+link = "~/.config/mpd/"
+service = "--user mpd.service"
+
+[[pkgs]]
+name = "neovim"
+config = "./nvim/"
+link = "~/.config/nvim/"
+
+[[pkgs]]
+name = "fzf"
+
+[[pkgs]]
+name = "zellij"
+config = "./zellij/"
+link = "~/.config/zellij/"
+
+[[links]]
+src = "./applications/fix-mouse.desktop"
+dst = "~/.local/share/applications/fix-mouse.desktop"
+
+[[links]]
+src = "./applications/wl-mirror.desktop"
+dst = "~/.local/share/applications/wl-mirror.desktop"
