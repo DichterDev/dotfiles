@@ -1,0 +1,25 @@
+input {
+    keyboard {
+        repeat-delay 200
+        repeat-rate 35
+        xkb {
+            layout "de,us"
+        }
+        numlock
+    }
+
+    touchpad {
+        tap
+        accel-profile "adaptive"
+        scroll-method "two-finger"
+        disabled-on-external-mouse
+    }
+
+    mouse {}
+
+    trackpoint {}
+
+    warp-mouse-to-focus
+
+    focus-follows-mouse max-scroll-amount="0%"
+}

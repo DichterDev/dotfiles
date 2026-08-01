@@ -1,105 +1,41 @@
 prefer-no-csd
-input {
-    keyboard {
-        repeat-delay 200
-        repeat-rate 35
-        xkb {
-            layout "de,us"
-        }
-        numlock
-    }
-
-    touchpad {
-        tap
-        accel-profile "adaptive"
-        scroll-method "two-finger"
-        disabled-on-external-mouse
-    }
-
-    mouse {}
-
-    trackpoint {}
-
-    warp-mouse-to-focus
-
-    focus-follows-mouse max-scroll-amount="0%"
-}
-
-
-layout {
-    gaps 8
-    center-focused-column "never"
-
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-        proportion 1.0
-    }
-
-    preset-window-heights {
-        proportion 0.5
-        proportion 1.0
-    }
-
-    default-column-width { proportion 0.5; }
-
-    focus-ring {
-      width 2
-      active-gradient from="#00868b" to="#FF66CC" angle=180 in="oklch shorter hue"
-      inactive-color "#505050"
-    }
-
-    border { off; }
-
-    shadow {
-        softness 30
-        spread 5
-        offset x=0 y=5
-        color "#0007"
-    }
-
-    struts {
-        left 16
-        right 16
-        top 8
-        bottom 8
-    }
-
-}
 
 spawn-sh-at-startup "dms run"
 
+include "input.kdl"
+include "layout.kdl"
+
 hotkey-overlay {
-  skip-at-startup
+    skip-at-startup
 }
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-  slowdown 2.5
+    slowdown 2.5
 
-  workspace-switch {
-    spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
-  }
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
 
-  window-open {
-    duration-ms 150
-    curve "ease-out-expo"
-  }
+    window-open {
+        duration-ms 150
+        curve "ease-out-expo"
+    }
 
-  window-close {
-    duration-ms 150
-    curve "ease-out-quad"
-  }
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
 }
 
 binds {
     Mod+S { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Shift+Return { spawn "kitty" "--class" "floating-terminal"; }
 
-    Mod+Space hotkey-overlay-title="Application Launcher" { spawn-sh "fuzzel"; }
+    Mod+Space { spawn-sh "fuzzel"; }
 
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
