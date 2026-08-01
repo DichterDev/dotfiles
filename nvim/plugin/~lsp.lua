@@ -3,8 +3,9 @@ vim.lsp.config("*", {
 })
 
 vim.lsp.enable({
-	"clangd",
 	"bashls",
+	"clangd",
+	"cssls",
 	"fish_lsp",
 	"gopls",
 	"html",
@@ -23,6 +24,7 @@ vim.lsp.enable({
 	"tinymist",
 	"tombi",
 	"tsgo",
+	"ty",
 	"vtsls",
 	"vue_ls",
 	"yamlls",

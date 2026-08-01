@@ -276,7 +276,6 @@ PackAdd({
 	"gh:HiPhish/rainbow-delimiters.nvim",
 	"gh:catgoose/nvim-colorizer.lua",
 	"gh:chrisgrieser/nvim-spider",
-	"gh:tris203/precognition.nvim",
 
 	"gh:Bilal2453/luvit-meta",
 	"gh:j-hui/fidget.nvim",

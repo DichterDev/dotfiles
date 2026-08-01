@@ -29,6 +29,12 @@ require("render-markdown").setup({
 	},
 })
 
+Autocmd("ColorScheme", "render-markdown-colorscheme", {
+	callback = function()
+		vim.api.nvim_set_hl(0, "RenderMarkdownBullet", { bg = "NONE", update = true })
+	end,
+})
+
 vim.api.nvim_create_autocmd({ "FileType", "BufWinEnter" }, {
 	pattern = "markdown",
 	callback = function()

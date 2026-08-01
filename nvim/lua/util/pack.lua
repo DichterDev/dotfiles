@@ -4,7 +4,7 @@ local M = {}
 
 local prefixes = {
 	["gh:"] = "https://github.com/",
-	["cb:"] = "https://codeberg.com/",
+	["cb:"] = "https://codeberg.org/",
 	["lr:"] = "https://luarocks.com/",
 }
 
@@ -25,6 +25,8 @@ M.add = function(specs, opts)
 	if type(specs) == "string" or (type(specs) == "table" and not vim.islist(specs)) then
 		specs = { specs }
 	end
+
+	---@type Spec[]
 	local pkgs = {}
 
 	for _, spec in ipairs(specs) do

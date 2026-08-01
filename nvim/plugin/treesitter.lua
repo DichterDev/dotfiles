@@ -26,8 +26,12 @@ Autocmd("FileType", "ts-parser-install", {
 		local is_available = vim.tbl_contains(available_langs, lang)
 		if is_available then
 			require("nvim-treesitter").install(lang):wait()
-			vim.treesitter.start()
-			vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
+			local success = pcall(vim.treesitter.start)
+
+			if success then
+				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+			end
 		end
 	end,
 })
