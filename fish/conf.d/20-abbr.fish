@@ -70,3 +70,7 @@ abbr -a dcub "docker compose up -d --build"
 abbr -a dcuf "docker compose up -d --force-recreate"
 abbr -a dcr "docker compose restart"
 abbr -a dcd "docker compose down"
+
+# ZELLIJ
+abbr -a zj zellij
+abbr -a zja "zellij attach"
