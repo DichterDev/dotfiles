@@ -138,6 +138,26 @@ ft.add({
 
 vim.lsp.inlay_hint.enable(true)
 
+Usercmd("Lsp", function(opts)
+	local subcommand = opts.fargs[1]
+
+	if subcommand == "log" then
+		local log_path = vim.fn.stdpath("log") .. "/lsp.log"
+		vim.cmd("edit " .. vim.fn.fnameescape(log_path))
+	elseif subcommand == "health" then
+		vim.cmd("checkhealth vim.lsp")
+	end
+end, {
+	nargs = "?",
+	desc = "LSP helper commands",
+	complete = function(arg_lead, cmd_line, cursor_pos)
+		local subcommands = { "log", "health" }
+		return vim.tbl_filter(function(item)
+			return item:find("^" .. arg_lead)
+		end, subcommands)
+	end,
+})
+
 -- AUTOCMD
 
 Autocmd("ColorScheme", "transparent-bg", {

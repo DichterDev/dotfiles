@@ -15,6 +15,8 @@ vim.lsp.enable({
 	"lua_ls",
 	"nil_ls",
 	"oxlint",
+	-- "qmlls",
+	"qml-language-server",
 	"roslyn",
 	"ruff",
 	"rust_analyzer",

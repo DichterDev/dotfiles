@@ -52,6 +52,9 @@ require("mason-tool-installer").setup({
 		"java-debug-adapter",
 		"vscode-spring-boot-tools",
 
+		-- QML
+		"qmlls",
+
 		-- CSHARP
 		"roslyn",
 
