@@ -42,6 +42,11 @@ name = "zellij"
 config = "./zellij/"
 link = "~/.config/zellij/"
 
+[[pkgs]]
+name = "quickshell"
+config = "./quickshell/"
+link = "~/.config/quickshell"
+
 [[links]]
 src = "./applications/fix-mouse.desktop"
 dst = "~/.local/share/applications/fix-mouse.desktop"
