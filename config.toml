@@ -15,6 +15,7 @@ pkgs = [
   "niri",
   "quickshell",
   "starship",
+  "wl-mirror",
   "zellij",
   "zoxide",
   "zsh",
