@@ -2,8 +2,8 @@
 Name=Fix Mouse
 
 Comment=Resets the Intel I2C HID touchpad driver to fix a disappearing cursor
-Keywords=Mouse,Touchpad
+Keywords=Mouse;Touchpad;
 
 Type=Application
 Icon=utilities-terminal
-Exec=env HOME=%h /home/dichter/dotfiles/scripts/fix-mouse.sh
+Exec=bash -c "fuzzel -d -p 'Password: ' --password | sudo -S fix-mouse.sh"
