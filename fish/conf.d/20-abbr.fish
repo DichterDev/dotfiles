@@ -14,7 +14,7 @@ alias ssh "kitten ssh"
 abbr -a icat "kitten icat"
 
 # BASE
-abbr -a rm "rm -Ir"
+abbr -a rm "rm -r"
 abbr -a cp "cp -av"
 
 # LS
@@ -36,13 +36,6 @@ abbr -a ll "ls -alh"
 if type -q z
     alias cd="z"
 end
-
-# SUDO
-function last_history_item
-    echo $history[1]
-end
-
-abbr -a !! --position anywhere --function last_history_item
 
 # GIT
 abbr -a ga "git add"
