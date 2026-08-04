@@ -1,56 +1,49 @@
-[[pkgs]]
-name = "fish"
-config = "./fish/"
-link = "~/.config/fish/"
+pkgs = [
+  "bat",
+  "btop",
+  "docker",
+  "docker-buildx",
+  "docker-compose",
+  "eza",
+  "fish",
+  "fuzzel",
+  "fzf",
+  "kitty",
+  "mpd",
+  "mpv",
+  "neovim",
+  "niri",
+  "quickshell",
+  "starship",
+  "zellij",
+  "zoxide",
+  "zsh",
+]
 
-[[pkgs]]
-name = "kitty"
-config = "./kitty/"
-link = "~/.config/kitty/"
+[services]
+mpd = "--user mpd.service"
+docker = "docker.service"
 
-[[pkgs]]
-name = "niri"
-config = "./niri/"
-link = "~/.config/niri/"
+[home]
+".bashrc" = "./bash/.bashrc"
 
-[[pkgs]]
-name = "starship"
-config = "./starship/"
-link = "~/.config/starship/"
+[home.cache]
 
-[[pkgs]]
-name = "mpv"
-config = "./mpv/"
-link = "~/.config/mpv/"
+[home.config]
+bat = "./bat/"
+btop = "./btop/"
+fish = "./fish/"
+fuzzel = "./fuzzel/"
+kitty = "./kitty/"
+mpd = "./mpd/"
+mpv = "./mpv/"
+nvim = "./nvim/"
+starship = "./starship/"
+zellij = "./zellij/"
 
-[[pkgs]]
-name = "mpd"
-config = "./mpd/"
-link = "~/.config/mpd/"
-service = "--user mpd.service"
+[home.share]
 
-[[pkgs]]
-name = "neovim"
-config = "./nvim/"
-link = "~/.config/nvim/"
-
-[[pkgs]]
-name = "fzf"
-
-[[pkgs]]
-name = "zellij"
-config = "./zellij/"
-link = "~/.config/zellij/"
-
-[[pkgs]]
-name = "quickshell"
-config = "./quickshell/"
-link = "~/.config/quickshell"
-
-[[links]]
-src = "./applications/fix-mouse.desktop"
-dst = "~/.local/share/applications/fix-mouse.desktop"
-
-[[links]]
-src = "./applications/wl-mirror.desktop"
-dst = "~/.local/share/applications/wl-mirror.desktop"
+[home.state]
+[home.state.applications]
+"fix-mouse.desktop" = "./applications/fix-mouse.desktop"
+"wl-mirror.desktop" = "./applications/wl-mirror.desktop"
