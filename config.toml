@@ -41,9 +41,9 @@ nvim = "./nvim/"
 starship = "./starship/"
 zellij = "./zellij/"
 
-[home.share]
+[home.local.bin]
+"fix-mouse.sh" = "./scripts/fix-mouse.sh"
 
-[home.state]
-[home.state.applications]
+[home.local.share.applications]
 "fix-mouse.desktop" = "./applications/fix-mouse.desktop"
 "wl-mirror.desktop" = "./applications/wl-mirror.desktop"

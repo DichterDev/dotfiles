@@ -5,14 +5,17 @@ import sys
 from pathlib import Path
 import tomllib
 
+# Dynamically locate the dotfiles directory relative to this script
+SCRIPT_DIR = Path(__file__).resolve().parent
+CONFIG_PATH = SCRIPT_DIR / "config.toml"
+
 
 def load_config() -> dict:
-    config_file = Path("config.toml")
-    if not config_file.exists():
-        print("Error: config.toml not found in the current directory.", file=sys.stderr)
+    if not CONFIG_PATH.exists():
+        print(f"Error: {CONFIG_PATH} not found.", file=sys.stderr)
         sys.exit(1)
 
-    with open(config_file, "rb") as f:
+    with open(CONFIG_PATH, "rb") as f:
         return tomllib.load(f)
 
 
@@ -32,7 +35,11 @@ def install_packages(pkgs: list[str]):
 
 
 def create_symlink(src: str, dst: str):
-    source = Path(src).resolve()
+    # Resolve relative source paths against the repository root
+    source = Path(src)
+    if not source.is_absolute():
+        source = (SCRIPT_DIR / source).resolve()
+
     dest = Path(dst).expanduser()
 
     if not source.exists():
