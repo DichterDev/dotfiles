@@ -92,14 +92,11 @@ def process_home_links(home_config: dict):
     """Recursively traverses the [home] section to map subpaths to ~/.X paths."""
     print("\nProcessing home symlinks...")
 
-    HIDDEN_TOP_LEVELS = {"config", "local", "cache"}
+    HIDDEN = {"config", "local", "cache"}
 
     def _traverse(node: dict, current_subpath: Path, is_root: bool = False):
         for key, val in node.items():
-            if is_root and key in HIDDEN_TOP_LEVELS:
-                segment_name = f".{key}"
-            else:
-                segment_name = key
+            segment_name = f".{key}" if is_root and key in HIDDEN else key
 
             next_subpath = current_subpath / segment_name
 
