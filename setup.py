@@ -92,16 +92,24 @@ def process_home_links(home_config: dict):
     """Recursively traverses the [home] section to map subpaths to ~/.X paths."""
     print("\nProcessing home symlinks...")
 
-    def _traverse(node: dict, current_subpath: Path):
-        for key, val in node.items():
-            if isinstance(val, dict):
-                _traverse(val, current_subpath / key)
-            elif isinstance(val, str):
-                dst = Path.home() / current_subpath / key
-                src = val
-                create_symlink(src, str(dst))
+    HIDDEN_TOP_LEVELS = {"config", "local", "cache"}
 
-    _traverse(home_config, Path())
+    def _traverse(node: dict, current_subpath: Path, is_root: bool = False):
+        for key, val in node.items():
+            if is_root and key in HIDDEN_TOP_LEVELS:
+                segment_name = f".{key}"
+            else:
+                segment_name = key
+
+            next_subpath = current_subpath / segment_name
+
+            if isinstance(val, dict):
+                _traverse(val, next_subpath, is_root=False)
+            elif isinstance(val, str):
+                dst = Path.home() / next_subpath
+                create_symlink(val, str(dst))
+
+    _traverse(home_config, Path(), is_root=True)
 
 
 def action_install(config: dict):
