@@ -1,0 +1,11 @@
+[mgr]
+image_preview = true
+
+[plugin]
+previewer_rules = [{ mime = "image/*", run = "image" }]
+fetchers = []
+
+[preview]
+image_bound = [0, 0]
+image_filter = "triangle"
+image_quality = 75

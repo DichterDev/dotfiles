@@ -16,6 +16,7 @@ pkgs = [
   "quickshell",
   "starship",
   "wl-mirror",
+  "yazi",
   "zellij",
   "zoxide",
   "zsh",
@@ -40,6 +41,7 @@ mpd = "./mpd/"
 mpv = "./mpv/"
 nvim = "./nvim/"
 starship = "./starship/"
+yazi = "./yazi/"
 zellij = "./zellij/"
 
 [home.local.bin]
