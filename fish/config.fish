@@ -5,7 +5,9 @@ if status is-interactive
     end
 end
 
-# uv
 fish_add_path "$HOME/.local/bin"
+
 # cargo
 fish_add_path "$HOME/.cargo/bin"
+
+set -g fish_greeting ""
