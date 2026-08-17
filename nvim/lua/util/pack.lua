@@ -4,8 +4,9 @@ local M = {}
 
 local prefixes = {
 	["gh:"] = "https://github.com/",
+	["gl:"] = "https://gitlab.com/",
 	["cb:"] = "https://codeberg.org/",
-	["lr:"] = "https://luarocks.com/",
+	-- ["lr:"] = "https://luarocks.com/",
 }
 
 ---@param url string
