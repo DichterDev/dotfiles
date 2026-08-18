@@ -16,6 +16,7 @@ require("conform").setup({
 		sql = { "sleek" },
 		rust = { "rustfmt" },
 		nix = { "nixfmt" },
+		["_"] = { "indent_only" },
 	},
 	format_on_save = {
 		async = false,

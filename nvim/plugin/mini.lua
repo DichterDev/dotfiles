@@ -1,13 +1,14 @@
 PackAdd("gh:nvim-mini/mini.nvim")
 
 require("mini.ai").setup()
-require("mini.move").setup()
 require("mini.align").setup()
-require("mini.extra").setup()
-require("mini.pairs").setup()
-require("mini.surround").setup()
 require("mini.bracketed").setup()
+require("mini.cursorword").setup()
+require("mini.extra").setup()
+require("mini.move").setup()
+require("mini.pairs").setup()
 require("mini.splitjoin").setup()
+require("mini.surround").setup()
 
 require("mini.basics").setup({
 	options = {
