@@ -14,6 +14,7 @@ pkgs = [
   "neovim",
   "niri",
   "quickshell",
+  "rmpc",
   "starship",
   "wl-mirror",
   "yazi",
@@ -40,6 +41,7 @@ kitty = "./kitty/"
 mpd = "./mpd/"
 mpv = "./mpv/"
 nvim = "./nvim/"
+rmpc = "./rmpc/"
 starship = "./starship/"
 yazi = "./yazi/"
 zellij = "./zellij/"
