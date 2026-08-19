@@ -1,3 +1,11 @@
+PackAdd({
+	"gh:saghen/blink.indent",
+	{
+		src = "gh:saghen/blink.cmp",
+		version = vim.version.range("1.*"),
+	},
+})
+
 require("blink.cmp").setup({
 	snippets = { preset = "mini_snippets" },
 	appearance = {

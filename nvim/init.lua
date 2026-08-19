@@ -24,6 +24,7 @@ vim.env.JDK21 = "/usr/lib/jvm/java-21-openjdk/"
 vim.env.JDK25 = "/usr/lib/jvm/java-25-openjdk/"
 
 -- OPTIONS
+vim.o.exrc = true
 
 vim.o.wrap = false
 vim.o.linebreak = true
@@ -301,14 +302,7 @@ PackAdd({
 	"gh:Bilal2453/luvit-meta",
 	"gh:j-hui/fidget.nvim",
 
-	-- TREESITTER
-	"gh:nvim-treesitter/nvim-treesitter",
-	"gh:nvim-treesitter/nvim-treesitter-context",
-	"gh:windwp/nvim-ts-autotag",
-
 	-- MASON
-	"gh:mason-org/mason.nvim",
-	"gh:WhoIsSethDaniel/mason-tool-installer.nvim",
 
 	-- STEVEARC
 	"gh:stevearc/oil.nvim",
@@ -332,15 +326,4 @@ PackAdd({
 	},
 	"gh:nvim-lua/plenary.nvim",
 	"gh:MunifTanjim/nui.nvim",
-
-	-- FZF
-	"gh:ibhagwan/fzf-lua",
-	"gh:stephansama/fzf-nerdfont.nvim",
-
-	-- BLINK
-	"gh:saghen/blink.indent",
-	{
-		src = "gh:saghen/blink.cmp",
-		version = vim.version.range("1.*"),
-	},
 })

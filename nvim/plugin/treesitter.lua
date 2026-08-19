@@ -1,3 +1,9 @@
+PackAdd({
+	"gh:nvim-treesitter/nvim-treesitter",
+	"gh:nvim-treesitter/nvim-treesitter-context",
+	"gh:windwp/nvim-ts-autotag",
+})
+
 Autocmd("PackChanged", "ts-update", {
 	callback = function(ev)
 		local name, kind = ev.data.spec.name, ev.data.kind

@@ -1,3 +1,8 @@
+PackAdd({
+	"gh:ibhagwan/fzf-lua",
+	"gh:stephansama/fzf-nerdfont.nvim",
+})
+
 ---@diagnostic disable: missing-fields
 local fzf = require("fzf-lua")
 fzf.setup({
