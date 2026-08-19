@@ -24,44 +24,47 @@ vim.env.JDK21 = "/usr/lib/jvm/java-21-openjdk/"
 vim.env.JDK25 = "/usr/lib/jvm/java-25-openjdk/"
 
 -- OPTIONS
-vim.o.exrc = true
 
-vim.o.wrap = false
-vim.o.linebreak = true
-vim.o.breakindent = true
--- vim.o.showbreak = "↳"
+local opt = vim.opt
 
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
-vim.o.expandtab = true
-vim.o.autoindent = true
+opt.exrc = true
 
-vim.o.foldmethod = "expr"
-vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.o.foldlevel = 99
-vim.o.foldenable = true
+opt.wrap = false
+opt.linebreak = true
+opt.breakindent = true
+-- opt.showbreak = "↳"
 
-vim.o.list = true
-vim.o.listchars = "trail:·,tab:»·,nbsp:+"
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.autoindent = true
 
-vim.o.scrolloff = 12
-vim.o.sidescrolloff = 8
-vim.o.undofile = true
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+opt.foldlevel = 99
+opt.foldenable = true
 
-vim.o.swapfile = false
+opt.list = true
+opt.listchars = "trail:·,tab:»·,nbsp:+"
 
-vim.o.updatetime = 300
-vim.o.timeoutlen = 500
-vim.o.conceallevel = 0
-vim.o.wildmode = "longest:full,full"
-vim.o.virtualedit = "block"
+opt.scrolloff = 12
+opt.sidescrolloff = 8
+opt.undofile = true
 
-vim.o.sh = "/bin/fish"
-vim.o.background = "dark"
-vim.o.termguicolors = true
+opt.swapfile = false
 
-vim.o.winblend = 0
-vim.o.pumblend = 0
+opt.updatetime = 300
+opt.timeoutlen = 500
+opt.conceallevel = 0
+opt.wildmode = "longest:full,full"
+opt.virtualedit = "block"
+
+opt.sh = "/bin/fish"
+opt.background = "dark"
+opt.termguicolors = true
+
+opt.winblend = 0
+opt.pumblend = 0
 
 -- KEYMAPS
 
