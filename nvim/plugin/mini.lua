@@ -9,6 +9,7 @@ require("mini.move").setup()
 require("mini.pairs").setup()
 require("mini.splitjoin").setup()
 require("mini.surround").setup()
+require("mini.statuscolumn").setup()
 
 require("mini.basics").setup({
 	options = {
