@@ -9,7 +9,6 @@ require("mini.move").setup()
 require("mini.pairs").setup()
 require("mini.splitjoin").setup()
 require("mini.surround").setup()
-require("mini.statuscolumn").setup()
 require("mini.indentscope").setup()
 
 require("mini.basics").setup({
@@ -35,6 +34,16 @@ require("mini.tabline").setup({
 		local suffix = vim.bo[buf_id].modified and "+ " or ""
 		return MiniTabline.default_format(buf_id, label) .. suffix
 	end,
+})
+
+require("mini.statuscolumn").setup({
+	content = require("mini.statuscolumn").gen_content.main({
+		-- `f` (fold), `s` (sign), `l` (lnum), and `=` (as `%=` in |'statusline'| syntax)
+		{ format = "fl=s", sep = "▏" },
+		{ ltype = "virt", lnum = "•" },
+		{ ltype = "wrap", lnum = "↳" },
+		{ win = "inactive", fold = "", lnum = "", sign = "" },
+	}),
 })
 
 vim.o.laststatus = 3
