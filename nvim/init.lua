@@ -39,10 +39,14 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
-opt.foldmethod = "expr"
+opt.foldcolumn = "1"
+opt.foldenable = true
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 opt.foldlevel = 99
-opt.foldenable = true
+opt.foldlevelstart = 99
+opt.foldmethod = "expr"
+
+opt.fillchars = "eob: ,fold: ,foldopen:󰅀,foldsep: ,foldinner: ,foldclose:"
 
 opt.list = false
 opt.listchars = "trail:·,tab:»·,nbsp:+"
