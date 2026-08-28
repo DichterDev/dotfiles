@@ -111,7 +111,7 @@ Map({ "n", "v" }, "<leader>P", '"+P"', { desc = "[P]aste from clipboard" })
 
 Map("n", "<leader>d", vim.diagnostic.open_float, { desc = "[d]iagnostic float" })
 
--- Diagnostic
+-- DIAGNOSTIC
 
 vim.diagnostic.config({
 	virtual_text = false,
@@ -122,7 +122,7 @@ vim.diagnostic.config({
 	},
 })
 
--- Fletypes
+-- FILETYPES
 
 local ft = vim.filetype
 
