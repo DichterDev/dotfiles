@@ -9,7 +9,7 @@ fzf.setup({
 	file_ignore_patterns = {
 		"node_modules/.*",
 		"build/.*",
-		"bin/.*",
+		-- "bin/.*",
 		"target/.*",
 		".next/*",
 	},

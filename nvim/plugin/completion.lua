@@ -1,5 +1,5 @@
 PackAdd({
-	"gh:saghen/blink.indent",
+	-- "gh:saghen/blink.indent",
 	{
 		src = "gh:saghen/blink.cmp",
 		version = vim.version.range("1.*"),

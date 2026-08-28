@@ -44,7 +44,7 @@ opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 opt.foldlevel = 99
 opt.foldenable = true
 
-opt.list = true
+opt.list = false
 opt.listchars = "trail:·,tab:»·,nbsp:+"
 
 opt.scrolloff = 12

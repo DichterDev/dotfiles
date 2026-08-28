@@ -1,5 +1,3 @@
-require("blink.indent").setup({})
-
 require("rainbow-delimiters")
 
 require("spider").setup()
