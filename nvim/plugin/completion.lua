@@ -79,6 +79,11 @@ require("blink.cmp").setup({
 	},
 	sources = {
 		default = { "lazydev", "lsp", "path", "snippets", "buffer", "cmdline" },
+		per_filetype = {
+			sql = { "snippets", "dadbod", "buffer" },
+			mysql = { "snippets", "dadbod", "buffer" },
+			plsql = { "snippets", "dadbod", "buffer" },
+		},
 		providers = {
 			lazydev = {
 				name = "LazyDev",
@@ -90,6 +95,7 @@ require("blink.cmp").setup({
 			snippets = { min_keyword_length = 2 },
 			buffer = { min_keyword_length = 4, max_items = 5 },
 			cmdline = { min_keyword_length = 0 },
+			dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink", min_keyword_length = 0 },
 		},
 	},
 	fuzzy = { implementation = "prefer_rust_with_warning" },
