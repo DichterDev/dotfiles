@@ -8,6 +8,10 @@ require("oil").setup({
 	keymaps = {
 		["h"] = { "actions.parent", mode = "n" },
 		["l"] = { "actions.select", mode = "n" },
+		["<C-h>"] = {},
+		["<C-j>"] = {},
+		["<C-k>"] = {},
+		["<C-l>"] = {},
 	},
 })
 
