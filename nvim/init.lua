@@ -295,6 +295,7 @@ PackAdd({
 
 -- PLUGIN
 PackAdd({
+	"gh:neovim/nvim-lspconfig",
 	"cb:cryptomilk/nvim-pack-ui",
 
 	"gh:monaqa/dial.nvim",
@@ -334,3 +335,5 @@ PackAdd({
 	"gh:nvim-lua/plenary.nvim",
 	"gh:MunifTanjim/nui.nvim",
 })
+
+require("lspconfig")

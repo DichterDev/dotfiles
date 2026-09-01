@@ -1,4 +1,4 @@
-require("rainbow-delimiters")
+-- require("rainbow-delimiters")
 
 require("spider").setup()
 
