@@ -25,7 +25,7 @@ vim.lsp.enable({
 	"tailwindcss",
 	"tinymist",
 	"tombi",
-	"tsgo",
+	"tsc",
 	"ty",
 	"vtsls",
 	"vue_ls",
