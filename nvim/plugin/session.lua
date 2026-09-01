@@ -14,14 +14,17 @@ end
 
 Autocmd("VimEnter", "mini-session", {
 	callback = function()
-		vim.schedule(function()
-			if vim.fn.argc() == 0 then
-				local session_name = get_session_name()
-				if MiniSessions.detected[session_name] then
-					MiniSessions.read(session_name)
-				end
+		if vim.fn.argc() == 0 then
+			local session_name = get_session_name()
+			if MiniSessions.detected[session_name] then
+				MiniSessions.read(session_name)
+				vim.schedule(function()
+					vim.cmd("silent! doautoall BufReadPost")
+					vim.cmd("silent! doautoall FileType")
+					vim.cmd("silent! doautoall ColorScheme")
+				end)
 			end
-		end)
+		end
 	end,
 })
 
