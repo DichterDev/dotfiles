@@ -103,9 +103,6 @@ Map({ "x", "o" }, "V", function()
 	end
 end, { desc = "[V]isual decrement" })
 
-Map("n", "<leader>vs", "<CMD>vsplit<CR>", { desc = "[v]ertical [s]plit" })
-Map("n", "<leader>hs", "<CMD>:hsplit", { desc = "[h]orizontal [s]plit" })
-
 Map({ "n", "v" }, "<leader>y", '"+y', { desc = "[y]ank to clipboard" })
 Map("n", "<leader>yy", '"+yy', { desc = "[yy]ank to clipboard" })
 Map("n", "<leader>Y", '"+y_', { desc = "[Y]ank to clipboard" })
@@ -325,8 +322,6 @@ PackAdd({
 	"gh:folke/todo-comments.nvim",
 
 	-- FOLDING
-	"gh:kevinhwang91/nvim-ufo",
-	"gh:kevinhwang91/promise-async",
 
 	{
 		src = "gh:nvim-neo-tree/neo-tree.nvim",

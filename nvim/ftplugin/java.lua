@@ -60,7 +60,7 @@ local bundles = {}
 
 -- vim.list_extend(bundles, get_java_test())
 -- vim.list_extend(bundles, get_java_debug_adapter())
--- vim.list_extend(bundles, get_spring_boot())
+vim.list_extend(bundles, get_spring_boot())
 
 local extendedClientCapabilities = require("jdtls").extendedClientCapabilities
 
