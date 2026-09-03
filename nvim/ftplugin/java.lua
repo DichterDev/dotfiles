@@ -31,8 +31,6 @@ local function get_workspace(dir)
 		vim.fn.mkdir(workspace_dir, "p")
 	end
 
-	vim.notify("Workspace: " .. workspace_name, vim.log.levels.INFO)
-
 	return workspace_dir
 end
 
