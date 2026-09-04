@@ -195,16 +195,8 @@ Autocmd("ColorScheme", "transparent-bg", {
 		set_hl(0, "Normal", { bg = "NONE", update = true })
 		set_hl(0, "NormalNC", { bg = "NONE", update = true })
 		set_hl(0, "TablineFill", { bg = "NONE", update = true })
-	end,
-})
-
-Autocmd("ColorScheme", "remove-bg", {
-	callback = function()
-		local hls = util.hl.RM_BG
-
-		for _, name in ipairs(hls) do
-			vim.api.nvim_set_hl(0, name, { bg = "NONE", link = "", update = true })
-		end
+		set_hl(0, "FoldColumn", { bg = "NONE", update = true })
+		set_hl(0, "SignColumn", { bg = "NONE", update = true })
 	end,
 })
 
