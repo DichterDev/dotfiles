@@ -20,8 +20,10 @@ vim.g.loaded_python3_provider = 0
 -- ENV
 
 vim.env.JAVA_HOME = "/usr/lib/jvm/default"
+vim.env.JDK17 = "/usr/lib/jvm/java-17-openjdk/"
 vim.env.JDK21 = "/usr/lib/jvm/java-21-openjdk/"
 vim.env.JDK25 = "/usr/lib/jvm/java-25-openjdk/"
+vim.env.JDK26 = "/usr/lib/jvm/java-26-openjdk/"
 
 -- OPTIONS
 
