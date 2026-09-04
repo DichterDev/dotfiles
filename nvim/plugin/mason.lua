@@ -50,6 +50,7 @@ require("mason-tool-installer").setup({
 
 		-- C/C++
 		"clangd",
+		"codelldb",
 
 		-- JAVA
 		"jdtls",
