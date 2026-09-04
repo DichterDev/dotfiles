@@ -19,9 +19,13 @@ Autocmd("VimEnter", "mini-session", {
 			if MiniSessions.detected[session_name] then
 				MiniSessions.read(session_name)
 				vim.schedule(function()
-					vim.cmd("silent! doautoall BufReadPost")
-					vim.cmd("silent! doautoall FileType")
-					vim.cmd("silent! doautoall ColorScheme")
+					local buf = vim.api.nvim_get_current_buf()
+
+					if vim.api.nvim_buf_line_count(buf) <= 15000 then
+						vim.cmd("silent! doautocmd BufReadPost")
+						vim.cmd("silent! doautocmd FileType")
+						vim.cmd("silent! doautocmd ColorScheme")
+					end
 				end)
 			end
 		end
