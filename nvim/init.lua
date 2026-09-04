@@ -186,17 +186,26 @@ Autocmd("ColorScheme", "transparent-bg", {
 
 		local keyword_fg = util.hl.get_prop("Keyword", "fg")
 		local comment_fg = util.hl.get_prop("Comment", "fg")
+		local const_fg = util.hl.get_prop("Constant", "fg")
 
 		set_hl(0, "LspInlayHint", { fg = comment_fg, update = true })
 		set_hl(0, "FloatTitle", { fg = keyword_fg, bg = normal.bg, update = true })
 		set_hl(0, "FloatBorder", { fg = keyword_fg, bg = normal.bg, update = true })
 		set_hl(0, "NormalFloat", { bg = normal.bg, update = true })
+		set_hl(0, "CursorLineNr", { fg = const_fg, update = true })
 
-		set_hl(0, "Normal", { bg = "NONE", update = true })
-		set_hl(0, "NormalNC", { bg = "NONE", update = true })
-		set_hl(0, "TablineFill", { bg = "NONE", update = true })
-		set_hl(0, "FoldColumn", { bg = "NONE", update = true })
-		set_hl(0, "SignColumn", { bg = "NONE", update = true })
+		local NO_BG = {
+			"Normal",
+			"NormalNC",
+			"FoldColumn",
+			"SignColumn",
+			"TablineFill",
+			"CursorLineNr",
+		}
+
+		for _, hl in ipairs(NO_BG) do
+			set_hl(0, hl, { bg = "NONE", update = true })
+		end
 	end,
 })
 
