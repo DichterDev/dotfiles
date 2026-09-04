@@ -9,7 +9,7 @@ vim.lsp.enable({
 	"fish_lsp",
 	"gopls",
 	"html",
-	"htmx",
+	-- "htmx",
 	"jinja_lsp",
 	"jsonls",
 	"lua_ls",
