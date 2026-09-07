@@ -17,17 +17,17 @@ require("blink.cmp").setup({
 		["<C-e>"] = { "hide", "fallback" },
 		["<CR>"] = { "accept", "fallback" },
 		["<Tab>"] = {
+			"snippet_forward",
 			function(cmp)
 				return cmp.select_next()
 			end,
-			"snippet_forward",
 			"fallback",
 		},
 		["<S-Tab>"] = {
+			"snippet_backward",
 			function(cmp)
 				return cmp.select_prev()
 			end,
-			"snippet_backward",
 			"fallback",
 		},
 		["<Up>"] = {},
