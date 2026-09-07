@@ -324,8 +324,6 @@ PackAdd({
 	"gh:folke/lazydev.nvim",
 	"gh:folke/todo-comments.nvim",
 
-	-- FOLDING
-
 	{
 		src = "gh:nvim-neo-tree/neo-tree.nvim",
 		version = vim.version.range("3"),
@@ -333,5 +331,3 @@ PackAdd({
 	"gh:nvim-lua/plenary.nvim",
 	"gh:MunifTanjim/nui.nvim",
 })
-
-require("lspconfig")
