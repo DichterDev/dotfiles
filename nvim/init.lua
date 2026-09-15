@@ -365,12 +365,11 @@ packadd("Plugins", {
 --#endregion
 
 --#region KEYMAPS
-
 local keymap = require("core.keymap")
 
 keymap.setup({ opts = { silent = true } })
 
-map = keymap.set
+local map = keymap.set
 local multi = keymap.multi
 local combo = keymap.combo
 
@@ -456,12 +455,11 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
-combo({ "n", "x" }, "gl", "g$")
-combo({ "n", "x" }, "gh", "g^")
-
 combo({ "n", "i", "x", "c" }, "<Esc><Esc>", function()
 	vim.cmd("nohlsearch")
 end)
+
+--#region FLASH
 
 map({ "n", "x", "o" }, "s", function()
 	require("flash").jump()
@@ -479,6 +477,8 @@ map({ "n", "x", "o" }, "R", function()
 	require("flash").treesitter_search()
 end)
 
+--#endregion
+
 map("c", "<C-s>", function()
 	require("flash").toggle()
 end)
@@ -493,7 +493,7 @@ map("n", "<leader>E", "<CMD>Neotree toggle show right<CR>", { desc = "toggle neo
 map("n", "<leader>o", "<CMD>AerialToggle!<CR>", { desc = "toggle aerial [o]utline" })
 map({ "n" }, "<leader>gg", "<CMD>Neogit<CR>", { desc = "Show Neogit UI" })
 
---#region
+--#region FZF
 map("n", "<leader>F", "<CMD>FzfLua global<CR>", { desc = "[F]ind" })
 map("n", "<leader>ff", "<CMD>FzfLua files<CR>", { desc = "[f]ind [f]iles" })
 map("n", "<leader>fg", "<CMD>FzfLua git_files<CR>", { desc = "[f] [g]it files" })

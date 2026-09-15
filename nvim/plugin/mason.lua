@@ -49,6 +49,7 @@ require("mason-tool-installer").setup({
 
 		-- JAVA
 		"jdtls",
+		"jls",
 		"java-test",
 		"java-debug-adapter",
 		"vscode-spring-boot-tools",
