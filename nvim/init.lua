@@ -294,6 +294,7 @@ packadd("Plugins", {
 	"https://github.com/folke/lazydev.nvim",
 	"https://github.com/folke/todo-comments.nvim",
 
+	-- RACHARTIER
 	"https://github.com/rachartier/tiny-cmdline.nvim",
 	"https://github.com/rachartier/tiny-glimmer.nvim",
 	"https://github.com/rachartier/tiny-inline-diagnostic.nvim",
@@ -306,7 +307,7 @@ packadd("Plugins", {
 	},
 
 	["notify"] = {
-		{ spec = "https://github.com/Bilal2453/luvit-meta", deps = { "https://github.com/j-hui/fidget.nvim" } },
+		{ spec = "https://github.com/j-hui/fidget.nvim", deps = { "https://github.com/Bilal2453/luvit-meta" } },
 	},
 
 	["treesitter"] = {
@@ -323,7 +324,7 @@ packadd("Plugins", {
 		"https://github.com/nanotee/sqls.nvim",
 		"https://github.com/seblyng/roslyn.nvim",
 		"https://github.com/mfussenegger/nvim-jdtls",
-		-- "https://github.com/idelice/nvim-jls",
+		"https://github.com/idelice/nvim-jls",
 	},
 
 	["explorer"] = {
