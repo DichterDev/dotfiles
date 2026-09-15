@@ -1,3 +1,3 @@
-require("roslyn").setup({})
+require("roslyn").setup()
 
 require("jdtls")

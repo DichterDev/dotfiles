@@ -34,7 +34,7 @@ end
 
 ---@class core.keymap.step.Table
 ---@field condition fun(): boolean
----@field action fun(): boolean
+---@field action fun()
 
 ---@alias core.keymap.step.pre.Pmenu "pmenu_next" | "pmenu_prev" | "pmenu_accept"
 ---@alias core.keymap.step.pre.MiniSnippets "minisnippets_next" | "minisnippets_prev" | "minisnippets_expand"
@@ -46,7 +46,15 @@ end
 ---@alias core.keymap.step.pre.LuaSnip "luasnip_next" | "luasnip_prev" | "luasnip_expand"
 ---@alias core.keymap.step.pre.NvimAutopairs "nvimautopairs_bs" | "nvimautopairs_cr"
 
----@alias core.keymap.step.Predefined core.keymap.step.pre.Pmenu | core.keymap.step.pre.MiniSnippets | core.keymap.step.pre.MiniPairs | core.keymap.step.pre.Jump | core.keymap.step.pre.Whitespace | core.keymap.step.pre.VimSnippet | core.keymap.step.pre.Blink | core.keymap.step.pre.LuaSnip | core.keymap.step.pre.NvimAutopairs
+---@alias core.keymap.step.Predefined core.keymap.step.pre.Pmenu
+---| core.keymap.step.pre.MiniSnippets
+---| core.keymap.step.pre.MiniPairs
+---| core.keymap.step.pre.Jump
+---| core.keymap.step.pre.Whitespace
+---| core.keymap.step.pre.VimSnippet
+---| core.keymap.step.pre.Blink
+---| core.keymap.step.pre.LuaSnip
+---| core.keymap.step.pre.NvimAutopairs
 
 ---@alias core.keymap.Step (string | core.keymap.step.Table | core.keymap.step.Predefined)[]
 
@@ -56,7 +64,20 @@ end
 ---@param opts? vim.keymap.set.Opts
 function M.multi(modes, lhs, steps, opts)
 	opts = vim.tbl_deep_extend("force", M.config.opts, opts or {})
-	require("mini.keymap").map_multistep(modes, lhs, steps, opts)
+
+	local s = vim.list_extend({}, steps)
+
+	-- table.insert(s, {
+	-- 	condition = function()
+	-- 		return true
+	-- 	end,
+	-- 	action = function()
+	-- 		local key = vim.api.nvim_replace_termcodes(lhs, true, true, true)
+	-- 		vim.api.nvim_feedkeys(key, "n", false)
+	-- 	end,
+	-- })
+
+	require("mini.keymap").map_multistep(modes, lhs, s, opts)
 end
 
 return M

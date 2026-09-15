@@ -422,12 +422,14 @@ multi(mode, "<Tab>", {
 	"blink_next",
 	"minisnippets_next",
 	"increase_indent",
+	"jump_after_close",
 })
 
 multi(mode, "<S-Tab>", {
 	"blink_prev",
 	"minisnippets_prev",
 	"decrease_indent",
+	"jump_before_open",
 })
 
 multi(mode, "<CR>", {
@@ -435,7 +437,7 @@ multi(mode, "<CR>", {
 	"minipairs_cr",
 })
 
-multi(mode, "<BS>", {
+multi("i", "<BS>", {
 	"minipairs_bs",
 	"hungry_bs",
 })

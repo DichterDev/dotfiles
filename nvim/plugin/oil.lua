@@ -5,6 +5,10 @@ require("oil").setup({
 			return name == ".." or name == ".git"
 		end,
 	},
+	confirmation = {
+		border = "rounded",
+	},
+	skip_confirm_for_simple_edits = true,
 	keymaps = {
 		["h"] = { "actions.parent", mode = "n" },
 		["l"] = { "actions.select", mode = "n" },
@@ -12,24 +16,6 @@ require("oil").setup({
 		["<C-j>"] = {},
 		["<C-k>"] = {},
 		["<C-l>"] = {},
-	},
-})
-
-require("neo-tree").setup({
-	filesystem = {
-		use_libuv_file_watcher = true,
-		follow_current_file = {
-			enabled = true,
-			leave_dirs_open = false,
-		},
-	},
-	window = {
-		mappings = {
-			["a"] = "none",
-			["d"] = "none",
-			["r"] = "none",
-			["m"] = "none",
-			["x"] = "none",
-		},
+		["<C-s>"] = {},
 	},
 })
