@@ -1,5 +1,3 @@
-PackAdd("gl:itaranto/id3.nvim")
-
 -- Requires:
 -- python-mutagen
 -- flac

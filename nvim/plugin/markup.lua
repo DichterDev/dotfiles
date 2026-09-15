@@ -1,12 +1,6 @@
-PackAdd({
-	"gh:jmbuhr/otter.nvim",
-	"gh:quarto-dev/quarto-nvim",
-	"gh:hakonharnes/img-clip.nvim",
-	"gh:chomosuke/typst-preview.nvim",
-	"gh:MeanderingProgrammer/render-markdown.nvim",
+require("typst-preview").setup({
+	debug = true,
 })
-
-require("typst-preview").setup({})
 
 require("quarto").setup({})
 
@@ -32,6 +26,7 @@ require("render-markdown").setup({
 Autocmd("ColorScheme", "render-markdown-colorscheme", {
 	callback = function()
 		vim.api.nvim_set_hl(0, "RenderMarkdownBullet", { bg = "NONE", update = true })
+		vim.api.nvim_set_hl(0, "RenderMarkdownCode", { bg = "NONE", update = true })
 	end,
 })
 

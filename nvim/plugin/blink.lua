@@ -1,11 +1,3 @@
-PackAdd({
-	-- "gh:saghen/blink.indent",
-	{
-		src = "gh:saghen/blink.cmp",
-		version = vim.version.range("1.*"),
-	},
-})
-
 require("blink.cmp").setup({
 	snippets = { preset = "mini_snippets" },
 	appearance = {
@@ -13,29 +5,9 @@ require("blink.cmp").setup({
 		nerd_font_variant = "mono",
 	},
 	keymap = {
-		["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
-		["<C-e>"] = { "hide", "fallback" },
+		preset = "none",
+		["<C-Space>"] = { "show", "hide" },
 		["<CR>"] = { "accept", "fallback" },
-		["<Tab>"] = {
-			"snippet_forward",
-			function(cmp)
-				return cmp.select_next()
-			end,
-			"fallback",
-		},
-		["<S-Tab>"] = {
-			"snippet_backward",
-			function(cmp)
-				return cmp.select_prev()
-			end,
-			"fallback",
-		},
-		["<Up>"] = {},
-		["<Down>"] = {},
-		["<C-p>"] = { "select_prev", "fallback" },
-		["<C-n>"] = { "select_next", "fallback" },
-		["<C-up>"] = { "scroll_documentation_up", "fallback" },
-		["<C-down>"] = { "scroll_documentation_down", "fallback" },
 	},
 	cmdline = {
 		keymap = { preset = "inherit" },

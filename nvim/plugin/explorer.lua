@@ -15,11 +15,6 @@ require("oil").setup({
 	},
 })
 
-Map("n", "<leader>x", ":Oil<CR>", { desc = "e[x]plore" })
-Map("n", "<leader>X", function()
-	require("oil").open(vim.fn.getcwd())
-end, { desc = "e[X]plore cwd" })
-
 require("neo-tree").setup({
 	filesystem = {
 		use_libuv_file_watcher = true,
@@ -38,5 +33,3 @@ require("neo-tree").setup({
 		},
 	},
 })
-
-Map("n", "<leader>e", ":Neotree toggle show right<CR>", { desc = "toggle neotree" })

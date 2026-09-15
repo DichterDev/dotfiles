@@ -1,5 +1,3 @@
--- require("rainbow-delimiters")
-
 require("spider").setup()
 
 vim.keymap.set({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>")

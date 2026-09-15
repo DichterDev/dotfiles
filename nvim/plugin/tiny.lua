@@ -1,9 +1,3 @@
-PackAdd({
-	"gh:rachartier/tiny-cmdline.nvim",
-	"gh:rachartier/tiny-glimmer.nvim",
-	"gh:rachartier/tiny-inline-diagnostic.nvim",
-})
-
 require("vim._core.ui2").enable({})
 
 vim.o.cmdheight = 0

@@ -1,12 +1,9 @@
 local util = require("util")
 
-Map = util.keymap.set
 Autocmd = util.cmd.autocmd
 Usercmd = util.cmd.usercmd
-RemoveBG = util.hl.remove_bg
-PackAdd = util.pack.add
 
--- GLOBALS
+--#region GLOBALS
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
@@ -17,7 +14,9 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0
 
--- ENV
+--#endregion
+
+--#region ENV
 
 vim.env.JAVA_HOME = "/usr/lib/jvm/default"
 vim.env.JDK17 = "/usr/lib/jvm/java-17-openjdk/"
@@ -25,9 +24,11 @@ vim.env.JDK21 = "/usr/lib/jvm/java-21-openjdk/"
 vim.env.JDK25 = "/usr/lib/jvm/java-25-openjdk/"
 vim.env.JDK26 = "/usr/lib/jvm/java-26-openjdk/"
 
--- OPTIONS
+--#endregion
 
-local opt = vim.opt
+--#region OPTIONS
+
+local opt = vim.o
 
 opt.exrc = true
 
@@ -41,9 +42,11 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
+opt.number = true
+opt.cursorline = true
+
 opt.foldcolumn = "1"
 opt.foldenable = true
-opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldmethod = "expr"
@@ -72,49 +75,9 @@ opt.termguicolors = true
 opt.winblend = 0
 opt.pumblend = 0
 
--- KEYMAPS
+--#endregion
 
-Map("i", "jk", "<Esc>", { desc = "Exit insert mode" })
-Map("t", "jk", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-
-Map({ "n", "x", "o" }, "ö", "[", { desc = "Left bracket [", remap = true })
-Map({ "n", "x", "o" }, "ä", "]", { desc = "Right bracket ]", remap = true })
-Map({ "n", "x", "o" }, "ü", "\\", { desc = "Backslash \\", remap = true })
-
-Map("n", "<leader>a", "ggVG", { desc = "Visual select all" })
-
-Map("n", "<leader>Q", ":qa<CR>", { desc = "[Q]it all" })
-
-Map("n", "gh", ":norm 0<CR>")
-Map("n", "gl", ":norm $<CR>")
-
--- src: https://www.reddit.com/r/neovim/comments/1scauyd/comment/oecobq8/
-Map({ "x", "o" }, "v", function()
-	if vim.treesitter.get_parser(nil, nil, { error = false }) then
-		require("vim.treesitter._select").select_parent(vim.v.count1)
-	else
-		vim.lsp.buf.selection_range(vim.v.count1)
-	end
-end, { desc = "[v]isual increment" })
-
-Map({ "x", "o" }, "V", function()
-	if vim.treesitter.get_parser(nil, nil, { error = false }) then
-		require("vim.treesitter._select").select_child(vim.v.count1)
-	else
-		vim.lsp.buf.selection_range(-vim.v.count1)
-	end
-end, { desc = "[V]isual decrement" })
-
-Map({ "n", "v" }, "<leader>y", '"+y', { desc = "[y]ank to clipboard" })
-Map("n", "<leader>yy", '"+yy', { desc = "[yy]ank to clipboard" })
-Map("n", "<leader>Y", '"+y_', { desc = "[Y]ank to clipboard" })
-
-Map({ "n", "v" }, "<leader>p", '"+p', { desc = "[p]aste from clipboard" })
-Map({ "n", "v" }, "<leader>P", '"+P"', { desc = "[P]aste from clipboard" })
-
-Map("n", "<leader>d", vim.diagnostic.open_float, { desc = "[d]iagnostic float" })
-
--- DIAGNOSTIC
+--#region DIAGNOSTIC
 
 vim.diagnostic.config({
 	virtual_text = false,
@@ -125,7 +88,9 @@ vim.diagnostic.config({
 	},
 })
 
--- FILETYPES
+--#endregion
+
+--#region FILETYPES
 
 local ft = vim.filetype
 
@@ -142,7 +107,9 @@ ft.add({
 	},
 })
 
--- LSP
+--#endregion
+
+--#region LSP
 
 vim.lsp.inlay_hint.enable(true)
 
@@ -166,7 +133,9 @@ end, {
 	end,
 })
 
--- AUTOCMD
+--#endregion
+
+--#region AUTOCMD
 
 Autocmd("ColorScheme", "transparent-bg", {
 	callback = function()
@@ -197,6 +166,7 @@ Autocmd("ColorScheme", "transparent-bg", {
 		local NO_BG = {
 			"Normal",
 			"NormalNC",
+			"Folded",
 			"FoldColumn",
 			"SignColumn",
 			"TablineFill",
@@ -221,6 +191,9 @@ Autocmd("ColorScheme", "diagnostic-underline", {
 	end,
 })
 
+--#endregion
+
+--#region CODELENS
 -- vim.lsp.codelens.enable(true)
 --
 -- vim.lsp.handlers["textDocument/codeLens"] = function(err, result, ctx, _)
@@ -244,7 +217,9 @@ Autocmd("ColorScheme", "diagnostic-underline", {
 -- 	end
 -- end
 
--- ROCKS
+--#endregion
+
+--#region ROCKS
 -- local rocks_location = vim.fn.stdpath("data") .. "/rocks"
 -- local rocks_path = rocks_location .. "/share/lua/5.1/?.lua;" .. rocks_location .. "/share/lua/5.1/?/init.lua"
 -- local rocks_cpath = rocks_location .. "/lib/lua/5.1/?.so"
@@ -272,62 +247,379 @@ Autocmd("ColorScheme", "diagnostic-underline", {
 -- 		end,
 -- 	})
 -- end
+--#endregion
 
--- PACK
+--#region PLUGINS
 
 vim.cmd.packadd("nvim.undotree")
 
-Map("n", "<leader>u", ":Undotree<CR>", { desc = "[u]ndotree" })
-
 vim.cmd.packadd("nohlsearch")
 
--- COLOR
-PackAdd({
-	"gh:rebelot/kanagawa.nvim",
-	"gh:darianmorat/gruvdark.nvim",
-	"gh:catppuccin/nvim",
-	"gh:pankvitek/bonbon.nvim",
-	"gh:navarasu/onedark.nvim",
-	"gh:scottmckendry/cyberdream.nvim",
-	"gh:sainnhe/sonokai",
-	"gh:jpwol/thorn.nvim",
+local packadd = require("core.pack").add
+
+packadd("Colorschemes", {
+	"https://github.com/rebelot/kanagawa.nvim",
+	"https://github.com/darianmorat/gruvdark.nvim",
+	"https://github.com/catppuccin/nvim",
+	"https://github.com/pankvitek/bonbon.nvim",
+	"https://github.com/navarasu/onedark.nvim",
+	"https://github.com/scottmckendry/cyberdream.nvim",
+	"https://github.com/sainnhe/sonokai",
+	"https://github.com/jpwol/thorn.nvim",
 })
 
--- PLUGIN
-PackAdd({
-	"gh:neovim/nvim-lspconfig",
-	"cb:cryptomilk/nvim-pack-ui",
+packadd("Plugins", {
+	"https://github.com/nvim-mini/mini.nvim",
+	"https://codeberg.org/cryptomilk/nvim-pack-ui",
 
-	"gh:monaqa/dial.nvim",
+	"https://github.com/monaqa/dial.nvim",
 
-	"gh:Amansingh-afk/milli.nvim",
-	"gh:rafamadriz/friendly-snippets",
-	"gh:Aasim-A/scrollEOF.nvim",
-	"gh:HiPhish/rainbow-delimiters.nvim",
-	"gh:catgoose/nvim-colorizer.lua",
-	"gh:chrisgrieser/nvim-spider",
-
-	"gh:Bilal2453/luvit-meta",
-	"gh:j-hui/fidget.nvim",
+	"https://github.com/rafamadriz/friendly-snippets",
+	"https://github.com/Aasim-A/scrollEOF.nvim",
+	"https://github.com/HiPhish/rainbow-delimiters.nvim",
+	"https://github.com/catgoose/nvim-colorizer.lua",
+	"https://github.com/chrisgrieser/nvim-spider",
+	"https://gitlab.com/itaranto/id3.nvim",
 
 	-- MASON
 
 	-- STEVEARC
-	"gh:stevearc/oil.nvim",
-	"gh:stevearc/aerial.nvim",
-	"gh:stevearc/conform.nvim",
-	"gh:stevearc/quicker.nvim",
-	"gh:stevearc/overseer.nvim",
+	"https://github.com/stevearc/aerial.nvim",
+	"https://github.com/stevearc/conform.nvim",
+	"https://github.com/stevearc/quicker.nvim",
+	"https://github.com/stevearc/overseer.nvim",
 
 	-- FOLKE
-	"gh:folke/flash.nvim",
-	"gh:folke/lazydev.nvim",
-	"gh:folke/todo-comments.nvim",
+	"https://github.com/folke/flash.nvim",
+	"https://github.com/folke/lazydev.nvim",
+	"https://github.com/folke/todo-comments.nvim",
 
-	{
-		src = "gh:nvim-neo-tree/neo-tree.nvim",
-		version = vim.version.range("3"),
+	"https://github.com/rachartier/tiny-cmdline.nvim",
+	"https://github.com/rachartier/tiny-glimmer.nvim",
+	"https://github.com/rachartier/tiny-inline-diagnostic.nvim",
+
+	{ spec = "https://github.com/kevinhwang91/nvim-ufo", deps = { "https://github.com/kevinhwang91/promise-async" } },
+
+	["git"] = {
+		"https://github.com/lewis6991/gitsigns.nvim",
+		{ spec = "https://github.com/NeogitOrg/neogit", deps = { "https://github.com/sindrets/diffview.nvim" } },
 	},
-	"gh:nvim-lua/plenary.nvim",
-	"gh:MunifTanjim/nui.nvim",
+
+	["notify"] = {
+		{ spec = "https://github.com/Bilal2453/luvit-meta", deps = { "https://github.com/j-hui/fidget.nvim" } },
+	},
+
+	["treesitter"] = {
+		"https://github.com/nvim-treesitter/nvim-treesitter",
+		"https://github.com/nvim-treesitter/nvim-treesitter-context",
+		"https://github.com/windwp/nvim-ts-autotag",
+	},
+
+	["lsp"] = {
+		"https://github.com/neovim/nvim-lspconfig",
+		"https://github.com/mason-org/mason.nvim",
+		"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
+		{ spec = { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") } },
+		"https://github.com/nanotee/sqls.nvim",
+		"https://github.com/seblyng/roslyn.nvim",
+		"https://github.com/mfussenegger/nvim-jdtls",
+		-- "https://github.com/idelice/nvim-jls",
+	},
+
+	["explorer"] = {
+		"https://github.com/stevearc/oil.nvim",
+		{
+			spec = { src = "https://github.com/nvim-neo-tree/neo-tree.nvim", version = vim.version.range("3") },
+			deps = { "https://github.com/nvim-lua/plenary.nvim", "https://github.com/MunifTanjim/nui.nvim" },
+		},
+	},
+
+	["dap"] = {
+		"https://github.com/mfussenegger/nvim-dap",
+		"https://github.com/mfussenegger/nvim-dap-python",
+		"https://github.com/igorlfs/nvim-dap-view",
+		"https://github.com/theHamsta/nvim-dap-virtual-text",
+	},
+
+	["picker"] = {
+		"https://github.com/ibhagwan/fzf-lua",
+		"https://github.com/stephansama/fzf-nerdfont.nvim",
+	},
+
+	["markup"] = {
+		"https://github.com/jmbuhr/otter.nvim",
+		"https://github.com/quarto-dev/quarto-nvim",
+		"https://github.com/hakonharnes/img-clip.nvim",
+		"https://github.com/chomosuke/typst-preview.nvim",
+		"https://github.com/MeanderingProgrammer/render-markdown.nvim",
+	},
+
+	["db"] = {
+		"https://github.com/tpope/vim-dadbod",
+		"https://github.com/kristijanhusak/vim-dadbod-ui",
+		"https://github.com/kristijanhusak/vim-dadbod-completion",
+	},
 })
+
+--#endregion
+
+--#region KEYMAPS
+
+local keymap = require("core.keymap")
+
+keymap.setup({ opts = { silent = true } })
+
+map = keymap.set
+local multi = keymap.multi
+local combo = keymap.combo
+
+map("n", "<leader>u", ":Undotree<CR>", { desc = "[u]ndotree" })
+
+map({ "n", "x", "o" }, "ö", "[", { desc = "Left bracket [", remap = true })
+map({ "n", "x", "o" }, "ä", "]", { desc = "Right bracket ]", remap = true })
+map({ "n", "x", "o" }, "ü", "\\", { desc = "Backslash \\", remap = true })
+map("n", "<C-S>", "<Cmd>silent! update | redraw<CR>", { desc = "Save" })
+map({ "i", "x" }, "<C-S>", "<Esc><Cmd>silent! update | redraw<CR>", { desc = "Save and go to Normal mode" })
+
+map("n", "<leader>a", "ggVG", { desc = "Visual select all" })
+
+map("n", "<leader>Q", ":qa<CR>", { desc = "[Q]it all" })
+
+-- src: https://www.reddit.com/r/neovim/comments/1scauyd/comment/oecobq8/
+map({ "x", "o" }, "v", function()
+	if vim.treesitter.get_parser(nil, nil, { error = false }) then
+		require("vim.treesitter._select").select_parent(vim.v.count1)
+	else
+		vim.lsp.buf.selection_range(vim.v.count1)
+	end
+end, { desc = "[v]isual increment" })
+
+map({ "x", "o" }, "V", function()
+	if vim.treesitter.get_parser(nil, nil, { error = false }) then
+		require("vim.treesitter._select").select_child(vim.v.count1)
+	else
+		vim.lsp.buf.selection_range(-vim.v.count1)
+	end
+end, { desc = "[V]isual decrement" })
+
+map({ "n", "v" }, "<leader>y", '"+y', { desc = "[y]ank to clipboard" })
+map("n", "<leader>yy", '"+yy', { desc = "[yy]ank to clipboard" })
+map("n", "<leader>Y", '"+y_', { desc = "[Y]ank to clipboard" })
+
+map({ "n", "v" }, "<leader>p", '"+p', { desc = "[p]aste from clipboard" })
+map({ "n", "v" }, "<leader>P", '"+P"', { desc = "[P]aste from clipboard" })
+
+map("n", "<leader>d", vim.diagnostic.open_float, { desc = "[d]iagnostic float" })
+
+combo("i", "jk", "<BS><BS><ESC>")
+combo("i", "kj", "<BS><BS><ESC>")
+combo("t", "jk", "<BS><BS><C-\\><C-n>")
+combo("t", "kj", "<BS><BS><C-\\><C-n>")
+
+local mode = { "i", "c" }
+
+multi(mode, "<Tab>", {
+	"blink_next",
+	"minisnippets_next",
+	"increase_indent",
+})
+
+multi(mode, "<S-Tab>", {
+	"blink_prev",
+	"minisnippets_prev",
+	"decrease_indent",
+})
+
+multi(mode, "<CR>", {
+	"blink_accept",
+	"minipairs_cr",
+})
+
+multi(mode, "<BS>", {
+	"minipairs_bs",
+	"hungry_bs",
+})
+
+multi(mode, "<C-n>", {
+	"blink_next",
+})
+
+multi(mode, "<C-p>", {
+	"blink_prev",
+})
+
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-l>", "<C-w>l")
+
+combo({ "n", "x" }, "gl", "g$")
+combo({ "n", "x" }, "gh", "g^")
+
+combo({ "n", "i", "x", "c" }, "<Esc><Esc>", function()
+	vim.cmd("nohlsearch")
+end)
+
+map({ "n", "x", "o" }, "s", function()
+	require("flash").jump()
+end)
+
+map({ "n", "x", "o" }, "S", function()
+	require("flash").treesitter()
+end)
+
+map({ "n", "x", "o" }, "r", function()
+	require("flash").remote()
+end)
+
+map({ "n", "x", "o" }, "R", function()
+	require("flash").treesitter_search()
+end)
+
+map("c", "<C-s>", function()
+	require("flash").toggle()
+end)
+
+map("n", "<leader>x", ":Oil<CR>", { desc = "e[x]plore" })
+map("n", "<leader>X", function()
+	require("oil").open(vim.fn.getcwd())
+end, { desc = "e[X]plore cwd" })
+
+map("n", "<leader>E", "<CMD>Neotree toggle show right<CR>", { desc = "toggle neotree" })
+
+map("n", "<leader>o", "<CMD>AerialToggle!<CR>", { desc = "toggle aerial [o]utline" })
+map({ "n" }, "<leader>gg", "<CMD>Neogit<CR>", { desc = "Show Neogit UI" })
+
+--#region
+map("n", "<leader>F", "<CMD>FzfLua global<CR>", { desc = "[F]ind" })
+map("n", "<leader>ff", "<CMD>FzfLua files<CR>", { desc = "[f]ind [f]iles" })
+map("n", "<leader>fg", "<CMD>FzfLua git_files<CR>", { desc = "[f] [g]it files" })
+map("n", "<leader>fr", "<CMD>FzfLua live_grep resume=true<CR>", { desc = "[f]ind [r]ipgrep" })
+map("n", "<leader><Tab>", "<CMD>FzfLua buffers<CR>", { desc = "[f]ind [b]uffers" })
+map("n", "<leader>fo", "<CMD>FzfLua oldfiles<CR>", { desc = "[f]ind [o]ldfiles" })
+map("n", "<leader>fq", "<CMD>FzfLua quickfix<CR>", { desc = "[f]ind [q]ickfix" })
+map("n", "<leader>fh", "<CMD>FzfLua highlights<CR>", { desc = "[f]ind [h]istory" })
+map("n", "<leader>fk", "<CMD>FzfLua keymaps<CR>", { desc = "[f]ind [k]eymaps" })
+map("n", "<leader>fb", "<CMD>FzfLua blines<CR>", { desc = "[f]ind [b]uffer lines" })
+map("n", "<leader>ft", "<CMD>FzfLua tags_live_grep<CR>", { desc = "[f]ind [t]ags" })
+map("n", "<leader>fd", "<CMD>FzfLua lsp_workspace_diagnostics<CR>", { desc = "[f]ind [d]iagnostics" })
+map("n", "<leader>fx", "<CMD>FzfLua lsp_document_diagnostics<CR>", { desc = "[f]ind buffer diagnostics" })
+map("n", "<leader>fz", "<CMD>FzfLua zoxide<CR>", { desc = "[f]ind [z]oxide" })
+map("n", "<leader>fi", "<CMD>FzfNerdfont<CR>", { desc = "[f]ind [i]con" })
+map("n", "<leader>fs", require("mini.sessions").select, { desc = "[f]ind [s]ession" })
+--#endregion
+
+Autocmd("LspAttach", "fzf-lua-lsp", {
+	callback = function(args)
+		local function opts(desc)
+			return { desc = desc, noremap = true, silent = true, buffer = args.buf }
+		end
+
+		map("n", "gd", "<CMD>FzfLua lsp_definitions<CR>", opts("[g]o [d]efinition"))
+		map("n", "gr", "<CMD>FzfLua lsp_references<CR>", opts("[g]o [r]efrences"))
+		map("n", "gD", "<CMD>FzfLua lsp_declarations<CR>", opts("[g]o [D]eclaration"))
+		map("n", "gi", "<CMD>FzfLua lsp_implementations<CR>", opts("[g]o [i]mplementation"))
+		map("n", "<leader>ca", "<CMD>FzfLua lsp_code_actions<CR>", opts("[c]ode [a]ctions"))
+
+		map("n", "<leader>rn", vim.lsp.buf.rename, opts("[r]e[n]ame"))
+
+		map("n", "K", function()
+			vim.lsp.buf.hover({ border = "rounded", max_width = 120, max_height = 40 })
+		end, opts("Hover Documentation"))
+	end,
+})
+
+map("n", "<leader>q", require("quicker").toggle, { desc = "toggle [q]uickfix" })
+
+map("n", "<leader>l", function()
+	require("quicker").toggle({ loclist = true })
+end, {
+	desc = "toggle [l]oclist",
+})
+
+local has_dap, dap = pcall(require, "dap")
+local has_dap_view, dap_view = pcall(require, "dap-view")
+
+if has_dap then
+	local function set_debug_keymaps()
+		map("n", "<Down>", function()
+			dap.step_over()
+		end, { desc = "Debug: Step Over" })
+		map("n", "<Right>", function()
+			dap.step_into()
+		end, { desc = "Debug: Step Into" })
+		map("n", "<Left>", function()
+			dap.step_out()
+		end, { desc = "Debug: Step Out" })
+		map("n", "<Up>", function()
+			dap.restart_frame()
+		end, { desc = "Debug: Restart Frame" })
+	end
+
+	local function remove_debug_keymaps()
+		local arrow_keys = { "<Down>", "<Right>", "<Left>", "<Up>" }
+		for _, key in ipairs(arrow_keys) do
+			pcall(vim.keymap.del, "n", key)
+		end
+	end
+
+	dap.listeners.after.event_initialized["dap_arrow_keymaps"] = function()
+		set_debug_keymaps()
+	end
+
+	dap.listeners.before.event_terminated["dap_arrow_keymaps"] = function()
+		remove_debug_keymaps()
+	end
+
+	dap.listeners.before.event_exited["dap_arrow_keymaps"] = function()
+		remove_debug_keymaps()
+	end
+
+	map("n", "<F5>", function()
+		dap.continue()
+	end, { desc = "Debug: Start / Continue" })
+
+	map("n", "<S-F5>", function()
+		dap.terminate()
+	end, { desc = "Debug: Stop / Terminate" })
+
+	map("n", "<C-S-F5>", function()
+		dap.restart()
+	end, { desc = "Debug: Restart Session" })
+
+	map("n", "<leader>db", "<CMD>DapToggleBreakpoint<CR>", { desc = "Debug: Toggle [B]reakpoint" })
+	map("n", "<leader>dB", function()
+		dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
+	end, { desc = "Debug: Set Conditional [B]reakpoint" })
+
+	map("n", "<leader>dlp", function()
+		dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+	end, { desc = "Debug: Set [L]og [P]oint" })
+
+	map("n", "<leader>dr", function()
+		dap.repl.open()
+	end, { desc = "Debug: Open [R]EPL" })
+	map("n", "<leader>dl", function()
+		dap.run_last()
+	end, { desc = "Debug: Run [L]ast" })
+
+	if has_dap_view then
+		map("n", "<leader>dv", function()
+			dap_view.toggle()
+		end, { desc = "Debug: Toggle [V]iew" })
+
+		dap.listeners.after.event_initialized["dap_view_auto"] = function()
+			dap_view.open()
+		end
+
+		dap.listeners.before.event_terminated["dap_view_auto"] = function()
+			dap_view.close()
+		end
+
+		dap.listeners.before.event_exited["dap_view_auto"] = function()
+			dap_view.close()
+		end
+	end
+end
+
+--#endregion

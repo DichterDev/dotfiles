@@ -1,8 +1,3 @@
-PackAdd({
-	"gh:mason-org/mason.nvim",
-	"gh:WhoIsSethDaniel/mason-tool-installer.nvim",
-})
-
 require("mason").setup({
 	registries = {
 		"github:Crashdummyy/mason-registry",
