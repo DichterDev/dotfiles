@@ -65,19 +65,18 @@ end
 function M.multi(modes, lhs, steps, opts)
 	opts = vim.tbl_deep_extend("force", M.config.opts, opts or {})
 
-	local s = vim.list_extend({}, steps)
+	if type(modes) ~= "table" then
+		modes = { modes }
+	end
 
-	-- table.insert(s, {
-	-- 	condition = function()
-	-- 		return true
-	-- 	end,
-	-- 	action = function()
-	-- 		local key = vim.api.nvim_replace_termcodes(lhs, true, true, true)
-	-- 		vim.api.nvim_feedkeys(key, "n", false)
-	-- 	end,
-	-- })
+	for _, mode in ipairs(modes) do
+		local _opts = vim.tbl_deep_extend("force", opts, {})
+		if mode == "c" or mode == "t" then
+			_opts.silent = false
+		end
 
-	require("mini.keymap").map_multistep(modes, lhs, s, opts)
+		require("mini.keymap").map_multistep(mode, lhs, steps, _opts)
+	end
 end
 
 return M

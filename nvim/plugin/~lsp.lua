@@ -1,3 +1,5 @@
+vim.lsp.inlay_hint.enable(true)
+
 local capabilities = require("blink-cmp").get_lsp_capabilities()
 
 capabilities.textDocument.foldingRange = {
@@ -10,7 +12,6 @@ vim.lsp.config("*", {
 })
 
 vim.lsp.enable({
-
 	"bashls",
 	"clangd",
 	"cssls",

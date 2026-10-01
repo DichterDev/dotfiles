@@ -15,7 +15,11 @@ local ts = require("nvim-treesitter")
 
 require("nvim-treesitter.config")
 
-ts.setup({ install_dir = vim.fn.stdpath("data") .. "/site" })
+ts.setup({
+	install_dir = vim.fn.stdpath("data") .. "/site",
+})
+
+ts.install({ "vim", "vimdoc", "lua", "markdown", "markdown_inline" })
 
 -- Auto Parser Install
 -- src: https://www.reddit.com/r/neovim/comments/1sezoxf
@@ -37,3 +41,14 @@ Autocmd("FileType", "ts-parser-install", {
 })
 
 require("nvim-ts-autotag").setup({})
+
+require("treesitter-context").setup({
+	mode = "topline",
+	-- separator = "─",
+})
+
+Autocmd("ColorScheme", "ts-context-remove-bg", {
+	callback = function()
+		vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { bg = "NONE", update = true })
+	end,
+})

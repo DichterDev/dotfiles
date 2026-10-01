@@ -6,7 +6,7 @@ require("oil").setup({
 		end,
 	},
 	confirmation = {
-		border = "rounded",
+		border = "bold",
 	},
 	skip_confirm_for_simple_edits = true,
 	keymaps = {

@@ -1,2 +1,7 @@
 ---@type vim.lsp.Config
-return {}
+return {
+	---@type lspconfig.settings.stylua
+	settings = {
+		stylua = {},
+	},
+}

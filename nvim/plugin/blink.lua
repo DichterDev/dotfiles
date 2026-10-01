@@ -7,7 +7,6 @@ require("blink.cmp").setup({
 	keymap = {
 		preset = "none",
 		["<C-Space>"] = { "show", "hide" },
-		["<CR>"] = { "accept", "fallback" },
 	},
 	cmdline = {
 		keymap = { preset = "inherit" },
@@ -47,6 +46,7 @@ require("blink.cmp").setup({
 		enabled = true,
 		window = {
 			treesitter_highlighting = true,
+			border = "rounded",
 		},
 	},
 	sources = {

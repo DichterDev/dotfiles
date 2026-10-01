@@ -1,4 +1,5 @@
 vim.o.laststatus = 3
+
 require("mini.statusline").setup({
 	use_icons = true,
 	content = {
@@ -19,6 +20,7 @@ require("mini.statusline").setup({
 				"%<", -- Mark general truncate point
 				{ hl = "MiniStatuslineFilename", strings = { filename } },
 				"%=", -- End left alignment
+				"%S",
 				{ hl = "MiniStatuslineFileinfo", strings = { fileinfo } },
 				{ hl = mode_hl, strings = { search, location } },
 			})

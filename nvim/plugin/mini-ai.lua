@@ -16,7 +16,7 @@ require("mini.ai").setup({
 	},
 	n_lines = 50,
 	search_method = "cover_or_next",
-	silent = false,
+	silent = true,
 	custom_textobjects = {
 
 		B = extra.gen_ai_spec.buffer(),

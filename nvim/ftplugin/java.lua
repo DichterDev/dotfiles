@@ -165,4 +165,4 @@ local config = {
 }
 
 -- using jls for now
--- require("jdtls").start_or_attach(config)
+require("jdtls").start_or_attach(config)

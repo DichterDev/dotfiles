@@ -1,8 +1,8 @@
-vim.o.sessionoptions = "buffers,curdir,tabpages,winsize,folds,terminal"
+vim.o.sessionoptions = "buffers,folds"
 
 require("mini.sessions").setup({
 	autowrite = true,
-	directory = vim.fn.stdpath("data") .. "/session",
+	directory = vim.fn.stdpath("cache") .. "/session",
 })
 
 local get_session_name = function()

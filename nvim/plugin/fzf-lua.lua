@@ -28,10 +28,12 @@ fzf.setup({
 		rg_opts = "--column --line-number --no-heading --color=always --smart-case --hidden",
 	},
 	hls = {
+		normal = "FloatNormal",
 		title = "FloatTitle",
 		border = "FloatBorder",
 		preview_title = "FloatTitle",
 		preview_border = "FloatBorder",
+		preview_normal = "FloatNormal",
 	},
 })
 

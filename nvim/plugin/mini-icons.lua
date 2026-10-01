@@ -4,5 +4,6 @@ require("mini.icons").setup({
 	},
 	filetype = {
 		["env"] = { glyph = "", hl = "MiniIconsOrange" },
+		["quadlet"] = { glyph = "", hl = "MiniIconsPurple" },
 	},
 })
