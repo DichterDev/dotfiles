@@ -1,9 +1,14 @@
 prefer-no-csd
 
-spawn-sh-at-startup "dms run"
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
+spawn-at-startup "vicinae" "server"
 
 include "input.kdl"
 include "layout.kdl"
+include "output.kdl"
+
+// include "dms.kdl"
+include "noctalia.kdl"
 
 hotkey-overlay {
     skip-at-startup
@@ -33,11 +38,9 @@ binds {
     Mod+S { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+Shift+Return { spawn "kitty" "--class" "floating-terminal"; }
+    Mod+Shift+Return { spawn "kitty" "--class" "float-term"; }
 
-    Mod+Space { spawn-sh "fuzzel"; }
-
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+Space repeat=false { spawn-sh "vicinae open"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
@@ -178,10 +181,6 @@ binds {
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
-    // Move the focused window between the floating and the tiling layout.
-    Mod+V       { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
-
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
@@ -206,4 +205,3 @@ binds {
 
 include "window-rule.kdl"
 include "blur.kdl"
-include "dms.kdl"

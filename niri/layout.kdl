@@ -3,9 +3,8 @@ layout {
     center-focused-column "never"
 
     preset-column-widths {
-        proportion 0.33333
         proportion 0.5
-        proportion 0.66667
+        proportion 0.667
         proportion 1.0
     }
 
@@ -14,12 +13,12 @@ layout {
         proportion 1.0
     }
 
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.667; }
 
     focus-ring {
-      width 2
-      active-gradient from="#00868b" to="#FF66CC" angle=180 in="oklch shorter hue"
-      inactive-color "#505050"
+        width 2
+        active-gradient from="#00868b" to="#FF66CC" angle=180 in="oklch shorter hue"
+        inactive-color "#505050"
     }
 
     border { off; }

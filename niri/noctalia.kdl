@@ -1,0 +1,6 @@
+spawn-at-startup "noctalia"
+
+binds {
+    Mod+x { spawn "noctalia" "msg" "panel-toggle" "session"; }
+    Mod+v { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
+}

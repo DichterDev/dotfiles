@@ -6,8 +6,9 @@ window-rule {
 window-rule {
     match is-floating=true
 
-    min-width 600
-    min-height 500
+
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.6; }
 }
 
 window-rule {
@@ -23,22 +24,14 @@ window-rule {
 
 window-rule {
     match app-id="(?i)mullvad"
-    
+
     open-floating false
 }
 
 window-rule {
-    match app-id="floating-terminal"
+    match app-id="^float-term$"
     open-floating true
 
-    default-column-width { fixed 900; }
-    default-window-height { fixed 600; }
-}
-
-window-rule {
-    match app-id="fzf-launcher"
-    open-floating true
-
-    default-column-width { fixed 900; }
-    default-window-height { fixed 600; }
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.6; }
 }
