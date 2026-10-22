@@ -10,7 +10,7 @@ abbr -a jv "journalctl --user -xeu"
 alias pkg "pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 
 # KITTENS
-alias ssh "kitten ssh"
+# alias ssh "kitten ssh"
 abbr -a icat "kitten icat"
 
 # BASE
