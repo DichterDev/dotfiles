@@ -1,4 +1,4 @@
-vim.o.sessionoptions = "buffers,folds"
+vim.o.sessionoptions = "buffers,folds,curdir,tabpages,winsize"
 
 require("mini.sessions").setup({
 	autowrite = true,

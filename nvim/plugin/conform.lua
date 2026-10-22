@@ -5,6 +5,7 @@ require("conform").setup({
 		css = { "oxfmt" },
 		dockerfile = { "none" },
 		html = { "oxfmt" },
+		go = { "goimports", "gofumpt" },
 		javascript = { "oxfmt" },
 		javascriptreact = { "oxfmt" },
 		json = { "oxfmt" },

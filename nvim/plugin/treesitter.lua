@@ -13,8 +13,6 @@ Autocmd("PackChanged", "ts-update", {
 
 local ts = require("nvim-treesitter")
 
-require("nvim-treesitter.config")
-
 ts.setup({
 	install_dir = vim.fn.stdpath("data") .. "/site",
 })
@@ -25,6 +23,12 @@ ts.install({ "vim", "vimdoc", "lua", "markdown", "markdown_inline" })
 -- src: https://www.reddit.com/r/neovim/comments/1sezoxf
 Autocmd("FileType", "ts-parser-install", {
 	callback = function(ev)
+		for _, ft in ipairs({ "dockerfile" }) do
+			if ev.match == ft then
+				return
+			end
+		end
+
 		local lang = vim.treesitter.language.get_lang(ev.match)
 		local available_langs = require("nvim-treesitter").get_available()
 		local is_available = vim.tbl_contains(available_langs, lang)
@@ -49,6 +53,7 @@ require("treesitter-context").setup({
 
 Autocmd("ColorScheme", "ts-context-remove-bg", {
 	callback = function()
+		vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "NONE", update = true })
 		vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { bg = "NONE", update = true })
 	end,
 })

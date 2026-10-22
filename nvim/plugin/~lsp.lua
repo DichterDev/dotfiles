@@ -22,7 +22,7 @@ vim.lsp.enable({
 	"jinja_lsp",
 	"jsonls",
 	"lua_ls",
-	"nil_ls",
+	-- "nil_ls",
 	"oxlint",
 	-- "qmlls",
 	"qml-language-server",

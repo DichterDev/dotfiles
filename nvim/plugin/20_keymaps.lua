@@ -6,12 +6,20 @@ local map = keymap.set
 local multi = keymap.multi
 local combo = keymap.combo
 
+map("n", "<leader>t", function()
+	os.execute("kitty --class float-term")
+end)
+
+map("n", "<leader>T", function()
+	os.execute(string.format("kitty --class float-term --directory '%s'", vim.fn.expand("%:p:h")))
+end)
+
 map("n", "<leader>u", ":Undotree<CR>", { desc = "[u]ndotree" })
 
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 
-map("n", "n", "nzzzv", { silent = true })
+map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
 map("n", "<C-S>", "<Cmd>silent! update | redraw<CR>", { desc = "Save" })
@@ -19,7 +27,7 @@ map({ "i", "x" }, "<C-S>", "<Esc><Cmd>silent! update | redraw<CR>", { desc = "Sa
 
 map("n", "<leader>a", "ggVG", { desc = "Visual select all" })
 
-map("n", "<leader>Q", ":qa<CR>", { desc = "[Q]it all" })
+map("n", "<leader>Q", "<CMD>qa<CR>", { desc = "[Q]it all" })
 map("n", "<leader>R", "<CMD>restart<CR>", { desc = "[R]estart" })
 
 -- src: https://www.reddit.com/r/neovim/comments/1scauyd/comment/oecobq8/
@@ -116,10 +124,15 @@ end)
 
 --#endregion
 
-map("n", "<leader>x", ":Oil<CR>", { desc = "e[x]plore" })
+map("n", "<leader>x", "<CMD>Oil<CR>", { desc = "e[x]plore" })
+
 map("n", "<leader>X", function()
 	require("oil").open(vim.fn.getcwd())
 end, { desc = "e[X]plore cwd" })
+
+map("n", "<leader>H", function()
+	require("oil").open(vim.fn.expand("~"))
+end, { desc = "explore [H]ome" })
 
 map("n", "<leader>E", "<CMD>Neotree toggle show right<CR>", { desc = "toggle neotree" })
 

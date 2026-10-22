@@ -3,12 +3,12 @@ vim.o.exrc = true
 vim.o.mouse = "a"
 vim.o.switchbuf = "usetab"
 vim.o.undofile = true
+vim.o.swapfile = false
 vim.o.sh = "/bin/fish"
 
 vim.o.breakindent = true
 vim.o.breakindentopt = "list:-1"
 vim.o.colorcolumn = "+1"
-vim.o.cursorline = true
 vim.o.linebreak = true
 vim.o.list = true
 vim.o.number = true
@@ -30,6 +30,7 @@ vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldmethod = "expr"
 
+vim.o.cursorline = true
 vim.o.cursorlineopt = "screenline,number"
 
 vim.o.fillchars = "eob: ,fold: ,foldopen:󰅀,foldsep: ,foldinner: ,foldclose:"
@@ -65,3 +66,13 @@ local mappings = {
 }
 
 vim.o.langmap = table.concat(mappings, ",")
+
+local ft_prose = { "text", "typst", "markdown" }
+
+Autocmd("BufEnter", "prose-bufopt", {
+	pattern = ft_prose,
+	callback = function()
+		vim.wo.wrap = true
+		vim.wo.linebreak = true
+	end,
+})
