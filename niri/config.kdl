@@ -40,7 +40,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Shift+Return { spawn "kitty" "--class" "float-term"; }
 
-    Mod+Space repeat=false { spawn-sh "vicinae open"; }
+    Mod+Space repeat=false { spawn-sh "vicinae toggle"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
