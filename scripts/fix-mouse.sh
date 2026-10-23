@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# Resets the Intel I2C HID touchpad driver to fix a disappearing cursor
+sudo rmmod i2c_hid_acpi i2c_hid 2>/dev/null
 
-echo "Reloading touchpad kernel modules..."
-
-rmmod i2c_hid_acpi i2c_hid 2>/dev/null
+echo "Reloaded ic2"
 
 sleep 0.5
 
-modprobe i2c_hid_acpi i2c_hid 2>/dev/null
+sudo modprobe i2c_hid_acpi i2c_hid 2>/dev/null
 
-echo "Touchpad successfully reset!"
+echo "Successful"
+
+exit 0

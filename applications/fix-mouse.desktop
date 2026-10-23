@@ -6,4 +6,4 @@ Keywords=Mouse;Touchpad;
 
 Type=Application
 Icon=utilities-terminal
-Exec=bash -c "fuzzel -d -p 'Password: ' --password | sudo -S fix-mouse.sh"
+Exec=$TERM_PROGRAM -e ~/.local/bin/fix-mouse.sh
