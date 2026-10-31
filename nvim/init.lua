@@ -211,6 +211,7 @@ packadd("Plugins", {
 		"https://github.com/nvim-treesitter/nvim-treesitter-context",
 		"https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
 		"https://github.com/windwp/nvim-ts-autotag",
+		"https://github.com/JoosepAlviste/nvim-ts-context-commentstring",
 	},
 
 	["lsp"] = {
