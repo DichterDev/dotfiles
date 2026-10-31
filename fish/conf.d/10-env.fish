@@ -2,7 +2,7 @@ set -gx BROWSER firefox
 set -gx SHELL /bin/fish
 set -gx EDITOR nvim
 set -gx TERM xterm-256color
-set -gx TERM_PROGRAM kitty
+set -gx TERM_PROGRAM alacritty
 set -gx SUDO_EDITOR nvim
 set -gx VISUAL nvim
 

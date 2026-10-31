@@ -37,7 +37,7 @@ animations {
 binds {
     Mod+S { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Return { spawn "alacritty"; }
     Mod+Shift+Return { spawn "kitty" "--class" "float-term"; }
 
     Mod+Space repeat=false { spawn-sh "vicinae toggle"; }
