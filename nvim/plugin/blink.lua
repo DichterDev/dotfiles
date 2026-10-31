@@ -50,7 +50,7 @@ require("blink.cmp").setup({
 		},
 	},
 	sources = {
-		default = { "lazydev", "lsp", "path", "snippets", "buffer", "cmdline" },
+		default = { "lazydev", "lsp", "cwd", "path", "snippets", "buffer", "cmdline" },
 		per_filetype = {
 			sql = { "snippets", "dadbod", "buffer" },
 			mysql = { "snippets", "dadbod", "buffer" },
@@ -62,8 +62,19 @@ require("blink.cmp").setup({
 				module = "lazydev.integrations.blink",
 				score_offset = 1000,
 			},
+			cwd = {
+				name = "CWD",
+				module = "blink.cmp.sources.path",
+				min_keyword_length = 0,
+				opts = {
+					ignore_root_slash = true,
+					trailing_slash = true,
+					show_hidden_files_by_default = true,
+				},
+				score_offset = 10,
+			},
 			lsp = { min_keyword_length = 0 },
-			path = { min_keyword_length = 0 },
+			path = { min_keyword_length = 0, opts = { show_hidden_files_by_default = true } },
 			snippets = { min_keyword_length = 2 },
 			buffer = { min_keyword_length = 4, max_items = 5 },
 			cmdline = { min_keyword_length = 0 },
