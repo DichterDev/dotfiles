@@ -5,22 +5,12 @@ require("typst-preview").setup({
 require("quarto").setup({})
 
 require("render-markdown").setup({
-	enabled = true,
-	render_modes = { "n", "c" },
+	render_modes = { "n" },
 
-	anti_conceal = {
-		enabled = false,
-	},
-
-	win_options = {
-		conceallevel = {
-			default = 2,
-			rendered = 2,
-		},
-	},
-
-	link = {
-		enabled = true,
+	code = {
+		conceal_delimiters = true,
+		border = "thin",
+		language_icon = false,
 	},
 })
 
