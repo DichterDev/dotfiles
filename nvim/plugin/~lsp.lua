@@ -30,6 +30,7 @@ vim.lsp.enable({
 	"ruff",
 	"rust_analyzer",
 	-- "superhtml",
+	"solang",
 	"sqls",
 	"tailwindcss",
 	"tinymist",

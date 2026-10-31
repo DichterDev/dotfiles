@@ -18,9 +18,6 @@ require("mason-tool-installer").setup({
 		"lua-language-server",
 		"stylua",
 
-		-- TypeScript / JavaScript
-		"tsgo",
-
 		-- PRETTIER
 		"prettierd",
 
