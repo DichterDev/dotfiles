@@ -186,6 +186,7 @@ packadd("Plugins", {
 	"https://github.com/stevearc/conform.nvim",
 	"https://github.com/stevearc/quicker.nvim",
 	"https://github.com/stevearc/overseer.nvim",
+	"https://github.com/stevearc/resession.nvim",
 
 	"https://github.com/folke/flash.nvim",
 	"https://github.com/folke/lazydev.nvim",
