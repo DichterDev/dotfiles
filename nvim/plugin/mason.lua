@@ -66,6 +66,7 @@ require("mason-tool-installer").setup({
 		-- CSS
 		"css-lsp",
 		"css-variables-language-server",
+		"csskit",
 		"tailwindcss-language-server",
 
 		-- GLSL
