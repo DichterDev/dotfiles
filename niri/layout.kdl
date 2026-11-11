@@ -18,7 +18,7 @@ layout {
     focus-ring {
         width 2
         active-gradient from="#00868b" to="#FF66CC" angle=180 in="oklch shorter hue"
-        inactive-color "#505050"
+        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     border { off; }
