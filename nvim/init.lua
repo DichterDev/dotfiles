@@ -87,6 +87,15 @@ Autocmd("ColorScheme", "diagnostic-underline", {
 	end,
 })
 
+Autocmd("ColorScheme", "spell-underline", {
+	callback = function()
+		vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, underline = false, sp = "#ff5555" })
+		vim.api.nvim_set_hl(0, "SpellCap", { undercurl = true, sp = "#ffb86c" })
+		vim.api.nvim_set_hl(0, "SpellRare", { undercurl = true, sp = "#8be9fd" })
+		vim.api.nvim_set_hl(0, "SpellLocal", { undercurl = true, sp = "#50fa7b" })
+	end,
+})
+
 Autocmd("FileType", "proper-format-options", {
 	pattern = { "*" },
 	callback = function(ev)
@@ -229,6 +238,7 @@ packadd("Plugins", {
 
 	["explorer"] = {
 		"https://github.com/stevearc/oil.nvim",
+		"https://github.com/malewicz1337/oil-git.nvim",
 		{
 			spec = { src = "https://github.com/nvim-neo-tree/neo-tree.nvim", version = vim.version.range("3") },
 			deps = { "https://github.com/nvim-lua/plenary.nvim", "https://github.com/MunifTanjim/nui.nvim" },
