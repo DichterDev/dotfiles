@@ -67,3 +67,7 @@ abbr -a dcd "docker compose down"
 # ZELLIJ
 abbr -a zj zellij
 abbr -a zja "zellij attach"
+abbr -a zjs "zellij -s"
+abbr -a zjk "zellij k"
+abbr -a zjka "zellij ka"
+abbr -a zjls "zellij ls"
