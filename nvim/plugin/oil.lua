@@ -1,4 +1,7 @@
 require("oil").setup({
+	columns = {
+		"icon",
+	},
 	view_options = {
 		show_hidden = true,
 		is_always_hidden = function(name, _)
@@ -12,6 +15,7 @@ require("oil").setup({
 	keymaps = {
 		["h"] = { "actions.parent", mode = "n" },
 		["l"] = { "actions.select", mode = "n" },
+		["gr"] = { "actions.refresh" },
 		["<C-h>"] = {},
 		["<C-j>"] = {},
 		["<C-k>"] = {},
