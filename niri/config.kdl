@@ -35,14 +35,13 @@ animations {
 }
 
 binds {
-    Mod+S { show-hotkey-overlay; }
+    Mod+Return repeat=false { spawn "kitty"; }
 
-    Mod+Return { spawn "alacritty"; }
-    Mod+Shift+Return { spawn "kitty" "--class" "float-term"; }
+    Mod+B repeat=false { spawn "firefox"; }
+    Mod+E repeat=false { spawn "dfiles" "show"; }
 
-    Mod+Space repeat=false { spawn-sh "vicinae toggle"; }
-
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    Mod+O repeat=false { toggle-overview; }
+    Mod+Q repeat=false { close-window; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
@@ -52,9 +51,6 @@ binds {
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-    Mod+O repeat=false { toggle-overview; }
-
-    Mod+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -191,11 +187,6 @@ binds {
     Alt+Print { screenshot-window; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-
-    Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
-
-    Mod+Shift+P { power-off-monitors; }
 
     Mod+Alt+Left { set-column-width "-10%"; }
     Mod+Alt+Right { set-column-width "+10%"; }

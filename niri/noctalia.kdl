@@ -3,4 +3,5 @@ spawn-at-startup "noctalia"
 binds {
     Mod+x { spawn "noctalia" "msg" "panel-toggle" "session"; }
     Mod+v { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
+    Mod+Space repeat=false { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
 }
