@@ -6,6 +6,9 @@ vim.o.undofile = true
 vim.o.swapfile = false
 vim.o.sh = "/bin/fish"
 
+vim.o.modeline = true
+vim.o.modelines = 5
+
 vim.o.breakindent = true
 vim.o.breakindentopt = "list:-1"
 vim.o.colorcolumn = "+1"
