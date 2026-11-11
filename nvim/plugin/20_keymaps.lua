@@ -157,6 +157,7 @@ map("n", "<leader>fx", "<CMD>FzfLua lsp_document_diagnostics<CR>", { desc = "[f]
 map("n", "<leader>fz", "<CMD>FzfLua zoxide<CR>", { desc = "[f]ind [z]oxide" })
 map("n", "<leader>fi", "<CMD>FzfNerdfont<CR>", { desc = "[f]ind [i]con" })
 map("n", "<leader>fs", require("mini.sessions").select, { desc = "[f]ind [s]ession" })
+map("n", "z=", "<CMD>FzfLua spell_suggest<CR>")
 --#endregion
 
 Autocmd("LspAttach", "fzf-lua-lsp", {
