@@ -1,3 +1,0 @@
-public interface %1 {
-  $0
-}

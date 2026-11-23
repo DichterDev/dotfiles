@@ -6,6 +6,12 @@ local map = keymap.set
 local multi = keymap.multi
 local combo = keymap.combo
 
+map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
+map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
+map({ "n", "x" }, "0", "v:count == 0 ? 'g0' : '0'", { expr = true })
+map({ "n", "x" }, "^", "v:count == 0 ? 'g^' : '^'", { expr = true })
+map({ "n", "x" }, "$", "v:count == 0 ? 'g$' : '$'", { expr = true })
+
 map("n", "<leader>t", function()
 	os.execute("kitty --class float-term")
 end)

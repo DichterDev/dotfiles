@@ -7,6 +7,7 @@ require("neo-tree").setup({
 		},
 	},
 	window = {
+		position = "right",
 		mappings = {
 			["a"] = "none",
 			["d"] = "none",
@@ -15,6 +16,7 @@ require("neo-tree").setup({
 			["x"] = "none",
 		},
 	},
+	add_blank_line_at_top = true,
 })
 
 Autocmd("ColorScheme", "neo-tree-background", {

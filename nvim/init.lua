@@ -191,6 +191,10 @@ packadd("Plugins", {
 	"https://github.com/rafamadriz/friendly-snippets",
 	"https://github.com/HiPhish/rainbow-delimiters.nvim",
 
+	"https://github.com/rebelot/heirline.nvim",
+	"https://github.com/SmiteshP/nvim-navic",
+	"https://github.com/zeioth/heirline-components.nvim",
+
 	"https://github.com/stevearc/aerial.nvim",
 	"https://github.com/stevearc/conform.nvim",
 	"https://github.com/stevearc/quicker.nvim",
@@ -271,3 +275,16 @@ packadd("Plugins", {
 		"https://github.com/kristijanhusak/vim-dadbod-completion",
 	},
 })
+
+package.preload["lazy.core.config"] = function()
+	local plugins = {}
+	for _, pack in ipairs(vim.pack.get()) do
+		if pack.active then
+			plugins[pack.spec.name] = pack.spec
+		end
+	end
+	return {
+		plugins = plugins,
+		spec = { plugins = plugins },
+	}
+end

@@ -21,6 +21,8 @@ require("conform").setup({
 		vue = { "oxfmt" },
 		text = { "none" },
 		yaml = { "none" },
+		quadlet = { "none" },
+		nginx = { "none" },
 		["_"] = { "indent_only" },
 	},
 	format_on_save = {

@@ -25,8 +25,8 @@ require("mason-tool-installer").setup({
 		"eslint_d",
 		"eslint-lsp",
 
-		-- "vtsls",
-		-- "vue-language-server",
+		"vtsls",
+		"vue-language-server",
 
 		"oxlint",
 		"oxfmt",

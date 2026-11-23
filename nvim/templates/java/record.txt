@@ -1,1 +1,0 @@
-public record %1 ($0) {$1}

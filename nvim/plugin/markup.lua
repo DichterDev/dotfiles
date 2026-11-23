@@ -1,6 +1,6 @@
-require("typst-preview").setup({
-	debug = true,
-})
+-- require("typst-preview").setup({
+-- 	debug = true,
+-- })
 
 require("quarto").setup({})
 
