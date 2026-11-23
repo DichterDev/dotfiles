@@ -1,0 +1,97 @@
+#:schema ../schemas/umbriel.schema.json
+#:tombi schema.strict = false
+
+[include]
+files = [
+  "appearance.toml",
+  "animation.toml",
+  "keybinds.toml",
+  "scratchpad.toml",
+]
+
+[include.optional]
+files = []
+
+[general]
+mod_key = "Super"
+show_cheatsheet = false
+autostart = [
+  "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP",
+  "noctalia",
+  "zellij terminal -c scratch"
+]
+
+
+[input.keyboard]
+numlock_toggle = true
+repeat_rate = 25
+repeat_delay = 200
+
+[colors]
+accent_primary = "#7AA3FFFF"
+accent_secondary = "#F5C96BFF"
+
+[layout]
+extent_presets = [0.333, 0.666, 1.0]
+
+[layout.stacking]
+
+[layout.scrolling]
+default_extent_fraction = 0.666
+
+[[window_rule]]
+blur = true
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.Noctalia$"
+default_floating = true
+default_floating_size_px = { width = 1020, height = 900 }
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_floating_size_px = { width = 800, height = 600 }
+
+[[window_rule]]
+match.title = "^(Picture-in-Picture|Picture in picture)$"
+default_floating = true
+default_maximize = false
+default_position = { x = 20, y = 20, anchor = "bottom_right" }
+
+[[window_rule]]
+match.title = "^notificationtoasts_.+_desktop"
+default_position = { x = 0, y = 0, anchor = "bottom_right" }
+default_focused = false
+default_pinned = true
+
+[[window_rule]]
+match.app_id = "firefox"
+default_maximize = true
+
+[[window_rule]]
+match.app_id = "firefox"
+match.title = "^Picture-in-Picture$"
+default_floating = true
+
+[[window_rule]]
+match.app_id = "mullvad"
+default_floating = false
+
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
+blur = true
+blur_ignore_alpha = 0.5
+blur_popups = true
+
+[[layer_rule]]
+match.namespace = "^noctalia-(notification|dock|panel|attached-panel|osd)$"
+blur_optimized = false
+
+[hot_corners.top_left]
+enabled = true
+delay_ms = 500
+action = "overview-open"
+
+[output.eDP-1]
+mode = "1920x1080@60"
+scale = 1.0

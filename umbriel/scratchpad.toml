@@ -1,0 +1,12 @@
+#:schema ../schemas/umbriel.schema.json
+#:tombi schema.strict = false
+
+[keybinds]
+"Mod+S" = "scratchpad-toggle"
+"Mod+Shift+S" = "window-move-to-scratchpad"
+"Mod+Ctrl+S" = "window-restore-from-scratchpad"
+
+[[window_rule]]
+match.app_id = "^dev.zellij.Zellij$"
+match.title = "scratch"
+default_scratchpad = "default"

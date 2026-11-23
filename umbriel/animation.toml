@@ -1,0 +1,16 @@
+#:schema ../schemas/umbriel.schema.json
+#:tombi schema.strict = false
+
+[animation]
+enabled = true
+duration_ms = 250
+curve = "easeout"
+
+[animation.workspaces]
+style = "slide"
+enabled = true
+curve = "spring:1,800"
+
+[animation.border]
+enabled = true
+curve = "spring:1,900"
