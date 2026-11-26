@@ -21,7 +21,6 @@ autostart = [
   "zellij terminal -c scratch"
 ]
 
-
 [input.keyboard]
 numlock_toggle = true
 repeat_rate = 25
@@ -64,14 +63,18 @@ default_position = { x = 0, y = 0, anchor = "bottom_right" }
 default_focused = false
 default_pinned = true
 
+
 [[window_rule]]
 match.app_id = "firefox"
 default_maximize = true
 
 [[window_rule]]
 match.app_id = "firefox"
-match.title = "^Picture-in-Picture$"
+match.title = "^Extension:*"
+default_maximize = false
 default_floating = true
+default_floating_size = { width = 0.25, height = 0.75 }
+default_position = { x = 10, y = 10, anchor = "bottom_left" }
 
 [[window_rule]]
 match.app_id = "mullvad"

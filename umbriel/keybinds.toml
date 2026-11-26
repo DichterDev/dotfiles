@@ -10,7 +10,7 @@
 "Mod+Escape" = "session-quit"
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 
-"Mod" = "spawn noctalia msg panel-toggle launcher"
+"Mod+Space" = "spawn noctalia msg panel-toggle launcher"
 "Mod+X" = { action = "spawn noctalia msg panel-toggle session"}
 "Mod+V" = { action = "spawn noctalia msg panel-toggle clipboard"}
 
@@ -79,6 +79,6 @@
 "Mod+Shift+8" = "window-move-to-workspace 8"
 "Mod+Shift+9" = "window-move-to-workspace 9"
 
-"Print" = "spawn grim -g \"$(slurp)\" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png"
-"Ctrl+Print" = "spawn grim -g \"$(slurp)\" - | wl-copy"
-"Shift+Print" = "spawn grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png"
+"Print" = "spawn noctalia msg screenshot-region --no-annotate"
+"Ctrl+Print" = "spawn noctalia msg screenshot-region"
+"Shift+Print" = "spawn noctalia msg screenshot-fullscreen"
