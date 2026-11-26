@@ -1,4 +1,4 @@
 ---@type vim.lsp.Config
 return {
-	root_markers = { "main.typ", "typst.toml", ".git" },
+	root_markers = { "typst.toml", "main.typ", ".git" },
 }

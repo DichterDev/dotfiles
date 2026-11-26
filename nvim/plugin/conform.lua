@@ -19,6 +19,7 @@ require("conform").setup({
 		typescriptreact = { "oxfmt" },
 		typst = { "typstyle" },
 		vue = { "oxfmt" },
+		solidity = {},
 		text = { "none" },
 		yaml = { "none" },
 		quadlet = { "none" },

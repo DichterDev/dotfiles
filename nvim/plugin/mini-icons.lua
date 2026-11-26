@@ -6,4 +6,7 @@ require("mini.icons").setup({
 		["env"] = { glyph = "", hl = "MiniIconsOrange" },
 		["quadlet"] = { glyph = "", hl = "MiniIconsPurple" },
 	},
+	extension = {
+		db = { glyph = " ", hl = "MiniIconsAzure" },
+	},
 })

@@ -80,26 +80,23 @@ local WinBar = {
 	{ provider = " " },
 }
 
+local function tabline_hl(self)
+	local state = self.is_active and "active_" or ""
+	return {
+		fg = "tab_" .. state .. "fg",
+		bg = "tab_" .. state .. "bg",
+	}
+end
+
 local TabLine = {
 	{ provider = " " },
 	lib.tabline_buffers({
-		hl = function(self)
-			local state = self.is_active and "active_" or ""
-			return {
-				fg = "tab_" .. state .. "fg",
-				bg = "tab_" .. state .. "bg",
-			}
-		end,
+		filename = { hl = tabline_hl },
+		hl = tabline_hl,
 	}),
 	lib.fill({ hl = { fg = "tab_fg", bg = "tab_bg" } }),
 	lib.tabline_tabpages({
-		hl = function(self)
-			local state = self.is_active and "active_" or ""
-			return {
-				fg = "tab_" .. state .. "fg",
-				bg = "tab_" .. state .. "bg",
-			}
-		end,
+		hl = tabline_hl,
 	}),
 }
 
@@ -110,19 +107,21 @@ heirline.setup({
 	tabline = TabLine,
 	opts = {
 		disable_winbar_cb = function(args)
-			return not require("heirline-components.buffer").is_valid(args.buf)
-				or condition.buffer_matches({
-					buftype = { "terminal", "prompt", "nofile", "help", "quickfix" },
-					filetype = {
-						"NvimTree",
-						"neo%-tree",
-						"dashboard",
-						"alpha",
-						"snacks_dashboard",
-						"Outline",
-						"aerial",
-					},
-				}, args.buf)
+			local buf = args.buf
+
+			return condition.buffer_matches({
+				buftype = { "terminal", "prompt", "nofile", "help", "quickfix" },
+				filetype = {
+					"NvimTree",
+					"neo%-tree",
+					"dashboard",
+					"alpha",
+					"snacks_dashboard",
+					"Outline",
+					"aerial",
+					"oil",
+				},
+			}, buf)
 		end,
 	},
 })
